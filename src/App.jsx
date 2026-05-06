@@ -1,9 +1,11 @@
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <div>
-      <h1>Welcome to My Textile Store</h1>
-    </div>
-  )
+    <>
+      <Navbar />
+    </>
+  );
 }
 
-export default App
+export default App;
