@@ -1,13 +1,19 @@
+/* BASE */
 .navbar {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: 15px 40px;
+  padding: 15px 20px;
   background: white;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 /* LOGO */
+.logo {
+  justify-self: start;
+}
+
 .logo img {
   height: 50px;
 }
@@ -15,55 +21,86 @@
 /* CENTER MENU */
 .nav-links {
   display: flex;
-  justify-content: center; /* 🔥 this centers it perfectly */
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
   list-style: none;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.nav-links li {
-  cursor: pointer;
-  position: relative;
-  letter-spacing: 0.5px;
-  color: #333;
-}
-
-.nav-links li:hover {
-  color: black;
+  font-size: 18px;
 }
 
 /* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
 .dropdown-menu {
+  display: none;
   position: absolute;
   top: 30px;
-  left: 0;
   background: white;
   border: 1px solid #eee;
-  padding: 10px 0;
-  min-width: 150px;
 }
 
-.dropdown-menu li {
-  padding: 10px 15px;
-  white-space: nowrap;
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.dropdown-menu li:hover {
-  background: #f5f5f5;
-}
-
-/* RIGHT BUTTON */
+/* BUTTON */
 .enquire-btn {
+  justify-self: end;
   padding: 10px 20px;
   border-radius: 10px;
-  border: none;
   background: black;
   color: white;
-  cursor: pointer;
-  font-weight: 500;
+  border: none;
 }
 
-.enquire-btn:hover {
-  opacity: 0.85;
+/* MOBILE MENU ICON */
+.mobile-menu {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* MOBILE DROPDOWN */
+.mobile-dropdown {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+
+.mobile-dropdown p {
+  margin: 10px 0;
+}
+
+/* 📱 MOBILE VIEW */
+@media (max-width: 768px) {
+
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  /* Hide desktop menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .mobile-menu {
+    display: block;
+    justify-self: start;
+  }
+
+  /* Center button */
+  .enquire-btn {
+    justify-self: center;
+  }
+
+  /* Move logo right */
+  .logo {
+    justify-self: end;
+  }
 }
