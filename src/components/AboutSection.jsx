@@ -1,0 +1,123 @@
+export default function AboutSection() {
+  return (
+    <section
+      style={{
+        width: "100%",
+        background: "#ffffff",
+       padding: window.innerWidth < 768 ? "30px 20px 0px" : "40px 8% 0px",
+        boxSizing: "border-box",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "80px",
+          flexWrap: "wrap",
+        }}
+      >
+        {/* LEFT CONTENT */}
+        <div
+          style={{
+            flex: "1",
+            minWidth: "320px",
+          }}
+        >
+          {/* Heading */}
+          <div style={{ marginBottom: "40px" }}>
+            <h3
+              style={{
+                fontSize: "42px",
+                color: "#0B2C66",
+                margin: 0,
+                fontFamily: "Times New Roman, serif",
+                fontWeight: "700",
+                textTransform: "uppercase",
+                textAlign: "center",
+              }}
+            >
+              ABOUT US
+            </h3>
+
+            {/* Yellow Underline */}
+            <div
+              style={{
+                width: "220px",
+                height: "5px",
+                background: "#E2B13C",
+                marginTop: "10px",
+                margin: "10px auto 0",
+              }}
+            ></div>
+          </div>
+
+          {/* Paragraphs */}
+          <div
+            style={{
+              fontSize: "20px",
+              lineHeight: "1.5",
+              color: "#111",
+              fontWeight: "400",
+            }}
+          >
+            <p>
+             Aurora Textile is a wholesale textile business based in the Old Textile Market in Dubai. We are specialized in men’s Shirting, and Suiting and now are expanding to offer men’s ethnics as well.
+            </p>
+
+            <p>
+              We are fabrics material wholesaler and we offer multiple types of fabrics including: Wool, Polywool, Cotton, Linen, Poly Viscose, Denim, Tencel Blend and much more from the brands like: Donear, Klopman, Oxford , Reliance, Sammaan and Nemesis so our customers will only step out from our store with quality fabrics in their hand.
+            </p>
+
+            <p>
+              We also export our high-quality fabrics into MENA countries such as Riyadh, Qatar, Saudi Arabia, Malaysia, Kuwait, Bahrain, Iran, Iraq, etc. You don’t have to worry about shipping or delivery time as we offer fast shipping services so your fabrics will reach to you at their perfect time.
+            </p>
+          </div>
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div
+          style={{
+            flex: "1",
+            minWidth: "320px",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+              width: "430px",
+              maxWidth: "100%",
+            }}
+          >
+            {/* Blue Background Shadow */}
+            <div
+              style={{
+                position: "absolute",
+                top: "-55px",
+                right: "-35px",
+                width: "100%",
+                height: "100%",
+                background: "#33488F",
+                zIndex: 1,
+              }}
+            ></div>
+
+            {/* Main Image */}
+            <img
+              src="/image-2.png"
+              alt="About Us"
+              style={{
+                width: "100%",
+                position: "relative",
+                zIndex: 2,
+                display: "block",
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

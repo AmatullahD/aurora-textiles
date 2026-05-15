@@ -7,22 +7,38 @@ function Navbar() {
     return (
         <nav className="navbar">
 
-            {/* LEFT (Mobile: Menu Icon) */}
-            <div className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)}>
+            {/* MOBILE MENU ICON */}
+            <div
+                className="mobile-menu"
+                onClick={() => setMenuOpen(!menuOpen)}
+                style={{
+                    color: menuOpen ? "purple" : "black",
+                    transition: "0.3s ease",
+                }}
+            >
                 ☰
             </div>
 
             {/* LOGO */}
             <div className="logo">
-                <img src="/aurora-logo.png" alt="Logo" />
+                <img
+                    src="/aurora-logo.png"
+                    alt="Logo"
+                    style={{
+                        height: "50px",
+                        objectFit: "contain",
+                    }}
+                />
             </div>
 
-            {/* CENTER MENU (Desktop) */}
+            {/* DESKTOP MENU */}
             <ul className="nav-links">
+
                 <li>Home</li>
 
                 <li className="dropdown">
                     Products ▾
+
                     <ul className="dropdown-menu">
                         <li>Category 1</li>
                         <li>Category 2</li>
@@ -30,24 +46,42 @@ function Navbar() {
                 </li>
 
                 <li>Brands</li>
+
                 <li className="dropdown">
                     Fabrics ▾
+
                     <ul className="dropdown-menu">
                         <li>Category 1</li>
                         <li>Category 2</li>
                     </ul>
                 </li>
+
                 <li>About Us</li>
+
                 <li>Contact Us</li>
 
             </ul>
 
-            {/* RIGHT BUTTON */}
-            <button className="enquire-btn">Enquire</button>
+            {/* ENQUIRE BUTTON */}
+            <button
+                className="enquire-btn"
+                style={{
+                    background: menuOpen ? "#6b21a8" : "black",
+                    transform: menuOpen ? "scale(1.05)" : "scale(1)",
+                    transition: "0.3s ease",
+                }}
+            >
+                Enquire
+            </button>
 
             {/* MOBILE DROPDOWN */}
             {menuOpen && (
-                <div className="mobile-dropdown">
+                <div
+                    className="mobile-dropdown"
+                    style={{
+                        animation: "fadeIn 0.3s ease",
+                    }}
+                >
                     <p>Home</p>
                     <p>Products</p>
                     <p>Brands</p>
@@ -56,6 +90,7 @@ function Navbar() {
                     <p>Contact Us</p>
                 </div>
             )}
+
         </nav>
     );
 }
