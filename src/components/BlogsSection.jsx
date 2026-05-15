@@ -30,7 +30,7 @@ export default function BlogsSection() {
     <section
       style={{
         width: "100%",
-        background: "#f3f3f3",
+        background: "#ffffff",
         padding: "70px 5%",
         boxSizing: "border-box",
       }}
