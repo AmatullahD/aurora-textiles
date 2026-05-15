@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const collections = [
   {
@@ -63,8 +64,21 @@ function CollectionSection() {
         }}
       >
         {collections.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{
+              opacity: 0,
+              x: index < 2 ? -120 : 120,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 1,
+              delay: index * 0.2,
+            }}
+            viewport={{ once: true }}
             style={{
               textAlign: "center",
             }}
@@ -115,7 +129,7 @@ function CollectionSection() {
             >
               {item.title}
             </h3>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

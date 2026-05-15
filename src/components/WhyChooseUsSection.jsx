@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 import {
   FaAward,
@@ -28,7 +31,11 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, x: -150 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
       style={{
         width: "100%",
         backgroundColor: "#FFFFFF",
@@ -83,9 +90,10 @@ export default function WhyChooseUsSection() {
           >
             Our fabrics are sourced from the finest mills,
             ensuring <br /> durability, comfort, and a luxurious
-            feel. Whether you're <br/> seeking cotton, wool,
-            linen or denim, our commitment to <br /> craftsmanship
-            guarantees the highest standards of quality.
+            feel. Whether you're <br /> seeking cotton, wool,
+            linen or denim, our commitment to <br />
+            craftsmanship guarantees the highest standards of
+            quality.
           </p>
 
           {/* FEATURES */}
@@ -182,6 +190,6 @@ export default function WhyChooseUsSection() {
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
