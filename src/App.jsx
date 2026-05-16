@@ -1,32 +1,16 @@
-import Navbar from "./components/Navbar";
-import BannerSlider from "./components/BannerSlider";
-import AboutSection from "./components/AboutSection";
-import PartnerBrands from "./components/PartnerBrands";
-import WhatsAppButton from "./components/WhatsAppButton";
-import CollectionSection from "./components/CollectionSection";
-import FabricSliderSection from "./components/FabricSliderSection";
-import CountriesSection from "./components/CountriesSection";
-import WhyChooseUsSection from "./components/WhyChooseUsSection";
-import TestimonialsSection from "./components/TestimonialsSection";
-import BlogsSection from "./components/BlogsSection";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <BannerSlider />
-      <AboutSection />
-      <PartnerBrands />
-      <CollectionSection />
-      <FabricSliderSection /> 
-      <CountriesSection />
-      <WhyChooseUsSection />
-      <TestimonialsSection />
-      <BlogsSection />
-      <Footer />
-      <WhatsAppButton />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 }
 

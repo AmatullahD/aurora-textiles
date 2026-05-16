@@ -21,47 +21,77 @@ function Navbar() {
 
             {/* LOGO */}
             <div className="logo">
-                <img
-                    src="/aurora-logo.png"
-                    alt="Logo"
-                    style={{
-                        height: "50px",
-                        objectFit: "contain",
-                    }}
-                />
+                <a href="/">
+                    <img
+                        src="/aurora-logo.png"
+                        alt="Logo"
+                        style={{
+                            height: "50px",
+                            objectFit: "contain",
+                            cursor: "pointer",
+                        }}
+                    />
+                </a>
             </div>
 
             {/* DESKTOP MENU */}
             <ul className="nav-links">
 
-                <li>Home</li>
+                <li>
+                    <a href="/">Home</a>
+                </li>
 
                 <li className="dropdown">
-                    Products ▾
+                    <a href="/products">Products ▾</a>
 
                     <ul className="dropdown-menu">
-                        <li>Category 1</li>
-                        <li>Category 2</li>
+                        <li>
+                            <a href="/products/category1">Category 1</a>
+                        </li>
+
+                        <li>
+                            <a href="/products/category2">Category 2</a>
+                        </li>
                     </ul>
                 </li>
 
-                <li>Brands</li>
-
                 <li className="dropdown">
-                    Fabrics ▾
+                    <a href="/brands">Brands ▾</a>
 
                     <ul className="dropdown-menu">
-                        <li>Category 1</li>
-                        <li>Category 2</li>
+                        <li>
+                            <a href="/brands/category1">Category 1</a>
+                        </li>
+
+                        <li>
+                            <a href="/brands/category2">Category 2</a>
+                        </li>
                     </ul>
                 </li>
 
-                <li>About Us</li>
+                <li className="dropdown">
+                    <a href="/fabrics">Fabrics ▾</a>
 
-                <li>Contact Us</li>
+                    <ul className="dropdown-menu">
+                        <li>
+                            <a href="/fabrics/category1">Category 1</a>
+                        </li>
+
+                        <li>
+                            <a href="/fabrics/category2">Category 2</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="/about">About Us</a>
+                </li>
+
+                <li>
+                    <a href="/contact">Contact Us</a>
+                </li>
 
             </ul>
-
             {/* ENQUIRE BUTTON */}
             <button
                 className="enquire-btn"

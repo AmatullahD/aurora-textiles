@@ -9,10 +9,8 @@ export default function AboutSection() {
       style={{
         width: "100%",
         background: "#ffffff",
-        padding:
-          window.innerWidth < 768
-            ? "30px 20px 0px"
-            : "40px 8% 0px",
+        padding: "60px 20px",
+       fontSize: "36px",
         boxSizing: "border-box",
         overflow: "hidden",
       }}

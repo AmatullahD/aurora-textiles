@@ -13,14 +13,15 @@ import {
 export default function Footer() {
   return (
     <footer
-      style={{
-        width: "100%",
-        backgroundColor: "#122a4b",
-        color: "#fff",
-        paddingTop: "40px",
-        boxSizing: "border-box",
-      }}
-    >
+  style={{
+    width: "100%",
+    backgroundColor: "#122a4b",
+    color: "#fff",
+    marginTop: "60px",
+    paddingTop: "40px",
+    boxSizing: "border-box",
+  }}
+>
       {/* MAIN FOOTER */}
       <div
         style={{
