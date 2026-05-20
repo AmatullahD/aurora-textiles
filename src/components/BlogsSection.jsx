@@ -42,7 +42,7 @@ export default function BlogsSection() {
           fontSize: "34px",
           color: "#0B2C66",
           fontWeight: "400",
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "'Cinzel Decorative', serif",
           marginTop: 0,
           marginBottom: "55px",
           letterSpacing: "1px",
@@ -114,7 +114,7 @@ export default function BlogsSection() {
                 marginTop: "18px",
                 marginBottom: "22px",
                 fontWeight: "500",
-                fontFamily: "'Cormorant Garamond', serif",
+                fontFamily: "'Cinzel Decorative', serif",
                 textTransform: "uppercase",
               }}
             >

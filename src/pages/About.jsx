@@ -105,7 +105,7 @@ export default function AboutPage() {
               fontWeight: "600",
               margin: 0,
               lineHeight: "1.1",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cinzel Decorative', serif",
               textTransform: "uppercase",
             }}
           >
@@ -150,7 +150,7 @@ export default function AboutPage() {
                 style={{
                   fontSize: window.innerWidth < 768 ? "20px" : "35px",
                   color: "#122a4b",
-                  fontFamily: "'Cormorant Garamond', serif",
+                  fontFamily: "'Cinzel Decorative', serif",
                   margin: 0,
                   fontWeight: "600",
                   textTransform: "uppercase",

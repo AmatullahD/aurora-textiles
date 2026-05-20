@@ -66,7 +66,7 @@ export default function ContactPage() {
                             fontWeight: "600",
                             margin: 0,
                             lineHeight: "1.1",
-                            fontFamily: "'Cormorant Garamond', serif",
+                            fontFamily: "'Cinzel Decorative', serif",
                             textTransform: "uppercase",
                         }}
                     >
@@ -95,7 +95,7 @@ export default function ContactPage() {
                         style={{
                             color: "#122a4b",
                             fontSize: window.innerWidth < 768 ? "28px" : "32px",
-                            fontFamily: "'Cormorant Garamond', serif",
+                            fontFamily: "'Cinzel Decorative', serif",
                             margin: 0,
                             fontWeight: "600",
                             textTransform: "uppercase",

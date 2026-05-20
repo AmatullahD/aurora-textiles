@@ -13,15 +13,15 @@ import {
 export default function Footer() {
   return (
     <footer
-  style={{
-    width: "100%",
-    backgroundColor: "#122a4b",
-    color: "#fff",
-    marginTop: "60px",
-    paddingTop: "40px",
-    boxSizing: "border-box",
-  }}
->
+      style={{
+        width: "100%",
+        backgroundColor: "#122a4b",
+        color: "#fff",
+        marginTop: "60px",
+        paddingTop: "40px",
+        boxSizing: "border-box",
+      }}
+    >
       {/* MAIN FOOTER */}
       <div
         style={{
@@ -42,7 +42,7 @@ export default function Footer() {
             style={{
               fontSize: "22px",
               marginBottom: "25px",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cinzel Decorative', serif",
               fontWeight: "500",
             }}
           >
@@ -68,7 +68,7 @@ export default function Footer() {
               fontSize: "22px",
               marginTop: "40px",
               marginBottom: "20px",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cinzel Decorative', serif",
               fontWeight: "500",
             }}
           >
@@ -107,7 +107,7 @@ export default function Footer() {
             style={{
               fontSize: "22px",
               marginBottom: "25px",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cinzel Decorative', serif",
               fontWeight: "500",
             }}
           >
@@ -173,7 +173,7 @@ export default function Footer() {
             style={{
               fontSize: "22px",
               marginBottom: "25px",
-              fontFamily: "'Cormorant Garamond', serif",
+              fontFamily: "'Cinzel Decorative', serif",
               fontWeight: "500",
             }}
           >
@@ -230,7 +230,7 @@ export default function Footer() {
               border: 0,
               borderRadius: "8px",
             }}
-            allowFullScreen=""
+            allowFullScreen="/FAQ-IMAGE.JPG"
             loading="lazy"
           ></iframe>
         </div>

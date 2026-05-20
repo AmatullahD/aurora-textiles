@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
           fontSize: "32px",
           fontWeight: "400",
           color: "#0B2C66",
-          fontFamily: "'Cormorant Garamond', serif",
+          fontFamily: "'Cinzel Decorative', serif",
           marginBottom: "25px",
           marginTop: 0,
           letterSpacing: "1px",
