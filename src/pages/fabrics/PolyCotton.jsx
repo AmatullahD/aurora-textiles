@@ -1,6 +1,71 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+
+function PolyCottonCard({ icon, title, desc }) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "1 1 220px",
+        maxWidth: "280px",
+        height: "220px",
+        border: "5px solid #1a237e",
+        borderRadius: "18px",
+        padding: "32px 24px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <div style={{ fontSize: "36px", color: "#b8960c", marginBottom: "14px" }}>
+        {icon}
+      </div>
+
+      {/* Title — before hover, bold 24px */}
+      {!hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "24px",
+          fontWeight: "700",
+          color: "#111",
+          lineHeight: "1.4",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {title}
+        </p>
+      )}
+
+      {/* Description — after hover, small text */}
+      {hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "14px",
+          fontWeight: "400",
+          color: "#333",
+          lineHeight: "1.6",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
 
 export default function PolyCottonPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -113,7 +178,7 @@ export default function PolyCottonPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polycotton-1.webp"
             alt="PolyCotton Fabric"
             style={{
               width: "100%",
@@ -174,17 +239,27 @@ export default function PolyCottonPage() {
           {/* Buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                background: "#b8960c",
+                background: "#8b7d3a",
                 color: "#fff",
-                border: "none",
-                borderRadius: "6px",
-                padding: "14px 32px",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "500",
+                borderRadius: "6px",
                 cursor: "pointer",
-                fontFamily: "sans-serif",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
@@ -228,10 +303,11 @@ export default function PolyCottonPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR POLYCOTTON FABRICS */}
+      {/* SECTION 2 – WHY CHOOSE AURORA FOR POLYCOTTON FABRICS */}
       <section
         style={{
           width: "100%",
-          background: "#f9f9f9",
+          background: "#fff",
           padding: "60px 40px",
           boxSizing: "border-box",
           marginBottom: "70px",
@@ -261,120 +337,30 @@ export default function PolyCottonPage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 1 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>★</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Sourced from certified textile mills for consistent performance
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>⌃⌃</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Tailored options for UAE-based workwear &amp; menswear industries
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>🤝</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "14px",
-                fontWeight: "400",
-                color: "#333",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Flexible bulk ordering for designers, retailers, and uniform suppliers
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>✔</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Fast delivery across Dubai and the MENA region
-            </p>
-          </div>
+          <PolyCottonCard
+            icon="★"
+            title="Certified Mills"
+            desc="Sourced from certified textile mills for consistent performance"
+          />
+          <PolyCottonCard
+            icon="⌃⌃"
+            title="UAE Tailored Options"
+            desc="Tailored options for UAE-based workwear & menswear industries"
+          />
+          <PolyCottonCard
+            icon="🤝"
+            title="Flexible Bulk Orders"
+            desc="Flexible bulk ordering for designers, retailers, and uniform suppliers"
+          />
+          <PolyCottonCard
+            icon="✔"
+            title="Fast MENA Delivery"
+            desc="Fast delivery across Dubai and the MENA region"
+          />
         </div>
       </section>
 
+      
       {/* SECTION 3 – WHAT IS POLYCOTTON FABRIC */}
       <section
         style={{
@@ -391,7 +377,7 @@ export default function PolyCottonPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 46%", maxWidth: "46%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polycotton-2.webp"
             alt="What is Polycotton Fabric"
             style={{
               width: "100%",
@@ -620,6 +606,7 @@ export default function PolyCottonPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

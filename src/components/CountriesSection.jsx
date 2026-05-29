@@ -1,28 +1,46 @@
 import React from "react";
-import {
-  FaLandmark,
-  FaMosque,
-  FaMountain,
-} from "react-icons/fa";
-import { GiElephant } from "react-icons/gi";
 
 export default function CountriesSection() {
   const countries = [
     {
       name: "South Africa",
-      icon: <GiElephant />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2026/01/safari.png.webp"
+          alt="South Africa"
+          style={{ width: "75px", height: "75px", objectFit: "contain", }}
+        />
+      ),
     },
     {
       name: "Egypt",
-      icon: <FaMountain />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2026/01/pyramids.png.webp"
+          alt="Egypt"
+          style={{ width: "75px", height: "75px", objectFit: "contain", }}
+        />
+      ),
     },
     {
       name: "Saudi Arabia",
-      icon: <FaLandmark />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2026/01/saudi-arabia.png.webp"
+          alt="Saudi Arabia"
+          style={{ width: "75px", height: "75px", objectFit: "contain",  }}
+        />
+      ),
     },
     {
       name: "Tanzania",
-      icon: <FaMosque />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2026/01/dodoma.png.webp"
+          alt="Tanzania"
+          style={{ width: "75px", height: "75px", objectFit: "contain", }}
+        />
+      ),
     },
   ];
 
@@ -75,12 +93,10 @@ export default function CountriesSection() {
               minHeight: "190px",
               padding: "20px",
               boxSizing: "border-box",
-
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-
               color: "white",
               cursor: "pointer",
               transition: "all 0.3s ease",
@@ -96,6 +112,7 @@ export default function CountriesSection() {
             <div
               style={{
                 fontSize: "58px",
+                fontWeight: "bold",
                 marginBottom: "16px",
                 display: "flex",
                 alignItems: "center",

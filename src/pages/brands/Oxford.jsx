@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function OxfordPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -149,7 +150,7 @@ export default function OxfordPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford.webp"
                         alt="Oxford Brand Logo"
                         style={{
                             width: "100%",
@@ -181,7 +182,7 @@ export default function OxfordPage() {
                 {/* Left — image */}
                 <div style={{ flex: "0 0 auto", width: window.innerWidth < 768 ? "100%" : "380px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford-1.webp"
                         alt="Oxford Shirt Men"
                         style={{
                             width: "100%",
@@ -282,7 +283,7 @@ export default function OxfordPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford-2.webp"
                         alt="Oxford Shirt Fabric"
                         style={{
                             width: "100%",
@@ -315,7 +316,7 @@ export default function OxfordPage() {
                 {/* Left — tall image */}
                 <div style={{ flex: "0 0 auto", width: window.innerWidth < 768 ? "100%" : "420px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford-3.webp"
                         alt="Oxford Shirting Dubai"
                         style={{
                             width: "100%",
@@ -543,17 +544,27 @@ export default function OxfordPage() {
                     </p>
 
                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            background: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
-                            borderRadius: "4px",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -563,7 +574,7 @@ export default function OxfordPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford-4.webp"
                         alt="Aurora Textiles Fabric Store"
                         style={{
                             width: "100%",
@@ -595,7 +606,7 @@ export default function OxfordPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/oxford-5.webp"
                         alt="Oxford Fabric Swatches"
                         style={{
                             width: "100%",
@@ -700,6 +711,7 @@ export default function OxfordPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

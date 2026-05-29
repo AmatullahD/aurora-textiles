@@ -71,8 +71,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                             }}
                         >
                             Home
@@ -95,8 +96,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                 fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
@@ -178,8 +180,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                 fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
@@ -474,8 +477,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                 fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
@@ -558,8 +562,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                 fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                             }}
                         >
                             About Us
@@ -573,8 +578,9 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontSize: "20px",
-                                fontWeight: 600,
+                                 fontFamily: "poppins, sans-serif",
+                                fontSize: "18px",
+                                fontWeight: 400,
                             }}
                         >
                             Contact Us

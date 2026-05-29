@@ -2,22 +2,22 @@ import { useState } from "react";
 
 export default function PartnerBrands() {
     const brands = [
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/Oxford-Logo_page-0001-e1736148501624.jpg.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/kolpaam.jpg.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/lino.jpg.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/nemssis.jpg.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/spada.jpg.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/su-4.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp",
+        "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
     ];
 
     const visibleItems = 6;
@@ -26,10 +26,15 @@ export default function PartnerBrands() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const getVisibleBrands = () => {
-        return brands.slice(
-            currentSlide,
-            currentSlide + visibleItems
-        );
+        return brands.slice(currentSlide, currentSlide + visibleItems);
+    };
+
+    const handlePrev = () => {
+        setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+    };
+
+    const handleNext = () => {
+        setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
     };
 
     return (
@@ -56,44 +61,87 @@ export default function PartnerBrands() {
                 Partner Brands
             </h4>
 
-            {/* Brands Row */}
+            {/* Slider Row with Arrows */}
             <div
                 style={{
-                    display: "grid",
-                    gridTemplateColumns:
-                        window.innerWidth < 768
-                            ? "repeat(2, 1fr)"
-                            : "repeat(6, 1fr)",
-                    gap: window.innerWidth < 768 ? "30px" : "40px",
+                    display: "flex",
                     alignItems: "center",
-                    justifyItems: "center",
+                    justifyContent: "center",
+                    gap: "16px",
                     marginBottom: "50px",
-                    transition: "0.4s ease",
                 }}
             >
-                {getVisibleBrands().map((brand, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            width: "100%",
-                            display: "flex",
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}
-                    >
-                        <img
-                            src={brand}
-                            alt="brand"
+                {/* Left Arrow */}
+
+                <div
+                    onClick={handlePrev}
+                    style={{
+                        cursor: "pointer",
+                        flexShrink: 0,
+                        color: "#aaaaaa",
+                        fontSize: "40px",
+                        userSelect: "none",
+                        lineHeight: 1,
+                    }}
+                >
+                    &#8249;
+                </div>
+
+                {/* Brands Grid */}
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns:
+                            window.innerWidth < 768
+                                ? "repeat(2, 1fr)"
+                                : "repeat(6, 1fr)",
+                        gap: window.innerWidth < 768 ? "30px" : "40px",
+                        alignItems: "center",
+                        justifyItems: "center",
+                        flex: 1,
+                        transition: "0.4s ease",
+                    }}
+                >
+                    {getVisibleBrands().map((brand, index) => (
+                        <div
+                            key={index}
                             style={{
                                 width: "100%",
-                                maxWidth: window.innerWidth < 768 ? "120px" : "180px",
-                                objectFit: "contain",
-                                transition: "0.3s ease",
-                                cursor: "pointer",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
                             }}
-                        />
-                    </div>
-                ))}
+                        >
+                            <img
+                                src={brand}
+                                alt="brand"
+                                style={{
+                                    width: "100%",
+                                    maxWidth: window.innerWidth < 768 ? "120px" : "180px",
+                                    objectFit: "contain",
+                                    transition: "0.3s ease",
+                                    cursor: "pointer",
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* Right Arrow */}
+                {/* Right Arrow */}
+                <div
+                    onClick={handleNext}
+                    style={{
+                        cursor: "pointer",
+                        flexShrink: 0,
+                        color: "#aaaaaa",
+                        fontSize: "40px",
+                        userSelect: "none",
+                        lineHeight: 1,
+                    }}
+                >
+                    &#8250;
+                </div>
             </div>
 
             {/* Dots */}
@@ -114,8 +162,7 @@ export default function PartnerBrands() {
                             width: currentSlide === index ? "12px" : "9px",
                             height: currentSlide === index ? "12px" : "9px",
                             borderRadius: "50%",
-                            background:
-                                currentSlide === index ? "#000" : "#c7c7c7",
+                            background: currentSlide === index ? "#000" : "#c7c7c7",
                             cursor: "pointer",
                             transition: "0.3s ease",
                         }}

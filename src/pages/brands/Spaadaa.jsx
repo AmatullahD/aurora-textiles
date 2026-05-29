@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function SpaadaaPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -111,7 +112,7 @@ export default function SpaadaaPage() {
                     }}
                 >
                     <img
-                        src="/spaadaa-logo.jpg"
+                        src="/spaadaa-1.webp"
                         alt="Spaadaa Logo"
                         style={{
                             width: "100%",
@@ -211,7 +212,7 @@ export default function SpaadaaPage() {
                     }}
                 >
                     <img
-                        src="/spaadaa-suit-dark.jpg"
+                        src="/spaadaa-2.webp"
                         alt="Designed for Men's Shirting Needs"
                         style={{
                             width: "100%",
@@ -248,7 +249,7 @@ export default function SpaadaaPage() {
                     }}
                 >
                     <img
-                        src="/spaadaa-suit-grey.jpg"
+                        src="/spaadaa-3.webp"
                         alt="Material Options for Spaadaa Shirtings"
                         style={{
                             width: "100%",
@@ -360,18 +361,28 @@ export default function SpaadaaPage() {
                         timely delivery and bulk availability. As a trusted textile partner, we prioritize fabric
                         reliability and responsive service.
                     </p>
-                    <button
+                   <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            backgroundColor: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
+                            border: "2px solid #050e5f",
                             padding: "14px 36px",
-                            fontSize: "16px",
-                            fontFamily: "'Georgia', serif",
-                            fontWeight: "600",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
                             letterSpacing: "0.5px",
-                            borderRadius: "4px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -389,7 +400,7 @@ export default function SpaadaaPage() {
                     }}
                 >
                     <img
-                        src="/faq-imagejpg"
+                        src="/spaadaa-4.webp"
                         alt="Spaadaa Fabric"
                         style={{
                             width: "100%",
@@ -426,7 +437,7 @@ export default function SpaadaaPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/spaadaa-5.webp"
                         alt="Spaadaa Fabric Close-up"
                         style={{
                             width: "100%",
@@ -524,6 +535,7 @@ export default function SpaadaaPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

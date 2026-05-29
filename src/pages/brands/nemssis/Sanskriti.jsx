@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function SanskritiPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -110,7 +111,7 @@ export default function SanskritiPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-logo.png"
+                        src="/nemssis-1.webp"
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
@@ -203,23 +204,32 @@ export default function SanskritiPage() {
                         and color palettes suited for every festive mood, this line is a
                         go-to for ethnic elegance.
                     </p>
-                    <a
-                        href="/contact"
+                    <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            display: "inline-block",
-                            padding: "14px 36px",
-                            backgroundColor: "#8b8000",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontWeight: "600",
-                            textDecoration: "none",
+                            fontWeight: "500",
                             borderRadius: "6px",
+                            cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
-                    </a>
+                    </button>
                 </div>
 
                 {/* Right: Image */}
@@ -233,12 +243,12 @@ export default function SanskritiPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/sanskriti-1.webp"
                         alt="Ethnic Print Fabrics"
                         style={{
                             width: "100%",
                             height: "100%",
-                            objectFit: "cover",
+                            objectFit: "contain",
                             display: "block",
                         }}
                     />
@@ -270,7 +280,7 @@ export default function SanskritiPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/sanskriti-2.webp"
                         alt="Fabric Types"
                         style={{
                             width: "100%",
@@ -397,7 +407,7 @@ export default function SanskritiPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/sanskriti-3.webp"
                         alt="Aurora Textiles"
                         style={{
                             width: "100%",
@@ -434,7 +444,7 @@ export default function SanskritiPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/sanskriti-4.webp"
                         alt="FAQ Fabric"
                         style={{
                             width: "100%",
@@ -565,6 +575,7 @@ export default function SanskritiPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

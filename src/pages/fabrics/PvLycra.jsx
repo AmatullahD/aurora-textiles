@@ -1,6 +1,70 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+
+function PvLycraCard({ icon, title, desc, isBottom }) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        border: "5px solid #1a237e",
+        borderRadius: "18px",
+        padding: "32px 28px",
+        textAlign: "center",
+        flex: isBottom ? "0 0 calc(45% - 12px)" : "0 0 calc(33% - 16px)",
+        maxWidth: isBottom ? "calc(45% - 12px)" : "calc(33% - 16px)",
+        height: "220px",
+        boxSizing: "border-box",
+        background: "#fff",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <span style={{ fontSize: "36px", color: "#b8960c", lineHeight: 1, marginBottom: "14px" }}>
+        {icon}
+      </span>
+
+      {/* Title — before hover, bold 24px */}
+      {!hovered && (
+        <p style={{
+          fontSize: "24px",
+          fontWeight: "700",
+          color: "#111",
+          lineHeight: "1.4",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {title}
+        </p>
+      )}
+
+      {/* Description — after hover, small text */}
+      {hovered && (
+        <p style={{
+          fontSize: "14px",
+          fontWeight: "400",
+          color: "#333",
+          lineHeight: "1.6",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
+
 
 export default function PvLycraPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +173,7 @@ export default function PvLycraPage() {
       >
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/pvLycra-1.webp"
             alt="PV Lycra Suit"
             style={{
               width: "100%",
@@ -152,15 +216,27 @@ export default function PvLycraPage() {
           </p>
           <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
             <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                background: "#b8960c",
+                background: "#8b7d3a",
                 color: "#fff",
-                border: "none",
-                padding: "14px 32px",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "500",
+                borderRadius: "6px",
                 cursor: "pointer",
-                borderRadius: "4px",
+                letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
@@ -206,6 +282,7 @@ export default function PvLycraPage() {
       </section>
 
       {/* SECTION 2: WHY CHOOSE AURORA TEXTILES */}
+      {/* SECTION 2: WHY CHOOSE AURORA TEXTILES */}
       <section
         style={{
           width: "100%",
@@ -229,6 +306,39 @@ export default function PvLycraPage() {
         >
           WHY CHOOSE AURORA TEXTILES FOR PV LYCRA FABRICS?
         </h2>
+
+        {/* Row 1 — 3 cards */}
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto 24px auto",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "24px",
+            justifyContent: "center",
+          }}
+        >
+          <PvLycraCard
+            icon="★"
+            title="Reputable Mills"
+            desc="High-quality PV Lycra sourced from reputable mills"
+            isBottom={false}
+          />
+          <PvLycraCard
+            icon="❯❯"
+            title="Multiple Textures"
+            desc="Available in multiple textures, finishes, and stretch levels"
+            isBottom={false}
+          />
+          <PvLycraCard
+            icon="🤝"
+            title="Tailored Solutions"
+            desc="Tailored solutions for fashion houses, tailors, and uniform suppliers"
+            isBottom={false}
+          />
+        </div>
+
+        {/* Row 2 — 2 cards centered */}
         <div
           style={{
             maxWidth: "1200px",
@@ -239,66 +349,18 @@ export default function PvLycraPage() {
             justifyContent: "center",
           }}
         >
-          {[
-            {
-              icon: "★",
-              iconColor: "#b8960c",
-              text: "High-quality PV Lycra sourced from reputable mills",
-            },
-            {
-              icon: "❯❯",
-              iconColor: "#b8960c",
-              text: "Available in multiple textures, finishes, and stretch levels",
-            },
-            {
-              icon: "🤝",
-              iconColor: "#b8960c",
-              text: "Tailored solutions for fashion houses, tailors, and uniform suppliers",
-            },
-            {
-              icon: "📊",
-              iconColor: "#b8960c",
-              text: "Reliable bulk supply and fast delivery across Dubai and MENA",
-            },
-            {
-              icon: "✔",
-              iconColor: "#b8960c",
-              text: "Expert guidance to help you choose the right suiting fabric for your needs",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                border: "2px solid #1a237e",
-                borderRadius: "16px",
-                padding: "36px 28px",
-                textAlign: "center",
-                flex: i < 3 ? "0 0 calc(33% - 16px)" : "0 0 calc(45% - 12px)",
-                maxWidth: i < 3 ? "calc(33% - 16px)" : "calc(45% - 12px)",
-                boxSizing: "border-box",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "20px",
-              }}
-            >
-              <span style={{ fontSize: "36px", color: item.iconColor, lineHeight: 1 }}>
-                {item.icon}
-              </span>
-              <p
-                style={{
-                  fontSize: "16px",
-                  color: "#222",
-                  fontWeight: "500",
-                  lineHeight: "1.5",
-                  margin: 0,
-                  textAlign: "center",
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
-          ))}
+          <PvLycraCard
+            icon="📊"
+            title="Bulk & Fast Delivery"
+            desc="Reliable bulk supply and fast delivery across Dubai and MENA"
+            isBottom={true}
+          />
+          <PvLycraCard
+            icon="✔"
+            title="Expert Guidance"
+            desc="Expert guidance to help you choose the right suiting fabric for your needs"
+            isBottom={true}
+          />
         </div>
       </section>
 
@@ -317,7 +379,7 @@ export default function PvLycraPage() {
       >
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/pvLycra-2.avif"
             alt="PV Lycra Fabric"
             style={{
               width: "100%",
@@ -431,51 +493,24 @@ export default function PvLycraPage() {
             for quality and consistency.
           </p>
         </div>
-        <div style={{ flex: "0 0 50%", maxWidth: "50%" }}>
+        <div style={{ flex: 1 }}>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "4px",
-              borderRadius: "12px",
+              height: "520px",
               overflow: "hidden",
+              borderRadius: "4px",
             }}
           >
-            {[
-              { label: "Men's Formal Suits" },
-              { label: "Trousers & Pants" },
-              { label: "Uniforms" },
-              { label: "Blazers & Jackets" },
-            ].map((item, i) => (
-              <div key={i} style={{ position: "relative" }}>
-                <img
-                  src="/faq-image.jpg"
-                  alt={item.label}
-                  style={{
-                    width: "100%",
-                    height: "220px",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    background: "rgba(0,0,0,0.52)",
-                    color: "#fff",
-                    fontSize: "13px",
-                    fontWeight: "600",
-                    padding: "8px 10px",
-                    textAlign: "center",
-                  }}
-                >
-                  {item.label}
-                </div>
-              </div>
-            ))}
+            <img
+              src="/pvLycra-3.webp"
+              alt="Application"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -571,6 +606,7 @@ export default function PvLycraPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

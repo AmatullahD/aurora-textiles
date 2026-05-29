@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function JohnCavendishPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -111,7 +112,7 @@ export default function JohnCavendishPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/john-cavendish.webp"
                         alt="John Cavendish Logo"
                         style={{
                             width: "100%",
@@ -212,7 +213,7 @@ export default function JohnCavendishPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/john-1.webp"
                         alt="John Cavendish Suiting Fabric"
                         style={{
                             width: "100%",
@@ -244,7 +245,7 @@ export default function JohnCavendishPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/john-2.webp"
                         alt="John Cavendish Men's Fabrics"
                         style={{
                             width: "100%",
@@ -388,18 +389,28 @@ export default function JohnCavendishPage() {
                         or request samples of our latest{" "}
                         <strong>John Cavendish suiting</strong> range.
                     </p>
-                    <button
+                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            background: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
-                            borderRadius: "4px",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -409,7 +420,7 @@ export default function JohnCavendishPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/john-3.webp"
                         alt="John Cavendish Commercial Fabrics"
                         style={{
                             width: "100%",
@@ -441,7 +452,7 @@ export default function JohnCavendishPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/john-4.webp"
                         alt="John Cavendish Fabric Swatches"
                         style={{
                             width: "100%",
@@ -546,6 +557,7 @@ export default function JohnCavendishPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

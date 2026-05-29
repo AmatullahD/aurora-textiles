@@ -1,6 +1,72 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+
+function PolyViscoseCard({ icon, title, desc }) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "1 1 260px",
+        maxWidth: "340px",
+        height: "220px",
+        border: "5px solid #1a237e",
+        borderRadius: "18px",
+        padding: "32px 28px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "14px" }}>
+        {icon}
+      </div>
+
+      {/* Title — before hover, bold 24px */}
+      {!hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "24px",
+          fontWeight: "700",
+          color: "#111",
+          lineHeight: "1.4",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {title}
+        </p>
+      )}
+
+      {/* Description — after hover, small text */}
+      {hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "14px",
+          fontWeight: "400",
+          color: "#333",
+          lineHeight: "1.6",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
+
 
 export default function PolyViscosePage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -120,7 +186,7 @@ export default function PolyViscosePage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polyviscose-1.webp"
             alt="Poly Viscose Fabric"
             style={{
               width: "100%",
@@ -182,17 +248,27 @@ export default function PolyViscosePage() {
           {/* Buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                background: "#b8960c",
+                background: "#8b7d3a",
                 color: "#fff",
-                border: "none",
-                borderRadius: "6px",
-                padding: "14px 32px",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "500",
+                borderRadius: "6px",
                 cursor: "pointer",
-                fontFamily: "sans-serif",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
@@ -236,10 +312,11 @@ export default function PolyViscosePage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR POLY VISCOSE SUITING */}
+      {/* SECTION 2 – WHY CHOOSE AURORA FOR POLY VISCOSE SUITING */}
       <section
         style={{
           width: "100%",
-          background: "#f9f9f9",
+          background: "#fff",
           padding: "60px 40px",
           boxSizing: "border-box",
           marginBottom: "70px",
@@ -270,89 +347,21 @@ export default function PolyViscosePage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 1 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>★</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              High-quality blends sourced from trusted textile mills
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>⌃⌃</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Available in classic and modern textures for professional use
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>🤝</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Perfect for UAE's climate—breathable yet polished
-            </p>
-          </div>
+          <PolyViscoseCard
+            icon="★"
+            title="Trusted Mills"
+            desc="High-quality blends sourced from trusted textile mills"
+          />
+          <PolyViscoseCard
+            icon="⌃⌃"
+            title="Classic & Modern Textures"
+            desc="Available in classic and modern textures for professional use"
+          />
+          <PolyViscoseCard
+            icon="🤝"
+            title="UAE Climate Ready"
+            desc="Perfect for UAE's climate—breathable yet polished"
+          />
         </div>
 
         {/* Row 2 – 2 cards centered */}
@@ -366,61 +375,16 @@ export default function PolyViscosePage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 4 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>📊</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Suitable for both retail and bulk Poly Viscose fabric supply
-            </p>
-          </div>
-
-          {/* Card 5 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>✔</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Quick delivery and expert guidance for fabric selection
-            </p>
-          </div>
+          <PolyViscoseCard
+            icon="📊"
+            title="Retail & Bulk Supply"
+            desc="Suitable for both retail and bulk Poly Viscose fabric supply"
+          />
+          <PolyViscoseCard
+            icon="✔"
+            title="Quick Delivery"
+            desc="Quick delivery and expert guidance for fabric selection"
+          />
         </div>
       </section>
 
@@ -440,7 +404,7 @@ export default function PolyViscosePage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 46%", maxWidth: "46%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polyviscose-2.webp"
             alt="What is Poly Viscose Fabric"
             style={{
               width: "100%",
@@ -586,37 +550,25 @@ export default function PolyViscosePage() {
           </p>
         </div>
 
-        {/* Right Image Grid – 2x2 */}
+        {/* Right Image Grid – */}
         <div style={{ flex: 1 }}>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gridTemplateRows: "1fr 1fr",
-              gap: "6px",
               height: "520px",
+              overflow: "hidden",
+              borderRadius: "4px",
             }}
           >
-            {[0, 1, 2, 3].map((i) => (
-              <div
-                key={i}
-                style={{
-                  overflow: "hidden",
-                  borderRadius: "4px",
-                }}
-              >
-                <img
-                  src="/faq-image.jpg"
-                  alt={`Application ${i + 1}`}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-              </div>
-            ))}
+            <img
+              src="/polyviscose-3.webp"
+              alt="Application"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -718,6 +670,7 @@ export default function PolyViscosePage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

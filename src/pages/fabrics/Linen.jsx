@@ -1,6 +1,67 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+function LinenCard({ icon, title, desc }) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "1 1 260px",
+        maxWidth: "340px",
+        height: "220px",
+        border: "5px solid #1a237e",
+        borderRadius: "18px",
+        padding: "32px 28px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "14px" }}>
+        {icon}
+      </div>
+
+      {!hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "24px",
+          fontWeight: "600",
+          color: "#111",
+          lineHeight: "1.4",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {title}
+        </p>
+      )}
+
+      {hovered && (
+        <p style={{
+          fontFamily: "sans-serif",
+          fontSize: "14px",
+          fontWeight: "500",
+          color: "#333",
+          lineHeight: "1.6",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
 
 export default function LinenPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -113,7 +174,7 @@ export default function LinenPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/linen-1.webp"
             alt="Linen Fabric"
             style={{
               width: "100%",
@@ -173,17 +234,27 @@ export default function LinenPage() {
           {/* Buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                background: "#b8960c",
+                background: "#8b7d3a",
                 color: "#fff",
-                border: "none",
-                borderRadius: "6px",
-                padding: "14px 32px",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "500",
+                borderRadius: "6px",
                 cursor: "pointer",
-                fontFamily: "sans-serif",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
@@ -227,10 +298,11 @@ export default function LinenPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR LINEN FABRICS */}
+      {/* SECTION 2 – WHY CHOOSE AURORA FOR LINEN FABRICS */}
       <section
         style={{
           width: "100%",
-          background: "#f9f9f9",
+          background: "#fff",
           padding: "60px 40px",
           boxSizing: "border-box",
           marginBottom: "70px",
@@ -261,89 +333,21 @@ export default function LinenPage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 1 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>★</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Sourced from globally trusted textile partners
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>⌃⌃</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "400",
-                color: "#333",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Variety of GSMs and finishes for different tailoring needs
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>🤝</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Options available in pure linen and linen blends (cotton/viscose)
-            </p>
-          </div>
+          <LinenCard
+            icon="★"
+            title="Trusted Partners"
+            desc="Sourced from globally trusted textile partners"
+          />
+          <LinenCard
+            icon="⌃⌃"
+            title="GSMs & Finishes"
+            desc="Variety of GSMs and finishes for different tailoring needs"
+          />
+          <LinenCard
+            icon="🤝"
+            title="Pure & Blend Options"
+            desc="Options available in pure linen and linen blends (cotton/viscose)"
+          />
         </div>
 
         {/* Row 2 – 2 cards centered */}
@@ -357,61 +361,16 @@ export default function LinenPage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 4 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>📊</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Perfect for warm-weather dressing in the UAE
-            </p>
-          </div>
-
-          {/* Card 5 */}
-          <div
-            style={{
-              flex: "1 1 260px",
-              maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 28px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "18px" }}>✔</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "600",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Suitable for bulk orders, B2B clients, and fashion houses
-            </p>
-          </div>
+          <LinenCard
+            icon="📊"
+            title="Warm-Weather Ready"
+            desc="Perfect for warm-weather dressing in the UAE"
+          />
+          <LinenCard
+            icon="✔"
+            title="Bulk Orders Welcome"
+            desc="Suitable for bulk orders, B2B clients, and fashion houses"
+          />
         </div>
       </section>
 
@@ -431,7 +390,7 @@ export default function LinenPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 46%", maxWidth: "46%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/linen-2.webp"
             alt="What is Linen Fabric"
             style={{
               width: "100%",
@@ -541,45 +500,60 @@ export default function LinenPage() {
         >
           Applications of Linen Fabric
         </h2>
+
         <p
           style={{
             fontFamily: "sans-serif",
             fontSize: "15.5px",
             color: "#333",
             textAlign: "center",
-            margin: "0 0 36px 0",
+            margin: "0 0 40px 0",
             lineHeight: "1.7",
           }}
         >
-          At Aurora, our <strong>linen fabrics</strong> are widely used in crafting garments that
-          blend comfort and sophistication. Popular applications include:
+          At Aurora, our <strong>linen fabrics</strong> are widely used in
+          crafting garments that blend comfort and sophistication. Popular
+          applications include:
         </p>
 
-        {/* Grid Row 1 – 3 images */}
+        {/* TOP 3 IMAGES */}
         <div
           style={{
-            display: "flex",
-            gap: "0px",
-            marginBottom: "0px",
+            display: "grid",
+            gridTemplateColumns:
+              window.innerWidth < 768 ? "1fr" : "repeat(3, 1fr)",
+            gap: "20px",
+            marginBottom: "20px",
           }}
         >
           {[
-            "Tailored linen suits for men – formal yet breathable",
-            "Kurta fabrics and ethnic semi-formal wear",
-            "Linen-blend trousers and casual jackets",
-          ].map((label, i) => (
+            {
+              label:
+                "Tailored linen suits for men – formal yet breathable",
+              image: "/linen-3.webp",
+            },
+            {
+              label:
+                "Kurta fabrics and ethnic semi-formal wear",
+              image: "/linen-4.webp",
+            },
+            {
+              label:
+                "Linen-blend trousers and casual jackets",
+              image: "/linen-5.webp",
+            },
+          ].map((item, i) => (
             <div
               key={i}
               style={{
-                flex: 1,
                 position: "relative",
-                height: "460px",
+                height: window.innerWidth < 768 ? "320px" : "460px",
                 overflow: "hidden",
               }}
             >
               <img
-                src="/faq-image.jpg"
-                alt={label}
+                src={item.image}
+                alt={item.label}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -587,56 +561,76 @@ export default function LinenPage() {
                   display: "block",
                 }}
               />
+
+              {/* Overlay */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "rgba(0,0,0,0.35)",
+                  background: "rgba(0,0,0,0.38)",
                 }}
               />
+
+              {/* Text */}
               <div
                 style={{
                   position: "absolute",
-                  bottom: "40px",
-                  left: "24px",
-                  right: "24px",
-                  color: "#fff",
-                  fontFamily: "sans-serif",
-                  fontSize: "20px",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  textAlign: "center",
+                  inset: 0,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "25px",
                 }}
               >
-                {label}
+                <p
+                  style={{
+                    color: "#fff",
+                    fontSize: window.innerWidth < 768 ? "26px" : "22px",
+                    fontWeight: "700",
+                    lineHeight: "1.45",
+                    textAlign: "center",
+                    margin: 0,
+                  }}
+                >
+                  {item.label}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Grid Row 2 – 2 images */}
+        {/* BOTTOM 2 IMAGES */}
         <div
           style={{
-            display: "flex",
-            gap: "0px",
+            display: "grid",
+            gridTemplateColumns:
+              window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)",
+            gap: "20px",
           }}
         >
           {[
-            "Smart-casual shirts for weekend dressing",
-            "Ideal for bespoke tailoring and corporate gifting",
-          ].map((label, i) => (
+            {
+              label:
+                "Smart-casual shirts for weekend dressing",
+              image: "/linen-6.webp",
+            },
+            {
+              label:
+                "Ideal for bespoke tailoring and corporate gifting",
+              image: "/linen-7.webp",
+            },
+          ].map((item, i) => (
             <div
               key={i}
               style={{
-                flex: 1,
                 position: "relative",
-                height: "380px",
+                height: window.innerWidth < 768 ? "280px" : "340px",
                 overflow: "hidden",
               }}
             >
               <img
-                src="/faq-image.jpg"
-                alt={label}
+                src={item.image}
+                alt={item.label}
                 style={{
                   width: "100%",
                   height: "100%",
@@ -644,28 +638,40 @@ export default function LinenPage() {
                   display: "block",
                 }}
               />
+
+              {/* Overlay */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "rgba(0,0,0,0.35)",
+                  background: "rgba(0,0,0,0.38)",
                 }}
               />
+
+              {/* Text */}
               <div
                 style={{
                   position: "absolute",
-                  bottom: "40px",
-                  left: "24px",
-                  right: "24px",
-                  color: "#fff",
-                  fontFamily: "sans-serif",
-                  fontSize: "20px",
-                  fontWeight: "700",
-                  lineHeight: "1.4",
-                  textAlign: "center",
+                  inset: 0,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "25px",
                 }}
               >
-                {label}
+                <p
+                  style={{
+                    color: "#fff",
+                    fontSize: window.innerWidth < 768 ? "26px" : "22px",
+                    fontWeight: "700",
+                    lineHeight: "1.45",
+                    textAlign: "center",
+                    margin: 0,
+                    maxWidth: "80%",
+                  }}
+                >
+                  {item.label}
+                </p>
               </div>
             </div>
           ))}
@@ -769,6 +775,7 @@ export default function LinenPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

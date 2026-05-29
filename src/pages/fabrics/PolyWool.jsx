@@ -1,6 +1,80 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+
+function PolyWoolCard({ item }) {
+  const [hovered, setHovered] = React.useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "0 0 auto",
+        width: "300px",
+        height: "220px",
+        border: "5px solid #1a1a5e",
+        borderRadius: "18px",
+        padding: "32px 28px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <div
+        style={{
+          fontSize: "36px",
+          marginBottom: "16px",
+          color: "#c8a84b",
+        }}
+      >
+        {item.icon}
+      </div>
+
+      {/* Title — shown before hover */}
+      {!hovered && (
+        <p
+          style={{
+            fontSize: "24px",
+            fontWeight: "600",
+            color: "#222",
+            lineHeight: "1.4",
+            margin: 0,
+            textAlign: "center",
+          }}
+        >
+          {item.title}
+        </p>
+      )}
+
+      {/* Description — shown on hover */}
+      {hovered && (
+        <p
+          style={{
+            fontSize: "14px",
+            fontWeight: "500",
+            color: "#333",
+            lineHeight: "1.6",
+            margin: 0,
+            textAlign: "center",
+          }}
+        >
+          {item.desc}
+        </p>
+      )}
+    </div>
+  );
+}
 
 export default function PolyWoolPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -107,7 +181,7 @@ export default function PolyWoolPage() {
       >
         <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
           <img
-            src="/faq-image.jpg"
+            src="/blogs-1.avif"
             alt="Poly Wool Fabric"
             style={{
               width: "100%",
@@ -146,22 +220,32 @@ export default function PolyWoolPage() {
             for clients who want performance without compromising on elegance.
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <a
-              href="/contact"
+            <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                display: "inline-block",
-                padding: "14px 30px",
-                background: "#c8a84b",
+                background: "#8b7d3a",
                 color: "#fff",
-                fontWeight: "600",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                textDecoration: "none",
-                borderRadius: "4px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
-            </a>
+            </button>
             <a
               href="tel:+971000000000"
               style={{
@@ -201,6 +285,7 @@ export default function PolyWoolPage() {
       </section>
 
       {/* SECTION 2: WHY CHOOSE - Feature Cards */}
+      {/* SECTION 2: WHY CHOOSE - Feature Cards */}
       <section
         style={{
           background: "#fff",
@@ -237,51 +322,21 @@ export default function PolyWoolPage() {
           {[
             {
               icon: "⭐",
-              text: "Sourced from top textile mills with consistent blend quality",
+              title: "Premium Quality",
+              desc: "Sourced from top textile mills with consistent blend quality",
             },
             {
               icon: "❯❯",
-              text: "Variety of GSMs, weaves, and textures to match your style",
-              iconStyle: { color: "#c8a84b", fontSize: "28px" },
+              title: "Variety of Options",
+              desc: "Variety of GSMs, weaves, and textures to match your style",
             },
             {
               icon: "🤝",
-              text: "Reliable delivery and support across Dubai & MENA",
+              title: "Reliable Delivery",
+              desc: "Reliable delivery and support across Dubai & MENA",
             },
           ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                flex: "0 0 auto",
-                width: "300px",
-                border: "2px solid #1a1a5e",
-                borderRadius: "16px",
-                padding: "40px 28px",
-                textAlign: "center",
-                background: "#fff",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "36px",
-                  marginBottom: "20px",
-                  color: "#c8a84b",
-                }}
-              >
-                {item.icon}
-              </div>
-              <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#222",
-                  lineHeight: "1.5",
-                  margin: 0,
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
+            <PolyWoolCard key={i} item={item} />
           ))}
         </div>
 
@@ -299,46 +354,16 @@ export default function PolyWoolPage() {
           {[
             {
               icon: "📊",
-              text: "Available in solid shades, subtle patterns, and elegant finishes",
+              title: "Solid Shades & Patterns",
+              desc: "Available in solid shades, subtle patterns, and elegant finishes",
             },
             {
               icon: "✅",
-              text: "Ideal for bulk orders by tailors, wholesalers, and designers",
+              title: "Bulk Orders Welcome",
+              desc: "Ideal for bulk orders by tailors, wholesalers, and designers",
             },
           ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                flex: "0 0 auto",
-                width: "300px",
-                border: "2px solid #1a1a5e",
-                borderRadius: "16px",
-                padding: "40px 28px",
-                textAlign: "center",
-                background: "#fff",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "36px",
-                  marginBottom: "20px",
-                  color: "#c8a84b",
-                }}
-              >
-                {item.icon}
-              </div>
-              <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#222",
-                  lineHeight: "1.5",
-                  margin: 0,
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
+            <PolyWoolCard key={i} item={item} />
           ))}
         </div>
       </section>
@@ -357,7 +382,7 @@ export default function PolyWoolPage() {
       >
         <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polywool-2.webp"
             alt="Poly Wool Fabric Close Up"
             style={{
               width: "100%",
@@ -439,6 +464,7 @@ export default function PolyWoolPage() {
         >
           Applications Of Poly Wool Fabric
         </h2>
+
         <p
           style={{
             textAlign: "center",
@@ -447,36 +473,49 @@ export default function PolyWoolPage() {
             marginBottom: "40px",
           }}
         >
-          Our premium <strong>poly wool suiting fabrics</strong> are used in a wide range of
-          menswear garments including:
+          Our premium <strong>poly wool suiting fabrics</strong> are used in a
+          wide range of menswear garments including:
         </p>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "20px",
-            maxWidth: "1100px",
+            gridTemplateColumns:
+              window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)",
+            gap: "22px",
+            maxWidth: "1150px",
             margin: "0 auto",
           }}
         >
           {[
-            { label: "Blazers for formal and semi-formal events" },
-            { label: "Business suits & corporate uniforms" },
-            { label: "Tailored trousers and waistcoats" },
-            { label: "Kandura & Dishdasha" },
+            {
+              label: "Blazers for formal and semi-formal events",
+              image: "/polywool-3.webp",
+            },
+            {
+              label: "Business suits & corporate uniforms",
+              image: "/polywool-4.webp",
+            },
+            {
+              label: "Tailored trousers and waistcoats",
+              image: "/polywool-5.jpg",
+            },
+            {
+              label: "Kandura & Dishdasha",
+              image: "/polywool-6.jpg",
+            },
           ].map((item, i) => (
             <div
               key={i}
               style={{
                 position: "relative",
-                height: "300px",
+                height: window.innerWidth < 768 ? "240px" : "300px",
                 overflow: "hidden",
                 borderRadius: "4px",
               }}
             >
               <img
-                src="/faq-image.jpg"
+                src={item.image}
                 alt={item.label}
                 style={{
                   width: "100%",
@@ -485,29 +524,36 @@ export default function PolyWoolPage() {
                   display: "block",
                 }}
               />
+
+              {/* Dark overlay */}
               <div
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background: "rgba(0,0,0,0.40)",
+                  background: "rgba(0,0,0,0.38)",
                 }}
               />
+
+              {/* Text */}
               <div
                 style={{
                   position: "absolute",
-                  bottom: "30px",
-                  left: "30px",
-                  right: "30px",
+                  inset: 0,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "20px",
                 }}
               >
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: "22px",
+                    fontSize: window.innerWidth < 768 ? "26px" : "22px",
                     fontWeight: "700",
-                    margin: 0,
-                    lineHeight: "1.3",
+                    lineHeight: "1.4",
                     textAlign: "center",
+                    margin: 0,
+                    maxWidth: "80%",
                   }}
                 >
                   {item.label}
@@ -629,6 +675,7 @@ export default function PolyWoolPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

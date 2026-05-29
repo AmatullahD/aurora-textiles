@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
 
 export default function CottonPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const faqs = [
     {
@@ -109,7 +112,7 @@ export default function CottonPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/cotton.webp"
             alt="Cotton Fabric"
             style={{
               width: "100%",
@@ -173,21 +176,31 @@ export default function CottonPage() {
           {/* Buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <button
-              style={{
-                background: "#b8960c",
-                color: "#fff",
-                border: "none",
-                borderRadius: "6px",
-                padding: "14px 32px",
-                fontSize: "15px",
-                fontWeight: "600",
-                cursor: "pointer",
-                fontFamily: "sans-serif",
-                letterSpacing: "0.5px",
-              }}
-            >
-              Contact Us
-            </button>
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
+                        style={{
+                            background: "#8b7d3a",
+                            color: "#fff",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
+                            cursor: "pointer",
+                            letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
+                        }}
+                    >
+                        Contact Us
+                    </button>
             <button
               style={{
                 background: "#111",
@@ -230,7 +243,7 @@ export default function CottonPage() {
       <section
         style={{
           width: "100%",
-          background: "#f9f9f9",
+          background: "#ffffff",
           padding: "60px 40px",
           boxSizing: "border-box",
           marginBottom: "70px",
@@ -262,86 +275,168 @@ export default function CottonPage() {
         >
           {/* Card 1 */}
           <div
+            onMouseEnter={() => setHoveredCard(1)}
+            onMouseLeave={() => setHoveredCard(null)}
             style={{
               flex: "1 1 280px",
               maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 30px",
+              height: "280px",
+              border: "5px solid #1a237e",
+              borderRadius: "18px",
+              padding: "10px 5px",
               textAlign: "center",
               background: "#fff",
               boxSizing: "border-box",
+              cursor: "default",
+              transition: "box-shadow 0.3s ease",
+              boxShadow: hoveredCard === 1 ? "0 8px 32px rgba(26,35,126,0.15)" : "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "40px", color: "#b8960c", marginBottom: "18px" }}>★</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "16px",
-                fontWeight: "700",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Breathable and lightweight—ideal for UAE's warm climate
-            </p>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}>★</div>
+            {hoveredCard === 1 ? (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "15px",
+                  fontWeight: "400",
+                  color: "#111",
+                  lineHeight: "1.7",
+                  margin: "0 16px",
+                }}
+              >
+                Our cotton fabrics allow excellent air circulation and softness,
+                keeping you cool and comfortable in high temperatures.
+              </p>
+            ) : (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "24px",
+                  fontWeight: "700",
+                  color: "#111",
+                  lineHeight: "1.6",
+                  margin: "0 10px",
+                }}
+              >
+                Breathable and lightweight—ideal for UAE's warm climate
+              </p>
+            )}
           </div>
 
           {/* Card 2 */}
           <div
+            onMouseEnter={() => setHoveredCard(2)}
+            onMouseLeave={() => setHoveredCard(null)}
             style={{
               flex: "1 1 280px",
               maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 30px",
+              height: "280px",
+              border: "5px solid #1a237e",
+              borderRadius: "18px",
+              padding: "10px 5px",
               textAlign: "center",
               background: "#fff",
               boxSizing: "border-box",
+              cursor: "default",
+              transition: "box-shadow 0.3s ease",
+              boxShadow: hoveredCard === 2 ? "0 8px 32px rgba(26,35,126,0.15)" : "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "40px", color: "#b8960c", marginBottom: "18px" }}>⌃⌃</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "16px",
-                fontWeight: "700",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Variety of weaves for different styles
-            </p>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "10px" }}>⌃⌃</div>
+            {hoveredCard === 2 ? (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "15px",
+                  fontWeight: "400",
+                  color: "#111",
+                  lineHeight: "1.7",
+                  margin: "0 16px",
+                }}
+              >
+                From Oxford and Twill to Gabardine and Plain Cotton, we offer
+                options that suit everything from everyday shirting to ethnic
+                menswear.
+              </p>
+            ) : (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "24px",
+                  fontWeight: "700",
+                  color: "#111",
+                  lineHeight: "1.6",
+                  margin: 0,
+                }}
+              >
+                Variety of weaves for different styles
+              </p>
+            )}
           </div>
 
           {/* Card 3 */}
           <div
+            onMouseEnter={() => setHoveredCard(3)}
+            onMouseLeave={() => setHoveredCard(null)}
             style={{
               flex: "1 1 280px",
               maxWidth: "340px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "40px 30px",
+              height: "280px",
+              border: "5px solid #1a237e",
+              borderRadius: "18px",
+              padding: "10px 5px",
               textAlign: "center",
               background: "#fff",
               boxSizing: "border-box",
+              cursor: "default",
+              transition: "box-shadow 0.3s ease",
+              boxShadow: hoveredCard === 3 ? "0 8px 32px rgba(26,35,126,0.15)" : "none",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "40px", color: "#b8960c", marginBottom: "18px" }}>🤝</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                color: "#333",
-                lineHeight: "1.7",
-                margin: 0,
-              }}
-            >
-              We partner with trusted mills to ensure every fabric batch
-              maintains top-tier quality, finish, and reliability.
-            </p>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}>🤝</div>
+            {hoveredCard === 3 ? (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "15px",
+                  fontWeight: "400",
+                  color: "#111",
+                  lineHeight: "1.7",
+                  margin: "0 16px",
+                }}
+              >
+                We partner with trusted mills to ensure every fabric batch
+                maintains top-tier quality, finish, and reliability.
+              </p>
+            ) : (
+              <p
+                style={{
+                  fontFamily: "sans-serif",
+                  fontSize: "20px",
+                  fontWeight: "700",
+                  color: "#111",
+                  lineHeight: "1.6",
+                  margin: 0,
+                }}
+              >
+                Sourced from reputed mills with consistency in quality
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -362,7 +457,7 @@ export default function CottonPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 44%", maxWidth: "44%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/cotton-1.webp"
             alt="Premium Cotton"
             style={{
               width: "100%",
@@ -591,6 +686,7 @@ export default function CottonPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

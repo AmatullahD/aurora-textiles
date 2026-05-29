@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function RaagReshamPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function RaagReshamPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/ethnic-icon3.webp"
                         alt="Raag Resham by Nemssis Logo"
                         style={{
                             width: "100%",
@@ -217,7 +218,7 @@ export default function RaagReshamPage() {
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "540px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/resham-2.webp"
                         alt="Premium Ethnic Fabrics with Festive Appeal"
                         style={{
                             width: "100%",
@@ -246,7 +247,7 @@ export default function RaagReshamPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/resham-3.webp"
                         alt="Raag Resham Fabric Features"
                         style={{
                             width: "100%",
@@ -362,7 +363,7 @@ export default function RaagReshamPage() {
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "520px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/resham-4.webp"
                         alt="Why Choose Aurora Textiles for Raag Resham"
                         style={{
                             width: "100%",
@@ -390,7 +391,7 @@ export default function RaagReshamPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/resham-5.webp"
                         alt="Raag Resham Fabric Swatch"
                         style={{
                             width: "100%",
@@ -512,6 +513,7 @@ export default function RaagReshamPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

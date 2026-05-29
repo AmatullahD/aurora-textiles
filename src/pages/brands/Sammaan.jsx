@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function SammaanPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -111,7 +112,7 @@ export default function SammaanPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/sammaan-1.webp"
                         alt="Sammaan Exclusive Fabrics Logo"
                         style={{
                             width: "100%",
@@ -275,7 +276,7 @@ export default function SammaanPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/sammaan-2.webp"
                         alt="Sammaan Shirting Fabric"
                         style={{
                             width: "100%",
@@ -307,7 +308,7 @@ export default function SammaanPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/sammaan-3.webp"
                         alt="Sammaan Prints Embroidery Jacquard"
                         style={{
                             width: "100%",
@@ -457,7 +458,7 @@ export default function SammaanPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/sammaan-4.webp"
                         alt="Sammaan Fabric Supply Aurora Textiles"
                         style={{
                             width: "100%",
@@ -489,7 +490,7 @@ export default function SammaanPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/sammaan-5.webp"
                         alt="Sammaan Fabric Rolls"
                         style={{
                             width: "100%",
@@ -594,6 +595,7 @@ export default function SammaanPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

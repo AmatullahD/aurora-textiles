@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function RasmEthnicsPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function RasmEthnicsPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/ethnic-icon1.webp"
                         alt="Rasm Ethnics by Sammaan Logo"
                         style={{
                             width: "100%",
@@ -219,7 +220,7 @@ export default function RasmEthnicsPage() {
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/rasm-1.webp"
                         alt="Ethnic Fabrics for Men"
                         style={{
                             width: "100%",
@@ -247,7 +248,7 @@ export default function RasmEthnicsPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/rasm-2.webp"
                         alt="Wide Range of Unstitched Fabrics"
                         style={{
                             width: "100%",
@@ -364,7 +365,7 @@ export default function RasmEthnicsPage() {
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "520px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/rasm-3.webp"
                         alt="Trusted Supplier of Rasm Ethnic Fabrics"
                         style={{
                             width: "100%",
@@ -392,7 +393,7 @@ export default function RasmEthnicsPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "380px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/rasm-4.webp"
                         alt="Rasm Ethnic Garment"
                         style={{
                             width: "100%",
@@ -515,6 +516,7 @@ export default function RasmEthnicsPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

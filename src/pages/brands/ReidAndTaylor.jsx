@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function ReidAndTaylorPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -111,7 +112,7 @@ export default function ReidAndTaylorPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/reidAndTaylor.webp"
                         alt="Reid and Taylor Logo"
                         style={{
                             width: "100%",
@@ -225,7 +226,7 @@ export default function ReidAndTaylorPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/reid&taylor-1.webp"
                         alt="Reid and Taylor Suiting"
                         style={{
                             width: "100%",
@@ -257,7 +258,7 @@ export default function ReidAndTaylorPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/reid&taylor-2.webp"
                         alt="Reid and Taylor Shirting"
                         style={{
                             width: "100%",
@@ -384,18 +385,28 @@ export default function ReidAndTaylorPage() {
                         ))}
                     </ul>
 
-                    <button
+                   <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            background: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
-                            borderRadius: "4px",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -405,7 +416,7 @@ export default function ReidAndTaylorPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/reid&taylor-3.webp"
                         alt="Reid and Taylor Fabric Supply UAE"
                         style={{
                             width: "100%",
@@ -437,7 +448,7 @@ export default function ReidAndTaylorPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/reid&taylor-4.webp"
                         alt="Reid and Taylor Fabric Rolls"
                         style={{
                             width: "100%",
@@ -542,6 +553,7 @@ export default function ReidAndTaylorPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

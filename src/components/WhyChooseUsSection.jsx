@@ -3,29 +3,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import {
-  FaAward,
-  FaShieldAlt,
-  FaLayerGroup,
-  FaMedal,
-} from "react-icons/fa";
-
 export default function WhyChooseUsSection() {
   const features = [
     {
-      icon: <FaAward />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2024/11/premium.png.webp"
+          alt="Premium Quality"
+          style={{ width: "40px", height: "40px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+        />
+      ),
       title: "Premium Quality",
     },
     {
-      icon: <FaLayerGroup />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2024/11/fabric.png.webp"
+          alt="Extensive Range of Fabrics"
+          style={{ width: "40px", height: "40px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+        />
+      ),
       title: "Extensive Range of Fabrics",
     },
     {
-      icon: <FaShieldAlt />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2024/11/reliability.png.webp"
+          alt="Trusted Reputation"
+          style={{ width: "40px", height: "40px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+        />
+      ),
       title: "Trusted Reputation",
     },
     {
-      icon: <FaMedal />,
+      icon: (
+        <img
+          src="https://aurora-textiles.com/wp-content/uploads/2024/11/guarantee.png.webp"
+          alt="Trusted Brands"
+          style={{ width: "40px", height: "40px", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+        />
+      ),
       title: "Trusted Brands",
     },
   ];
@@ -55,7 +72,7 @@ export default function WhyChooseUsSection() {
         <div
           style={{
             flex: "6",
-            backgroundColor: "#122a4b",
+            backgroundColor: "#0d2341",
             padding: "50px 45px",
             boxSizing: "border-box",
             color: "white",
@@ -100,8 +117,7 @@ export default function WhyChooseUsSection() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns:
-                "repeat(auto-fit, minmax(250px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               gap: "32px 25px",
               marginBottom: "42px",
             }}
@@ -118,8 +134,6 @@ export default function WhyChooseUsSection() {
                 {/* ICON */}
                 <div
                   style={{
-                    fontSize: "34px",
-                    color: "#FFFFFF",
                     minWidth: "40px",
                     display: "flex",
                     alignItems: "center",
@@ -133,7 +147,7 @@ export default function WhyChooseUsSection() {
                 <h3
                   style={{
                     margin: 0,
-                    fontSize: "17px",
+                    fontSize: "19px",
                     fontFamily: "serif",
                     fontWeight: "500",
                     textTransform: "uppercase",

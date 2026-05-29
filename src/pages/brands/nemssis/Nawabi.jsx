@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+
 
 export default function NawabiPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +111,7 @@ export default function NawabiPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/nemssis-1.webp"
                         alt="Nawabi by Nemssis Logo"
                         style={{
                             width: "100%",
@@ -236,28 +238,38 @@ export default function NawabiPage() {
                         Each fabric in the Nawabi range features intricate embroidery, woven motifs,
                         jacquard or satin finish, and luxurious fall to ensure comfort and class.
                     </p>
-                    <a
-                        href="/contact"
+                    <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            display: "inline-block",
-                            padding: "14px 32px",
-                            background: "#c8a84b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            fontWeight: "600",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            textDecoration: "none",
-                            borderRadius: "4px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
+                            cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
-                    </a>
+                    </button>
                 </div>
 
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/nawabi-1.webp"
                         alt="Traditional Fabric with Royal Charm"
                         style={{
                             width: "100%",
@@ -286,7 +298,7 @@ export default function NawabiPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/nawabi-2.webp"
                         alt="Why Source Nawabi Fabrics"
                         style={{
                             width: "100%",
@@ -410,7 +422,7 @@ export default function NawabiPage() {
                 {/* Image Right */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "520px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/nawabi-3.webp"
                         alt="Nemssis Fabrics Quality"
                         style={{
                             width: "100%",
@@ -439,7 +451,7 @@ export default function NawabiPage() {
                 {/* Image Left */}
                 <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "460px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/nawabi-4.webp"
                         alt="Nawabi Fabric"
                         style={{
                             width: "100%",
@@ -561,6 +573,7 @@ export default function NawabiPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

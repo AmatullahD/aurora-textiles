@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function DonearPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -91,7 +92,7 @@ export default function DonearPage() {
                             fontWeight: "600",
                             margin: 0,
                             lineHeight: "1.1",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Cinzel Decorative', sans-serif",
                             textTransform: "uppercase",
                         }}
                     >
@@ -320,7 +321,7 @@ export default function DonearPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/donear-1.webp"
                         alt="Donear Fabric Swatches"
                         style={{
                             width: "100%",
@@ -349,35 +350,54 @@ export default function DonearPage() {
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image with beige accent block behind */}
+                
+                {/* Left — image with layered accent blocks */}
                 <div
                     style={{
                         flex: "1 1 45%",
                         minWidth: "280px",
                         position: "relative",
-                        paddingTop: "24px",
-                        paddingLeft: "24px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        padding: "40px",
                     }}
                 >
-                    {/* Accent rectangle behind image */}
+                    {/* Top-right beige block */}
                     <div
                         style={{
                             position: "absolute",
-                            top: 0,
-                            left: 0,
-                            width: "85%",
-                            height: "92%",
-                            background: "#f0ece4",
-                            borderRadius: "6px",
+                            top: "5%",
+                            right: "0%",
+                            width: "75%",
+                            height: "82%",
+                            background: "#e8e0d0",
+                            borderRadius: "12px",
                             zIndex: 0,
                         }}
                     />
+
+                    {/* Bottom-left light block */}
+                    <div
+                        style={{
+                            position: "absolute",
+                            bottom: "5%",
+                            left: "0%",
+                            width: "55%",
+                            height: "40%",
+                            background: "#f5f3ef",
+                            borderRadius: "12px",
+                            zIndex: 0,
+                        }}
+                    />
+
+                    {/* Image */}
                     <img
-                        src="/faq-image.jpg"
+                        src="/donear-2.png"
                         alt="Donear Shirting"
                         style={{
-                            width: "88%",
-                            height: "360px",
+                            width: "85%",
+                            aspectRatio: "3/4",
                             objectFit: "cover",
                             display: "block",
                             position: "relative",
@@ -386,6 +406,8 @@ export default function DonearPage() {
                         }}
                     />
                 </div>
+
+
 
                 {/* Right — heading + paragraph */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
@@ -511,17 +533,27 @@ export default function DonearPage() {
                     </p>
 
                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#bd930c";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#bd930c";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            background: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
-                            borderRadius: "4px",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -531,7 +563,7 @@ export default function DonearPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/donear-3.webp"
                         alt="Donear Fabric Stack"
                         style={{
                             width: "100%",
@@ -563,7 +595,7 @@ export default function DonearPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/donear-4.webp"
                         alt="Fabric Swatches FAQ"
                         style={{
                             width: "100%",
@@ -582,7 +614,7 @@ export default function DonearPage() {
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
                             color: "#1e2a5e",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Cinzel Decorative', sans-serif",
                             margin: "0 0 28px 0",
                             textTransform: "uppercase",
                             letterSpacing: "1px",
@@ -621,7 +653,7 @@ export default function DonearPage() {
                                             textTransform: "uppercase",
                                             margin: 0,
                                             lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                         }}
                                     >
                                         {faq.question}
@@ -653,7 +685,7 @@ export default function DonearPage() {
                                                 color: "#333",
                                                 lineHeight: "1.85",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Cinzel Decorative', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -668,6 +700,7 @@ export default function DonearPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
       style={{
         width: "100%",
         backgroundColor: "#f3f3f3",
-        padding: "50px 4%",
+        padding: "25px 4%",
         boxSizing: "border-box",
       }}
     >
@@ -38,9 +38,9 @@ export default function TestimonialsSection() {
         style={{
           textAlign: "center",
           fontSize: "32px",
-          fontWeight: "400",
+          fontWeight: "600",
           color: "#0B2C66",
-          fontFamily: "'Cinzel Decorative', serif",
+          fontFamily: "'Cinzel Decorative', sans-serif",
           marginBottom: "25px",
           marginTop: 0,
           letterSpacing: "1px",

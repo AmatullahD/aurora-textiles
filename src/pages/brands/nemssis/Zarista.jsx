@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function ZaristaPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function ZaristaPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-logo.png"
+                        src="/nemssis-1.webp"
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
@@ -241,23 +242,32 @@ export default function ZaristaPage() {
                         These fabrics are ideal for tailors and designers creating high-end
                         ethnic wear that demands elegance and durability.
                     </p>
-                    <a
-                        href="/contact"
+                    <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            display: "inline-block",
-                            padding: "14px 36px",
-                            backgroundColor: "#8b8000",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontWeight: "600",
-                            textDecoration: "none",
+                            fontWeight: "500",
                             borderRadius: "6px",
+                            cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
-                    </a>
+                    </button>
                 </div>
 
                 {/* Right: Image */}
@@ -270,7 +280,7 @@ export default function ZaristaPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/zarista-1.jpg"
                         alt="Refined Ethnic Fabrics"
                         style={{
                             width: "100%",
@@ -307,7 +317,7 @@ export default function ZaristaPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/zarista-2.jpg"
                         alt="Why Choose Zarista"
                         style={{
                             width: "100%",
@@ -423,7 +433,7 @@ export default function ZaristaPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/zarista-3.webp"
                         alt="Designed With Quality"
                         style={{
                             width: "100%",
@@ -460,7 +470,7 @@ export default function ZaristaPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/zarista-4.webp"
                         alt="FAQ Fabric"
                         style={{
                             width: "100%",
@@ -569,6 +579,7 @@ export default function ZaristaPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

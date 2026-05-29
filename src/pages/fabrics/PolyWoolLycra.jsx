@@ -1,6 +1,69 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+
+function PolyWoolLycraCard({ icon, title, desc, isBottom }) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "0 0 auto",
+        width: isBottom ? "300px" : "300px",
+        height: "220px",
+        border: "5px solid #1a1a5e",
+        borderRadius: "18px",
+        padding: "32px 28px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <div style={{ fontSize: "36px", color: "#c8a84b", marginBottom: "14px" }}>
+        {icon}
+      </div>
+
+      {/* Title — before hover, bold 24px */}
+      {!hovered && (
+        <p style={{
+          fontSize: "24px",
+          fontWeight: "700",
+          color: "#111",
+          lineHeight: "1.4",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {title}
+        </p>
+      )}
+
+      {/* Description — after hover, small text */}
+      {hovered && (
+        <p style={{
+          fontSize: "14px",
+          fontWeight: "400",
+          color: "#333",
+          lineHeight: "1.6",
+          margin: 0,
+          textAlign: "center",
+        }}>
+          {desc}
+        </p>
+      )}
+    </div>
+  );
+}
 
 export default function PolyWoolLycraPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +172,7 @@ export default function PolyWoolLycraPage() {
         {/* Image */}
         <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polywool-lycra1.webp"
             alt="Poly Wool Lycra Fabric"
             style={{
               width: "100%",
@@ -165,22 +228,32 @@ export default function PolyWoolLycraPage() {
             trusted by tailors, designers, and fashion brands across the UAE and MENA region.
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", alignItems: "center" }}>
-            <a
-              href="/contact"
+            <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                display: "inline-block",
-                padding: "14px 32px",
-                background: "#c8a84b",
+                background: "#8b7d3a",
                 color: "#fff",
-                fontWeight: "600",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                textDecoration: "none",
-                borderRadius: "4px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
-            </a>
+            </button>
             <a
               href="tel:+971000000000"
               style={{
@@ -220,6 +293,7 @@ export default function PolyWoolLycraPage() {
       </section>
 
       {/* ── SECTION 2: WHY CHOOSE – 5 Feature Cards ── */}
+      {/* ── SECTION 2: WHY CHOOSE – 5 Feature Cards ── */}
       <section
         style={{
           background: "#fff",
@@ -253,54 +327,24 @@ export default function PolyWoolLycraPage() {
             margin: "0 auto 28px auto",
           }}
         >
-          {[
-            {
-              icon: "⭐",
-              text: "Sourced from trusted mills for consistent quality and performance",
-            },
-            {
-              icon: "❯❯",
-              text: "Wide range of suiting blends with modern stretch technology",
-            },
-            {
-              icon: "🤝",
-              text: "Designed for Dubai's climate—breathable yet refined",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                flex: "0 0 auto",
-                width: "300px",
-                border: "2px solid #1a1a5e",
-                borderRadius: "16px",
-                padding: "40px 28px",
-                textAlign: "center",
-                background: "#fff",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "36px",
-                  marginBottom: "20px",
-                  color: "#c8a84b",
-                }}
-              >
-                {item.icon}
-              </div>
-              <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#222",
-                  lineHeight: "1.5",
-                  margin: 0,
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
-          ))}
+          <PolyWoolLycraCard
+            icon="⭐"
+            title="Trusted Mills"
+            desc="Sourced from trusted mills for consistent quality and performance"
+            isBottom={false}
+          />
+          <PolyWoolLycraCard
+            icon="❯❯"
+            title="Stretch Technology"
+            desc="Wide range of suiting blends with modern stretch technology"
+            isBottom={false}
+          />
+          <PolyWoolLycraCard
+            icon="🤝"
+            title="Dubai Climate Ready"
+            desc="Designed for Dubai's climate—breathable yet refined"
+            isBottom={false}
+          />
         </div>
 
         {/* Bottom Row – 2 cards centered */}
@@ -314,50 +358,18 @@ export default function PolyWoolLycraPage() {
             margin: "0 auto",
           }}
         >
-          {[
-            {
-              icon: "📊",
-              text: "Suitable for bulk orders and custom tailoring projects",
-            },
-            {
-              icon: "✅",
-              text: "Quick delivery and reliable B2B support across the UAE and MENA region",
-            },
-          ].map((item, i) => (
-            <div
-              key={i}
-              style={{
-                flex: "0 0 auto",
-                width: "300px",
-                border: "2px solid #1a1a5e",
-                borderRadius: "16px",
-                padding: "40px 28px",
-                textAlign: "center",
-                background: "#fff",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "36px",
-                  marginBottom: "20px",
-                  color: "#c8a84b",
-                }}
-              >
-                {item.icon}
-              </div>
-              <p
-                style={{
-                  fontSize: "16px",
-                  fontWeight: "600",
-                  color: "#222",
-                  lineHeight: "1.5",
-                  margin: 0,
-                }}
-              >
-                {item.text}
-              </p>
-            </div>
-          ))}
+          <PolyWoolLycraCard
+            icon="📊"
+            title="Bulk & Custom Orders"
+            desc="Suitable for bulk orders and custom tailoring projects"
+            isBottom={true}
+          />
+          <PolyWoolLycraCard
+            icon="✅"
+            title="Quick B2B Delivery"
+            desc="Quick delivery and reliable B2B support across the UAE and MENA region"
+            isBottom={true}
+          />
         </div>
       </section>
 
@@ -376,7 +388,7 @@ export default function PolyWoolLycraPage() {
         {/* Image */}
         <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
           <img
-            src="/faq-image.jpg"
+            src="/polywool-lycra2.webp"
             alt="Poly Wool Lycra Fabric Close Up"
             style={{
               width: "100%",
@@ -534,39 +546,26 @@ export default function PolyWoolLycraPage() {
           </p>
         </div>
 
-        {/* 2×2 Image Grid Right */}
-        <div
-          style={{
-            flex: "0 0 auto",
-            width: "100%",
-            maxWidth: "560px",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "12px",
-          }}
-        >
-          {[1, 2, 3, 4].map((_, i) => (
-            <div
-              key={i}
+        {/*  Image Grid Right */}
+        <div style={{ flex: 1 }}>
+          <div
+            style={{
+              height: "520px",
+              overflow: "hidden",
+              borderRadius: "4px",
+            }}
+          >
+            <img
+              src="/polywool-lycra3.webp"
+              alt="Application"
               style={{
                 width: "100%",
-                height: "240px",
-                overflow: "hidden",
-                borderRadius: "4px",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
               }}
-            >
-              <img
-                src="/faq-image.jpg"
-                alt={`Application ${i + 1}`}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            </div>
-          ))}
+            />
+          </div>
         </div>
       </section>
 
@@ -685,6 +684,7 @@ export default function PolyWoolLycraPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

@@ -5,31 +5,31 @@ import React, { useState } from "react";
 const fabrics = [
   {
     title: "Cotton",
-    image: "/linen.png",
+    image: "/cotton.png",
   },
   {
     title: "Wool",
-    image: "/linen.png",
+    image: "/wool.webp",
   },
   {
     title: "Linen",
-    image: "/silk.png",
+    image: "/linen.png",
   },
   {
     title: "Polyviscose",
-    image: "/linen.png",
+    image: "/polyviscose.webp",
   },
   {
     title: "Denim",
-    image: "/silk.png",
+    image: "/denim.jpg",
   },
   {
     title: "Cotton",
-    image: "/linen.png",
+    image: "/cotton.png",
   },
   {
     title: "Wool",
-    image: "/silk.png",
+    image: "/wool.webp",
   },
   {
     title: "Linen",
@@ -37,7 +37,7 @@ const fabrics = [
   },
   {
     title: "Polyviscose",
-    image: "/silk.png",
+    image: "/polyviscose.webp",
   },
 ];
 

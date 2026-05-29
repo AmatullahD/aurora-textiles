@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function EthnicPage() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [openFaq, setOpenFaq] = useState(0);
 
     const brandLogos = [
-        { name: "Raag Resham", subtitle: "PRECIOUS SILK EMBROIDERY FABRICS FROM VARANASI", src: "/FAQ-IMAGE.JPG" },
-        { name: "Nawabi", subtitle: "/FAQ-IMAGE.JPG", src: "/FAQ-IMAGE.JPG" },
-        { name: "Zarista", subtitle: "/FAQ-IMAGE.JPG", src: "/FAQ-IMAGE.JPG" },
-        { name: "Shiddat", subtitle: "EMBROIDERY FABRICS CRAFTED WITH PASSION", src: "/FAQ-IMAGE.JPG" },
-        { name: "Rasm", subtitle: "ETHNIC BY SAMMAAN", src: "/FAQ-IMAGE.JPG" },
-        { name: "Sanskriti", subtitle: "THE ART OF EMBROIDERY FROM ACROSS INDIA", src: "/FAQ-IMAGE.JPG" },
+        { name: "Rasm", subtitle: "ETHNIC BY SAMMAAN", src: "/ethnic-icon1.webp" },
+        { name: "Sanskriti", subtitle: "THE ART OF EMBROIDERY FROM ACROSS INDIA", src: "/ethnic-icon2.webp" },
+        { name: "Raag Resham", subtitle: "PRECIOUS SILK EMBROIDERY FABRICS FROM VARANASI", src: "/ethnic-icon3.webp" },
+        { name: "Nawabi", subtitle: "TRADITIONAL EMBROIDERY FROM UTTAR PRADESH", src: "/ethnic-icon4.webp" },
+        { name: "Zarista", subtitle: "MODERN ETHNIC FABRICS FOR CONTEMPORARY STYLE", src: "/ethnic-icon5.webp" },
+        { name: "Shiddat", subtitle: "EMBROIDERY FABRICS CRAFTED WITH PASSION", src: "/ethnic-icon6.webp" },
+
     ];
 
-    const totalSlides = Math.ceil(brandLogos.length / 4);
+    const totalSlides = brandLogos.length;
 
     const faqs = [
         {
@@ -42,7 +44,9 @@ export default function EthnicPage() {
         },
     ];
 
-    const visibleLogos = brandLogos.slice(activeSlide * 4, activeSlide * 4 + 4);
+    const visibleLogos = [0, 1, 2, 3].map(
+        (offset) => brandLogos[(activeSlide + offset) % brandLogos.length]
+    );
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
@@ -128,7 +132,7 @@ export default function EthnicPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/ethnic-1.webp"
                         alt="Ethnic Fabrics Collection"
                         style={{
                             width: "100%",
@@ -251,7 +255,7 @@ export default function EthnicPage() {
                 >
                     {/* Prev Arrow */}
                     <button
-                        onClick={() => setActiveSlide((prev) => Math.max(prev - 1, 0))}
+                        onClick={() => setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides)}
                         style={{
                             background: "none",
                             border: "none",
@@ -291,7 +295,7 @@ export default function EthnicPage() {
                                     <img
                                         src={brand.src}
                                         alt={brand.name}
-                                        style={{ maxWidth: "160px", maxHeight: "80px", objectFit: "contain" }}
+                                        style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
                                     />
                                 ) : (
                                     <>
@@ -331,9 +335,7 @@ export default function EthnicPage() {
 
                     {/* Next Arrow */}
                     <button
-                        onClick={() =>
-                            setActiveSlide((prev) => Math.min(prev + 1, totalSlides - 1))
-                        }
+                        onClick={() => setActiveSlide((prev) => (prev + 1) % totalSlides)}
                         style={{
                             background: "none",
                             border: "none",
@@ -362,8 +364,8 @@ export default function EthnicPage() {
                             key={i}
                             onClick={() => setActiveSlide(i)}
                             style={{
-                                width: "10px",
-                                height: "10px",
+                                width: "6px",
+                                height: "6px",
                                 borderRadius: "50%",
                                 border: "none",
                                 background: i === activeSlide ? "#555" : "#ccc",
@@ -532,18 +534,28 @@ export default function EthnicPage() {
                         Choose Aurora Textiles when you want more than just fabric—choose storytelling, artistry,
                         and cultural connection.
                     </p>
-
-                    <button
+                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
                             background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
+                            border: "2px solid #050e5f",
                             padding: "14px 36px",
                             fontSize: "15px",
                             fontWeight: "500",
                             borderRadius: "6px",
                             cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -739,8 +751,8 @@ export default function EthnicPage() {
                                         i === 0
                                             ? "8px 8px 0 0"
                                             : i === faqs.length - 1
-                                            ? "0 0 8px 8px"
-                                            : "0",
+                                                ? "0 0 8px 8px"
+                                                : "0",
                                     overflow: "hidden",
                                 }}
                             >
@@ -808,6 +820,7 @@ export default function EthnicPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

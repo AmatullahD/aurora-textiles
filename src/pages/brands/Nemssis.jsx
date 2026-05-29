@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function NemssisPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -111,7 +112,7 @@ export default function NemssisPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-logo.jpg"
+                        src="/nemssis-1.webp"
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
@@ -257,7 +258,7 @@ export default function NemssisPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-shirt-blue.jpg"
+                        src="/nemssis-2.webp"
                         alt="Nemssis Shirting Fabric"
                         style={{
                             width: "100%",
@@ -294,7 +295,7 @@ export default function NemssisPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-shirt-royal.jpg"
+                        src="/nemssis-3.webp"
                         alt="Range of Nemssis Shirting Fabric"
                         style={{
                             width: "100%",
@@ -518,18 +519,27 @@ export default function NemssisPage() {
                     ))}
 
                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            backgroundColor: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
+                            border: "2px solid #050e5f",
                             padding: "14px 36px",
-                            fontSize: "16px",
-                            fontFamily: "'Georgia', serif",
-                            fontWeight: "600",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
                             letterSpacing: "0.5px",
-                            marginTop: "16px",
-                            borderRadius: "4px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -547,7 +557,7 @@ export default function NemssisPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-fabric-folded.jpg"
+                        src="/nemssis-4.webp"
                         alt="Nemssis Fabric"
                         style={{
                             width: "100%",
@@ -584,7 +594,7 @@ export default function NemssisPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/nemssis-5.webp"
                         alt="Nemssis Striped Fabric"
                         style={{
                             width: "100%",
@@ -682,6 +692,7 @@ export default function NemssisPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

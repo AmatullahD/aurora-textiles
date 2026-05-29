@@ -6,21 +6,21 @@ export default function BlogsSection() {
   const blogs = [
     {
       image:
-        "./blogs-1.avif",
+        "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform_01-1024x683.png.webp",
       title:
         "WHY WHITE DOMINATES 30% OF THE GLOBAL UNIFORM MARKET",
     },
 
     {
       image:
-        "./blogs-1.avif",
+        "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform2-01-1024x492.png.webp",
       title:
         "WHAT ARE THE DIFFERENT TYPES OF PROTECTIVE WEAR? ALL YOU NEED TO KNOW",
     },
 
     {
       image:
-        "./blogs-1.avif",
+        "https://aurora-textiles.com/wp-content/uploads/2026/04/Mass-uniform.png.webp",
       title:
         "MASS-PRODUCED VS QUALITY-FOCUSED UNIFORMS: HOW MANUFACTURERS CAN BUILD A STRONG REPUTATION",
     },
@@ -41,8 +41,8 @@ export default function BlogsSection() {
           textAlign: "center",
           fontSize: "34px",
           color: "#0B2C66",
-          fontWeight: "400",
-          fontFamily: "'Cinzel Decorative', serif",
+          fontWeight: "600",
+          fontFamily: "'Cinzel Decorative', sans-serif",
           marginTop: 0,
           marginBottom: "55px",
           letterSpacing: "1px",
@@ -108,13 +108,13 @@ export default function BlogsSection() {
             {/* TITLE */}
             <h3
               style={{
-                fontSize: "16px",
+                fontSize: "15px",
                 color: "#0B2C66",
                 lineHeight: "1.3",
                 marginTop: "18px",
                 marginBottom: "22px",
-                fontWeight: "500",
-                fontFamily: "'Cinzel Decorative', serif",
+                fontWeight: "600",
+                fontFamily: "'Poppins', sans-serif",
                 textTransform: "uppercase",
               }}
             >

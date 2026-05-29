@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function KlopmanPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -116,7 +117,7 @@ export default function KlopmanPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/klopman.webp"
                         alt="Klopman International Logo"
                         style={{
                             width: "100%",
@@ -256,7 +257,7 @@ export default function KlopmanPage() {
                 {/* Right — image */}
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/klopman-1.webp"
                         alt="Klopman Workwear Fabric"
                         style={{
                             width: "100%",
@@ -288,7 +289,7 @@ export default function KlopmanPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/klopman-2.webp"
                         alt="Klopman Textile UAE"
                         style={{
                             width: "100%",
@@ -525,18 +526,28 @@ export default function KlopmanPage() {
                         across the Middle East.
                     </p>
 
-                    <button
+                   <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#bd930c";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#bd930c";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            background: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
-                            borderRadius: "4px",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -554,7 +565,7 @@ export default function KlopmanPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/klopman-3.webp"
                         alt="Klopman Workwear Model"
                         style={{
                             width: "100%",
@@ -641,7 +652,7 @@ export default function KlopmanPage() {
                 {/* Left — image */}
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <img
-                        src="/faq-image.jpg"
+                        src="/klopman-4.webp"
                         alt="Klopman Fabric Swatches"
                         style={{
                             width: "100%",
@@ -746,6 +757,7 @@ export default function KlopmanPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

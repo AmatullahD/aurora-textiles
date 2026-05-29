@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./BannerSlider.css";
 
 const slides = [
   {
@@ -22,20 +21,25 @@ const slides = [
 
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Auto slide
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
   const prevSlide = () => {
-    setCurrent((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
@@ -44,35 +48,118 @@ export default function BannerSlider() {
 
   return (
     <div
-      className="banner"
       style={{
+        position: "relative",
+        width: "100%",
+        height: isMobile ? "85vh" : "100vh",
         backgroundImage: `url(${slides[current].image})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
       }}
     >
       {/* Overlay */}
-      <div className="overlay"></div>
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "rgba(0, 0, 0, 0.35)",
+        }}
+      />
 
       {/* Content */}
-      <div className="banner-content">
-        <h1>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          maxWidth: "700px",
+          paddingLeft: isMobile ? "20px" : "60px",
+          paddingRight: isMobile ? "20px" : "0px",
+          color: "white",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: isMobile ? "34px" : "42px",
+            lineHeight: "1.2",
+            fontWeight: "500",
+            marginBottom: "25px",
+            textTransform: "uppercase",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
           {slides[current].heading1}
           <br />
           {slides[current].heading2}
         </h1>
 
-        <p>{slides[current].text}</p>
+        <p
+          style={{
+            fontSize: isMobile ? "16px" : "22px",
+            lineHeight: isMobile ? "1.6" : "1.8",
+            marginBottom: "35px",
+            maxWidth: "650px",
+          }}
+        >
+          {slides[current].text}
+        </p>
 
-        <button className="banner-btn">
+        <button
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+          style={{
+            padding: isMobile ? "12px 24px" : "16px 34px",
+            background: hovered ? "white" : "transparent",
+            border: "2px solid white",
+            color: hovered ? "black" : "white",
+            fontSize: isMobile ? "16px" : "20px",
+            cursor: "pointer",
+            transition: "0.3s ease",
+          }}
+        >
           Explore Our Collection
         </button>
       </div>
 
-      {/* Arrows */}
-      <button className="arrow left" onClick={prevSlide}>
+      {/* Left Arrow */}
+      <button
+        onClick={prevSlide}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "10px",
+          transform: "translateY(-50%)",
+          zIndex: 5,
+          background: "transparent",
+          border: "none",
+          color: "white",
+          fontSize: isMobile ? "28px" : "42px",
+          cursor: "pointer",
+          padding: "10px",
+        }}
+      >
         ❮
       </button>
 
-      <button className="arrow right" onClick={nextSlide}>
+      {/* Right Arrow */}
+      <button
+        onClick={nextSlide}
+        style={{
+          position: "absolute",
+          top: "50%",
+          right: "10px",
+          transform: "translateY(-50%)",
+          zIndex: 5,
+          background: "transparent",
+          border: "none",
+          color: "white",
+          fontSize: isMobile ? "28px" : "42px",
+          cursor: "pointer",
+          padding: "10px",
+        }}
+      >
         ❯
       </button>
     </div>

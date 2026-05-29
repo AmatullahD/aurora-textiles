@@ -1,6 +1,75 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
+
+function WoolFeatureCard({ card }) {
+  const [hovered, setHovered] = React.useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        flex: "1 1 220px",
+        maxWidth: "280px",
+        height: "220px",
+        border: "5px solid #1a237e",
+        borderRadius: "18px",
+        padding: "36px 24px",
+        textAlign: "center",
+        background: "#fff",
+        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        transition: "all 0.3s ease",
+        overflow: "hidden",
+      }}
+    >
+      {/* Icon — always visible */}
+      <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "14px" }}>
+        {card.icon}
+      </div>
+
+      {/* Title — shown before hover */}
+      {!hovered && (
+        <p
+          style={{
+            fontFamily: "sans-serif",
+            fontSize: "24px",
+            fontWeight: "600",
+            color: "#111",
+            lineHeight: "1.4",
+            margin: 0,
+            textAlign: "center",
+          }}
+        >
+          {card.title}
+        </p>
+      )}
+
+      {/* Description — shown on hover */}
+      {hovered && (
+        <p
+          style={{
+            fontFamily: "sans-serif",
+            fontSize: "13.5px",
+            fontWeight: "400",
+            color: "#333",
+            lineHeight: "1.7",
+            margin: 0,
+            textAlign: "center",
+          }}
+        >
+          {card.desc}
+        </p>
+      )}
+    </div>
+  );
+}
 
 export default function WoolPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -110,7 +179,7 @@ export default function WoolPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/wool-1.webp"
             alt="Wool Suiting Fabric"
             style={{
               width: "100%",
@@ -174,17 +243,27 @@ export default function WoolPage() {
           {/* Buttons */}
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <button
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#e0b219";
+                e.currentTarget.style.borderColor = "#0a089bd3";
+                e.currentTarget.style.color = "#fff";
+              }}
               style={{
-                background: "#b8960c",
+                background: "#8b7d3a",
                 color: "#fff",
-                border: "none",
-                borderRadius: "6px",
-                padding: "14px 32px",
+                border: "2px solid #050e5f",
+                padding: "14px 36px",
                 fontSize: "15px",
-                fontWeight: "600",
+                fontWeight: "500",
+                borderRadius: "6px",
                 cursor: "pointer",
-                fontFamily: "sans-serif",
                 letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
               }}
             >
               Contact Us
@@ -228,10 +307,11 @@ export default function WoolPage() {
       </section>
 
       {/* SECTION 2 – FEATURES OF WOOL FABRIC (4 cards) */}
+      {/* SECTION 2 – FEATURES OF WOOL FABRIC (4 cards) */}
       <section
         style={{
           width: "100%",
-          background: "#f9f9f9",
+          background: "#fff",
           padding: "60px 40px",
           boxSizing: "border-box",
           marginBottom: "70px",
@@ -261,117 +341,30 @@ export default function WoolPage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Card 1 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>★</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "400",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Natural Insulation &amp; Breathability
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>⌃⌃</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "400",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Luxurious Feel with Excellent Draping
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>🤝</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "400",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Tailoring Friendly &amp; Long-Lasting
-            </p>
-          </div>
-
-          {/* Card 4 */}
-          <div
-            style={{
-              flex: "1 1 220px",
-              maxWidth: "280px",
-              border: "2px solid #1a237e",
-              borderRadius: "16px",
-              padding: "36px 24px",
-              textAlign: "center",
-              background: "#fff",
-              boxSizing: "border-box",
-            }}
-          >
-            <div style={{ fontSize: "38px", color: "#b8960c", marginBottom: "16px" }}>✔</div>
-            <p
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "15px",
-                fontWeight: "400",
-                color: "#111",
-                lineHeight: "1.6",
-                margin: 0,
-              }}
-            >
-              Available in Various Weaves &amp; Finishes
-            </p>
-          </div>
+          {[
+            {
+              icon: "★",
+              title: "Natural Insulation & Breathability",
+              desc: "Wool offers excellent temperature regulation—keeping you warm during winter and cool indoors. Ideal for suits, jackets, and eveningwear.",
+            },
+            {
+              icon: "⌃⌃",
+              title: "Luxurious Feel with Excellent Draping",
+              desc: "Our wool and cashmere wool fabrics are soft to touch and drape well, enhancing the fit and fall of suits or sherwanis.",
+            },
+            {
+              icon: "🤝",
+              title: "Tailoring Friendly & Long-Lasting",
+              desc: "Wool fabrics are naturally elastic, resistant to wrinkles, and easy to tailor—ensuring a premium finish with lasting durability.",
+            },
+            {
+              icon: "✔",
+              title: "Available in Various Weaves & Finishes",
+              desc: "Choose from twill, gabardine, herringbone, and other structured weaves suitable for different fashion applications.",
+            },
+          ].map((card, i) => (
+            <WoolFeatureCard key={i} card={card} />
+          ))}
         </div>
       </section>
 
@@ -391,7 +384,7 @@ export default function WoolPage() {
         {/* Left Image */}
         <div style={{ flex: "0 0 46%", maxWidth: "46%" }}>
           <img
-            src="/faq-image.jpg"
+            src="/wool-2.webp"
             alt="Shop Wool Fabrics"
             style={{
               width: "100%",
@@ -563,6 +556,7 @@ export default function WoolPage() {
 
       {/* FOOTER */}
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

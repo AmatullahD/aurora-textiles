@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function GulliniPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -82,114 +83,114 @@ export default function GulliniPage() {
             </section>
 
             {/* SECTION 1 — Intro: Logo images left, text right */}
-           <section
-  style={{
-    width: "100%",
-    maxWidth: "1300px",
-    margin: "0 auto",
-    padding: "40px",
-    boxSizing: "border-box",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: "30px",
-  }}
->
-  {/* LEFT SIDE */}
-  <div
-    style={{
-      width: "50%",
-      position: "relative",
-      height: "420px",
-    }}
-  >
-    {/* BACK IMAGE */}
-    <div
-      style={{
-        position: "absolute",
-        bottom: "20px",
-        left: "20px",
-        width: "250px",
-        height: "250px",
-        background: "#efefef",
-        border: "1px solid #ddd",
-      }}
-    >
-      <img
-        src="/FAQ-IMAGE.JPG"
-        alt="Georgia Gullini"
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-      />
-    </div>
+            <section
+                style={{
+                    width: "100%",
+                    maxWidth: "1300px",
+                    margin: "0 auto",
+                    padding: "40px",
+                    boxSizing: "border-box",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: "30px",
+                }}
+            >
+                {/* LEFT SIDE */}
+                <div
+                    style={{
+                        width: "50%",
+                        position: "relative",
+                        height: "420px",
+                    }}
+                >
+                    {/* BACK IMAGE */}
+                    <div
+                        style={{
+                            position: "absolute",
+                            bottom: "20px",
+                            left: "20px",
+                            width: "250px",
+                            height: "250px",
+                            background: "#efefef",
+                            border: "1px solid #ddd",
+                        }}
+                    >
+                        <img
+                            src="/georgia-gullini-1.webp"
+                            alt="Georgia Gullini"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                            }}
+                        />
+                    </div>
 
-    {/* FRONT IMAGE */}
-    <div
-      style={{
-        position: "absolute",
-        top: "0",
-        right: "20px",
-        width: "250px",
-        height: "250px",
-        background: "#efefef",
-        border: "1px solid #ddd",
-        zIndex: 2,
-      }}
-    >
-      <img
-        src="/FAQ-IMAGE.JPG"
-        alt="Georgia Gullini"
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-      />
-    </div>
-  </div>
+                    {/* FRONT IMAGE */}
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: "0",
+                            right: "20px",
+                            width: "250px",
+                            height: "250px",
+                            background: "#efefef",
+                            border: "1px solid #ddd",
+                            zIndex: 2,
+                        }}
+                    >
+                        <img
+                            src="/georgia-gullini-1.webp"
+                            alt="Georgia Gullini"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                            }}
+                        />
+                    </div>
+                </div>
 
-  {/* RIGHT SIDE */}
-  <div
-    style={{
-      width: "50%",
-    }}
-  >
-    <h2
-      style={{
-        fontFamily: "'Cinzel Decorative', serif",
-        fontSize: "48px",
-        lineHeight: "1.25",
-        color: "#233f8c",
-        margin: "0 0 25px 0",
-        textTransform: "uppercase",
-        fontWeight: "700",
-      }}
-    >
-      GEORGIA GULLINI FABRICS – PREMIUM SUITING
-      SOLUTIONS FROM AURORA TEXTILES
-    </h2>
+                {/* RIGHT SIDE */}
+                <div
+                    style={{
+                        width: "50%",
+                    }}
+                >
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: "48px",
+                            lineHeight: "1.25",
+                            color: "#233f8c",
+                            margin: "0 0 25px 0",
+                            textTransform: "uppercase",
+                            fontWeight: "700",
+                        }}
+                    >
+                        GEORGIA GULLINI FABRICS – PREMIUM SUITING
+                        SOLUTIONS FROM AURORA TEXTILES
+                    </h2>
 
-    <p
-      style={{
-        fontSize: "18px",
-        lineHeight: "1.9",
-        color: "#333",
-        margin: 0,
-      }}
-    >
-      At <strong>Aurora Textiles</strong>, we supply a refined
-      selection of <strong>Georgia Gullini suit</strong> and{" "}
-      <strong>blazer fabrics</strong>, trusted by tailors and
-      menswear brands across Dubai and the MENA region.
-      Known for their European-inspired quality and elegant
-      finish, Georgia Gullini fabrics are perfect for
-      formalwear, business attire, and premium occasionwear.
-    </p>
-  </div>
-</section>
+                    <p
+                        style={{
+                            fontSize: "18px",
+                            lineHeight: "1.9",
+                            color: "#333",
+                            margin: 0,
+                        }}
+                    >
+                        At <strong>Aurora Textiles</strong>, we supply a refined
+                        selection of <strong>Georgia Gullini suit</strong> and{" "}
+                        <strong>blazer fabrics</strong>, trusted by tailors and
+                        menswear brands across Dubai and the MENA region.
+                        Known for their European-inspired quality and elegant
+                        finish, Georgia Gullini fabrics are perfect for
+                        formalwear, business attire, and premium occasionwear.
+                    </p>
+                </div>
+            </section>
 
 
             {/* SECTION 2 — Suit Fabrics: text left, image right */}
@@ -274,7 +275,7 @@ export default function GulliniPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/gullini-2.webp"
                         alt="Georgia Gullini Suit Fabric"
                         style={{
                             width: "100%",
@@ -310,7 +311,7 @@ export default function GulliniPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/gullini-3.webp"
                         alt="Georgia Gullini Blazer Fabric"
                         style={{
                             width: "100%",
@@ -435,16 +436,27 @@ export default function GulliniPage() {
                     </p>
 
                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            backgroundColor: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
+                            border: "2px solid #050e5f",
                             padding: "14px 36px",
-                            fontSize: "16px",
-                            fontFamily: "'Georgia', serif",
-                            fontWeight: "600",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -471,7 +483,7 @@ export default function GulliniPage() {
                         }}
                     >
                         <img
-                            src="/FAQ-IMAGE.JPG"
+                            src="/gullini-4.webp"
                             alt="Georgia Gullini Fabric Rolls"
                             style={{
                                 width: "100%",
@@ -491,7 +503,7 @@ export default function GulliniPage() {
                         }}
                     >
                         <img
-                            src="/FAQ-IMAGE.JPG"
+                            src="/gullini-5.webp"
                             alt="Georgia Gullini Dark Fabric"
                             style={{
                                 width: "100%",
@@ -512,7 +524,7 @@ export default function GulliniPage() {
                         }}
                     >
                         <img
-                            src="/FAQ-IMAGE.JPG"
+                            src="/gullini-6.webp"
                             alt="Georgia Gullini Check Fabric"
                             style={{
                                 width: "100%",
@@ -549,7 +561,7 @@ export default function GulliniPage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/gullini-7.webp"
                         alt="Georgia Gullini Teal Fabric"
                         style={{
                             width: "100%",
@@ -662,6 +674,7 @@ export default function GulliniPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

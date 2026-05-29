@@ -6,19 +6,19 @@ import { motion } from "framer-motion";
 const collections = [
   {
     title: "Suiting",
-    image: "/suitings.webp",
+    image: "https://aurora-textiles.com/wp-content/uploads/2025/01/Cavendish-suiting-832x1024.jpg.webp",
   },
   {
     title: "Shirting",
-    image: "/suitings.webp",
+    image: "	https://aurora-textiles.com/wp-content/uploads/2024/12/IMG_0453-1024x683.jpg.webp",
   },
   {
     title: "Uniform",
-    image: "/suitings.webp",
+    image: "	https://aurora-textiles.com/wp-content/uploads/2025/01/Uniform-1-683x1024.jpg.webp",
   },
   {
     title: "Ethnic",
-    image: "/suitings.webp",
+    image: "	https://aurora-textiles.com/wp-content/uploads/2025/01/PXL_20241205_093615144-771x1024.jpg.webp",
   },
 ];
 
@@ -83,23 +83,21 @@ function CollectionSection() {
               textAlign: "center",
             }}
           >
-            {/* Perfect Circle Image */}
+            {/* Rounded Sides Image */}
             <div
               style={{
-                width: window.innerWidth < 768 ? "150px" : "250px",
-                height: window.innerWidth < 768 ? "150px" : "250px",
-                borderRadius: "50%",
+                width: window.innerWidth < 768 ? "200px" : "280px",
+                height: window.innerWidth < 768 ? "200px" : "240px",
+                borderRadius: "50% / 60%",
                 overflow: "hidden",
                 cursor: "pointer",
                 flexShrink: 0,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.querySelector("img").style.transform =
-                  "scale(1.08)";
+                e.currentTarget.querySelector("img").style.transform = "scale(1.08)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.querySelector("img").style.transform =
-                  "scale(1)";
+                e.currentTarget.querySelector("img").style.transform = "scale(1)";
               }}
             >
               <img
@@ -110,7 +108,6 @@ function CollectionSection() {
                   height: "100%",
                   objectFit: "cover",
                   display: "block",
-                  borderRadius: "50%",
                   transition: "transform 0.5s ease",
                 }}
               />

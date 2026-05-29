@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function ReliancePage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -124,7 +125,7 @@ export default function ReliancePage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/reliance-1.webp"
                         alt="Reliance Industries Limited Logo"
                         style={{
                             width: "100%",
@@ -268,7 +269,7 @@ export default function ReliancePage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/reliance-2.webp"
                         alt="Premium Poly-Wool Suiting"
                         style={{
                             width: "100%",
@@ -293,59 +294,29 @@ export default function ReliancePage() {
                     gap: "60px",
                 }}
             >
-                {/* Left: two images side by side */}
+                {/* Left: single image */}
                 <div
                     style={{
                         flex: "0 0 auto",
-                        width: "500px",
-                        height: "310px",
+                        width: "600px",
+                        height: "320px",
                         flexShrink: 0,
-                        display: "flex",
-                        gap: "0px",
                         overflow: "hidden",
+                        borderRadius: "8px",
                     }}
                 >
-                    {/* First image: man in dishdasha */}
-                    <div
+                    <img
+                        src="/reliance-3.png"
+                        alt="Reliance Fabric"
                         style={{
-                            width: "48%",
+                            width: "100%",
                             height: "100%",
-                            overflow: "hidden",
-                            borderRadius: "8px 0 0 8px",
+                            objectFit: "contain",
+                            display: "block",
                         }}
-                    >
-                        <img
-                            src="/FAQ-IMAGE.JPG"
-                            alt="Man in Dishdasha"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                display: "block",
-                            }}
-                        />
-                    </div>
-                    {/* Second image: fabric rolls */}
-                    <div
-                        style={{
-                            width: "52%",
-                            height: "100%",
-                            overflow: "hidden",
-                            borderRadius: "0 8px 8px 0",
-                        }}
-                    >
-                        <img
-                            src="/FAQ-IMAGE.JPG"
-                            alt="Polyester Fabric Rolls"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                display: "block",
-                            }}
-                        />
-                    </div>
+                    />
                 </div>
+
 
                 {/* Right: heading + paragraph */}
                 <div style={{ flex: 1 }}>
@@ -396,7 +367,7 @@ export default function ReliancePage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "34px",
+                            fontSize: "36px",
                             fontWeight: "700",
                             color: "#1a2a6c",
                             textTransform: "uppercase",
@@ -428,7 +399,7 @@ export default function ReliancePage() {
                             <p
                                 style={{
                                     fontFamily: "'Cinzel Decorative', serif",
-                                    fontSize: "13px",
+                                    fontSize: "19px",
                                     fontWeight: "700",
                                     color: "#1a2a6c",
                                     textTransform: "uppercase",
@@ -443,18 +414,27 @@ export default function ReliancePage() {
                     ))}
 
                     <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            backgroundColor: "#b8860b",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            border: "none",
+                            border: "2px solid #050e5f",
                             padding: "14px 36px",
-                            fontSize: "16px",
-                            fontFamily: "'Georgia', serif",
-                            fontWeight: "600",
+                            fontSize: "15px",
+                            fontWeight: "500",
+                            borderRadius: "6px",
                             cursor: "pointer",
                             letterSpacing: "0.5px",
-                            marginTop: "16px",
-                            borderRadius: "4px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
@@ -472,13 +452,14 @@ export default function ReliancePage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/reliance-4.webp"
                         alt="Reliance Fabric Swatches"
                         style={{
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
                             display: "block",
+                            borderRadius: "14px",
                         }}
                     />
                 </div>
@@ -509,7 +490,7 @@ export default function ReliancePage() {
                     }}
                 >
                     <img
-                        src="/FAQ-IMAGE.JPG"
+                        src="/reliance-5.webp"
                         alt="Reliance Colourful Fabrics"
                         style={{
                             width: "100%",
@@ -607,6 +588,7 @@ export default function ReliancePage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

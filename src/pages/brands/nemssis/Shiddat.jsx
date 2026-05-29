@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
+import ScrollToTop from "../../../components/ScrollToTop";
+
 
 export default function ShiddatPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +111,7 @@ export default function ShiddatPage() {
                     }}
                 >
                     <img
-                        src="/nemssis-logo.png"
+                        src="/nemssis-1.webp"
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
@@ -201,23 +203,32 @@ export default function ShiddatPage() {
                         silhouettes. These materials are available in easy-to-stitch
                         formats, perfect for designers and tailoring professionals.
                     </p>
-                    <a
-                        href="/contact"
+                   <button
+                        onMouseEnter={e => {
+                            e.currentTarget.style.background = "#0a089bd3";
+                            e.currentTarget.style.borderColor = "#e0b219";
+                            e.currentTarget.style.color = "#ffffff";
+                        }}
+                        onMouseLeave={e => {
+                            e.currentTarget.style.background = "#e0b219";
+                            e.currentTarget.style.borderColor = "#0a089bd3";
+                            e.currentTarget.style.color = "#fff";
+                        }}
                         style={{
-                            display: "inline-block",
-                            padding: "14px 36px",
-                            backgroundColor: "#8b8000",
+                            background: "#8b7d3a",
                             color: "#fff",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            border: "2px solid #050e5f",
+                            padding: "14px 36px",
                             fontSize: "15px",
-                            fontWeight: "600",
-                            textDecoration: "none",
+                            fontWeight: "500",
                             borderRadius: "6px",
+                            cursor: "pointer",
                             letterSpacing: "0.5px",
+                            transition: "all 0.3s ease",
                         }}
                     >
                         Contact Us
-                    </a>
+                    </button>
                 </div>
 
                 {/* Right: Image */}
@@ -230,7 +241,7 @@ export default function ShiddatPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/shiddat-2.png"
                         alt="Ethnic Print Fabrics for Men"
                         style={{
                             width: "100%",
@@ -267,7 +278,7 @@ export default function ShiddatPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/shiddat-3.webp"
                         alt="Available Ethnic Fabric Types"
                         style={{
                             width: "100%",
@@ -394,7 +405,7 @@ export default function ShiddatPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/shiddat-4.webp"
                         alt="Why Choose Aurora Textiles"
                         style={{
                             width: "100%",
@@ -431,7 +442,7 @@ export default function ShiddatPage() {
                     }}
                 >
                     <img
-                        src="/faq-image.jpg"
+                        src="/shiddat-5.webp"
                         alt="FAQ Fabric"
                         style={{
                             width: "100%",
@@ -540,6 +551,7 @@ export default function ShiddatPage() {
 
             {/* FOOTER */}
             <Footer />
+            <ScrollToTop />
         </div>
     );
 }

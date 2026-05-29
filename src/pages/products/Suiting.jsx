@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
+import ScrollToTop from "../../components/ScrollToTop";
 
 export default function SuitingPage() {
 
     const brands = [
+        "/john-cavendish.webp",
+        "/gullini.webp",
+        "/regency.webp",
+        "/donear-logo.png",
+        "/opulent.webp",
         "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
-        "/brand-3.jpg",
+        "/dignity.webp",
+        "/cotton-wool.webp",
+        "/fc-collection.webp",
+        "/elegant-3.webp",
+        "/platinum-collection.webp",
+        "/john-cavendish.webp",
+        "/gullini.webp",
+        "/regency.webp",
     ];
 
     const visibleItems = window.innerWidth < 768 ? 2 : 4;
@@ -319,16 +319,18 @@ export default function SuitingPage() {
                                 key={index}
                                 style={{
                                     width: "100%",
-                                    overflow: "hidden",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 <img
                                     src={brand}
                                     alt="brand"
                                     style={{
-                                        width: "100%",
-                                        height: window.innerWidth < 768 ? "120px" : "170px",
-                                        objectFit: "cover",
+                                        width: "180px",   // ← change width here
+                                        height: "180px",  // ← change height here
+                                        objectFit: "contain",   // no cropping, shows full image
                                         borderRadius: "12px",
                                         display: "block",
                                     }}
@@ -419,7 +421,7 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/suiting-fabric.jpg"
+                            src="/suitings.webp"
                             alt="Suiting Fabrics"
                             style={{
                                 width: "100%",
@@ -488,8 +490,8 @@ export default function SuitingPage() {
                             <li>PolyViscose</li>
                             <li>Denim</li>
                             <li>PV Lycra</li>
-                           <li>Poly Wool Lycra</li> 
-                           <li>Tencel Blend</li>
+                            <li>Poly Wool Lycra</li>
+                            <li>Tencel Blend</li>
                         </ul>
                     </div>
 
@@ -581,7 +583,7 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/suiting-fabric.jpg"
+                            src="/suitings-1.webp"
                             alt="Buy Suit Fabric"
                             style={{
                                 width: "100%",
@@ -624,7 +626,7 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/faq-image.jpg"
+                            src="/suitings-2.webp"
                             alt="Suiting FAQ"
                             style={{
                                 width: "100%",
@@ -741,7 +743,7 @@ export default function SuitingPage() {
 
             {/* FOOTER */}
             <Footer />
-
+            <ScrollToTop />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   FaInstagram,
   FaFacebookF,
@@ -10,7 +10,18 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "Our Products", href: "/products" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Blog", href: "/blog" },
+  { label: "Leading Fabric Suppliers", href: "/suppliers" },
+];
+
 export default function Footer() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <footer
       style={{
@@ -58,7 +69,7 @@ export default function Footer() {
             }}
           >
             Aurora Textile is a wholesale textile business based in the Old
-            Textile Market in Dubai. We are specialized in men’s Shirting,
+            Textile Market in Dubai. We are specialized in men's Shirting,
             Suiting, Uniform and men's ethnics as well.
           </p>
 
@@ -123,47 +134,24 @@ export default function Footer() {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            <a
-              href="/"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              Home
-            </a>
-
-            <a
-              href="/products"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              Our Products
-            </a>
-
-            <a
-              href="/about"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              About Us
-            </a>
-
-            <a
-              href="/contact"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              Contact Us
-            </a>
-
-            <a
-              href="/blog"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              Blog
-            </a>
-
-            <a
-              href="/suppliers"
-              style={{ color: "#ffffff", textDecoration: "none" }}
-            >
-              Leading Fabric Suppliers
-            </a>
+            {quickLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                style={{
+                  color: "#ffffff",
+                  textDecoration: "none",
+                  display: "inline-block",
+                  transform: hoveredIndex === index ? "scale(1.15)" : "scale(1)",
+                  transformOrigin: "left center",
+                  transition: "transform 0.25s ease",
+                }}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
 
