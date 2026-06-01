@@ -85,14 +85,14 @@ export default function WhyChooseUsSection() {
           <h2
             style={{
               fontSize: "40px",
-              fontFamily: "serif",
-              fontWeight: "700",
+             fontFamily: "'Cinzel Decorative', Sans-serif",
+              fontWeight: "600",
               marginTop: 0,
               marginBottom: "10px",
               lineHeight: "1",
             }}
           >
-            Why Choose Us?
+           Why Choose Us?
           </h2>
 
           {/* Paragraph */}

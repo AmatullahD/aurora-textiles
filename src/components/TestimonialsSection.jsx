@@ -41,6 +41,7 @@ export default function TestimonialsSection() {
           fontWeight: "600",
           color: "#0B2C66",
           fontFamily: "'Cinzel Decorative', sans-serif",
+          textTransform: "lowercase",
           marginBottom: "25px",
           marginTop: 0,
           letterSpacing: "1px",

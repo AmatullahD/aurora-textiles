@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -27,6 +28,11 @@ export default function ShiddatPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Shiddat by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
+                <meta name="description" content="Shop Shiddat by Nemssis at Aurora Textiles Dubai. Premium men's ethnic fabric collection available wholesale across UAE and GCC." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -203,7 +209,7 @@ export default function ShiddatPage() {
                         silhouettes. These materials are available in easy-to-stitch
                         formats, perfect for designers and tailoring professionals.
                     </p>
-                   <button
+                    <button
                         onMouseEnter={e => {
                             e.currentTarget.style.background = "#0a089bd3";
                             e.currentTarget.style.borderColor = "#e0b219";

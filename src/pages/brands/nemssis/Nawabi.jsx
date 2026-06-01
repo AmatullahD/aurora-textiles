@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -27,6 +28,11 @@ export default function NawabiPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Nawabi by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
+                <meta name="description" content="Explore Nawabi by Nemssis at Aurora Textiles Dubai. Royal ethnic fabric collection for men's traditional wear. Available wholesale across UAE and GCC." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

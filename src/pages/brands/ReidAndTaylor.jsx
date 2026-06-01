@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -26,6 +27,12 @@ export default function ReidAndTaylorPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+
+            <Helmet>
+                <title>Reid & Taylor Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Shop Reid & Taylor luxury suiting fabrics in Dubai. Aurora Textiles is your trusted wholesale supplier of Reid & Taylor fabrics across UAE and GCC." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -385,7 +392,7 @@ export default function ReidAndTaylorPage() {
                         ))}
                     </ul>
 
-                   <button
+                    <button
                         onMouseEnter={e => {
                             e.currentTarget.style.background = "#0a089bd3";
                             e.currentTarget.style.borderColor = "#e0b219";

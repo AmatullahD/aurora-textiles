@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function SanskritiPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Sanskriti by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
+                <meta name="description" content="Shop Sanskriti by Nemssis at Aurora Textiles Dubai. Elegant ethnic fabric collection for men's traditional wear. Wholesale supplier in UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

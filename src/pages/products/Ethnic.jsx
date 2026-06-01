@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -51,6 +52,12 @@ export default function EthnicPage() {
     return (
         <div style={{ width: "100%", background: "#fff" }}>
 
+
+            <Helmet>
+                <title>Men's Ethnic Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Explore premium men's ethnic fabrics at Aurora Textiles Dubai. Shop wholesale ethnic fabric collections including kurta, sherwani and traditional wear materials." />
+            </Helmet>
+
             {/* NAVBAR */}
             <Navbar />
 
@@ -101,10 +108,10 @@ export default function EthnicPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
+                           
                         }}
                     >
-                        ETHNIC FABRICS
+                        Ethnic Fabrics
                     </h1>
                 </div>
             </section>
@@ -148,15 +155,15 @@ export default function EthnicPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "38px",
                             fontWeight: "700",
                             color: "#1a237e",
-                            textTransform: "uppercase",
-                            lineHeight: "1.2",
+                           
+                            lineHeight: "1.5",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        ETHNIC FABRICS WITH AURORA TEXTILES
+                        Ethnic Fabrics with Aurora Textiles
                     </h2>
 
                     <p
@@ -534,7 +541,7 @@ export default function EthnicPage() {
                         Choose Aurora Textiles when you want more than just fabric—choose storytelling, artistry,
                         and cultural connection.
                     </p>
-                     <button
+                    <button
                         onMouseEnter={e => {
                             e.currentTarget.style.background = "#0a089bd3";
                             e.currentTarget.style.borderColor = "#e0b219";

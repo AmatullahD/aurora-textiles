@@ -60,11 +60,11 @@ export default function CountriesSection() {
           textAlign: "center",
           color: "#0B2C66",
           fontSize: "30px",
-          fontFamily: "serif",
+         fontFamily: "'Cinzel Decorative', sans-serif",
           fontWeight: "700",
           letterSpacing: "0.5px",
           marginBottom: "35px",
-          textTransform: "uppercase",
+          textTransform: "lowercase",
           lineHeight: "1.3",
           maxWidth: "100%",
         }}

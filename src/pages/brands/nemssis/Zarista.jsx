@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function ZaristaPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Zarista by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
+                <meta name="description" content="Shop Zarista by Nemssis at Aurora Textiles Dubai. Exclusive ethnic fabric collection for men's festive and traditional wear. Wholesale supplier in UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

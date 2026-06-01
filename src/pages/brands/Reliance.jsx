@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -39,6 +40,12 @@ export default function ReliancePage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+
+            <Helmet>
+                <title>Reliance Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Shop Reliance fabrics wholesale in Dubai. Aurora Textiles offers a wide range of Reliance suiting and shirting fabrics for retailers and tailors across UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

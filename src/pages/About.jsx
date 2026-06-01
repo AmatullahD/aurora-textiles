@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -48,6 +49,12 @@ export default function AboutPage() {
         background: "#ffffff",
       }}
     >
+      {/* META TITLE & DESCRIPTION */}
+      <Helmet>
+        <title>About Us | Aurora Textiles Dubai</title>
+        <meta name="description" content="Learn about Aurora Textiles — a family-run wholesale fabric business in Dubai with 45+ years of experience supplying premium men's fabrics across UAE and GCC." />
+      </Helmet>
+
       {/* NAVBAR */}
       <Navbar />
 
@@ -421,7 +428,7 @@ export default function AboutPage() {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            Aurora’s vision for the future includes expanding our presence in African and other emerging markets while strengthening our position in the UAE and GCC regions. With a focus on sustainability, we aim to introduce eco-friendly fabric options and adopt efficient business practices. By blending our rich history with forward-thinking strategies, we are committed to becoming a leader in the global textile industry for years to come.
+            Aurora's vision for the future includes expanding our presence in African and other emerging markets while strengthening our position in the UAE and GCC regions. With a focus on sustainability, we aim to introduce eco-friendly fabric options and adopt efficient business practices. By blending our rich history with forward-thinking strategies, we are committed to becoming a leader in the global textile industry for years to come.
           </p>
         </div>
       </section>

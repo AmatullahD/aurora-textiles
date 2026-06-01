@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -42,6 +43,13 @@ export default function DonearPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+
+            <Helmet>
+                <title>Donear Fabrics Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Buy Donear suiting and shirting fabrics in Dubai. Aurora Textiles is an authorised Donear fabric supplier offering wholesale prices across UAE and GCC." />
+            </Helmet>
+
 
             {/* NAVBAR */}
             <Navbar />
@@ -350,7 +358,7 @@ export default function DonearPage() {
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                
+
                 {/* Left — image with layered accent blocks */}
                 <div
                     style={{

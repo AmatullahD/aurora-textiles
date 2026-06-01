@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function RasmEthnicsPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Rasm Ethnics by Sammaan | Aurora Textiles Dubai</title>
+                <meta name="description" content="Shop Rasm Ethnics by Sammaan at Aurora Textiles Dubai. Premium ethnic fabric collection for men's traditional and festive wear. Wholesale supplier in UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -200,7 +206,7 @@ export default function RasmEthnicsPage() {
                         sophistication to any traditional garment.
                     </p>
                     <a
-                        href="/contact"
+                        href="/contact-us"
                         style={{
                             display: "inline-block",
                             padding: "14px 32px",

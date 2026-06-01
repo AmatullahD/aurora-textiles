@@ -92,11 +92,11 @@ export default function Navbar() {
                         onMouseLeave={() => setProductsOpen(false)}
                     >
                         <a
-                            href="/products"
+                            href="/products/suiting"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                 fontFamily: "poppins, sans-serif",
+                                fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                                 display: "flex",
@@ -123,18 +123,15 @@ export default function Navbar() {
                                     overflow: "hidden",
                                 }}
                             >
-                                {["Suiting", "Shirting", "Uniform", "Ethnic"].map((item) => (
-                                    <li key={item}>
+                                {[
+                                    { label: "Suiting", href: "/products/suiting" },
+                                    { label: "Shirting", href: "/products/shirting" },
+                                    { label: "Uniform", href: "/products/uniform" },
+                                    { label: "Ethnic", href: "/products/ethnic" },
+                                ].map((item) => (
+                                    <li key={item.label}>
                                         <a
-                                            href={
-                                                item === "Suiting"
-                                                    ? "/products/suiting"
-                                                    : item === "Shirting"
-                                                        ? "/products/shirting"
-                                                        : item === "Uniform"
-                                                            ? "/products/uniform"
-                                                            : "/products/ethnic"
-                                            }
+                                            href={item.href}
                                             style={{
                                                 display: "block",
                                                 padding: "14px 26px",
@@ -152,7 +149,7 @@ export default function Navbar() {
                                                 e.target.style.color = "#111";
                                             }}
                                         >
-                                            {item}
+                                            {item.label}
                                         </a>
                                     </li>
                                 ))}
@@ -160,7 +157,7 @@ export default function Navbar() {
                         )}
                     </li>
 
-                    {/* BRANDS — with nested flyouts for Sammaan & Nemssis */}
+                    {/* BRANDS */}
                     <li
                         style={{
                             position: "relative",
@@ -176,11 +173,11 @@ export default function Navbar() {
                         }}
                     >
                         <a
-                            href="/brands"
+                            href="/products/donear"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                 fontFamily: "poppins, sans-serif",
+                                fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                                 display: "flex",
@@ -207,16 +204,16 @@ export default function Navbar() {
                                 }}
                             >
                                 {/* Simple brand items */}
-                                {["Donear", "Klopman", "Oxford", "Reid & Taylor", "John Cavendish"].map((item) => (
-                                    <li key={item}>
+                                {[
+                                    { label: "Donear", href: "/products/donear" },
+                                    { label: "Klopman", href: "/products/klopman" },
+                                    { label: "Oxford", href: "/products/oxford" },
+                                    { label: "Reid & Taylor", href: "/products/reid-and-taylor" },
+                                    { label: "John Cavendish", href: "/products/john-fabrics" },
+                                ].map((item) => (
+                                    <li key={item.label}>
                                         <a
-                                            href={
-                                                item === "Donear" ? "/brands/donear"
-                                                    : item === "Klopman" ? "/brands/klopman"
-                                                        : item === "Oxford" ? "/brands/oxford"
-                                                            : item === "Reid & Taylor" ? "/brands/reid-and-taylor"
-                                                                : "/brands/john"
-                                            }
+                                            href={item.href}
                                             style={{
                                                 display: "block",
                                                 padding: "11px 20px",
@@ -234,7 +231,7 @@ export default function Navbar() {
                                                 e.target.style.color = "#111";
                                             }}
                                         >
-                                            {item}
+                                            {item.label}
                                         </a>
                                     </li>
                                 ))}
@@ -249,7 +246,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setSammaanOpen(false)}
                                 >
                                     <a
-                                        href="/brands/sammaan"
+                                        href="/products/sammaan-fabrics"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -282,7 +279,7 @@ export default function Navbar() {
                                         >
                                             <li>
                                                 <a
-                                                    href="/brands/sammaan/rasm-ethnics"
+                                                    href="/products/sammaan-fabrics/rasm-ethnics"
                                                     style={{
                                                         display: "block",
                                                         padding: "11px 20px",
@@ -310,7 +307,7 @@ export default function Navbar() {
                                 {/* GEORGIA GULLINI */}
                                 <li>
                                     <a
-                                        href="/brands/gullini"
+                                        href="/products/gullini"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -335,7 +332,7 @@ export default function Navbar() {
                                 {/* RELIANCE */}
                                 <li>
                                     <a
-                                        href="/brands/reliance"
+                                        href="/products/reliance"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -367,7 +364,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setNemssisOpen(false)}
                                 >
                                     <a
-                                        href="/brands/nemssis"
+                                        href="/products/nemssis"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -399,11 +396,11 @@ export default function Navbar() {
                                             }}
                                         >
                                             {[
-                                                { label: "Shiddat by Nemssis", href: "/brands/nemssis/shiddat" },
-                                                { label: "Sanskriti by Nemssis", href: "/brands/nemssis/sanskriti" },
-                                                { label: "Raag Resham by Nemssis", href: "/brands/nemssis/raag-resham" },
-                                                { label: "Zarista by Nemssis", href: "/brands/nemssis/zarista" },
-                                                { label: "Nawabi by Nemssis", href: "/brands/nemssis/nawabi" },
+                                                { label: "Shiddat by Nemssis", href: "/products/nemssis/shiddat" },
+                                                { label: "Sanskriti by Nemssis", href: "/products/nemssis/sanskriti" },
+                                                { label: "Raag Resham by Nemssis", href: "/products/nemssis/raag-resham" },
+                                                { label: "Zarista by Nemssis", href: "/products/nemssis/zarista" },
+                                                { label: "Nawabi by Nemssis", href: "/products/nemssis/nawabi" },
                                             ].map((sub) => (
                                                 <li key={sub.label}>
                                                     <a
@@ -436,7 +433,7 @@ export default function Navbar() {
                                 {/* SPAADAA */}
                                 <li>
                                     <a
-                                        href="/brands/spaadaa"
+                                        href="/products/spaadaa"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -473,11 +470,11 @@ export default function Navbar() {
                         onMouseLeave={() => setFabricsOpen(false)}
                     >
                         <a
-                            href="/fabrics"
+                            href="/cotton-fabric"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                 fontFamily: "poppins, sans-serif",
+                                fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                                 display: "flex",
@@ -505,31 +502,20 @@ export default function Navbar() {
                                 }}
                             >
                                 {[
-                                    "Cotton Fabric",
-                                    "Wool Fabrics",
-                                    "Polywool Fabric",
-                                    "Linen",
-                                    "Polycotton",
-                                    "Denim",
-                                    "Poly Viscose",
-                                    "Tencel Blend",
-                                    "PV Lycra",
-                                    "Poly Wool Lycra",
+                                    { label: "Cotton Fabric", href: "/cotton-fabric" },
+                                    { label: "Wool Fabrics", href: "/wool-fabric" },
+                                    { label: "Polywool Fabric", href: "/poly-wool-fabric" },
+                                    { label: "Linen", href: "/linen-fabric" },
+                                    { label: "Polycotton", href: "/poly-cotton-fabric" },
+                                    { label: "Denim", href: "/denim-fabric" },
+                                    { label: "Poly Viscose", href: "/poly-viscose-fabric" },
+                                    { label: "Tencel Blend", href: "/tencel-blend-fabric" },
+                                    { label: "PV Lycra", href: "/pv-lycra" },
+                                    { label: "Poly Wool Lycra", href: "/poly-wool-lycra-fabric" },
                                 ].map((item) => (
-                                    <li key={item}>
+                                    <li key={item.label}>
                                         <a
-                                            href={
-                                                item === "Cotton Fabric" ? "/fabrics/cotton"
-                                                    : item === "Wool Fabrics" ? "/fabrics/wool"
-                                                        : item === "Polywool Fabric" ? "/fabrics/poly-wool"
-                                                            : item === "Linen" ? "/fabrics/linen"
-                                                                : item === "Polycotton" ? "/fabrics/poly-cotton"
-                                                                    : item === "Denim" ? "/fabrics/denim"
-                                                                        : item === "Poly Viscose" ? "/fabrics/poly-viscose"
-                                                                            : item === "Tencel Blend" ? "/fabrics/tencel-blend"
-                                                                                : item === "PV Lycra" ? "/fabrics/pv-lycra"
-                                                                                    : "/fabrics/poly-wool-lycra"
-                                            }
+                                            href={item.href}
                                             style={{
                                                 display: "block",
                                                 padding: "11px 20px",
@@ -547,7 +533,7 @@ export default function Navbar() {
                                                 e.target.style.color = "#111";
                                             }}
                                         >
-                                            {item}
+                                            {item.label}
                                         </a>
                                     </li>
                                 ))}
@@ -558,11 +544,11 @@ export default function Navbar() {
                     {/* ABOUT */}
                     <li>
                         <a
-                            href="/about"
+                            href="/about-us"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                 fontFamily: "poppins, sans-serif",
+                                fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                             }}
@@ -574,11 +560,11 @@ export default function Navbar() {
                     {/* CONTACT */}
                     <li>
                         <a
-                            href="/contact"
+                            href="/contact-us"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                 fontFamily: "poppins, sans-serif",
+                                fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                             }}
@@ -590,7 +576,7 @@ export default function Navbar() {
 
                 {/* ENQUIRE BUTTON */}
                 <a
-                    href="/contact"
+                    href="/contact-us"
                     style={{
                         background: "#122a4b",
                         color: "#fff",
@@ -615,10 +601,17 @@ export default function Navbar() {
                         boxSizing: "border-box",
                     }}
                 >
-                    {["Home", "Products", "Brands", "Fabrics", "About Us", "Contact Us"].map((item) => (
+                    {[
+                        { label: "Home", href: "/" },
+                        { label: "Products", href: "/products/suiting" },
+                        { label: "Brands", href: "/products/donear" },
+                        { label: "Fabrics", href: "/cotton-fabric" },
+                        { label: "About Us", href: "/about-us" },
+                        { label: "Contact Us", href: "/contact-us" },
+                    ].map((item) => (
                         <a
-                            key={item}
-                            href="/"
+                            key={item.label}
+                            href={item.href}
                             style={{
                                 display: "block",
                                 padding: "14px 0",
@@ -628,7 +621,7 @@ export default function Navbar() {
                                 borderBottom: "1px solid #eee",
                             }}
                         >
-                            {item}
+                            {item.label}
                         </a>
                     ))}
                 </div>
@@ -649,7 +642,7 @@ export default function Navbar() {
           nav img {
             width: 130px !important;
           }
-          nav a[href="/contact"] {
+          nav a[href="/contact-us"] {
             padding: 10px 18px !important;
             font-size: 14px !important;
           }

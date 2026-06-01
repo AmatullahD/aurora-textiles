@@ -39,14 +39,15 @@ function CollectionSection() {
           textAlign: "center",
           color: "#0B2C66",
           fontSize: window.innerWidth < 768 ? "28px" : "36px",
+          fontFamily: "'Cinzel Decorative', sans-serif",
+          // textTransform: "uppercase",
           fontWeight: "600",
           letterSpacing: "1px",
           marginBottom: "45px",
           marginTop: "0",
-          fontFamily: "serif",
         }}
       >
-        OUR COLLECTION
+        Our Collection
       </h4>
 
       {/* Collection Grid */}

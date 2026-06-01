@@ -34,7 +34,7 @@ export default function BannerSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -74,7 +74,7 @@ export default function BannerSlider() {
         style={{
           position: "relative",
           zIndex: 2,
-          maxWidth: "700px",
+          maxWidth: "900px",
           paddingLeft: isMobile ? "20px" : "60px",
           paddingRight: isMobile ? "20px" : "0px",
           color: "white",
@@ -83,11 +83,11 @@ export default function BannerSlider() {
         <h1
           style={{
             fontSize: isMobile ? "34px" : "42px",
-            lineHeight: "1.2",
-            fontWeight: "500",
+            lineHeight: "1.7",
+            fontWeight: "600",
             marginBottom: "25px",
-            textTransform: "uppercase",
-            fontFamily: "'Poppins', sans-serif",
+            textTransform: "lowercase",
+            fontFamily: "'Cinzel Decorative', sans-serif",
           }}
         >
           {slides[current].heading1}

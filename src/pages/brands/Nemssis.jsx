@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function NemssisPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Nemssis Ethnic Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Explore Nemssis ethnic fabric collections at Aurora Textiles Dubai. Wholesale supplier of Shiddat, Sanskriti, Raag Resham, Zarista and Nawabi collections." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

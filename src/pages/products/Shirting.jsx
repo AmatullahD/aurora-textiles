@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 
-export default function SuitingPage() {
+export default function ShirtingPage() {
 
     const brands = [
         "/john-cavendish.webp",
@@ -51,16 +51,16 @@ export default function SuitingPage() {
 
     const faqs = [
         {
-            question: "What types of branded suiting fabrics does Aurora Textiles offer?",
+            question: "What types of men's shirt fabrics do you offer?",
             answer: (
                 <>
                     <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", marginBottom: "12px", fontFamily: "'Poppins', sans-serif" }}>
-                        At Aurora Textile we offer suits fabrics from multiple brands including:
+                        We offer a diverse range of men's shirting fabrics, including:
                     </p>
                     <ul style={{ paddingLeft: "22px", margin: 0 }}>
-                        {["Donear", "Regency", "Opulent", "Dignity", "John Cavendish", "Reid & Taylor", "Georgia Gullini"].map((brand) => (
-                            <li key={brand} style={{ fontSize: "15px", lineHeight: "1.9", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
-                                {brand}
+                        {["Cotton for quilting apparel", "Linen for lightweight clothing", "Printed shirt fabrics for occasional wear", "Formal shirt fabrics for business attire"].map((item) => (
+                            <li key={item} style={{ fontSize: "15px", lineHeight: "1.9", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                                {item}
                             </li>
                         ))}
                     </ul>
@@ -68,18 +68,21 @@ export default function SuitingPage() {
             ),
         },
         {
-            question: "What types of suit fabrics are available at Aurora Textile?",
+            question: "Where is Your Retail Store Located?",
             answer: (
                 <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
-                    We offer a wide range of suiting fabrics including wool, wool blends, polyester, poly-viscose blends, linen, and cotton. Whether you need lightweight summer fabrics or heavier winter weights, our collection covers every need.
+                    Our store is located in Al Fahidi, Wholesale Textile Market, Capital Building, Dubai. You can visit our retail store:{" "}
+                    <a href="https://maps.app.goo.gl/4XVdGmxDpRs5Yxa37" target="_blank" rel="noopener noreferrer" style={{ color: "#b9972f" }}>
+                        https://maps.app.goo.gl/4XVdGmxDpRs5Yxa37
+                    </a>
                 </p>
             ),
         },
         {
-            question: "How to buy suit fabric from Aurora Textile?",
+            question: "Do you offer a wholesale price for bulk purchases?",
             answer: (
                 <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
-                    You can visit our store in Dubai's Textile City or contact us via phone or email. You can also reach out through our website contact form and our team will assist you with fabric selection, pricing, and delivery options.
+                    Yes, we offer wholesale prices for bulk purchases. If you are looking to buy bulk fabrics in Dubai at wholesale prices, then you can contact us directly through email, Call, or WhatsApp, and we will discuss your specific needs for the quote.
                 </p>
             ),
         },
@@ -88,10 +91,9 @@ export default function SuitingPage() {
     return (
         <div style={{ width: "100%", background: "#fff" }}>
 
-
             <Helmet>
-                <title>Men's Suiting Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop premium men's suiting fabrics in Dubai. Aurora Textiles offers wholesale suiting fabric from top global brands for tailors, retailers and fashion houses." />
+                <title>Men's Shirting Fabrics by Aurora Textile | Luxury Shirting Fabrics</title>
+                <meta name="description" content="Buy High-quality and premium unstitched Men's Shirting Fabrics by Aurora Textiles in Dubai, UAE. Check out our website and contact us to order now." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -110,7 +112,7 @@ export default function SuitingPage() {
                 {/* BACKGROUND IMAGE */}
                 <img
                     src="/about-banner.jpg"
-                    alt="Suiting Fabrics Banner"
+                    alt="Men's Shirting Fabrics"
                     style={{
                         width: "100%",
                         height: "100%",
@@ -152,12 +154,12 @@ export default function SuitingPage() {
                             textTransform: "uppercase",
                         }}
                     >
-                        SUITING FABRICS
+                        Shirting Fabrics
                     </h1>
                 </div>
             </section>
 
-            {/* SUITING INTRO SECTION */}
+            {/* SHIRTING INTRO SECTION */}
             <section
                 style={{
                     width: "100%",
@@ -195,7 +197,7 @@ export default function SuitingPage() {
                                 textTransform: "uppercase",
                             }}
                         >
-                            Suiting Fabric By <br />
+                            Shirting Fabric By <br />
                             Aurora Textiles
                         </h3>
 
@@ -209,19 +211,9 @@ export default function SuitingPage() {
                                 fontFamily: "'Poppins', sans-serif",
                             }}
                         >
-                            Our exquisite suiting fabrics are the foundation of sophisticated,
-                            <br />
-                            stylish, and luxurious attire. Whether you're crafting a formal
-                            <br />
-                            business suit, a casual blazer, or professional suiting, the right
-                            <br />
-                            fabric makes all the difference. At Aurora Textiles in Dubai, UAE, we
-                            <br />
-                            offer an exclusive selection of premium suiting fabrics from our
-                            <br />
-                            renowned partner brands, ensuring the perfect choice for every
-                            <br />
-                            taste and occasion.
+                            A perfectly tailored shirt crafted from quality fabrics forms the foundation of every stylish man's wardrobe. At Aurora Textiles, Dubai, we offer an exceptional collection of men's shirting fabrics designed to meet all your sartorial needs. From formal attire to casual elegance, discover the finest fabric selections that blend sophistication with comfort.
+                            <br /><br />
+                            Whether your day demands the crisp elegance of pure cotton formal shirts or the relaxed luxury of linen shirts in Dubai's warm climate, Aurora Textiles ensures you are impeccably dressed for every occasion. Our range is versatile, timeless, and designed for real-world comfort, offering the perfect fabric for shirts that feel as good as they look.
                         </p>
 
                         {/* Button */}
@@ -265,12 +257,12 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/suiting-fabric.jpg"
-                            alt="Suiting Fabric"
+                            src="/nemssis-2.webp"
+                            alt="Men's Shirting Fabrics"
                             style={{
                                 width: "100%",
                                 height: "420px",
-                                objectFit: "cover",
+                                objectFit: "contain",
                                 borderRadius: "24px",
                                 display: "block",
                             }}
@@ -350,9 +342,9 @@ export default function SuitingPage() {
                                     src={brand}
                                     alt="brand"
                                     style={{
-                                        width: "180px",   // ← change width here
-                                        height: "180px",  // ← change height here
-                                        objectFit: "contain",   // no cropping, shows full image
+                                        width: "180px",
+                                        height: "180px",
+                                        objectFit: "contain",
                                         borderRadius: "12px",
                                         display: "block",
                                     }}
@@ -414,7 +406,7 @@ export default function SuitingPage() {
             </section>
 
 
-            {/* TYPES OF SUITING FABRICS SECTION */}
+            {/* WHY CHOOSE AURORA TEXTILES SHIRTING FABRIC SECTION */}
             <section
                 style={{
                     width: "100%",
@@ -443,8 +435,8 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/suitings.webp"
-                            alt="Suiting Fabrics"
+                            src="/shirting-2.png"
+                            alt="Shirting Fabrics in Dubai, UAE"
                             style={{
                                 width: "100%",
                                 height: window.innerWidth < 768 ? "420px" : "620px",
@@ -461,7 +453,7 @@ export default function SuitingPage() {
                             flex: "1 1 500px",
                         }}
                     >
-                        <h3
+                        <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "38px",
                                 lineHeight: "1.25",
@@ -472,9 +464,9 @@ export default function SuitingPage() {
                                 textTransform: "uppercase",
                             }}
                         >
-                            Types Of Suit Fabrics <br />
-                            At Aurora Textiles
-                        </h3>
+                            Why Choose Aurora Textiles <br />
+                            Shirting Fabric?
+                        </h2>
 
                         <p
                             style={{
@@ -485,11 +477,7 @@ export default function SuitingPage() {
                                 fontFamily: "'Poppins', sans-serif",
                             }}
                         >
-                            Our suiting fabrics blend functionality, durability, and elegance,
-                            each offering its own unique qualities, perfect for crafting a
-                            professional wardrobe attire that enhances both style and confidence.
-                            At Aurora Textiles, we offer a wide range of options to suit every
-                            preference.
+                            Our shirting fabrics are crafted to deliver the perfect balance of comfort, durability, and style, making every shirt a testament to quality and sophistication.
                         </p>
 
                         {/* LIST */}
@@ -503,17 +491,10 @@ export default function SuitingPage() {
                                 fontFamily: "'Poppins', sans-serif",
                             }}
                         >
-                            <li>Wool</li>
-                            <li>Polywool</li>
-                            <li>Cotton</li>
-                            <li>Linen</li>
-                            <li>PolyCotton</li>
-                            <li>Cotton-Linen</li>
-                            <li>PolyViscose</li>
-                            <li>Denim</li>
-                            <li>PV Lycra</li>
-                            <li>Poly Wool Lycra</li>
-                            <li>Tencel Blend</li>
+                            <li><strong>Breathable Comfort:</strong> Experience fabrics crafted to be lightweight and breathable, ideal for keeping you cool and comfortable throughout long days in Dubai's warm weather.</li>
+                            <li><strong>Exceptional Durability:</strong> Invest in quality with our fabrics that resist pilling and wear, maintaining their pristine appearance wash after wash.</li>
+                            <li><strong>Eco-Friendly Choices:</strong> Committed to sustainability, Aurora Textiles offers responsibly sourced fabrics that reduce environmental impact without compromising on style or quality.</li>
+                            <li><strong>Fade-Resistant Quality:</strong> Preserve the vibrancy of your shirts with fabrics designed for exceptional fade resistance, ensuring your favorite colors remain fresh and bold even after extensive use.</li>
                         </ul>
                     </div>
 
@@ -521,7 +502,7 @@ export default function SuitingPage() {
             </section>
 
 
-            {/* BUY SUIT FABRIC SECTION */}
+            {/* OUR EXTENSIVE RANGE SECTION */}
             <section
                 style={{
                     width: "100%",
@@ -548,7 +529,7 @@ export default function SuitingPage() {
                             flex: "1 1 500px",
                         }}
                     >
-                        <h3
+                        <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "40px",
                                 lineHeight: "1.15",
@@ -559,10 +540,10 @@ export default function SuitingPage() {
                                 textTransform: "uppercase",
                             }}
                         >
-                            Buy Suit Fabric <br />
-                            Online at Aurora <br />
-                            Textiles
-                        </h3>
+                            Our Extensive Range of <br />
+                            Collection for the Best <br />
+                            Fabric for Men's Shirts
+                        </h2>
 
                         <p
                             style={{
@@ -574,27 +555,7 @@ export default function SuitingPage() {
                                 fontFamily: "'Poppins', sans-serif",
                             }}
                         >
-                            Your clothing plays a vital role in shaping your confidence and
-                            presence. Repeating the same outfits can feel uninspiring, but the
-                            right fabric can transform your look and mindset. At Aurora
-                            Textiles, we offer a premium collection of suiting fabrics, designed
-                            to enhance your style with elegance and professionalism.
-                        </p>
-
-                        <p
-                            style={{
-                                fontSize: "16px",
-                                lineHeight: "1.7",
-                                color: "#333",
-                                maxWidth: "620px",
-                                marginBottom: "0",
-                                fontFamily: "'Poppins', sans-serif",
-                            }}
-                        >
-                            With a diverse selection of high-quality fabrics from premium
-                            partner brands, you'll find the perfect material to craft a sharp and
-                            distinguished look. Visit our store or contact us today to explore our
-                            exclusive range and enhance your collection with timeless grace.
+                            From formal shirt fabric ideal for business attire to vibrant printed shirt fabric available for casual and party wear, Aurora Textiles has something to suit every personality and occasion. Choose from various shades and textures—rich, bold hues like navy, black, maroon, and teal, or softer, subtle tones such as pastel blues, gentle pinks, and sophisticated beige. Additionally, our fabrics feature unique textures and practical benefits such as easy ironing, fragrance infusion, stain resistance, cooling comfort, washing durability, and eco-friendly qualities to simplify care and enhance sustainability. With Aurora Textiles, you are always spoilt for choice.
                         </p>
                     </div>
 
@@ -605,8 +566,8 @@ export default function SuitingPage() {
                         }}
                     >
                         <img
-                            src="/suitings-1.webp"
-                            alt="Buy Suit Fabric"
+                            src="/suitings-2.webp"
+                            alt="Men's Shirting Fabrics"
                             style={{
                                 width: "100%",
                                 height: "420px",
@@ -615,6 +576,85 @@ export default function SuitingPage() {
                                 display: "block",
                             }}
                         />
+                    </div>
+                </div>
+            </section>
+
+
+            {/* SHOP THE BEST FABRIC SECTION */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "10px 5% 50px" : "10px 5% 70px",
+                    boxSizing: "border-box",
+                    background: "#ffffff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1250px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "30px",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        flexWrap: "wrap",
+                    }}
+                >
+
+                    {/* LEFT IMAGE */}
+                    <div
+                        style={{
+                            flex: "1 1 450px",
+                        }}
+                    >
+                        <img
+                            src="/donear-1.webp"
+                            alt="Men's Shirting Fabrics"
+                            style={{
+                                width: "100%",
+                                height: "420px",
+                                objectFit: "cover",
+                                borderRadius: "24px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* RIGHT CONTENT */}
+                    <div
+                        style={{
+                            flex: "1 1 500px",
+                        }}
+                    >
+                        <h2
+                            style={{
+                                fontSize: window.innerWidth < 768 ? "26px" : "40px",
+                                lineHeight: "1.15",
+                                marginBottom: "24px",
+                                color: "#122a4b",
+                                fontWeight: "700",
+                                fontFamily: "'Cinzel Decorative', serif",
+                                textTransform: "uppercase",
+                            }}
+                        >
+                            Shop the Best Fabric <br />
+                            for Shirts at Aurora <br />
+                            Textile
+                        </h2>
+
+                        <p
+                            style={{
+                                fontSize: "16px",
+                                lineHeight: "1.7",
+                                color: "#333",
+                                maxWidth: "620px",
+                                marginBottom: "20px",
+                                fontFamily: "'Poppins', sans-serif",
+                            }}
+                        >
+                            When purchasing men's shirting fabric, quality and trust matter. At Aurora Textiles, we combine decades of expertise with unparalleled customer care, ensuring every fabric meets your highest expectations. Discover the best shirt fabric and redefine your wardrobe with ease and elegance.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -631,133 +671,104 @@ export default function SuitingPage() {
             >
                 <div
                     style={{
-                        maxWidth: "1250px",
+                        maxWidth: "800px",
                         margin: "0 auto",
-                        display: "flex",
-                        gap: "40px",
-                        alignItems: "flex-start",
-                        justifyContent: "space-between",
-                        flexWrap: "wrap",
                     }}
                 >
 
-                    {/* LEFT IMAGE */}
-                    <div
+                    {/* FAQ TITLE */}
+                    <h3
                         style={{
-                            flex: "1 1 420px",
+                            fontSize: window.innerWidth < 768 ? "32px" : "42px",
+                            fontWeight: "700",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            color: "#122a4b",
+                            fontStyle: "italic",
+                            marginBottom: "24px",
+                            textAlign: "center",
+                            display: "flex",
+                            alignItems: "baseline",
+                            justifyContent: "center",
+                            gap: "6px",
                         }}
                     >
-                        <img
-                            src="/suitings-2.webp"
-                            alt="Suiting FAQ"
+                        FAQ
+                        <span
                             style={{
-                                width: "100%",
-                                height: "630px",
-                                objectFit: "cover",
-                                borderRadius: "24px",
-                                display: "block",
+                                display: "inline-block",
+                                width: "28px",
+                                borderBottom: "3px solid #122a4b",
+                                marginBottom: "6px",
+                                marginLeft: "4px",
                             }}
                         />
-                    </div>
+                    </h3>
 
-                    {/* RIGHT FAQ */}
-                    <div
-                        style={{
-                            flex: "1 1 500px",
-                        }}
-                    >
-                        {/* FAQ TITLE */}
-                        <h3
+                    {/* FAQ ITEMS */}
+                    {faqs.map((faq, index) => (
+                        <div
+                            key={index}
                             style={{
-                                fontSize: window.innerWidth < 768 ? "32px" : "42px",
-                                fontWeight: "700",
-                                fontFamily: "'Cinzel Decorative', serif",
-                                color: "#122a4b",
-                                fontStyle: "italic",
-                                marginBottom: "24px",
-                                display: "flex",
-                                alignItems: "baseline",
-                                gap: "6px",
+                                border: "1px solid #dde0e8",
+                                borderRadius: "8px",
+                                marginBottom: "12px",
+                                overflow: "hidden",
                             }}
                         >
-                            FAQ
-                            <span
-                                style={{
-                                    display: "inline-block",
-                                    width: "28px",
-                                    borderBottom: "3px solid #122a4b",
-                                    marginBottom: "6px",
-                                    marginLeft: "4px",
-                                }}
-                            />
-                        </h3>
-
-                        {/* FAQ ITEMS */}
-                        {faqs.map((faq, index) => (
+                            {/* QUESTION ROW */}
                             <div
-                                key={index}
+                                onClick={() => setOpenFaq(openFaq === index ? null : index)}
                                 style={{
-                                    border: "1px solid #dde0e8",
-                                    borderRadius: "8px",
-                                    marginBottom: "12px",
-                                    overflow: "hidden",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    padding: "18px 22px",
+                                    cursor: "pointer",
                                 }}
                             >
-                                {/* QUESTION ROW */}
-                                <div
-                                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                                <h4
                                     style={{
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        padding: "18px 22px",
-                                        cursor: "pointer",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "13px",
+                                        fontWeight: "700",
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        color: "#b9972f",
+                                        textTransform: "uppercase",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.5",
+                                        margin: 0,
+                                        flex: 1,
+                                        paddingRight: "16px",
                                     }}
                                 >
-                                    <h4
-                                        style={{
-                                            fontSize: window.innerWidth < 768 ? "11px" : "13px",
-                                            fontWeight: "700",
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            color: "#b9972f",
-                                            textTransform: "uppercase",
-                                            letterSpacing: "0.5px",
-                                            lineHeight: "1.5",
-                                            margin: 0,
-                                            flex: 1,
-                                            paddingRight: "16px",
-                                        }}
-                                    >
-                                        {faq.question}
-                                    </h4>
-                                    <span
-                                        style={{
-                                            fontSize: "24px",
-                                            color: "#b9972f",
-                                            fontWeight: "300",
-                                            lineHeight: "1",
-                                            flexShrink: 0,
-                                        }}
-                                    >
-                                        {openFaq === index ? "−" : "+"}
-                                    </span>
-                                </div>
-
-                                {/* ANSWER */}
-                                {openFaq === index && (
-                                    <div
-                                        style={{
-                                            padding: "0 22px 20px",
-                                            borderTop: "1px solid #eee",
-                                            paddingTop: "16px",
-                                        }}
-                                    >
-                                        {faq.answer}
-                                    </div>
-                                )}
+                                    {faq.question}
+                                </h4>
+                                <span
+                                    style={{
+                                        fontSize: "24px",
+                                        color: "#b9972f",
+                                        fontWeight: "300",
+                                        lineHeight: "1",
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    {openFaq === index ? "−" : "+"}
+                                </span>
                             </div>
-                        ))}
-                    </div>
+
+                            {/* ANSWER */}
+                            {openFaq === index && (
+                                <div
+                                    style={{
+                                        padding: "0 22px 20px",
+                                        borderTop: "1px solid #eee",
+                                        paddingTop: "16px",
+                                    }}
+                                >
+                                    {faq.answer}
+                                </div>
+                            )}
+                        </div>
+                    ))}
 
                 </div>
             </section>

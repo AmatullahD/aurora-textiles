@@ -9,7 +9,7 @@ export default function AboutSection() {
       style={{
         width: "100%",
         background: "#ffffff",
-        padding: "60px 20px",
+        padding: "60px 30px",
        fontSize: "36px",
         boxSizing: "border-box",
         overflow: "hidden",
@@ -20,7 +20,7 @@ export default function AboutSection() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          gap: "80px",
+          gap: "20px",
           flexWrap: "wrap",
         }}
       >
@@ -42,13 +42,12 @@ export default function AboutSection() {
                 fontSize: "42px",
                 color: "#0B2C66",
                 margin: 0,
-                fontFamily: "Times New Roman, serif",
+                fontFamily: "'Cinzel Decorative', sans-serif",
                 fontWeight: "700",
-                textTransform: "uppercase",
                 textAlign: "center",
               }}
             >
-              ABOUT US
+              About Us
             </h3>
 
             {/* Yellow Underline */}
@@ -57,7 +56,7 @@ export default function AboutSection() {
                 width: "220px",
                 height: "5px",
                 background: "#E2B13C",
-                marginTop: "10px",
+                marginTop: "5px",
                 margin: "10px auto 0",
               }}
             ></div>

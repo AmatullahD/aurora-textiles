@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -123,6 +124,12 @@ export default function Uniform() {
 
   return (
     <div style={{ width: "100%", background: "#fff", fontFamily: "'Lato', 'Segoe UI', sans-serif", color: "#222" }}>
+
+      <Helmet>
+        <title>Uniform Fabric Supplier in Dubai | Aurora Textiles</title>
+        <meta name="description" content="Aurora Textiles is a leading uniform fabric supplier in Dubai. We offer durable, professional-grade fabrics for all industries across UAE and GCC." />
+      </Helmet>
+
       <Navbar />
 
       {/* ── HERO BANNER ── */}
@@ -379,7 +386,7 @@ export default function Uniform() {
           style={{
             background: "#1e2d6b",
             borderRadius: "24px",
-             border: "3px solid #e6e213e7",
+            border: "3px solid #e6e213e7",
             maxWidth: "1120px",
             margin: "0 auto 70px",
             padding: "55px 60px",

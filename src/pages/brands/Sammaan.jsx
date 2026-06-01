@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -26,6 +27,12 @@ export default function SammaanPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+
+            <Helmet>
+                <title>Sammaan Fabrics Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Explore Sammaan ethnic and suiting fabrics in Dubai. Aurora Textiles is a wholesale supplier of Sammaan Fabrics collections across UAE and GCC." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

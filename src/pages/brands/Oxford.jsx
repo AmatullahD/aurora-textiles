@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -26,6 +27,12 @@ export default function OxfordPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+
+            <Helmet>
+                <title>Oxford Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Buy Oxford fabrics wholesale in Dubai. Aurora Textiles offers a wide range of Oxford weave fabrics for shirting, suiting and uniform use across UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ScrollToTop from "../../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function RaagReshamPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>Raag Resham by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
+                <meta name="description" content="Explore Raag Resham by Nemssis at Aurora Textiles Dubai. Premium ethnic fabric collection with rich textures for men's traditional wear. Wholesale in UAE." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -198,7 +204,7 @@ export default function RaagReshamPage() {
                         perfect base for impactful attire.
                     </p>
                     <a
-                        href="/contact"
+                        href="/contact-us"
                         style={{
                             display: "inline-block",
                             padding: "14px 32px",

@@ -50,12 +50,12 @@ export default function PartnerBrands() {
             {/* Heading */}
             <h4
                 style={{
-                    fontSize: window.innerWidth < 768 ? "28px" : "36px",
+                    fontSize: window.innerWidth < 768 ? "28px" : "38px",
                     color: "#0B2C66",
                     marginBottom: "60px",
-                    fontFamily: "Times New Roman, serif",
-                    textTransform: "uppercase",
-                    fontWeight: "800",
+                    fontFamily: "'Cinzel Decorative', sans-serif",
+                    textTransform: "lowercase",
+                    fontWeight: "600",
                 }}
             >
                 Partner Brands

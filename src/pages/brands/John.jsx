@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
@@ -26,6 +27,11 @@ export default function JohnCavendishPage() {
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
+
+            <Helmet>
+                <title>John Cavendish Fabric Supplier in Dubai | Aurora Textiles</title>
+                <meta name="description" content="Buy John Cavendish fabrics wholesale in Dubai. Aurora Textiles supplies premium John Cavendish suiting and shirting fabrics across UAE and GCC." />
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -389,7 +395,7 @@ export default function JohnCavendishPage() {
                         or request samples of our latest{" "}
                         <strong>John Cavendish suiting</strong> range.
                     </p>
-                     <button
+                    <button
                         onMouseEnter={e => {
                             e.currentTarget.style.background = "#0a089bd3";
                             e.currentTarget.style.borderColor = "#e0b219";

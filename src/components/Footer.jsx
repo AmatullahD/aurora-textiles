@@ -12,11 +12,11 @@ import {
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "Our Products", href: "/products" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Our Products", href: "/products/suiting" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
-  { label: "Leading Fabric Suppliers", href: "/suppliers" },
+  { label: "Leading Fabric Suppliers", href: "/fabric-suppliers" },
 ];
 
 export default function Footer() {
@@ -54,10 +54,10 @@ export default function Footer() {
               fontSize: "22px",
               marginBottom: "25px",
               fontFamily: "'Cinzel Decorative', serif",
-              fontWeight: "500",
+              fontWeight: "600",
             }}
           >
-            ABOUT US
+            About Us
           </h2>
 
           <p
@@ -80,21 +80,23 @@ export default function Footer() {
               marginTop: "40px",
               marginBottom: "20px",
               fontFamily: "'Cinzel Decorative', serif",
-              fontWeight: "500",
+              fontWeight: "600",
             }}
           >
-            FOLLOW US ON
+            Follow Us On
           </h2>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "18px",
-            }}
-          >
-            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, index) => (
-              <div
+          <div style={{ display: "flex", gap: "18px" }}>
+            {[
+              { Icon: FaFacebookF, href: "https://www.facebook.com/share/15UnfGtpkR/" },
+              { Icon: FaInstagram, href: "https://www.instagram.com/aurora.textiles" },
+              { Icon: FaLinkedinIn, href: "https://www.linkedin.com/company/aurora-textiles-uae/" },
+            ].map((item, index) => (
+              <a
                 key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   width: "42px",
                   height: "42px",
@@ -104,10 +106,12 @@ export default function Footer() {
                   alignItems: "center",
                   justifyContent: "center",
                   cursor: "pointer",
+                  color: "#fff",
+                  textDecoration: "none",
                 }}
               >
-                <Icon size={18} />
-              </div>
+                <item.Icon size={18} />
+              </a>
             ))}
           </div>
         </div>
@@ -119,10 +123,10 @@ export default function Footer() {
               fontSize: "22px",
               marginBottom: "25px",
               fontFamily: "'Cinzel Decorative', serif",
-              fontWeight: "500",
+              fontWeight: "600",
             }}
           >
-            QUICK LINKS
+            Quick Links
           </h2>
 
           <div
@@ -162,10 +166,10 @@ export default function Footer() {
               fontSize: "22px",
               marginBottom: "25px",
               fontFamily: "'Cinzel Decorative', serif",
-              fontWeight: "500",
+              fontWeight: "600",
             }}
           >
-            CONTACT US
+            Contact Us
           </h2>
 
           <div
@@ -179,9 +183,7 @@ export default function Footer() {
             }}
           >
             <div style={{ display: "flex", gap: "14px" }}>
-              <FaMapMarkerAlt
-                style={{ marginTop: "6px", minWidth: "18px" }}
-              />
+              <FaMapMarkerAlt style={{ marginTop: "6px", minWidth: "18px" }} />
               <span>
                 Dubai Textile City - Warehouse # 47
                 <br />
@@ -218,7 +220,7 @@ export default function Footer() {
               border: 0,
               borderRadius: "8px",
             }}
-            allowFullScreen="/FAQ-IMAGE.JPG"
+            allowFullScreen=""
             loading="lazy"
           ></iframe>
         </div>

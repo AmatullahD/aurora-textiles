@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import Schema from "../components/Schema";
 import Navbar from "../components/Navbar";
 import BannerSlider from "../components/BannerSlider";
 import AboutSection from "../components/AboutSection";
@@ -14,6 +16,11 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
+      <Helmet>
+        <title>Premium Fabric Store in Dubai | Aurora Textiles</title>
+        <meta name="description" content="Aurora Textiles is a leading premium fabric supplier in Dubai. Shop premium men's suiting, shirting, uniform and ethnic fabrics from top global brands." />
+      </Helmet>
+      <Schema />
       <Navbar />
       <BannerSlider />
       <AboutSection />

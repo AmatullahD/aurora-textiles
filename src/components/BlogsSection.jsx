@@ -43,6 +43,7 @@ export default function BlogsSection() {
           color: "#0B2C66",
           fontWeight: "600",
           fontFamily: "'Cinzel Decorative', sans-serif",
+          textTransform: "lowercase",
           marginTop: 0,
           marginBottom: "55px",
           letterSpacing: "1px",

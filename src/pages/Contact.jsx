@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -11,6 +12,12 @@ export default function ContactPage() {
                 background: "#ffffff",
             }}
         >
+
+            <Helmet>
+                <title>Contact Us | Aurora Textiles Dubai</title>
+                <meta name="description" content="Get in touch with Aurora Textiles. Visit us at Dubai Textile City or call +97143532696. We supply wholesale fabrics across UAE, GCC and Africa." />
+            </Helmet>
+            
             {/* NAVBAR */}
             <Navbar />
 
@@ -79,7 +86,7 @@ export default function ContactPage() {
             <section
                 style={{
                     width: "100%",
-                   padding: window.innerWidth < 768 ? "20px 20px" : "25px 7%",
+                    padding: window.innerWidth < 768 ? "20px 20px" : "25px 7%",
                     boxSizing: "border-box",
                     background: "#ffffff",
                 }}
