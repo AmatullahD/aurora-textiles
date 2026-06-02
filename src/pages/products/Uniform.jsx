@@ -168,10 +168,10 @@ export default function Uniform() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
+              
             }}
           >
-            UNIFORM FABRICS
+            Uniform Fabric
           </h1>
         </div>
       </section>
@@ -194,7 +194,7 @@ export default function Uniform() {
               fontSize: "clamp(28px, 3.5vw, 46px)",
               fontWeight: "700",
               color: "#1a2b6d",
-              textTransform: "uppercase",
+             
               lineHeight: "1.2",
               marginBottom: "24px",
             }}
@@ -203,42 +203,38 @@ export default function Uniform() {
             Fabric Suppliers in<br />
             Dubai, UAE
           </h2>
-          <p style={{ fontSize: "15px", lineHeight: "1.8", color: "#444", marginBottom: "28px" }}>
-            Aurora Textiles stands out among the leading{" "}
-            <a href="#" style={{ color: "#9a8120" }}>uniform fabric suppliers in Dubai</a>. We provide premium-quality fabrics tailored specifically for{" "}
-            <a href="#" style={{ color: "#9a8120" }}>uniforms</a> across{" "}
-            <a href="#" style={{ color: "#9a8120" }}>various industries</a>. Our{" "}
-            <a href="#" style={{ color: "#9a8120" }}>fabrics</a> are designed to deliver{" "}
-            <a href="#" style={{ color: "#9a8120" }}>durability</a>, comfort, and a professional appearance,{" "}
-            <a href="#" style={{ color: "#9a8120" }}>enhancing</a> your team's image and{" "}
-            <a href="#" style={{ color: "#9a8120" }}>performance</a>.
+
+          <p style={{ fontSize: "18px", fontWeight: "400", lineHeight: "1.5", color: "#444", marginBottom: "24px" }}>
+            Aurora Textiles stands out among the leading uniform fabric suppliers in Dubai. We provide premium-quality fabrics tailored specifically for uniforms across various industries. Our fabrics are designed to deliver durability, comfort, and a professional appearance, enhancing your team’s image and performance.
           </p>
           <p
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              fontSize: "13px",
+              fontSize: "18px",
               fontWeight: "700",
               color: "#1a2b6d",
-              textTransform: "uppercase",
               letterSpacing: "0.5px",
               marginBottom: "14px",
             }}
           >
             Our Fabric Selections Cater to Diverse Needs Across Various Industries, Including:
           </p>
-          <ul style={{ listStyle: "disc", paddingLeft: "20px", lineHeight: "2", fontSize: "15px" }}>
+
+          <ul style={{ listStyle: "disc", paddingLeft: "25px", lineHeight: "2", fontSize: "16px" }}>
             {["Corporate Offices", "Hotels & Hospitality", "Healthcare & Medical", "Education & Schools", "Industrial & Workwear", "Restaurants & Catering"].map((item) => (
               <li key={item} style={{ fontWeight: "600", color: "#222" }}>{item}</li>
             ))}
           </ul>
         </div>
+
+
         <div style={{ flex: "1" }}>
           <img
             src="/uniform-2.webp"
             alt="Chef in uniform"
             style={{
               width: "100%",
-              height: "620px",
+              height: "640px",
               objectFit: "cover",
               borderRadius: "12px",
               display: "block",
@@ -388,8 +384,8 @@ export default function Uniform() {
             borderRadius: "24px",
             border: "3px solid #e6e213e7",
             maxWidth: "1120px",
-            margin: "0 auto 70px",
-            padding: "55px 60px",
+            margin: "0 auto 20px",
+            padding: "15px 30px",
             color: "#fff",
           }}
         >
@@ -398,7 +394,7 @@ export default function Uniform() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "clamp(24px, 3vw, 38px)",
               fontWeight: "700",
-              textTransform: "uppercase",
+             
               letterSpacing: "2px",
               textAlign: "center",
               marginBottom: "20px",
@@ -408,26 +404,26 @@ export default function Uniform() {
           </h2>
           <p
             style={{
-              textAlign: "center",
-              fontSize: "15px",
+            
+              fontSize: "18px",
               lineHeight: "1.7",
               color: "#d0d5ee",
               marginBottom: "32px",
-              maxWidth: "820px",
-              margin: "0 auto 32px",
+              margin: "0 auto 25px",
             }}
           >
             Selecting the best fabric for uniforms can significantly impact your staff's comfort, durability, and overall professionalism. At Aurora Textiles, we offer a comprehensive range of uniform fabrics, including:
           </p>
+
           <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {fabricTypes.map((f, i) => (
-              <li key={i} style={{ marginBottom: "20px", fontSize: "15px", lineHeight: "1.7", color: "#dde" }}>
+              <li key={i} style={{ marginBottom: "20px", paddingLeft: "40px", fontSize: "16px", lineHeight: "1.4", color: "#dde" }}>
                 <span style={{ marginRight: "4px", fontWeight: "400" }}>{f.num}</span>
                 <strong style={{ color: "#fff" }}>{f.bold}</strong>{" "}{f.desc}
                 {f.sub && (
-                  <ul style={{ listStyle: "disc", paddingLeft: "30px", marginTop: "10px" }}>
+                  <ul style={{ listStyle: "disc", paddingLeft: "50px", marginTop: "10px" }}>
                     {f.sub.map((s, j) => (
-                      <li key={j} style={{ marginBottom: "10px", fontSize: "14px", lineHeight: "1.7", color: "#ccc" }}>
+                      <li key={j} style={{ marginBottom: "10px", fontSize: "16px", lineHeight: "1.4", color: "#ccc" }}>
                         <strong style={{ color: "#dde" }}>{s.bold}</strong>{" "}{s.desc}
                       </li>
                     ))}
@@ -464,7 +460,7 @@ export default function Uniform() {
               fontSize: "clamp(26px, 3vw, 42px)",
               fontWeight: "700",
               color: "#1a2b6d",
-              textTransform: "uppercase",
+              
               lineHeight: "1.25",
               marginBottom: "24px",
             }}
@@ -473,7 +469,7 @@ export default function Uniform() {
             Textiles for Uniform<br />
             Fabrics?
           </h2>
-          <p style={{ fontSize: "15px", lineHeight: "1.8", color: "#555" }}>
+          <p style={{ fontSize: "18px", lineHeight: "1.5", color: "#2b2929" }}>
             At Aurora Textiles, we understand that uniforms represent your brand and team identity. That's why we go beyond standard offerings, delivering fabrics that combine innovation, comfort, and reliability. With industry expertise and exceptional customer support, we ensure each fabric selection meets the highest standards of quality, helping your staff feel confident and comfortable every day.
           </p>
         </div>
@@ -497,7 +493,6 @@ export default function Uniform() {
               fontSize: "clamp(26px, 3vw, 42px)",
               fontWeight: "700",
               color: "#1a2b6d",
-              textTransform: "uppercase",
               lineHeight: "1.25",
               marginBottom: "22px",
             }}
@@ -506,31 +501,45 @@ export default function Uniform() {
             Tailored for Your<br />
             Business
           </h2>
-          <p style={{ fontSize: "15px", lineHeight: "1.8", color: "#555", marginBottom: "16px" }}>
+
+          <p style={{ fontSize: "18px", lineHeight: "1.5", color: "#2b2929", marginBottom: "16px" }}>
             Our uniform fabrics are carefully crafted to withstand everyday wear and tear, retain color brightness, and provide ease of care. Whether you need breathable fabrics for hospitality uniforms or durable fabrics for industrial workwear, Aurora Textiles has the ideal fabric solutions for you.
           </p>
-          <p style={{ fontSize: "15px", lineHeight: "1.8", color: "#555", marginBottom: "16px" }}>
-            Partner with Aurora Textiles today—Dubai's preferred{" "}
-            <a href="#" style={{ color: "#9a8120" }}>uniform fabric supplier</a>—and elevate your uniforms with fabrics that blend practicality, comfort, and professionalism seamlessly.
+          <p style={{ fontSize: "18px", lineHeight: "1.5", color: "#2b2929", marginBottom: "16px" }}>
+            Partner with Aurora Textiles today—Dubai's preferred uniform fabric supplier and elevate your uniforms with fabrics that blend practicality, comfort, and professionalism seamlessly.
           </p>
-          <a
-            href="#"
-            style={{
-              display: "inline-block",
-              marginTop: "10px",
-              padding: "13px 32px",
-              background: "#9a8120",
-              color: "#fff",
-              fontWeight: "600",
-              fontSize: "15px",
-              borderRadius: "6px",
-              textDecoration: "none",
-              cursor: "pointer",
-              letterSpacing: "0.3px",
-            }}
-          >
-            Contact Us
-          </a>
+           {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
         </div>
         <div style={{ flex: "0 0 50%" }}>
           <img
@@ -556,17 +565,17 @@ export default function Uniform() {
           <img
             src="/uniform-5.webp"
             alt="Fabric colour swatches"
-            style={{ width: "100%", height: "480px", objectFit: "cover", borderRadius: "12px" }}
+            style={{ width: "100%", height: "520px", objectFit: "cover", borderRadius: "12px" }}
           />
         </div>
         <div style={{ flex: "1" }}>
           <div
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              fontSize: "42px",
+              fontSize: "32px",
               fontWeight: "700",
               color: "#1a2b6d",
-              fontStyle: "italic",
+              
               marginBottom: "24px",
               display: "flex",
               alignItems: "baseline",
@@ -574,15 +583,7 @@ export default function Uniform() {
             }}
           >
             <span>FAQ</span>
-            <span
-              style={{
-                display: "inline-block",
-                borderBottom: "3px solid #1a2b6d",
-                width: "32px",
-                marginLeft: "6px",
-                marginBottom: "6px",
-              }}
-            />
+            
           </div>
 
           {faqs.map((f, index) => (
@@ -609,10 +610,10 @@ export default function Uniform() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "18px",
                     fontWeight: "700",
-                    color: "#9a8120",
-                    textTransform: "uppercase",
+                   color: "#b39131",
+                 
                     letterSpacing: "0.5px",
                     lineHeight: "1.5",
                     flex: 1,
@@ -621,7 +622,7 @@ export default function Uniform() {
                 >
                   {f.q}
                 </span>
-                <span style={{ fontSize: "22px", color: "#9a8120", fontWeight: "300", flexShrink: 0 }}>
+                <span style={{ fontSize: "22px", color: "#b39131", fontWeight: "300", flexShrink: 0 }}>
                   {openFaq === index ? "−" : "+"}
                 </span>
               </div>
@@ -629,9 +630,9 @@ export default function Uniform() {
                 <div
                   style={{
                     padding: "0 22px 18px",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     lineHeight: "1.8",
-                    color: "#555",
+                    color: "#474747",
                     borderTop: "1px solid #eee",
                   }}
                 >

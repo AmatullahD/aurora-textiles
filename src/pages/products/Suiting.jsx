@@ -54,12 +54,12 @@ export default function SuitingPage() {
             question: "What types of branded suiting fabrics does Aurora Textiles offer?",
             answer: (
                 <>
-                    <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", marginBottom: "12px", fontFamily: "'Poppins', sans-serif" }}>
+                    <p style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "12px", fontFamily: "'Poppins', sans-serif" }}>
                         At Aurora Textile we offer suits fabrics from multiple brands including:
                     </p>
                     <ul style={{ paddingLeft: "22px", margin: 0 }}>
                         {["Donear", "Regency", "Opulent", "Dignity", "John Cavendish", "Reid & Taylor", "Georgia Gullini"].map((brand) => (
-                            <li key={brand} style={{ fontSize: "15px", lineHeight: "1.9", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                            <li key={brand} style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
                                 {brand}
                             </li>
                         ))}
@@ -70,7 +70,7 @@ export default function SuitingPage() {
         {
             question: "What types of suit fabrics are available at Aurora Textile?",
             answer: (
-                <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                <p style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
                     We offer a wide range of suiting fabrics including wool, wool blends, polyester, poly-viscose blends, linen, and cotton. Whether you need lightweight summer fabrics or heavier winter weights, our collection covers every need.
                 </p>
             ),
@@ -78,7 +78,7 @@ export default function SuitingPage() {
         {
             question: "How to buy suit fabric from Aurora Textile?",
             answer: (
-                <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                <p style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
                     You can visit our store in Dubai's Textile City or contact us via phone or email. You can also reach out through our website contact form and our team will assist you with fabric selection, pricing, and delivery options.
                 </p>
             ),
@@ -149,10 +149,9 @@ export default function SuitingPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        SUITING FABRICS
+                        Suiting Fabrics
                     </h1>
                 </div>
             </section>
@@ -192,7 +191,7 @@ export default function SuitingPage() {
                                 color: "#122a4b",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+                               
                             }}
                         >
                             Suiting Fabric By <br />
@@ -464,12 +463,12 @@ export default function SuitingPage() {
                         <h3
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "38px",
-                                lineHeight: "1.25",
-                                marginBottom: "22px",
+                                lineHeight: "1.5",
+                                marginBottom: "12px",
                                 color: "#21408f",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+                               
                             }}
                         >
                             Types Of Suit Fabrics <br />
@@ -479,9 +478,9 @@ export default function SuitingPage() {
                         <p
                             style={{
                                 fontSize: "17px",
-                                lineHeight: "1.8",
+                                lineHeight: "1.3",
                                 color: "#222",
-                                marginBottom: "20px",
+                                marginBottom: "12px",
                                 fontFamily: "'Poppins', sans-serif",
                             }}
                         >
@@ -495,10 +494,10 @@ export default function SuitingPage() {
                         {/* LIST */}
                         <ul
                             style={{
-                                paddingLeft: "22px",
+                                paddingLeft: "30px",
                                 margin: "2px",
-                                lineHeight: "1.8",
-                                fontSize: "17px",
+                                lineHeight: "1.5",
+                                fontSize: "19px",
                                 color: "#111",
                                 fontFamily: "'Poppins', sans-serif",
                             }}
@@ -525,7 +524,7 @@ export default function SuitingPage() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "10px 5% 50px" : "10px 5% 70px",
+                    padding: window.innerWidth < 768 ? "10px 15% 50px" : "10px 5% 70px",
                     boxSizing: "border-box",
                     background: "#ffffff",
                 }}
@@ -556,7 +555,6 @@ export default function SuitingPage() {
                                 color: "#122a4b",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
                             }}
                         >
                             Buy Suit Fabric <br />
@@ -566,8 +564,8 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "16px",
-                                lineHeight: "1.7",
+                                fontSize: "18px",
+                                lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "20px",
@@ -583,8 +581,8 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "16px",
-                                lineHeight: "1.7",
+                                fontSize: "18px",
+                                lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "0",
@@ -609,7 +607,7 @@ export default function SuitingPage() {
                             alt="Buy Suit Fabric"
                             style={{
                                 width: "100%",
-                                height: "420px",
+                                height: "460px",
                                 objectFit: "cover",
                                 borderRadius: "24px",
                                 display: "block",
@@ -663,17 +661,17 @@ export default function SuitingPage() {
                     {/* RIGHT FAQ */}
                     <div
                         style={{
-                            flex: "1 1 500px",
+                            flex: "1 1 450px",
                         }}
                     >
                         {/* FAQ TITLE */}
                         <h3
                             style={{
-                                fontSize: window.innerWidth < 768 ? "32px" : "42px",
+                                fontSize: window.innerWidth < 768 ? "32px" : "32px",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
                                 color: "#122a4b",
-                                fontStyle: "italic",
+                               
                                 marginBottom: "24px",
                                 display: "flex",
                                 alignItems: "baseline",
@@ -681,15 +679,7 @@ export default function SuitingPage() {
                             }}
                         >
                             FAQ
-                            <span
-                                style={{
-                                    display: "inline-block",
-                                    width: "28px",
-                                    borderBottom: "3px solid #122a4b",
-                                    marginBottom: "6px",
-                                    marginLeft: "4px",
-                                }}
-                            />
+                           
                         </h3>
 
                         {/* FAQ ITEMS */}
@@ -716,11 +706,11 @@ export default function SuitingPage() {
                                 >
                                     <h4
                                         style={{
-                                            fontSize: window.innerWidth < 768 ? "11px" : "13px",
+                                            fontSize: window.innerWidth < 768 ? "11px" : "19px",
                                             fontWeight: "700",
                                             fontFamily: "'Cinzel Decorative', serif",
                                             color: "#b9972f",
-                                            textTransform: "uppercase",
+                                        
                                             letterSpacing: "0.5px",
                                             lineHeight: "1.5",
                                             margin: 0,
@@ -732,11 +722,12 @@ export default function SuitingPage() {
                                     </h4>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#b9972f",
-                                            fontWeight: "300",
-                                            lineHeight: "1",
-                                            flexShrink: 0,
+                                            fontFamily: "'Cinzel Decorative', serif",
+                                            fontSize: "18px",
+                                            fontWeight: "700",
+                                            color: "#b39131",
+                                            letterSpacing: "0.5px",
+                                            lineHeight: "1.4",
                                         }}
                                     >
                                         {openFaq === index ? "−" : "+"}
@@ -750,6 +741,9 @@ export default function SuitingPage() {
                                             padding: "0 22px 20px",
                                             borderTop: "1px solid #eee",
                                             paddingTop: "16px",
+                                            fontSize: "18px",
+                                            color: "#333",
+                                            lineHeight: "1.5",
                                         }}
                                     >
                                         {faq.answer}

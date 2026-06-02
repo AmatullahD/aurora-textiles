@@ -100,18 +100,15 @@ export default function DonearPage() {
                             fontWeight: "600",
                             margin: 0,
                             lineHeight: "1.1",
-                            fontFamily: "'Cinzel Decorative', sans-serif",
-                            textTransform: "uppercase",
+                            fontFamily: "'Cinzel Decorative', sans-serif", 
                         }}
                     >
-                        DONEAR FABRICS
+                        Donear Fabrics
                     </h1>
                 </div>
             </section>
 
-            {/* ─────────────────────────────────────────
-                SECTION 1 —
-            ───────────────────────────────────────── */}
+            {/*  SECTION 1 */}
             <section
                 style={{
                     width: "100%",

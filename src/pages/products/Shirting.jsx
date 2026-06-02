@@ -151,7 +151,7 @@ export default function ShirtingPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
+
                         }}
                     >
                         Shirting Fabrics
@@ -194,7 +194,7 @@ export default function ShirtingPage() {
                                 color: "#122a4b",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+
                             }}
                         >
                             Shirting Fabric By <br />
@@ -203,7 +203,7 @@ export default function ShirtingPage() {
 
                         <p
                             style={{
-                                fontSize: "18px",
+                                fontSize: "16px",
                                 lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",
@@ -461,7 +461,7 @@ export default function ShirtingPage() {
                                 color: "#21408f",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+
                             }}
                         >
                             Why Choose Aurora Textiles <br />
@@ -470,8 +470,8 @@ export default function ShirtingPage() {
 
                         <p
                             style={{
-                                fontSize: "17px",
-                                lineHeight: "1.8",
+                                fontSize: "19px",
+                                lineHeight: "1.5",
                                 color: "#222",
                                 marginBottom: "20px",
                                 fontFamily: "'Poppins', sans-serif",
@@ -485,8 +485,8 @@ export default function ShirtingPage() {
                             style={{
                                 paddingLeft: "22px",
                                 margin: "2px",
-                                lineHeight: "1.8",
-                                fontSize: "17px",
+                                lineHeight: "1.5",
+                                fontSize: "16px",
                                 color: "#111",
                                 fontFamily: "'Poppins', sans-serif",
                             }}
@@ -537,7 +537,7 @@ export default function ShirtingPage() {
                                 color: "#122a4b",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+
                             }}
                         >
                             Our Extensive Range of <br />
@@ -635,7 +635,7 @@ export default function ShirtingPage() {
                                 color: "#122a4b",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                textTransform: "uppercase",
+
                             }}
                         >
                             Shop the Best Fabric <br />
@@ -683,7 +683,7 @@ export default function ShirtingPage() {
                             fontWeight: "700",
                             fontFamily: "'Cinzel Decorative', serif",
                             color: "#122a4b",
-                            fontStyle: "italic",
+
                             marginBottom: "24px",
                             textAlign: "center",
                             display: "flex",
@@ -693,15 +693,7 @@ export default function ShirtingPage() {
                         }}
                     >
                         FAQ
-                        <span
-                            style={{
-                                display: "inline-block",
-                                width: "28px",
-                                borderBottom: "3px solid #122a4b",
-                                marginBottom: "6px",
-                                marginLeft: "4px",
-                            }}
-                        />
+
                     </h3>
 
                     {/* FAQ ITEMS */}
@@ -728,11 +720,11 @@ export default function ShirtingPage() {
                             >
                                 <h4
                                     style={{
-                                        fontSize: window.innerWidth < 768 ? "11px" : "13px",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "19px",
                                         fontWeight: "700",
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        color: "#b9972f",
-                                        textTransform: "uppercase",
+                                        color: "#b39131",
+
                                         letterSpacing: "0.5px",
                                         lineHeight: "1.5",
                                         margin: 0,
@@ -745,7 +737,7 @@ export default function ShirtingPage() {
                                 <span
                                     style={{
                                         fontSize: "24px",
-                                        color: "#b9972f",
+                                        color: "#b39131",
                                         fontWeight: "300",
                                         lineHeight: "1",
                                         flexShrink: 0,
@@ -762,6 +754,9 @@ export default function ShirtingPage() {
                                         padding: "0 22px 20px",
                                         borderTop: "1px solid #eee",
                                         paddingTop: "16px",
+                                        fontSize: "16px",
+                                        color: "#333",
+                                        lineHeight: "1.5",
                                     }}
                                 >
                                     {faq.answer}

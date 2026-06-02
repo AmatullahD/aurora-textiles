@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -22,26 +23,26 @@ export default function EthnicPage() {
 
     const faqs = [
         {
-            question: "WHAT TYPE OF ETHNIC FABRICS DOES AURORA TEXTILE OFFER?",
+            question: "What type of Ethnic Fabrics does Aurora Textile offer?",
             answer: (
                 <>
-                    <p style={{ margin: "0 0 12px 0" }}>At Aurora Textile, we offer ethnic fabrics including:</p>
-                    <ul style={{ margin: 0, paddingLeft: "20px", lineHeight: "1.9" }}>
+                    <p style={{ margin: "0 0 10px 0" }}>At Aurora Textile, we offer ethnic fabrics including:</p>
+                    <ul style={{ margin: 0, paddingLeft: "30px", lineHeight: "1.3" }}>
                         <li>Printed Cotton</li>
                         <li>Velvet Tuxedo Fabrics</li>
                         <li>Embroided Fabrics</li>
-                        <li style={{ color: "#b8860b" }}>Trendy Ethnic Print Fabrics, etc.</li>
+                        <li> Trendy Ethnic Print Fabrics, etc.</li>
                     </ul>
                 </>
             ),
         },
         {
-            question: "WHERE TO BUY ETHNIC FABRICS IN DUBAI?",
+            question: "Where to buy Ethnic Fabrics in Dubai?",
             answer: "You can buy ethnic fabrics in Dubai directly from Aurora Textiles, located at Dubai Textile City – Warehouse #47, Al Awir Road. We welcome walk-ins and bulk inquiries from designers, boutiques, and retailers.",
         },
         {
-            question: "CAN I ORDER BULK ETHNIC FABRIC FROM AURORA TEXTILES?",
-            answer: "Yes! Aurora Textiles specializes in bulk ethnic fabric orders. Whether you need large quantities for retail, manufacturing, or bespoke fashion production, we can accommodate your requirements with consistent quality and timely delivery.",
+            question: "Can I order bulk Ethnic Fabric from Aurora Textiles?",
+            answer: "Yes! Aurora Textiles specializes in bulk ethnic fabric orders. Whether you need large quantities for retail, manufacturing, or bespoke fashion production, we can accommodate your requirements with consistent quality and timely delivery,"
         },
     ];
 
@@ -108,7 +109,7 @@ export default function EthnicPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                           
+
                         }}
                     >
                         Ethnic Fabrics
@@ -135,7 +136,7 @@ export default function EthnicPage() {
                         flex: "0 0 48%",
                         borderRadius: "12px",
                         overflow: "hidden",
-                        height: "700px",
+                        height: "780px",
                     }}
                 >
                     <img
@@ -158,8 +159,7 @@ export default function EthnicPage() {
                             fontSize: "38px",
                             fontWeight: "700",
                             color: "#1a237e",
-                           
-                            lineHeight: "1.5",
+                            lineHeight: "1.3",
                             margin: "0 0 24px 0",
                         }}
                     >
@@ -168,14 +168,23 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
-                            margin: "0 0 28px 0",
+                            lineHeight: "1.3",
+                            margin: "0 0 24px 0",
                         }}
                     >
                         Celebrate tradition with a modern twist through{" "}
-                        <span style={{ color: "#1a237e", fontWeight: "500" }}>Aurora Textiles'</span>{" "}
+                        <Link
+                            to="/"
+                            style={{
+                                color: "#0d1574",
+                                fontWeight: "600",
+                                textDecoration: "none",
+                            }}
+                        >
+                            Aurora Textiles'
+                        </Link>
                         stunning collection of <strong>ethnic textiles</strong> in Dubai, UAE. We are the
                         leading <strong>suppliers</strong> of unstitched ethnic fabrics for designers, tailors,
                         and fashion businesses. As reliable <strong>ethnic Fabric suppliers in Dubai</strong>,
@@ -189,21 +198,20 @@ export default function EthnicPage() {
                             fontSize: "17px",
                             fontWeight: "700",
                             color: "#1a237e",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                             margin: "0 0 16px 0",
                         }}
                     >
-                        OUR COLLECTION INCLUDES:
+                        Our Collection Includes:
                     </h3>
 
                     <ul
                         style={{
                             margin: "0 0 24px 0",
-                            paddingLeft: "20px",
-                            fontSize: "15px",
+                            paddingLeft: "30px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.2",
                         }}
                     >
                         <li>
@@ -228,16 +236,16 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.6",
                             margin: 0,
                         }}
                     >
                         Whether you're a boutique, fashion brand, or designer, we have the perfect{" "}
                         <strong>ethnic</strong>{" "}
-                        <span style={{ color: "#1a237e", textDecoration: "underline" }}>fabric for sale</span>{" "}
-                        to meet your vision with consistent quality and creative freedom.
+                        <span style={{ color: "#1a237e", textDecoration: "none" }}>fabric</span>{" "}
+                      for sale to meet your vision with consistent quality and creative freedom.
                     </p>
                 </div>
             </section>
@@ -405,12 +413,12 @@ export default function EthnicPage() {
                             fontSize: "44px",
                             fontWeight: "700",
                             color: "#1a237e",
-                            textTransform: "uppercase",
+
                             lineHeight: "1.1",
                             margin: "0 0 28px 0",
                         }}
                     >
-                        BEST ETHNIC FABRIC FOR SALE
+                        Best Ethnic Fabric For Sale
                     </h2>
 
                     <p
@@ -506,20 +514,20 @@ export default function EthnicPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "44px",
+                            fontSize: "46px",
                             fontWeight: "700",
                             color: "#1a237e",
-                            textTransform: "uppercase",
+
                             lineHeight: "1.1",
                             margin: "0 0 28px 0",
                         }}
                     >
-                        BUY ETHNIC FABRICS IN DUBAI
+                        Buy Ethnic Fabrics in Dubai
                     </h2>
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#1a237e",
                             lineHeight: "1.8",
                             margin: "0 0 20px 0",
@@ -532,7 +540,7 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#1a237e",
                             lineHeight: "1.8",
                             margin: "0 0 36px 0",
@@ -541,32 +549,39 @@ export default function EthnicPage() {
                         Choose Aurora Textiles when you want more than just fabric—choose storytelling, artistry,
                         and cultural connection.
                     </p>
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    
+                  {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                 </div>
             </section>
 
@@ -594,9 +609,9 @@ export default function EthnicPage() {
                         <h3
                             style={{
                                 fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "20px",
+                                fontSize: "22px",
                                 fontWeight: "700",
-                                textTransform: "uppercase",
+
                                 letterSpacing: "1px",
                                 margin: "0 0 16px 0",
                                 display: "flex",
@@ -604,16 +619,17 @@ export default function EthnicPage() {
                                 gap: "10px",
                             }}
                         >
-                            <span style={{ fontSize: "14px" }}>▶</span>
-                            ETHNIC FABRIC FOR DESIGNERS, BOUTIQUES &amp; BULK BUYERS
+                            <span style={{ fontSize: "18px" }}>▶</span>
+                            Ethnic Fabric for Designers, Boutiques & Bulk Buyers
                         </h3>
 
                         <ul
                             style={{
                                 margin: "0 0 16px 0",
-                                paddingLeft: "20px",
-                                lineHeight: "2",
-                                fontSize: "15px",
+                                paddingLeft: "50px",
+                                lineHeight: "1.2",
+                                fontSize: "19px",
+
                             }}
                         >
                             <li>Fashion designers creating bespoke ethnic wear</li>
@@ -622,7 +638,7 @@ export default function EthnicPage() {
                             <li>Costume designers for cultural events and productions</li>
                         </ul>
 
-                        <p style={{ fontSize: "15px", lineHeight: "1.8", margin: 0 }}>
+                        <p style={{ fontSize: "19px", lineHeight: "1.2", margin: 0 }}>
                             Whether you're designing one-of-a-kind garments or looking to scale production, Aurora
                             Textiles ensures reliable access to quality fabrics and timely service.
                         </p>
@@ -641,9 +657,9 @@ export default function EthnicPage() {
                         <h3
                             style={{
                                 fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "20px",
+                                fontSize: "25px",
                                 fontWeight: "700",
-                                textTransform: "uppercase",
+
                                 letterSpacing: "1px",
                                 margin: "0 0 16px 0",
                                 display: "flex",
@@ -651,11 +667,11 @@ export default function EthnicPage() {
                                 gap: "10px",
                             }}
                         >
-                            <span style={{ fontSize: "14px" }}>▶</span>
-                            SUSTAINABILITY &amp; CRAFTSMANSHIP
+                            <span style={{ fontSize: "18px" }}>▶</span>
+                            Sustainability & Craftsmanship
                         </h3>
 
-                        <p style={{ fontSize: "15px", lineHeight: "1.8", margin: 0 }}>
+                        <p style={{ fontSize: "19px", lineHeight: "1.5", margin: 0 }}>
                             We are committed to responsible sourcing and promoting traditional textile arts. Our
                             collaborations with skilled artisans and ethical manufacturers ensure that each fabric
                             tells a story of sustainability, culture, and skill.
@@ -675,9 +691,8 @@ export default function EthnicPage() {
                         <h3
                             style={{
                                 fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "20px",
+                                fontSize: "25px",
                                 fontWeight: "700",
-                                textTransform: "uppercase",
                                 letterSpacing: "1px",
                                 margin: "0 0 16px 0",
                                 display: "flex",
@@ -685,11 +700,11 @@ export default function EthnicPage() {
                                 gap: "10px",
                             }}
                         >
-                            <span style={{ fontSize: "14px" }}>▶</span>
-                            BUY ETHNIC FABRIC ONLINE OR IN-STORE WITH AURORA TEXTILES
+                            <span style={{ fontSize: "18px" }}>▶</span>
+                            Buy Ethnic Fabric Online or In-Store with Aurora Textiles
                         </h3>
 
-                        <p style={{ fontSize: "15px", lineHeight: "1.8", margin: 0 }}>
+                        <p style={{ fontSize: "19px", lineHeight: "1.5", margin: 0 }}>
                             Are you looking to buy ethnic fabrics that reflect tradition with a modern flair? Contact
                             Aurora Textiles and browse our latest catalogues of ethnic fabrics for sale.
                         </p>
@@ -707,7 +722,7 @@ export default function EthnicPage() {
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "flex-start",
-                    gap: "60px",
+                    gap: "40px",
                 }}
             >
                 {/* Left Image */}
@@ -736,15 +751,14 @@ export default function EthnicPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "42px",
-                            fontWeight: "400",
-                            fontStyle: "italic",
+                            fontSize: "36px",
+                            fontWeight: "600",
                             color: "#1a237e",
                             margin: "0 0 28px 0",
                             letterSpacing: "2px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
@@ -782,10 +796,9 @@ export default function EthnicPage() {
                                     <span
                                         style={{
                                             fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "14px",
+                                            fontSize: "18px",
                                             fontWeight: "700",
-                                            color: "#1a237e",
-                                            textTransform: "uppercase",
+                                            color: "#b39131",
                                             letterSpacing: "0.5px",
                                             lineHeight: "1.4",
                                         }}
@@ -794,8 +807,8 @@ export default function EthnicPage() {
                                     </span>
                                     <span
                                         style={{
-                                            fontSize: "20px",
-                                            color: "#1a237e",
+                                            fontSize: "25px",
+                                            color: "#b39131",
                                             flexShrink: 0,
                                             fontWeight: "300",
                                         }}
@@ -809,9 +822,9 @@ export default function EthnicPage() {
                                     <div
                                         style={{
                                             padding: "0 20px 20px 20px",
-                                            fontSize: "14px",
+                                            fontSize: "18px",
                                             color: "#333",
-                                            lineHeight: "1.8",
+                                            lineHeight: "1.5",
                                             borderTop: "1px solid #f0f0f0",
                                             paddingTop: "16px",
                                         }}
