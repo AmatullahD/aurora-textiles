@@ -70,30 +70,31 @@ function DenimCard({ icon, title, desc }) {
 
 export default function DenimPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "WHAT MAKES DENIM FABRIC IDEAL FOR MEN'S CLOTHING?",
+      question: "What makes denim fabric ideal for men’s clothing?",
       answer:
         "Denim offers a perfect blend of strength, comfort, and timeless style—making it suitable for shirts, jackets, and pants.",
     },
     {
-      question: "CAN I BUY DENIM FABRIC ONLINE IN DUBAI?",
+      question: "Can I buy denim fabric online in Dubai?",
       answer:
         "Yes, Aurora Textiles offers denim fabric available for purchase online with delivery across Dubai and the UAE. Contact us to place your order or request samples.",
     },
     {
-      question: "WHAT TYPES OF DENIM FABRICS ARE AVAILABLE?",
+      question: "What types of denim fabrics are available?",
       answer:
         "We offer a wide range of denim fabrics including lightweight shirting denim, medium-weight jacket denim, heavy-weight trouser denim, and specialty washed or printed denims.",
     },
     {
-      question: "IS DENIM FABRIC SUITABLE FOR UAE WEATHER?",
+      question: "Is denim fabric suitable for UAE weather?",
       answer:
         "Lightweight denim is well-suited for UAE weather, especially for shirts and casual wear. We also carry lighter weaves and blends designed for warm climates.",
     },
     {
-      question: "DO YOU OFFER WHOLESALE DENIM FABRIC SUPPLY?",
+      question: "Do you offer wholesale denim fabric supply?",
       answer:
         "Yes, we supply denim fabric wholesale to fashion houses, tailors, boutiques, and bulk buyers across the UAE at competitive pricing.",
     },
@@ -104,8 +105,8 @@ export default function DenimPage() {
 
 
       <Helmet>
-        <title>Denim Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Shop denim fabric wholesale in Dubai. Aurora Textiles supplies premium denim fabrics for casual and workwear across UAE, GCC and Africa." />
+        <title>Buy Denim Fabric in Dubai | Denim Fabric Suppliers</title>
+        <meta name="description" content="Buy Denim fabrics from Aurora Textiles in Dubai. We are a high-quality Denim Fabric Supplier in the UAE & MENA Regions. Contact us now." />
       </Helmet>
 
       {/* NAVBAR */}
@@ -158,10 +159,9 @@ export default function DenimPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            DENIM FABRICS
+            Denim Fabric
           </h1>
         </div>
       </section>
@@ -204,7 +204,6 @@ export default function DenimPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
-              textTransform: "uppercase",
             }}
           >
             Shop Premium Denim Fabric in Dubai Shirts, Jackets &amp; Pants
@@ -212,9 +211,9 @@ export default function DenimPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -228,9 +227,9 @@ export default function DenimPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 36px 0",
             }}
           >
@@ -239,36 +238,38 @@ export default function DenimPage() {
             consistent color, and long-lasting performance
           </p>
 
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+          {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                            
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
@@ -338,7 +339,6 @@ export default function DenimPage() {
             fontSize: "30px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 50px 0",
           }}
         >
@@ -399,7 +399,7 @@ export default function DenimPage() {
             alt="What is Denim Fabric"
             style={{
               width: "100%",
-              height: "620px",
+              height: "680px",
               objectFit: "cover",
               objectPosition: "center",
               display: "block",
@@ -418,7 +418,6 @@ export default function DenimPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 22px 0",
-              textTransform: "uppercase",
             }}
           >
             What is Denim Fabric?
@@ -427,9 +426,9 @@ export default function DenimPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "18px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -441,7 +440,7 @@ export default function DenimPage() {
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "17px",
+              fontSize: "24px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -453,9 +452,9 @@ export default function DenimPage() {
           <ul
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "2",
+              lineHeight: "1.2",
               margin: "0 0 28px 0",
               paddingLeft: "22px",
             }}
@@ -469,7 +468,7 @@ export default function DenimPage() {
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "20px",
+              fontSize: "24px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -481,9 +480,9 @@ export default function DenimPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.2",
               margin: "0 0 16px 0",
             }}
           >
@@ -491,25 +490,25 @@ export default function DenimPage() {
             apparel categories and design requirements.
           </p>
 
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Shirt for Men</strong> – Lightweight denim suitable for everyday wear and casual outings
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Jacket for Men</strong> – Medium to heavy-weight options for structured outerwear
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Pants</strong> – Sturdy, flexible fabric for trousers and jeans
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 22px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
             <strong>Custom Apparel</strong> – Ideal for brands, tailors, and fashion studios looking for trendy, durable fabric
           </p>
 
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: 0,
             }}
           >
@@ -538,9 +537,6 @@ export default function DenimPage() {
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
               letterSpacing: "2px",
             }}
           >
@@ -562,6 +558,8 @@ export default function DenimPage() {
               {/* Question Row */}
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -573,12 +571,12 @@ export default function DenimPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "19px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -586,10 +584,11 @@ export default function DenimPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "400",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
@@ -602,9 +601,9 @@ export default function DenimPage() {
                   style={{
                     padding: "20px 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
+                    fontSize: "17px",
                     color: "#333",
-                    lineHeight: "1.8",
+                    lineHeight: "1.5",
                     borderTop: "1px solid #eee",
                   }}
                 >

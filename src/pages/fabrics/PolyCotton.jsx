@@ -70,10 +70,11 @@ function PolyCottonCard({ icon, title, desc }) {
 
 export default function PolyCottonPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "WHAT IS THE IDEAL USE OF POLYCOTTON FABRIC?",
+      question: "What is the ideal use of polycotton fabric?",
       answer: (
         <span>
           Polycotton is great for <strong>work uniforms</strong>, casual wear, and light formalwear due to its durability and comfort.
@@ -81,22 +82,22 @@ export default function PolyCottonPage() {
       ),
     },
     {
-      question: "CAN I BUY POLYCOTTON FABRIC ONLINE IN DUBAI?",
+      question: "Can I buy polycotton fabric online in Dubai?",
       answer:
         "Yes, Aurora Textiles offers polycotton fabric available for purchase online with delivery across Dubai and the UAE. Contact us to place your order or request fabric samples.",
     },
     {
-      question: "DO YOU SUPPLY POLYCOTTON IN DIFFERENT BLEND RATIOS?",
+      question: "Do you supply polycotton in different blend ratios?",
       answer:
         "Yes, we supply polycotton in various blend ratios such as 65/35 and 80/20 (polyester/cotton) to suit different applications including uniforms, casual wear, and semi-formal menswear.",
     },
     {
-      question: "IS POLYCOTTON FABRIC GOOD FOR HOT WEATHER?",
+      question: "Is polycotton fabric good for hot weather?",
       answer:
         "Polycotton fabric performs well in warm climates thanks to the cotton component that allows breathability, while the polyester adds moisture management and quick-drying properties—making it suitable for the UAE's hot weather.",
     },
     {
-      question: "DO YOU PROVIDE BULK POLYCOTTON FABRIC FOR UNIFORMS?",
+      question: "Do you provide bulk polycotton fabric for uniforms?",
       answer:
         "Yes, we provide bulk polycotton fabric specifically suited for uniforms across hospitality, healthcare, corporate, and industrial sectors. Contact our team for wholesale pricing and GSM options.",
     },
@@ -107,8 +108,8 @@ export default function PolyCottonPage() {
 
 
       <Helmet>
-        <title>Polycotton Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Buy polycotton fabric wholesale in Dubai. Aurora Textiles offers durable poly cotton blend fabrics for uniforms, shirting and suiting across UAE and GCC." />
+        <title>Buy Polycotton Fabrics in Dubai | Polycotton Work Uniform by Aurora Textiles</title>
+        <meta name="description" content="Buy Poly Cotton fabrics from Aurora Textiles in Dubai that combine polyester and Cotton. Check out our website and shop polycotton fabric now." />
       </Helmet>
 
       {/* NAVBAR */}
@@ -161,10 +162,9 @@ export default function PolyCottonPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            POLY-COTTON FABRICS
+            Poly cotton Fabric
           </h1>
         </div>
       </section>
@@ -179,18 +179,18 @@ export default function PolyCottonPage() {
           boxSizing: "border-box",
           display: "flex",
           alignItems: "center",
-          gap: "10px",
+          gap: "20px",
         }}
       >
         {/* Left Image */}
         <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
           <img
-            src="/polycotton-1.webp"
+            src="/polycotton-1.jpg"
             alt="PolyCotton Fabric"
             style={{
               width: "100%",
-              height: "580px",
-              objectFit: "contain",
+              height: "720px",
+              objectFit: "cover",
               display: "block",
               borderRadius: "20px",
             }}
@@ -202,23 +202,22 @@ export default function PolyCottonPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
-              fontSize: "36px",
-              fontWeight: "700",
-              lineHeight: "1.25",
-              margin: "0 0 28px 0",
-              textTransform: "uppercase",
+              color: "#150886",
+              fontSize: "42px",
+              fontWeight: "600",
+              lineHeight: "1.2",
+              margin: "0 0 18px 0",
             }}
           >
-            Fabric in Dubai | Durable Polycotton for Uniforms &amp; Menswear H2
+            Shop Polycotton Fabric in Dubai | Durable Polycotton for Uniforms & Menswear H2
           </h2>
 
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "18px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -232,9 +231,9 @@ export default function PolyCottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "18px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 36px 0",
             }}
           >
@@ -243,36 +242,37 @@ export default function PolyCottonPage() {
             comfort and resilience—ideal for the UAE's climate and fast-paced work environments.
           </p>
 
-          {/* Buttons */}
+          {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
 
             {/* Call Button */}
             <a
@@ -326,7 +326,7 @@ export default function PolyCottonPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR POLYCOTTON FABRICS */}
-      {/* SECTION 2 – WHY CHOOSE AURORA FOR POLYCOTTON FABRICS */}
+
       <section
         style={{
           width: "100%",
@@ -343,7 +343,6 @@ export default function PolyCottonPage() {
             fontSize: "30px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 50px 0",
           }}
         >
@@ -404,7 +403,7 @@ export default function PolyCottonPage() {
             alt="What is Polycotton Fabric"
             style={{
               width: "100%",
-              height: "640px",
+              height: "660px",
               objectFit: "cover",
               objectPosition: "center",
               display: "block",
@@ -423,7 +422,6 @@ export default function PolyCottonPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 22px 0",
-              textTransform: "uppercase",
             }}
           >
             What is Polycotton Fabric?
@@ -432,9 +430,9 @@ export default function PolyCottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -446,7 +444,7 @@ export default function PolyCottonPage() {
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "17px",
+              fontSize: "25px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -458,11 +456,11 @@ export default function PolyCottonPage() {
           <ul
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "16px",
               color: "#222",
-              lineHeight: "2",
+              lineHeight: "1.2",
               margin: "0 0 28px 0",
-              paddingLeft: "22px",
+              paddingLeft: "25px",
             }}
           >
             <li>Durable and long-lasting with lower shrinkage</li>
@@ -474,7 +472,7 @@ export default function PolyCottonPage() {
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "20px",
+              fontSize: "24px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -486,43 +484,44 @@ export default function PolyCottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 16px 0",
             }}
           >
-            <span
+            <a href="/"
               style={{
                 textDecoration: "underline",
                 cursor: "pointer",
+                color: "blue",
               }}
             >
               Aurora Textiles
-            </span>
+            </a>
             ' polycotton collection is trusted by B2B clients across multiple industries,
             including hospitality, corporate apparel, and retail fashion.
           </p>
 
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             <strong>Polycotton work uniforms</strong> – Ideal for factory, hospital, and hospitality uniforms
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             Daily wear shirts &amp; Pants – Lightweight and easy to maintain
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             Customised kurtas and semi-formal menswear
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "15.5px", color: "#222", lineHeight: "1.9", margin: "0 0 22px 0" }}>
+          <p style={{ fontFamily: "sans-serif", fontSize: "19px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
             Corporate giveaways and branded merchandise
           </p>
 
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: 0,
             }}
           >
@@ -551,9 +550,6 @@ export default function PolyCottonPage() {
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
               letterSpacing: "2px",
             }}
           >
@@ -574,6 +570,8 @@ export default function PolyCottonPage() {
             >
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -585,12 +583,12 @@ export default function PolyCottonPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "19px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -598,10 +596,11 @@ export default function PolyCottonPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "400",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
@@ -613,9 +612,9 @@ export default function PolyCottonPage() {
                   style={{
                     padding: "20px 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
+                    fontSize: "17px",
                     color: "#333",
-                    lineHeight: "1.8",
+                    lineHeight: "1.5",
                     borderTop: "1px solid #eee",
                   }}
                 >

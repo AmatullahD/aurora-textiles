@@ -14,9 +14,9 @@ function PolyWoolLycraCard({ icon, title, desc, isBottom }) {
       style={{
         flex: "0 0 auto",
         width: isBottom ? "300px" : "300px",
-        height: "220px",
+        height: "300px",
         border: "5px solid #1a1a5e",
-        borderRadius: "18px",
+        borderRadius: "24px",
         padding: "32px 28px",
         textAlign: "center",
         background: "#fff",
@@ -52,7 +52,7 @@ function PolyWoolLycraCard({ icon, title, desc, isBottom }) {
       {/* Description — after hover, small text */}
       {hovered && (
         <p style={{
-          fontSize: "14px",
+          fontSize: "17px",
           fontWeight: "400",
           color: "#333",
           lineHeight: "1.6",
@@ -68,30 +68,31 @@ function PolyWoolLycraCard({ icon, title, desc, isBottom }) {
 
 export default function PolyWoolLycraPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "WHAT MAKES POLY WOOL LYCRA FABRIC IDEAL FOR SUITING?",
+      question: "What makes Poly Wool Lycra fabric ideal for suiting?",
       answer:
         "It combines the refined look of wool with the strength of polyester and stretch of Lycra, offering unmatched comfort, durability, and fit.",
     },
     {
-      question: "CAN I BUY POLY WOOL LYCRA FABRIC ONLINE IN DUBAI?",
+      question: "Can I buy Poly Wool Lycra fabric online in Dubai?",
       answer:
         "Yes, Aurora Textiles offers easy ordering and delivery of Poly Wool Lycra fabrics across Dubai and the MENA region. Contact us to place your order or request fabric samples.",
     },
     {
-      question: "IS POLY WOOL LYCRA FABRIC SUITABLE FOR THE UAE'S WEATHER?",
+      question: "Is Poly Wool Lycra fabric suitable for the UAE’s weather?",
       answer:
         "Absolutely. The Lycra component adds stretch and breathability, while wool provides natural temperature regulation—making it perfectly suited for the UAE's climate.",
     },
     {
-      question: "WHAT GARMENTS CAN BE MADE FROM POLY WOOL LYCRA?",
+      question: "What garments can be made from Poly Wool Lycra?",
       answer:
         "Poly Wool Lycra is ideal for formal business suits, corporate uniforms, blazers, jackets, tailored trousers, and waistcoats—anywhere structure and comfort are both required.",
     },
     {
-      question: "DO YOU OFFER BULK POLY WOOL LYCRA SUITING FABRICS?",
+      question: "Do you offer bulk Poly Wool Lycra suiting fabrics?",
       answer:
         "Yes, we supply Poly Wool Lycra fabrics in bulk quantities for tailors, wholesalers, fashion brands, and corporate uniform suppliers across Dubai and the wider MENA region.",
     },
@@ -101,8 +102,8 @@ export default function PolyWoolLycraPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>Poly Wool Lycra Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Shop poly wool lycra fabric wholesale in Dubai. Aurora Textiles supplies stretch suiting fabrics with comfort and durability across UAE and GCC." />
+        <title>Buy Poly Wool Lycra | Poly Wool Lycra Suiting Fabrics Dubai</title>
+        <meta name="description" content="At Aurora Textiles, we offer a premium collection of Poly Wool Lycra Suiting Fabrics, crafted for men who value comfort, flexibility, and a refined appearance. Check out Poly Wool Fabric for Men in Dubai" />
       </Helmet>
 
       {/* NAVBAR */}
@@ -155,10 +156,9 @@ export default function PolyWoolLycraPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            POLY-WOOL LYCRA FABRICS
+            Poly Wool Lycra Fabric
           </h1>
         </div>
       </section>
@@ -200,17 +200,16 @@ export default function PolyWoolLycraPage() {
               color: "#1a1a5e",
               marginBottom: "28px",
               lineHeight: "1.2",
-              textTransform: "uppercase",
               margin: "0 0 28px 0",
             }}
           >
-            BUY POLY WOOL LYCRA FABRIC IN DUBAI
+            Buy Poly Wool Lycra Fabric in Dubai
           </h2>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "19px",
               color: "#333",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               marginBottom: "20px",
             }}
           >
@@ -222,9 +221,9 @@ export default function PolyWoolLycraPage() {
           </p>
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "19px",
               color: "#333",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               marginBottom: "36px",
             }}
           >
@@ -233,35 +232,37 @@ export default function PolyWoolLycraPage() {
             can easily <strong>buy Poly Wool Lycra fabric in Dubai</strong> from Aurora Textiles,
             trusted by tailors, designers, and fashion brands across the UAE and MENA region.
           </p>
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+          {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "19px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
 
             {/* Call Button */}
             <a
@@ -331,7 +332,6 @@ export default function PolyWoolLycraPage() {
             color: "#1a1a5e",
             textAlign: "center",
             marginBottom: "50px",
-            textTransform: "uppercase",
             lineHeight: "1.3",
           }}
         >
@@ -432,32 +432,31 @@ export default function PolyWoolLycraPage() {
               color: "#1a1a5e",
               marginBottom: "24px",
               lineHeight: "1.2",
-              textTransform: "uppercase",
               margin: "0 0 24px 0",
             }}
           >
             What Is Poly Wool Lycra Fabric?
           </h2>
 
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "16px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "16px" }}>
             <strong>Poly Wool Lycra fabric</strong> is a tri-blend of{" "}
             <strong>polyester, wool, and Lycra</strong>, combining the best characteristics of each
             fiber:
           </p>
 
           <ul style={{ paddingLeft: "20px", margin: "0 0 20px 0" }}>
-            <li style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+            <li style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
               <strong>Polyester</strong> adds durability and wrinkle resistance
             </li>
-            <li style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+            <li style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
               <strong>Wool</strong> contributes natural breathability and warmth
             </li>
-            <li style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+            <li style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
               <strong>Lycra (spandex)</strong> offers stretch for enhanced comfort and mobility
             </li>
           </ul>
 
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "24px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "24px" }}>
             This blend makes it a go-to choice for premium menswear, ensuring elegance,
             practicality, and flexibility—perfectly suited for the UAE's corporate and semi-formal
             lifestyle.
@@ -465,7 +464,7 @@ export default function PolyWoolLycraPage() {
 
           <p
             style={{
-              fontSize: "16px",
+              fontSize: "19px",
               fontWeight: "700",
               color: "#222",
               marginBottom: "14px",
@@ -500,9 +499,9 @@ export default function PolyWoolLycraPage() {
               <li
                 key={i}
                 style={{
-                  fontSize: "16px",
+                  fontSize: "19px",
                   color: "#333",
-                  lineHeight: "1.8",
+                  lineHeight: "1.5",
                   marginBottom: "8px",
                 }}
               >
@@ -536,33 +535,32 @@ export default function PolyWoolLycraPage() {
               color: "#1a1a5e",
               marginBottom: "24px",
               lineHeight: "1.2",
-              textTransform: "uppercase",
               margin: "0 0 24px 0",
             }}
           >
             Applications Of Poly Wool Lycra Suiting
           </h2>
 
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "20px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "20px" }}>
             Our <strong>Poly Wool Lycra fabrics</strong> are ideal for a wide range of menswear
             applications:
           </p>
 
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
             <strong>Formal Business Suits</strong> – Perfect for executives and professionals.
           </p>
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
             <strong>Corporate Uniforms</strong> – Provides comfort with long-lasting finish.
           </p>
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "8px" }}>
             <strong>Blazers &amp; Jackets</strong> – Structured yet stretchable for modern fits.
           </p>
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8", marginBottom: "24px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "24px" }}>
             <strong>Trousers &amp; Waistcoats</strong> – Durable and wrinkle-resistant for daily
             use.
           </p>
 
-          <p style={{ fontSize: "16px", color: "#333", lineHeight: "1.8" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5" }}>
             Each fabric is available in multiple weights, textures, and finishes to suit diverse
             tailoring requirements.
           </p>
@@ -642,6 +640,8 @@ export default function PolyWoolLycraPage() {
             >
               <button
                 onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                onMouseEnter={() => setHoveredFaq(i)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   width: "100%",
                   display: "flex",
@@ -657,12 +657,12 @@ export default function PolyWoolLycraPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "18px",
                     fontWeight: "700",
-                    color: "#c8a84b",
+                    color: openFaq === i ? "#b8960c" : hoveredFaq === i ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
                     lineHeight: "1.4",
-                    textTransform: "uppercase",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -670,10 +670,11 @@ export default function PolyWoolLycraPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a1a5e",
+                    color: openFaq === i ? "#b8960c" : hoveredFaq === i ? "#070e46" : "#0b18a1",
                     fontWeight: "300",
                     flexShrink: 0,
                     marginLeft: "16px",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === i ? "−" : "+"}
@@ -689,9 +690,9 @@ export default function PolyWoolLycraPage() {
                 >
                   <p
                     style={{
-                      fontSize: "15px",
+                      fontSize: "17px",
                       color: "#333",
-                      lineHeight: "1.75",
+                      lineHeight: "1.5",
                       margin: 0,
                     }}
                   >

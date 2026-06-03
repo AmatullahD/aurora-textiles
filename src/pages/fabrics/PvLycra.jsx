@@ -13,12 +13,12 @@ function PvLycraCard({ icon, title, desc, isBottom }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         border: "5px solid #1a237e",
-        borderRadius: "18px",
+        borderRadius: "24px",
         padding: "32px 28px",
         textAlign: "center",
-        flex: isBottom ? "0 0 calc(45% - 12px)" : "0 0 calc(33% - 16px)",
-        maxWidth: isBottom ? "calc(45% - 12px)" : "calc(33% - 16px)",
-        height: "220px",
+        flex: "0 0 calc(33% - 16px)",
+        maxWidth: "calc(33% - 16px)",
+        height: "300px",
         boxSizing: "border-box",
         background: "#fff",
         display: "flex",
@@ -52,7 +52,7 @@ function PvLycraCard({ icon, title, desc, isBottom }) {
       {/* Description — after hover, small text */}
       {hovered && (
         <p style={{
-          fontSize: "14px",
+          fontSize: "17px",
           fontWeight: "400",
           color: "#333",
           lineHeight: "1.6",
@@ -69,30 +69,31 @@ function PvLycraCard({ icon, title, desc, isBottom }) {
 
 export default function PvLycraPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "WHY IS PV LYCRA FABRIC IDEAL FOR MEN'S SUITING?",
+      question: "Why is PV Lycra fabric ideal for men’s suiting?",
       answer:
         "PV Lycra blends comfort, flexibility, and durability—making it perfect for tailored suits, uniforms, and formal trousers that require a crisp yet comfortable finish.",
     },
     {
-      question: "CAN I BUY PV LYCRA FABRIC ONLINE IN DUBAI?",
+      question: "Can I buy PV Lycra fabric online in Dubai?",
       answer:
         "Yes, Aurora Textiles offers convenient online ordering for PV Lycra fabrics with delivery across Dubai and the wider MENA region.",
     },
     {
-      question: "IS PV LYCRA FABRIC SUITABLE FOR WARM CLIMATES?",
+      question: "Is PV Lycra fabric suitable for warm climates?",
       answer:
         "Absolutely. The viscose component adds breathability while the polyester ensures structure, making it ideal for the UAE's hot and humid conditions.",
     },
     {
-      question: "WHAT GARMENTS CAN BE MADE FROM PV LYCRA FABRICS?",
+      question: "What garments can be made from PV Lycra fabrics?",
       answer:
         "PV Lycra is used for men's formal suits, trousers, blazers, jackets, uniforms (hospitality, aviation, office), and other structured menswear.",
     },
     {
-      question: "DO YOU OFFER PV LYCRA FABRIC IN BULK FOR TAILORS AND BRANDS?",
+      question: "Do you offer PV Lycra fabric in bulk for tailors and brands?",
       answer:
         "Yes, we provide bulk supply options tailored for fashion houses, tailors, uniform suppliers, and wholesale buyers with competitive pricing and fast delivery.",
     },
@@ -102,8 +103,8 @@ export default function PvLycraPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>PV Lycra Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Buy PV Lycra fabric wholesale in Dubai. Aurora Textiles offers poly viscose lycra blend fabrics for stretch suiting and uniform use across UAE." />
+        <title>Buy PV Lycra Suiting Fabrics | PV Lycra Fabric For Men in Dubai</title>
+        <meta name="description" content="At Aurora Textiles, we offer a premium collection of PV Lycra Suiting Fabrics, crafted for men who value comfort, flexibility, and a refined appearance. Check out PV Lycra Fabric for Men in Dubai" />
       </Helmet>
 
       {/* NAVBAR */}
@@ -156,10 +157,9 @@ export default function PvLycraPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            POLY-VISCOSE LYCRA FABRICS
+           PV Lycra Fabric
           </h1>
         </div>
       </section>
@@ -200,12 +200,11 @@ export default function PvLycraPage() {
               lineHeight: "1.2",
               marginTop: 0,
               marginBottom: "24px",
-              textTransform: "uppercase",
             }}
           >
-            BUY PV LYCRA FABRIC IN DUBAI | PREMIUM STRETCH SUITING FOR MEN
+           Buy PV Lycra Fabric in Dubai | Premium Stretch Suiting for Men
           </h2>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "20px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "20px" }}>
             At <strong>Aurora Textiles</strong>, we offer a premium collection of{" "}
             <strong>PV Lycra Suiting Fabrics</strong>, crafted for men who value comfort,
             flexibility, and a refined appearance. Designed using a{" "}
@@ -213,42 +212,44 @@ export default function PvLycraPage() {
             durability with stretch, making them ideal for modern suiting, trousers, and
             uniforms.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "32px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "32px" }}>
             Whether you're a fashion designer, tailor, or wholesaler, our{" "}
             <strong>PV Lycra fabrics</strong> provide the perfect blend of structure and
             movement—ensuring a polished look that's also comfortable for long wear. You can
             easily <strong>buy PV Lycra fabric in Dubai</strong> through Aurora Textiles,
             with options available for both small and bulk orders.
           </p>
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+           {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "19px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
 
             {/* Call Button */}
             <a
@@ -319,12 +320,11 @@ export default function PvLycraPage() {
             fontSize: "32px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             marginBottom: "50px",
             marginTop: 0,
           }}
         >
-          WHY CHOOSE AURORA TEXTILES FOR PV LYCRA FABRICS?
+        Why Choose Aurora Textiles for PV Lycra Fabrics?
         </h2>
 
         {/* Row 1 — 3 cards */}
@@ -340,19 +340,19 @@ export default function PvLycraPage() {
         >
           <PvLycraCard
             icon="★"
-            title="Reputable Mills"
+            title="High-quality PV Lycra sourced from reputable mills"
             desc="High-quality PV Lycra sourced from reputable mills"
             isBottom={false}
           />
           <PvLycraCard
             icon="❯❯"
-            title="Multiple Textures"
+            title="Available in multiple textures, finishes, and stretch levels"
             desc="Available in multiple textures, finishes, and stretch levels"
             isBottom={false}
           />
           <PvLycraCard
             icon="🤝"
-            title="Tailored Solutions"
+            title="Tailored solutions for fashion houses, tailors, and uniform suppliers"
             desc="Tailored solutions for fashion houses, tailors, and uniform suppliers"
             isBottom={false}
           />
@@ -371,13 +371,13 @@ export default function PvLycraPage() {
         >
           <PvLycraCard
             icon="📊"
-            title="Bulk & Fast Delivery"
+            title="Reliable bulk supply and fast delivery across Dubai and MENA"
             desc="Reliable bulk supply and fast delivery across Dubai and MENA"
             isBottom={true}
           />
           <PvLycraCard
             icon="✔"
-            title="Expert Guidance"
+            title="Expert guidance to help you choose the right suiting fabric for your needs"
             desc="Expert guidance to help you choose the right suiting fabric for your needs"
             isBottom={true}
           />
@@ -403,7 +403,7 @@ export default function PvLycraPage() {
             alt="PV Lycra Fabric"
             style={{
               width: "100%",
-              height: "480px",
+              height: "620px",
               objectFit: "cover",
               display: "block",
               borderRadius: "4px",
@@ -415,17 +415,16 @@ export default function PvLycraPage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#1a237e",
-              fontSize: "34px",
+              fontSize: "38px",
               fontWeight: "700",
               lineHeight: "1.25",
               marginTop: 0,
               marginBottom: "20px",
-              textTransform: "uppercase",
             }}
           >
-            WHAT IS PV LYCRA FABRIC?
+           What is PV Lycra Fabric?
           </h2>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "28px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.5", marginBottom: "28px" }}>
             together the strength and wrinkle resistance of polyester, the softness and
             breathability of viscose, and the flexibility of Lycra. This makes it one of the
             most versatile fabrics for formalwear and business attire in the UAE's fast-paced
@@ -433,7 +432,7 @@ export default function PvLycraPage() {
           </p>
           <p
             style={{
-              fontSize: "17px",
+              fontSize: "24px",
               color: "#222",
               fontWeight: "700",
               marginBottom: "16px",
@@ -441,24 +440,24 @@ export default function PvLycraPage() {
           >
             Benefits of PV Lycra Fabric:
           </p>
-          <ul style={{ paddingLeft: "20px", margin: 0, lineHeight: "2" }}>
-            <li style={{ fontSize: "15px", color: "#333", marginBottom: "6px" }}>
+          <ul style={{ paddingLeft: "20px", margin: 0, lineHeight: "1.2" }}>
+            <li style={{ fontSize: "19px", color: "#333", marginBottom: "6px" }}>
               <strong>Stretch &amp; Flexibility:</strong> Lycra provides elasticity for ease of movement and comfort.
             </li>
-            <li style={{ fontSize: "15px", color: "#333", marginBottom: "6px" }}>
+            <li style={{ fontSize: "19px", color: "#333", marginBottom: "6px" }}>
               <strong>Durable &amp; Wrinkle-Resistant:</strong> Polyester adds strength and keeps the fabric looking crisp.
             </li>
-            <li style={{ fontSize: "15px", color: "#333", marginBottom: "6px" }}>
+            <li style={{ fontSize: "19px", color: "#333", marginBottom: "6px" }}>
               <strong>Soft Hand Feel:</strong> Viscose ensures a smooth texture with excellent drape.
             </li>
-            <li style={{ fontSize: "15px", color: "#333", marginBottom: "6px" }}>
+            <li style={{ fontSize: "19px", color: "#333", marginBottom: "6px" }}>
               <strong>Shape Retention:</strong> Perfect fit for tailored suits and trousers.
             </li>
-            <li style={{ fontSize: "15px", color: "#333", marginBottom: "6px" }}>
+            <li style={{ fontSize: "19px", color: "#333", marginBottom: "6px" }}>
               <strong>Ideal for Hot Climates:</strong> Breathable yet structured—perfect for UAE conditions.
             </li>
           </ul>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginTop: "20px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginTop: "20px" }}>
             <strong>Shape Retention:</strong> Maintains its form and crisp look even after daily wear and multiple washes — ideal for uniforms and workwear.
           </p>
         </div>
@@ -487,28 +486,27 @@ export default function PvLycraPage() {
               lineHeight: "1.25",
               marginTop: 0,
               marginBottom: "24px",
-              textTransform: "uppercase",
             }}
           >
-            APPLICATIONS OF PV LYCRA SUITING FABRIC
+            Applications of PV Lycra Suiting Fabric
           </h2>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "20px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginBottom: "20px" }}>
             Our <strong>PV Lycra fabrics</strong> are designed to meet the needs of both
             professional and casual menswear collections.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginBottom: "8px" }}>
             <strong>Men's Formal Suits:</strong> Elegant and flexible for business or corporate wear.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginBottom: "8px" }}>
             <strong>Trousers &amp; Pants:</strong> Provides comfort stretch while maintaining a clean shape.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "8px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginBottom: "8px" }}>
             <strong>Uniforms:</strong> Ideal for hospitality, aviation, or office use due to its easy-care nature.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8", marginBottom: "20px" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2", marginBottom: "20px" }}>
             <strong>Blazers &amp; Jackets:</strong> Structured with a modern, slim-fit appeal.
           </p>
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: "1.8" }}>
+          <p style={{ fontSize: "19px", color: "#333", lineHeight: "1.2" }}>
             Available in a range of colors, finishes, and GSMs, our fabrics are engineered
             for quality and consistency.
           </p>
@@ -569,6 +567,8 @@ export default function PvLycraPage() {
             >
               <button
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                onMouseEnter={() => setHoveredFaq(i)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   width: "100%",
                   background: "#fff",
@@ -585,12 +585,12 @@ export default function PvLycraPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    color: openFaq === i ? "#b8960c" : "#1a237e",
-                    fontSize: "13px",
+                    color: openFaq === i ? "#b8960c" : hoveredFaq === i ? "#070e46" : "#0b18a1",
+                    fontSize: "18px",
                     fontWeight: "700",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -598,10 +598,11 @@ export default function PvLycraPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === i ? "#b8960c" : hoveredFaq === i ? "#070e46" : "#0b18a1",
                     fontWeight: "300",
                     flexShrink: 0,
                     lineHeight: 1,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === i ? "−" : "+"}
@@ -611,9 +612,9 @@ export default function PvLycraPage() {
                 <div
                   style={{
                     padding: "4px 24px 24px 24px",
-                    fontSize: "15px",
+                    fontSize: "17px",
                     color: "#444",
-                    lineHeight: "1.7",
+                    lineHeight: "1.5",
                   }}
                 >
                   {faq.answer}

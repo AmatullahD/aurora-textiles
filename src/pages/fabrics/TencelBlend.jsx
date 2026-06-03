@@ -14,9 +14,9 @@ function TencelCard({ icon, title, desc }) {
       style={{
         flex: "1 1 260px",
         maxWidth: "340px",
-        height: "220px",
+        height: "300px",
         border: "5px solid #1a237e",
-        borderRadius: "18px",
+        borderRadius: "24px",
         padding: "32px 28px",
         textAlign: "center",
         background: "#fff",
@@ -54,7 +54,7 @@ function TencelCard({ icon, title, desc }) {
       {hovered && (
         <p style={{
           fontFamily: "sans-serif",
-          fontSize: "14px",
+          fontSize: "18px",
           fontWeight: "400",
           color: "#333",
           lineHeight: "1.6",
@@ -70,30 +70,31 @@ function TencelCard({ icon, title, desc }) {
 
 export default function TencelBlendPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "WHAT MAKES TENCEL FABRIC UNIQUE COMPARED TO COTTON OR POLYESTER?",
+      question: "What makes Tencel fabric unique compared to cotton or polyester?",
       answer:
         "Tencel stands out for its silky-smooth texture, superior breathability, and eco-friendly production. Unlike polyester, which is synthetic, and cotton, which—though natural—is an extremely water-intensive crop, Tencel is made from sustainably sourced wood pulp through a closed-loop production process that recycles over 98% of water and solvents used. This makes it significantly more sustainable. Additionally, Tencel resists wrinkles, maintains its shape better than pure cotton, and feels luxuriously soft against the skin, making it both a comfortable and conscious choice.",
     },
     {
-      question: "IS TENCEL FABRIC SUITABLE FOR THE UAE CLIMATE?",
+      question: "Is Tencel fabric suitable for the UAE climate?",
       answer:
         "Yes, Tencel is an excellent choice for the UAE's warm and humid climate. Its natural moisture-wicking and breathability properties keep you cool and dry, making it ideal for both everyday wear and formal occasions.",
     },
     {
-      question: "WHAT TYPES OF GARMENTS CAN BE MADE FROM TENCEL FABRIC?",
+      question: "What types of garments can be made from Tencel fabric?",
       answer:
         "Tencel fabric is highly versatile and can be used for men's shirts, suits, kurtas, trousers, semi-formal wear, and uniforms. Its blends with cotton, linen, or polyester further expand its applications across casual and formal garments.",
     },
     {
-      question: "CAN I BUY TENCEL BLEND FABRIC ONLINE IN DUBAI?",
+      question: "Can I buy Tencel blend fabric online in Dubai?",
       answer:
         "Yes, Aurora Textiles offers Tencel blend fabric with online ordering and delivery across Dubai and the UAE. Contact us to request swatches, check availability, or place a bulk order.",
     },
     {
-      question: "DO YOU SUPPLY TENCEL BLENDS WHOLESALE IN THE UAE?",
+      question: "Do you supply Tencel blends wholesale in the UAE?",
       answer:
         "Yes, we supply Tencel blend fabrics wholesale to designers, fashion brands, tailors, and uniform manufacturers across the UAE. We offer competitive pricing for bulk orders with consistent quality and eco-certified sourcing.",
     },
@@ -103,8 +104,8 @@ export default function TencelBlendPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>Tencel Blend Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Shop Tencel blend fabric wholesale in Dubai. Aurora Textiles supplies eco-friendly, soft and breathable Tencel blend fabrics for premium menswear across UAE." />
+        <title>Buy Tencel Blend Fabrics in Dubai | Tencel Blend Shirting Fabrics</title>
+        <meta name="description" content="Shop premium Tencel blend fabrics for men in Dubai at Aurora Textiles. Discover soft, breathable, and durable fabrics perfect for shirts, trousers, and suits. Order online today!" />
       </Helmet>
 
       {/* NAVBAR */}
@@ -156,11 +157,10 @@ export default function TencelBlendPage() {
               fontWeight: "600",
               margin: 0,
               lineHeight: "1.1",
-              fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
+              fontFamily: "'Cinzel Decorative', sans-serif",
             }}
           >
-            TENCEL BLEND FABRICS
+           Tencel Blend Fabric
           </h1>
         </div>
       </section>
@@ -197,13 +197,12 @@ export default function TencelBlendPage() {
         <div style={{ flex: 1 }}>
           <h2
             style={{
-              fontFamily: "'Cinzel Decorative', serif",
+              fontFamily: "'Cinzel Decorative', sans-serif",
               color: "#1a237e",
               fontSize: "32px",
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
-              textTransform: "uppercase",
             }}
           >
             Buy Tencel Blend Fabric in Dubai | Premium Sustainable Fabric for Men's Wear
@@ -212,9 +211,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -228,9 +227,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 36px 0",
             }}
           >
@@ -239,36 +238,37 @@ export default function TencelBlendPage() {
             confident in quality, consistency, and eco-friendly sourcing.
           </p>
 
-          {/* Buttons */}
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+          {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
 
             {/* Call Button */}
             <a
@@ -322,7 +322,7 @@ export default function TencelBlendPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA TEXTILES FOR TENCEL FABRICS */}
-      {/* SECTION 2 – WHY CHOOSE AURORA TEXTILES FOR TENCEL FABRICS */}
+     
       <section
         style={{
           width: "100%",
@@ -336,10 +336,9 @@ export default function TencelBlendPage() {
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             color: "#1a237e",
-            fontSize: "30px",
+            fontSize: "36px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 50px 0",
             lineHeight: "1.35",
           }}
@@ -360,17 +359,17 @@ export default function TencelBlendPage() {
         >
           <TencelCard
             icon="★"
-            title="Trusted UAE Supplier"
+            title="Trusted Tencel fabric supplier in UAE with sustainable sourcing"
             desc="Trusted Tencel fabric supplier in UAE with sustainable sourcing"
           />
           <TencelCard
             icon="⌃⌃"
-            title="Versatile Blends"
+            title="Range of blends suitable for shirting, suiting, and uniforms"
             desc="Range of blends suitable for shirting, suiting, and uniforms"
           />
           <TencelCard
             icon="🤝"
-            title="Soft & Long-Lasting"
+            title="Soft hand feel with excellent drape and long-lasting performance"
             desc="Soft hand feel with excellent drape and long-lasting performance"
           />
         </div>
@@ -388,12 +387,12 @@ export default function TencelBlendPage() {
         >
           <TencelCard
             icon="📊"
-            title="Bulk & B2B Orders"
+            title="Ideal for bulk orders and B2B clients across Dubai and MENA region"
             desc="Ideal for bulk orders and B2B clients across Dubai and MENA region"
           />
           <TencelCard
             icon="✔"
-            title="Eco-Conscious"
+            title="Eco-conscious materials that align with modern fashion trends"
             desc="Eco-conscious materials that align with modern fashion trends"
           />
         </div>
@@ -439,7 +438,6 @@ export default function TencelBlendPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 22px 0",
-              textTransform: "uppercase",
             }}
           >
             What is Tencel Fabric?
@@ -448,9 +446,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 18px 0",
             }}
           >
@@ -468,9 +466,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 28px 0",
             }}
           >
@@ -495,9 +493,9 @@ export default function TencelBlendPage() {
           <ul
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "2.2",
+              lineHeight: "1.5",
               margin: 0,
               paddingLeft: "22px",
             }}
@@ -534,7 +532,6 @@ export default function TencelBlendPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 22px 0",
-              textTransform: "uppercase",
             }}
           >
             Types of Tencel Fabric
@@ -543,9 +540,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 20px 0",
             }}
           >
@@ -557,9 +554,9 @@ export default function TencelBlendPage() {
           <ul
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "17px",
               color: "#222",
-              lineHeight: "2",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
               paddingLeft: "22px",
             }}
@@ -585,9 +582,9 @@ export default function TencelBlendPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: 0,
             }}
           >
@@ -637,9 +634,6 @@ export default function TencelBlendPage() {
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
               letterSpacing: "2px",
             }}
           >
@@ -660,6 +654,8 @@ export default function TencelBlendPage() {
             >
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -671,12 +667,12 @@ export default function TencelBlendPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "18px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -684,10 +680,11 @@ export default function TencelBlendPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "400",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
@@ -699,9 +696,9 @@ export default function TencelBlendPage() {
                   style={{
                     padding: "20px 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
+                    fontSize: "17px",
                     color: "#333",
-                    lineHeight: "1.8",
+                    lineHeight: "1.5",
                     borderTop: "1px solid #eee",
                   }}
                 >

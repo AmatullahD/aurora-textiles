@@ -74,6 +74,7 @@ function WoolFeatureCard({ card }) {
 
 export default function WoolPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
@@ -107,8 +108,8 @@ export default function WoolPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>Wool Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Shop premium wool fabrics wholesale in Dubai. Aurora Textiles supplies high-quality wool suiting fabrics from top global mills across UAE and GCC." />
+        <title>Buy Wool Fabric in Dubai | Premium Wool Fabric for Dressmaking Online</title>
+        <meta name="description" content="Buy Premium quality wool fabric for Dressmaking from Aurora Textiles in Dubai. You can purchase various wool fabric materials in retail and bulk quantities. Contact Us Now." />
       </Helmet>
 
       {/* NAVBAR */}
@@ -161,10 +162,9 @@ export default function WoolPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            Wool Fabrics
+            WOOL FABRIC
           </h1>
         </div>
       </section>
@@ -189,7 +189,7 @@ export default function WoolPage() {
             alt="Wool Suiting Fabric"
             style={{
               width: "100%",
-              height: "620px",
+              height: "680px",
               objectFit: "contain",
               display: "block",
               borderRadius: "20px",
@@ -205,7 +205,7 @@ export default function WoolPage() {
               color: "#1a237e",
               fontSize: "36px",
               fontWeight: "700",
-              lineHeight: "1.25",
+              lineHeight: "1.2",
               margin: "0 0 28px 0",
              
             }}
@@ -216,9 +216,9 @@ export default function WoolPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.2",
               margin: "0 0 22px 0",
             }}
           >
@@ -235,9 +235,9 @@ export default function WoolPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.2",
               margin: "0 0 36px 0",
             }}
           >
@@ -521,6 +521,8 @@ export default function WoolPage() {
             >
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -534,10 +536,10 @@ export default function WoolPage() {
                     fontFamily: "'Cinzel Decorative', serif",
                     fontSize: "17px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -545,10 +547,11 @@ export default function WoolPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "400",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
@@ -560,7 +563,7 @@ export default function WoolPage() {
                   style={{
                     padding: "20px 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
+                    fontSize: "19px",
                     color: "#333",
                     lineHeight: "1.8",
                     borderTop: "1px solid #eee",

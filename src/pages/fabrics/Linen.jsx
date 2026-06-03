@@ -13,9 +13,9 @@ function LinenCard({ icon, title, desc }) {
       style={{
         flex: "1 1 260px",
         maxWidth: "340px",
-        height: "220px",
+        height: "300px",
         border: "5px solid #1a237e",
-        borderRadius: "18px",
+        borderRadius: "25px",
         padding: "32px 28px",
         textAlign: "center",
         background: "#fff",
@@ -66,10 +66,11 @@ function LinenCard({ icon, title, desc }) {
 
 export default function LinenPage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
-      question: "IS LINEN FABRIC SUITABLE FOR UAE SUMMERS?",
+      question: "Is linen fabric suitable for UAE summers?",
       answer: (
         <span>
           Yes, linen is one of the <strong>best fabrics for warm climates</strong>—it's breathable, sweat-wicking, and ideal for hot, dry conditions like those in the UAE.
@@ -77,22 +78,22 @@ export default function LinenPage() {
       ),
     },
     {
-      question: "CAN I BUY LINEN SUIT FABRIC IN BULK FROM AURORA?",
+      question: "Can I buy linen suit fabric in bulk from Aurora?",
       answer:
         "Yes, Aurora Textiles offers wholesale and bulk purchasing options for linen suit fabric. We cater to fashion houses, tailoring studios, and corporate clients across the UAE.",
     },
     {
-      question: "WHAT'S THE DIFFERENCE BETWEEN PURE LINEN AND LINEN BLENDS?",
+      question: "What's the difference between pure linen and linen blends?",
       answer:
         "Pure linen is made entirely from flax fibers and offers maximum breathability and texture. Linen blends combine linen with cotton or viscose to add softness, drape, or reduced wrinkling while retaining linen's natural qualities.",
     },
     {
-      question: "ARE LINEN SUITS APPROPRIATE FOR FORMAL EVENTS?",
+      question: "Are linen suits appropriate for formal events?",
       answer:
         "Absolutely. Linen suits are well-suited for formal events in warm climates. They offer a refined, sophisticated look while keeping you cool and comfortable throughout the occasion.",
     },
     {
-      question: "CAN I SHOP LINEN FABRICS ONLINE AT AURORA TEXTILES?",
+      question: "Can I shop linen fabrics online at Aurora Textiles?",
       answer:
         "Yes, you can explore and order linen fabrics online through Aurora Textiles. Contact us to request swatches, pricing, or place a bulk order for your design needs.",
     },
@@ -102,8 +103,8 @@ export default function LinenPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>Linen Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Buy premium linen fabric wholesale in Dubai. Aurora Textiles offers breathable, lightweight linen fabrics ideal for men's suiting and shirting across UAE." />
+        <title>Buy Linen Fabrics in Dubai | Linen Fabric Online by Aurora Textiles</title>
+        <meta name="description" content="We offer a wide collection of linen fabrics online, ideal for Formal Shirts, Ethnic, and casual trousers and jackets styles. Your trusted source for wholesale textile solutions in Dubai." />
       </Helmet>
 
       {/* NAVBAR */}
@@ -156,10 +157,9 @@ export default function LinenPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
             }}
           >
-            LINEN FABRICS
+            Linen Fabrics
           </h1>
         </div>
       </section>
@@ -202,7 +202,6 @@ export default function LinenPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
-              textTransform: "uppercase",
             }}
           >
             Buy Linen Fabrics in Dubai - Lightweight Linen Suiting &amp; Shirting
@@ -210,9 +209,9 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 22px 0",
             }}
           >
@@ -226,9 +225,9 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 36px 0",
             }}
           >
@@ -237,35 +236,37 @@ export default function LinenPage() {
             and high wearability.
           </p>
 
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+        {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
 
             {/* Call Button */}
             <a
@@ -319,7 +320,7 @@ export default function LinenPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR LINEN FABRICS */}
-      {/* SECTION 2 – WHY CHOOSE AURORA FOR LINEN FABRICS */}
+     
       <section
         style={{
           width: "100%",
@@ -333,10 +334,9 @@ export default function LinenPage() {
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             color: "#1a237e",
-            fontSize: "30px",
+            fontSize: "42px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 50px 0",
           }}
         >
@@ -356,17 +356,17 @@ export default function LinenPage() {
         >
           <LinenCard
             icon="★"
-            title="Trusted Partners"
+            title="Sourced from globally trusted textile partners"
             desc="Sourced from globally trusted textile partners"
           />
           <LinenCard
             icon="⌃⌃"
-            title="GSMs & Finishes"
+            title="Variety of GSMs and finishes for different tailoring needs"
             desc="Variety of GSMs and finishes for different tailoring needs"
           />
           <LinenCard
             icon="🤝"
-            title="Pure & Blend Options"
+            title="Options available in pure linen and linen blends (cotton/viscose)"
             desc="Options available in pure linen and linen blends (cotton/viscose)"
           />
         </div>
@@ -384,12 +384,12 @@ export default function LinenPage() {
         >
           <LinenCard
             icon="📊"
-            title="Warm-Weather Ready"
+            title="Perfect for warm-weather dressing in the UAE"
             desc="Perfect for warm-weather dressing in the UAE"
           />
           <LinenCard
             icon="✔"
-            title="Bulk Orders Welcome"
+            title="Suitable for bulk orders, B2B clients, and fashion houses"
             desc="Suitable for bulk orders, B2B clients, and fashion houses"
           />
         </div>
@@ -434,7 +434,6 @@ export default function LinenPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 22px 0",
-              textTransform: "uppercase",
             }}
           >
             What is Linen Fabric?
@@ -443,9 +442,9 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 24px 0",
             }}
           >
@@ -472,7 +471,7 @@ export default function LinenPage() {
               fontFamily: "sans-serif",
               fontSize: "15.5px",
               color: "#222",
-              lineHeight: "2.2",
+              lineHeight: "2.6",
               margin: "0 0 24px 0",
               paddingLeft: "22px",
             }}
@@ -486,9 +485,9 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: 0,
             }}
           >
@@ -515,7 +514,6 @@ export default function LinenPage() {
             fontSize: "32px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 18px 0",
           }}
         >
@@ -525,11 +523,11 @@ export default function LinenPage() {
         <p
           style={{
             fontFamily: "sans-serif",
-            fontSize: "15.5px",
+            fontSize: "19px",
             color: "#333",
             textAlign: "center",
             margin: "0 0 40px 0",
-            lineHeight: "1.7",
+            lineHeight: "1.5",
           }}
         >
           At Aurora, our <strong>linen fabrics</strong> are widely used in
@@ -606,7 +604,7 @@ export default function LinenPage() {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: window.innerWidth < 768 ? "26px" : "22px",
+                    fontSize: window.innerWidth < 768 ? "26px" : "28px",
                     fontWeight: "700",
                     lineHeight: "1.45",
                     textAlign: "center",
@@ -683,7 +681,7 @@ export default function LinenPage() {
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: window.innerWidth < 768 ? "26px" : "22px",
+                    fontSize: window.innerWidth < 768 ? "26px" : "28px",
                     fontWeight: "700",
                     lineHeight: "1.45",
                     textAlign: "center",
@@ -717,10 +715,7 @@ export default function LinenPage() {
               color: "#1a237e",
               fontSize: "38px",
               fontWeight: "700",
-              margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
+              margin: 0, 
               letterSpacing: "2px",
             }}
           >
@@ -741,6 +736,8 @@ export default function LinenPage() {
             >
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -752,12 +749,12 @@ export default function LinenPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "18px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -765,10 +762,11 @@ export default function LinenPage() {
                 <span
                   style={{
                     fontSize: "22px",
-                    color: "#1a237e",
+                    color: openFaq === index ? "#b8960c" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "400",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
@@ -780,9 +778,9 @@ export default function LinenPage() {
                   style={{
                     padding: "20px 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
+                    fontSize: "17px",
                     color: "#333",
-                    lineHeight: "1.8",
+                    lineHeight: "1.5",
                     borderTop: "1px solid #eee",
                   }}
                 >

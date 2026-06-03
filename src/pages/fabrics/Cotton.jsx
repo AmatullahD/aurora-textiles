@@ -8,6 +8,7 @@ import ScrollToTop from "../../components/ScrollToTop";
 export default function CottonPage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [hoveredCard, setHoveredCard] = useState(null);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
 
   const faqs = [
     {
@@ -41,8 +42,8 @@ export default function CottonPage() {
     <div style={{ width: "100%", background: "#fff" }}>
 
       <Helmet>
-        <title>Cotton Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Buy premium cotton fabric wholesale in Dubai. Aurora Textiles offers Oxford, plain, twill and gabardine cotton fabrics for shirting and suiting across UAE." />
+        <title>Buy Cotton Fabric in UAE | Shop Pure Cotton Fabrics at Aurora Textiles</title>
+        <meta name="description" content="At Aurora Textiles, we offer pure cotton, as well as cotton weaves and Cotton Blends, in Dubai, UAE, at affordable prices. Our Collection includes: Plain, Twill, Oxford Cotton, Gaberdine, etc." />
       </Helmet>
 
       {/* NAVBAR */}
@@ -653,6 +654,8 @@ export default function CottonPage() {
               {/* Question Row */}
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -666,10 +669,10 @@ export default function CottonPage() {
                     fontFamily: "'Cinzel Decorative', serif",
                     fontSize: "19px",
                     fontWeight: "700",
-                    color: "#b39131",
+                    color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     letterSpacing: "0.5px",
-                   
                     lineHeight: "1.4",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {faq.question}
@@ -677,10 +680,11 @@ export default function CottonPage() {
                 <span
                   style={{
                     fontSize: "19px",
-                    color: "#b39131",
+                    color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                     fontWeight: "600",
                     marginLeft: "20px",
                     flexShrink: 0,
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {openFaq === index ? "−" : "+"}
