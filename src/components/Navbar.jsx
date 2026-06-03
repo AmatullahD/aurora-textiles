@@ -137,7 +137,7 @@ export default function Navbar() {
                                                 padding: "14px 26px",
                                                 textDecoration: "none",
                                                 color: "#111",
-                                                fontSize: "16px",
+                                                fontSize: "17px",
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -219,7 +219,7 @@ export default function Navbar() {
                                                 padding: "11px 20px",
                                                 textDecoration: "none",
                                                 color: "#111",
-                                                fontSize: "14px",
+                                                fontSize: "17px",
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -254,13 +254,13 @@ export default function Navbar() {
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: sammaanOpen ? "#fff" : "#111",
-                                            fontSize: "14px",
+                                            fontSize: "17px",
                                             background: sammaanOpen ? "#122a4b" : "transparent",
                                             transition: "0.3s",
                                         }}
                                     >
                                         Sammaan
-                                        <span style={{ fontSize: "11px" }}>▶</span>
+                                        <span style={{ fontSize: "14px" }}>▶</span>
                                     </a>
 
                                     {sammaanOpen && (
@@ -285,7 +285,7 @@ export default function Navbar() {
                                                         padding: "11px 20px",
                                                         textDecoration: "none",
                                                         color: "#111",
-                                                        fontSize: "14px",
+                                                        fontSize: "15px",
                                                         transition: "0.3s",
                                                     }}
                                                     onMouseEnter={(e) => {
@@ -313,7 +313,7 @@ export default function Navbar() {
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: "#111",
-                                            fontSize: "14px",
+                                            fontSize: "17px",
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -338,7 +338,7 @@ export default function Navbar() {
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: "#111",
-                                            fontSize: "14px",
+                                            fontSize: "17px",
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -372,13 +372,13 @@ export default function Navbar() {
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: nemssisOpen ? "#fff" : "#111",
-                                            fontSize: "14px",
+                                            fontSize: "17px",
                                             background: nemssisOpen ? "#122a4b" : "transparent",
                                             transition: "0.3s",
                                         }}
                                     >
                                         Nemssis
-                                        <span style={{ fontSize: "11px" }}>▶</span>
+                                        <span style={{ fontSize: "14px" }}>▶</span>
                                     </a>
 
                                     {nemssisOpen && (
@@ -410,7 +410,7 @@ export default function Navbar() {
                                                             padding: "11px 20px",
                                                             textDecoration: "none",
                                                             color: "#111",
-                                                            fontSize: "14px",
+                                                            fontSize: "15px",
                                                             transition: "0.3s",
                                                         }}
                                                         onMouseEnter={(e) => {
@@ -439,7 +439,7 @@ export default function Navbar() {
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: "#111",
-                                            fontSize: "14px",
+                                            fontSize: "17px",
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -521,7 +521,7 @@ export default function Navbar() {
                                                 padding: "11px 20px",
                                                 textDecoration: "none",
                                                 color: "#111",
-                                                fontSize: "14px",
+                                                fontSize: "17px",
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {

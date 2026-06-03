@@ -77,27 +77,27 @@ export default function WoolPage() {
 
   const faqs = [
     {
-      question: "WHAT IS THE DIFFERENCE BETWEEN WOOL AND CASHMERE WOOL?",
+      question: "What is the difference between wool and cashmere wool?",
       answer:
         "Wool is sourced from sheep, while cashmere comes from specific goats and is known for its finer, softer feel. Cashmere is often used in high-end suits and jackets for added luxury.",
     },
     {
-      question: "IS WOOL FABRIC SUITABLE FOR THE UAE CLIMATE?",
+      question: "Is wool fabric suitable for the UAE climate?",
       answer:
         "Lightweight wool blends are well-suited for the UAE's indoor air-conditioned environments and cooler months. We offer lighter GSM wool fabrics specifically chosen for warm-climate countries like the UAE.",
     },
     {
-      question: "DO YOU OFFER BULK WOOL FABRIC FOR TAILORING HOUSES AND DESIGNERS?",
+      question: "Do you offer bulk wool fabric for tailoring houses and designers?",
       answer:
         "Yes, Aurora Textiles supplies wool fabric in bulk to tailoring houses, fashion designers, and menswear brands across the UAE. We offer wholesale pricing with consistent quality and reliable availability.",
     },
     {
-      question: "WHAT TYPES OF WEAVES ARE AVAILABLE IN YOUR WOOL FABRICS?",
+      question: "What types of weaves are available in your wool fabrics?",
       answer:
         "Our wool fabric collection includes plain weave, twill weave, herringbone, and houndstooth patterns. We also carry wool-poly blends and cashmere wool in various GSM weights to suit different garment types.",
     },
     {
-      question: "CAN I BUY WOOL SUITING FABRIC IN BULK FOR TAILORING BUSINESSES IN THE UAE?",
+      question: "Can I buy wool suiting fabric in bulk for tailoring businesses in the UAE?",
       answer:
         "Absolutely. We cater to tailoring businesses, garment manufacturers, and boutique studios looking for bulk wool suiting fabric. Contact our team for wholesale pricing, minimum order quantities, and available swatches.",
     },
@@ -164,7 +164,7 @@ export default function WoolPage() {
               textTransform: "uppercase",
             }}
           >
-            WOOL FABRICS
+            Wool Fabrics
           </h1>
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function WoolPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
-              textTransform: "uppercase",
+             
             }}
           >
             Trusted Supplier of Wool Suiting Fabric in Dubai, UAE
@@ -246,36 +246,38 @@ export default function WoolPage() {
             formalwear, and ceremonial menswear collections.
           </p>
 
-          {/* Buttons */}
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+         {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        
 
             {/* Call Button */}
             <a
@@ -343,10 +345,9 @@ export default function WoolPage() {
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             color: "#1a237e",
-            fontSize: "32px",
+            fontSize: "36px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
             margin: "0 0 50px 0",
           }}
         >
@@ -425,20 +426,20 @@ export default function WoolPage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#1a237e",
-              fontSize: "34px",
+              fontSize: "42px",
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 24px 0",
-              textTransform: "uppercase",
+             
             }}
           >
-            Shop Wool Fabrics with Aurora Textiles
+            Shop Wool Fabrics <br /> with Aurora Textiles
           </h2>
 
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "17px",
+              fontSize: "24px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 16px 0",
@@ -450,9 +451,9 @@ export default function WoolPage() {
           <ul
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "2.4",
+              lineHeight: "1.8",
               margin: "0 0 28px 0",
               paddingLeft: "22px",
             }}
@@ -466,7 +467,7 @@ export default function WoolPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
               lineHeight: "1.8",
               margin: 0,
@@ -500,9 +501,6 @@ export default function WoolPage() {
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
               letterSpacing: "2px",
             }}
           >
@@ -534,11 +532,11 @@ export default function WoolPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "17px",
                     fontWeight: "700",
                     color: "#b8960c",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
+                
                     lineHeight: "1.4",
                   }}
                 >

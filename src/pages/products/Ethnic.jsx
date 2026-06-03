@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
@@ -8,6 +8,16 @@ import ScrollToTop from "../../components/ScrollToTop";
 export default function EthnicPage() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+    const autoSlideRef = useRef(null);
+
+    useEffect(() => {
+        if (faqColRef.current) {
+            setFaqImgHeight(faqColRef.current.offsetHeight);
+        }
+    }, [openFaq]);
 
     const brandLogos = [
         { name: "Rasm", subtitle: "ETHNIC BY SAMMAAN", src: "/ethnic-icon1.webp" },
@@ -20,6 +30,25 @@ export default function EthnicPage() {
     ];
 
     const totalSlides = brandLogos.length;
+
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideRef.current = setInterval(() => {
+            setActiveSlide(prev => (prev + 1) % totalSlides);
+        }, 3000);
+    };
+
+    const stopAutoSlide = () => {
+        if (autoSlideRef.current) {
+            clearInterval(autoSlideRef.current);
+            autoSlideRef.current = null;
+        }
+    };
+
+    useEffect(() => {
+        startAutoSlide();
+        return () => stopAutoSlide();
+    }, [totalSlides]);
 
     const faqs = [
         {
@@ -55,8 +84,8 @@ export default function EthnicPage() {
 
 
             <Helmet>
-                <title>Men's Ethnic Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Explore premium men's ethnic fabrics at Aurora Textiles Dubai. Shop wholesale ethnic fabric collections including kurta, sherwani and traditional wear materials." />
+                <title>Buy Ethnic Fabrics in Dubai, UAE | Ethnic Fabric Suppliers</title>
+                <meta name="description" content="Check out our Ethnic Fabrics collection and buy high-quality fabrics in Dubai, UAE. Premium and affordable fabrics in Dubai at Aurora Textiles. Visit our website or shop now." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -270,7 +299,7 @@ export default function EthnicPage() {
                 >
                     {/* Prev Arrow */}
                     <button
-                        onClick={() => setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides)}
+                        onClick={() => { stopAutoSlide(); setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides); startAutoSlide(); }}
                         style={{
                             background: "none",
                             border: "none",
@@ -350,7 +379,7 @@ export default function EthnicPage() {
 
                     {/* Next Arrow */}
                     <button
-                        onClick={() => setActiveSlide((prev) => (prev + 1) % totalSlides)}
+                        onClick={() => { stopAutoSlide(); setActiveSlide((prev) => (prev + 1) % totalSlides); startAutoSlide(); }}
                         style={{
                             background: "none",
                             border: "none",
@@ -377,7 +406,7 @@ export default function EthnicPage() {
                     {Array.from({ length: totalSlides }).map((_, i) => (
                         <button
                             key={i}
-                            onClick={() => setActiveSlide(i)}
+                            onClick={() => { stopAutoSlide(); setActiveSlide(i); startAutoSlide(); }}
                             style={{
                                 width: "6px",
                                 height: "6px",
@@ -731,7 +760,6 @@ export default function EthnicPage() {
                         flex: "0 0 48%",
                         borderRadius: "12px",
                         overflow: "hidden",
-                        height: "480px",
                     }}
                 >
                     <img
@@ -739,102 +767,111 @@ export default function EthnicPage() {
                         alt="Ethnic Fabrics FAQ"
                         style={{
                             width: "100%",
-                            height: "100%",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
                 {/* Right FAQ */}
-                <div style={{ flex: 1 }}>
+                <div ref={faqColRef} style={{ flex: 1 }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
-                            fontWeight: "600",
-                            color: "#1a237e",
+                            fontSize: window.innerWidth < 768 ? "32px" : "32px",
+                            fontWeight: "700",
+                            color: "#122a4b",
                             margin: "0 0 28px 0",
-                            letterSpacing: "2px",
+                            display: "flex",
+                            alignItems: "baseline",
+                            gap: "6px",
                         }}
                     >
                         FAQ
                     </h2>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-                        {faqs.map((faq, i) => (
+                    {faqs.map((faq, i) => (
+                        <div
+                            key={i}
+                            style={{
+                                border: "1px solid #dde0e8",
+                                borderRadius: "8px",
+                                marginBottom: "12px",
+                                overflow: "hidden",
+                            }}
+                        >
+                            {/* Question Row */}
                             <div
-                                key={i}
+                                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                                onMouseEnter={() => setHoveredFaq(i)}
+                                onMouseLeave={() => setHoveredFaq(null)}
                                 style={{
-                                    border: "1px solid #e0e0e0",
-                                    borderBottom: i < faqs.length - 1 ? "none" : "1px solid #e0e0e0",
-                                    borderRadius:
-                                        i === 0
-                                            ? "8px 8px 0 0"
-                                            : i === faqs.length - 1
-                                                ? "0 0 8px 8px"
-                                                : "0",
-                                    overflow: "hidden",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    padding: "18px 22px",
+                                    cursor: "pointer",
                                 }}
                             >
-                                {/* Question Row */}
-                                <button
-                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                <span
                                     style={{
-                                        width: "100%",
-                                        display: "flex",
-                                        justifyContent: "space-between",
-                                        alignItems: "center",
-                                        padding: "18px 20px",
-                                        background: "#fff",
-                                        border: "none",
-                                        cursor: "pointer",
-                                        textAlign: "left",
-                                        gap: "12px",
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "19px",
+                                        fontWeight: "700",
+                                        color: openFaq === i
+                                            ? "#b9972f"
+                                            : hoveredFaq === i
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.5",
+                                        flex: 1,
+                                        paddingRight: "16px",
+                                        transition: "color 0.2s ease",
                                     }}
                                 >
-                                    <span
-                                        style={{
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "18px",
-                                            fontWeight: "700",
-                                            color: "#b39131",
-                                            letterSpacing: "0.5px",
-                                            lineHeight: "1.4",
-                                        }}
-                                    >
-                                        {faq.question}
-                                    </span>
-                                    <span
-                                        style={{
-                                            fontSize: "25px",
-                                            color: "#b39131",
-                                            flexShrink: 0,
-                                            fontWeight: "300",
-                                        }}
-                                    >
-                                        {openFaq === i ? "−" : "+"}
-                                    </span>
-                                </button>
-
-                                {/* Answer */}
-                                {openFaq === i && (
-                                    <div
-                                        style={{
-                                            padding: "0 20px 20px 20px",
-                                            fontSize: "18px",
-                                            color: "#333",
-                                            lineHeight: "1.5",
-                                            borderTop: "1px solid #f0f0f0",
-                                            paddingTop: "16px",
-                                        }}
-                                    >
-                                        {faq.answer}
-                                    </div>
-                                )}
+                                    {faq.question}
+                                </span>
+                                <span
+                                    style={{
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: "18px",
+                                        fontWeight: "700",
+                                        color: openFaq === i
+                                            ? "#b9972f"
+                                            : hoveredFaq === i
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.4",
+                                        transition: "color 0.2s ease",
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    {openFaq === i ? "−" : "+"}
+                                </span>
                             </div>
-                        ))}
-                    </div>
+
+                            {/* Answer */}
+                            {openFaq === i && (
+                                <div
+                                    style={{
+                                        padding: "0 22px 20px",
+                                        borderTop: "1px solid #eee",
+                                        paddingTop: "16px",
+                                        fontSize: "18px",
+                                        color: "#333",
+                                        lineHeight: "1.5",
+                                    }}
+                                >
+                                    {faq.answer}
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -29,16 +29,37 @@ export default function ShirtingPage() {
 
     const totalSlides = brands.length - visibleItems + 1;
 
-    const nextSlide = () => {
-        if (currentSlide < totalSlides - 1) {
-            setCurrentSlide(currentSlide + 1);
+    const autoSlideRef = useRef(null);
+
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideRef.current = setInterval(() => {
+            setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        }, 3000);
+    };
+
+    const stopAutoSlide = () => {
+        if (autoSlideRef.current) {
+            clearInterval(autoSlideRef.current);
+            autoSlideRef.current = null;
         }
     };
 
+    useEffect(() => {
+        startAutoSlide();
+        return () => stopAutoSlide();
+    }, [totalSlides]);
+
+    const nextSlide = () => {
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        startAutoSlide();
+    };
+
     const prevSlide = () => {
-        if (currentSlide > 0) {
-            setCurrentSlide(currentSlide - 1);
-        }
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev > 0 ? prev - 1 : totalSlides - 1));
+        startAutoSlide();
     };
 
     const visibleBrands = brands.slice(
@@ -48,6 +69,7 @@ export default function ShirtingPage() {
 
     // FAQ STATE
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
 
     const faqs = [
         {
@@ -390,7 +412,7 @@ export default function ShirtingPage() {
                     {Array.from({ length: totalSlides }).map((_, index) => (
                         <div
                             key={index}
-                            onClick={() => setCurrentSlide(index)}
+                            onClick={() => { stopAutoSlide(); setCurrentSlide(index); startAutoSlide(); }}
                             style={{
                                 width: currentSlide === index ? "11px" : "8px",
                                 height: currentSlide === index ? "11px" : "8px",
@@ -675,15 +697,13 @@ export default function ShirtingPage() {
                         margin: "0 auto",
                     }}
                 >
-
                     {/* FAQ TITLE */}
                     <h3
                         style={{
-                            fontSize: window.innerWidth < 768 ? "32px" : "42px",
+                            fontSize: window.innerWidth < 768 ? "32px" : "32px",
                             fontWeight: "700",
                             fontFamily: "'Cinzel Decorative', serif",
                             color: "#122a4b",
-
                             marginBottom: "24px",
                             textAlign: "center",
                             display: "flex",
@@ -693,7 +713,6 @@ export default function ShirtingPage() {
                         }}
                     >
                         FAQ
-
                     </h3>
 
                     {/* FAQ ITEMS */}
@@ -710,6 +729,8 @@ export default function ShirtingPage() {
                             {/* QUESTION ROW */}
                             <div
                                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                                onMouseEnter={() => setHoveredFaq(index)}
+                                onMouseLeave={() => setHoveredFaq(null)}
                                 style={{
                                     display: "flex",
                                     justifyContent: "space-between",
@@ -723,24 +744,34 @@ export default function ShirtingPage() {
                                         fontSize: window.innerWidth < 768 ? "11px" : "19px",
                                         fontWeight: "700",
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        color: "#b39131",
-
+                                        color: openFaq === index
+                                            ? "#b9972f"
+                                            : hoveredFaq === index
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
                                         letterSpacing: "0.5px",
                                         lineHeight: "1.5",
                                         margin: 0,
                                         flex: 1,
                                         paddingRight: "16px",
+                                        transition: "color 0.2s ease",
                                     }}
                                 >
                                     {faq.question}
                                 </h4>
                                 <span
                                     style={{
-                                        fontSize: "24px",
-                                        color: "#b39131",
-                                        fontWeight: "300",
-                                        lineHeight: "1",
-                                        flexShrink: 0,
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: "18px",
+                                        fontWeight: "700",
+                                        color: openFaq === index
+                                            ? "#b9972f"
+                                            : hoveredFaq === index
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.4",
+                                        transition: "color 0.2s ease",
                                     }}
                                 >
                                     {openFaq === index ? "−" : "+"}
@@ -764,7 +795,6 @@ export default function ShirtingPage() {
                             )}
                         </div>
                     ))}
-
                 </div>
             </section>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -109,25 +109,59 @@ export default function Uniform() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = brands.length - visibleItems + 1;
 
+  const autoSlideRef = useRef(null);
+
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    autoSlideRef.current = setInterval(() => {
+      setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+    }, 3000);
+  };
+
+  const stopAutoSlide = () => {
+    if (autoSlideRef.current) {
+      clearInterval(autoSlideRef.current);
+      autoSlideRef.current = null;
+    }
+  };
+
+  useEffect(() => {
+    startAutoSlide();
+    return () => stopAutoSlide();
+  }, [totalSlides]);
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    stopAutoSlide();
+    setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+    startAutoSlide();
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+    stopAutoSlide();
+    setCurrentSlide(prev => (prev > 0 ? prev - 1 : totalSlides - 1));
+    startAutoSlide();
   };
 
   const visibleBrands = brands.slice(currentSlide, currentSlide + visibleItems);
 
   // ─── FAQ open state ───
   const [openFaq, setOpenFaq] = useState(null);
+  const [hoveredFaq, setHoveredFaq] = useState(null);
+  const faqColRef = useRef(null);
+  const [faqImgHeight, setFaqImgHeight] = useState(520);
+
+  useEffect(() => {
+    if (faqColRef.current) {
+      setFaqImgHeight(faqColRef.current.offsetHeight);
+    }
+  }, [openFaq]);
 
   return (
     <div style={{ width: "100%", background: "#fff", fontFamily: "'Lato', 'Segoe UI', sans-serif", color: "#222" }}>
 
       <Helmet>
-        <title>Uniform Fabric Supplier in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Aurora Textiles is a leading uniform fabric supplier in Dubai. We offer durable, professional-grade fabrics for all industries across UAE and GCC." />
+        <title>Uniform Fabric Suppliers in Dubai, UAE - Aurora Textiles</title>
+        <meta name="description" content="Aurora Textiles is one of the most reliable uniform fabric suppliers in Dubai, UAE. We have all kinds of uniform fabric available within our reach, spread over Dubai and the UAE. Contact us now." />
       </Helmet>
 
       <Navbar />
@@ -207,7 +241,7 @@ export default function Uniform() {
           <p style={{ fontSize: "18px", fontWeight: "400", lineHeight: "1.5", color: "#444", marginBottom: "24px" }}>
             Aurora Textiles stands out among the leading uniform fabric suppliers in Dubai. We provide premium-quality fabrics tailored specifically for uniforms across various industries. Our fabrics are designed to deliver durability, comfort, and a professional appearance, enhancing your team’s image and performance.
           </p>
-          <p
+          <h6
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "18px",
@@ -218,7 +252,7 @@ export default function Uniform() {
             }}
           >
             Our Fabric Selections Cater to Diverse Needs Across Various Industries, Including:
-          </p>
+          </h6>
 
           <ul style={{ listStyle: "disc", paddingLeft: "25px", lineHeight: "2", fontSize: "16px" }}>
             {["Corporate Offices", "Hotels & Hospitality", "Healthcare & Medical", "Education & Schools", "Industrial & Workwear", "Restaurants & Catering"].map((item) => (
@@ -361,7 +395,7 @@ export default function Uniform() {
           {Array.from({ length: totalSlides }).map((_, index) => (
             <div
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => { stopAutoSlide(); setCurrentSlide(index); startAutoSlide(); }}
               style={{
                 width: currentSlide === index ? "9px" : "6px",
                 height: currentSlide === index ? "9px" : "6px",
@@ -565,17 +599,23 @@ export default function Uniform() {
           <img
             src="/uniform-5.webp"
             alt="Fabric colour swatches"
-            style={{ width: "100%", height: "520px", objectFit: "cover", borderRadius: "12px" }}
+            style={{
+              width: "100%",
+              height: `${faqImgHeight}px`,
+              minHeight: "300px",
+              objectFit: "cover",
+              borderRadius: "12px",
+              transition: "height 0.4s ease",
+            }}
           />
         </div>
-        <div style={{ flex: "1" }}>
+        <div ref={faqColRef} style={{ flex: "1" }}>
           <div
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "32px",
               fontWeight: "700",
-              color: "#1a2b6d",
-              
+              color: "#122a4b",
               marginBottom: "24px",
               display: "flex",
               alignItems: "baseline",
@@ -583,21 +623,22 @@ export default function Uniform() {
             }}
           >
             <span>FAQ</span>
-            
           </div>
 
           {faqs.map((f, index) => (
             <div
               key={index}
               style={{
-                border: "1px solid #dde",
-                borderRadius: "6px",
-                marginBottom: "10px",
+                border: "1px solid #dde0e8",
+                borderRadius: "8px",
+                marginBottom: "12px",
                 overflow: "hidden",
               }}
             >
               <div
                 onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                onMouseEnter={() => setHoveredFaq(index)}
+                onMouseLeave={() => setHoveredFaq(null)}
                 style={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -610,30 +651,50 @@ export default function Uniform() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "18px",
+                    fontSize: window.innerWidth < 768 ? "11px" : "19px",
                     fontWeight: "700",
-                   color: "#b39131",
-                 
+                    color: openFaq === index
+                      ? "#b9972f"
+                      : hoveredFaq === index
+                        ? "#0a1e3d"
+                        : "#122a4b",
                     letterSpacing: "0.5px",
                     lineHeight: "1.5",
                     flex: 1,
                     paddingRight: "16px",
+                    transition: "color 0.2s ease",
                   }}
                 >
                   {f.q}
                 </span>
-                <span style={{ fontSize: "22px", color: "#b39131", fontWeight: "300", flexShrink: 0 }}>
+                <span
+                  style={{
+                    fontFamily: "'Cinzel Decorative', serif",
+                    fontSize: "18px",
+                    fontWeight: "700",
+                    color: openFaq === index
+                      ? "#b9972f"
+                      : hoveredFaq === index
+                        ? "#0a1e3d"
+                        : "#122a4b",
+                    letterSpacing: "0.5px",
+                    lineHeight: "1.4",
+                    transition: "color 0.2s ease",
+                    flexShrink: 0,
+                  }}
+                >
                   {openFaq === index ? "−" : "+"}
                 </span>
               </div>
               {openFaq === index && (
                 <div
                   style={{
-                    padding: "0 22px 18px",
+                    padding: "0 22px 20px",
+                    borderTop: "1px solid #eee",
+                    paddingTop: "16px",
                     fontSize: "16px",
                     lineHeight: "1.8",
                     color: "#474747",
-                    borderTop: "1px solid #eee",
                   }}
                 >
                   {f.a}

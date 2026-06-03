@@ -17,8 +17,8 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Premium Fabric Store in Dubai | Aurora Textiles</title>
-        <meta name="description" content="Aurora Textiles is a leading premium fabric supplier in Dubai. Shop premium men's suiting, shirting, uniform and ethnic fabrics from top global brands." />
+        <title>Premium Fabric Store in Dubai | Wholesale Textile Supplier and Exporter</title>
+        <meta name="description" content="Aurora Textiles is Dubai's premier destination for premium fabrics, offering a curated selection of high-quality textiles from renowned brands. Experience exceptional craftsmanship and timeless elegance—contact us to source the finest fabrics today." />
       </Helmet>
       <Schema />
       <Navbar />

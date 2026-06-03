@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -29,16 +29,37 @@ export default function SuitingPage() {
 
     const totalSlides = brands.length - visibleItems + 1;
 
-    const nextSlide = () => {
-        if (currentSlide < totalSlides - 1) {
-            setCurrentSlide(currentSlide + 1);
+    const autoSlideRef = useRef(null);
+
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideRef.current = setInterval(() => {
+            setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        }, 3000);
+    };
+
+    const stopAutoSlide = () => {
+        if (autoSlideRef.current) {
+            clearInterval(autoSlideRef.current);
+            autoSlideRef.current = null;
         }
     };
 
+    useEffect(() => {
+        startAutoSlide();
+        return () => stopAutoSlide();
+    }, [totalSlides]);
+
+    const nextSlide = () => {
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        startAutoSlide();
+    };
+
     const prevSlide = () => {
-        if (currentSlide > 0) {
-            setCurrentSlide(currentSlide - 1);
-        }
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev > 0 ? prev - 1 : totalSlides - 1));
+        startAutoSlide();
     };
 
     const visibleBrands = brands.slice(
@@ -48,6 +69,15 @@ export default function SuitingPage() {
 
     // FAQ STATE
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(630);
+
+    useEffect(() => {
+        if (faqColRef.current) {
+            setFaqImgHeight(faqColRef.current.offsetHeight);
+        }
+    }, [openFaq]);
 
     const faqs = [
         {
@@ -90,8 +120,8 @@ export default function SuitingPage() {
 
 
             <Helmet>
-                <title>Men's Suiting Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop premium men's suiting fabrics in Dubai. Aurora Textiles offers wholesale suiting fabric from top global brands for tailors, retailers and fashion houses." />
+                <title>Luxury Mens Suiting Fabrics | High-Quality Suit Fabrics Supplier</title>
+                <meta name="description" content="Explore Aurora Textiles' luxurious collection of high-quality men's suiting fabrics. Find the perfect fabric to craft elegant suits that reflect your style and sophistication." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -183,7 +213,7 @@ export default function SuitingPage() {
                             flex: "1 1 500px",
                         }}
                     >
-                        <h3
+                        <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "14px" : "40px",
                                 lineHeight: "1.15",
@@ -196,7 +226,7 @@ export default function SuitingPage() {
                         >
                             Suiting Fabric By <br />
                             Aurora Textiles
-                        </h3>
+                        </h2>
 
                         <p
                             style={{
@@ -397,7 +427,7 @@ export default function SuitingPage() {
                     {Array.from({ length: totalSlides }).map((_, index) => (
                         <div
                             key={index}
-                            onClick={() => setCurrentSlide(index)}
+                            onClick={() => { stopAutoSlide(); setCurrentSlide(index); startAutoSlide(); }}
                             style={{
                                 width: currentSlide === index ? "11px" : "8px",
                                 height: currentSlide === index ? "11px" : "8px",
@@ -460,7 +490,7 @@ export default function SuitingPage() {
                             flex: "1 1 500px",
                         }}
                     >
-                        <h3
+                        <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "38px",
                                 lineHeight: "1.5",
@@ -473,7 +503,7 @@ export default function SuitingPage() {
                         >
                             Types Of Suit Fabrics <br />
                             At Aurora Textiles
-                        </h3>
+                        </h2>
 
                         <p
                             style={{
@@ -547,7 +577,7 @@ export default function SuitingPage() {
                             flex: "1 1 500px",
                         }}
                     >
-                        <h3
+                        <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "40px",
                                 lineHeight: "1.15",
@@ -560,7 +590,7 @@ export default function SuitingPage() {
                             Buy Suit Fabric <br />
                             Online at Aurora <br />
                             Textiles
-                        </h3>
+                        </h2>
 
                         <p
                             style={{
@@ -650,22 +680,24 @@ export default function SuitingPage() {
                             alt="Suiting FAQ"
                             style={{
                                 width: "100%",
-                                height: "630px",
+                                height: `${faqImgHeight}px`,
                                 objectFit: "cover",
                                 borderRadius: "24px",
                                 display: "block",
+                                transition: "height 0.4s ease",
                             }}
                         />
                     </div>
 
                     {/* RIGHT FAQ */}
                     <div
+                        ref={faqColRef}
                         style={{
                             flex: "1 1 450px",
                         }}
                     >
                         {/* FAQ TITLE */}
-                        <h3
+                        <h6
                             style={{
                                 fontSize: window.innerWidth < 768 ? "32px" : "32px",
                                 fontWeight: "700",
@@ -680,7 +712,7 @@ export default function SuitingPage() {
                         >
                             FAQ
                            
-                        </h3>
+                        </h6>
 
                         {/* FAQ ITEMS */}
                         {faqs.map((faq, index) => (
@@ -696,6 +728,8 @@ export default function SuitingPage() {
                                 {/* QUESTION ROW */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                                    onMouseEnter={() => setHoveredFaq(index)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -709,13 +743,17 @@ export default function SuitingPage() {
                                             fontSize: window.innerWidth < 768 ? "11px" : "19px",
                                             fontWeight: "700",
                                             fontFamily: "'Cinzel Decorative', serif",
-                                            color: "#b9972f",
-                                        
+                                            color: openFaq === index
+                                                ? "#b9972f"
+                                                : hoveredFaq === index
+                                                    ? "#0a1e3d"
+                                                    : "#122a4b",
                                             letterSpacing: "0.5px",
                                             lineHeight: "1.5",
                                             margin: 0,
                                             flex: 1,
                                             paddingRight: "16px",
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {faq.question}
@@ -725,9 +763,14 @@ export default function SuitingPage() {
                                             fontFamily: "'Cinzel Decorative', serif",
                                             fontSize: "18px",
                                             fontWeight: "700",
-                                            color: "#b39131",
+                                            color: openFaq === index
+                                                ? "#b9972f"
+                                                : hoveredFaq === index
+                                                    ? "#0a1e3d"
+                                                    : "#122a4b",
                                             letterSpacing: "0.5px",
                                             lineHeight: "1.4",
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === index ? "−" : "+"}

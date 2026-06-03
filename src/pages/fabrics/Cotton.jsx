@@ -11,27 +11,27 @@ export default function CottonPage() {
 
   const faqs = [
     {
-      question: "WHAT IS GIZA COTTON AND DO YOU OFFER IT?",
+      question: "What is Giza cotton and do you offer it?",
       answer:
         "Giza cotton is a premium variety of Egyptian cotton known for its long fibres, exceptional softness, and durability. We occasionally offer Giza-quality shirting fabrics on special request or limited collections.",
     },
     {
-      question: "WHAT IS OXFORD COTTON FABRIC BEST USED FOR?",
+      question: "What is Oxford cotton fabric best used for?",
       answer:
         "Oxford cotton fabric is best used for casual and semi-formal shirts. Its textured weave gives it a polished yet relaxed appearance, making it ideal for business casual and everyday wear.",
     },
     {
-      question: "DO YOU SUPPLY COTTON FABRIC WHOLESALE IN THE UAE?",
+      question: "Do you supply cotton fabric wholesale in the UAE?",
       answer:
         "Yes, we supply cotton fabric wholesale across the UAE. Whether you're a fashion house, tailor, or retailer, we offer competitive pricing and bulk availability for all our cotton collections.",
     },
     {
-      question: "WHAT ARE THE BENEFITS OF COTTON LINEN FABRIC?",
+      question: "What are the benefits of cotton linen fabric?",
       answer:
         "Cotton linen fabric combines the breathability of linen with the softness of cotton. It is lightweight, moisture-wicking, and perfect for warm climates like the UAE, offering both comfort and a refined look.",
     },
     {
-      question: "HOW DO I CHOOSE THE BEST COTTON FABRIC FOR MEN'S CLOTHING?",
+      question: "How do I choose the best cotton fabric for men's clothing?",
       answer:
         "Choosing the best cotton fabric depends on the end use. For everyday shirts, plain or Oxford weave works well. For formal or structured garments, twill or gabardine cotton offers durability and a sharp finish.",
     },
@@ -95,10 +95,10 @@ export default function CottonPage() {
               margin: 0,
               lineHeight: "1.1",
               fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
+              
             }}
           >
-            COTTON FABRICS
+            Cotton Fabrics
           </h1>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function CottonPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
-              textTransform: "uppercase",
+              
             }}
           >
             Shop Cotton Fabrics from Aurora Textile
@@ -149,10 +149,10 @@ export default function CottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
-              margin: "0 0 22px 0",
+              lineHeight: "1.5",
+              margin: "0 0 20px 0",
             }}
           >
             Cotton is one of the most versatile and widely preferred natural
@@ -167,9 +167,9 @@ export default function CottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 36px 0",
             }}
           >
@@ -180,35 +180,38 @@ export default function CottonPage() {
             preferences, and performance needs.
           </p>
 
-          {/* Buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            {/* Contact Us Button */}
-            <button
-              onMouseEnter={e => {
-                e.currentTarget.style.background = "#0a089bd3";
-                e.currentTarget.style.borderColor = "#e0b219";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = "#8b7d3a";
-                e.currentTarget.style.borderColor = "#050e5f";
-                e.currentTarget.style.color = "#fff";
-              }}
-              style={{
-                background: "#8b7d3a",
-                color: "#fff",
-                border: "2px solid #050e5f",
-                padding: "14px 36px",
-                fontSize: "15px",
-                fontWeight: "500",
-                borderRadius: "6px",
-                cursor: "pointer",
-                letterSpacing: "0.5px",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Contact Us
-            </button>
+         {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                       
 
             {/* Call Button */}
             <a
@@ -275,10 +278,10 @@ export default function CottonPage() {
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             color: "#1a237e",
-            fontSize: "32px",
+            fontSize: "38px",
             fontWeight: "700",
             textAlign: "center",
-            textTransform: "uppercase",
+           
             margin: "0 0 50px 0",
           }}
         >
@@ -483,7 +486,7 @@ export default function CottonPage() {
             alt="Premium Cotton"
             style={{
               width: "100%",
-              height: "620px",
+              height: "680px",
               objectFit: "cover",
               objectPosition: "top",
               display: "block",
@@ -498,20 +501,21 @@ export default function CottonPage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#1a237e",
-              fontSize: "34px",
+              fontSize: "38px",
               fontWeight: "700",
+              
               lineHeight: "1.25",
               margin: "0 0 24px 0",
-              textTransform: "uppercase",
             }}
           >
-            Premium Cotton Fabrics in Dubai
+            Premium Cotton 
+            <br />Fabrics in Dubai
           </h2>
 
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "17px",
+              fontSize: "28px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -523,9 +527,9 @@ export default function CottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 18px 0",
             }}
           >
@@ -540,9 +544,9 @@ export default function CottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 28px 0",
             }}
           >
@@ -555,7 +559,7 @@ export default function CottonPage() {
           <h3
             style={{
               fontFamily: "sans-serif",
-              fontSize: "17px",
+              fontSize: "28px",
               fontWeight: "700",
               color: "#111",
               margin: "0 0 14px 0",
@@ -567,9 +571,9 @@ export default function CottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "15.5px",
+              fontSize: "19px",
               color: "#222",
-              lineHeight: "1.8",
+              lineHeight: "1.5",
               margin: "0 0 14px 0",
             }}
           >
@@ -627,10 +631,8 @@ export default function CottonPage() {
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
-              display: "inline-block",
-              borderBottom: "3px solid #1a237e",
-              paddingBottom: "6px",
               letterSpacing: "2px",
+              textDecoration: "none",
             }}
           >
             FAQ
@@ -662,11 +664,11 @@ export default function CottonPage() {
                 <span
                   style={{
                     fontFamily: "'Cinzel Decorative', serif",
-                    fontSize: "13px",
+                    fontSize: "19px",
                     fontWeight: "700",
-                    color: "#b8960c",
+                    color: "#b39131",
                     letterSpacing: "0.5px",
-                    textTransform: "uppercase",
+                   
                     lineHeight: "1.4",
                   }}
                 >
@@ -674,9 +676,9 @@ export default function CottonPage() {
                 </span>
                 <span
                   style={{
-                    fontSize: "22px",
-                    color: "#1a237e",
-                    fontWeight: "400",
+                    fontSize: "19px",
+                    color: "#b39131",
+                    fontWeight: "600",
                     marginLeft: "20px",
                     flexShrink: 0,
                   }}
@@ -691,9 +693,9 @@ export default function CottonPage() {
                   style={{
                     padding: "0 28px 24px 28px",
                     fontFamily: "sans-serif",
-                    fontSize: "15px",
-                    color: "#333",
-                    lineHeight: "1.8",
+                    fontSize: "19px",
+                    color: "#292626",
+                    lineHeight: "1.5",
                     borderTop: "1px solid #eee",
                     paddingTop: "20px",
                   }}
