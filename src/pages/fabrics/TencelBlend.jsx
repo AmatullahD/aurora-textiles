@@ -198,7 +198,7 @@ export default function TencelBlendPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', sans-serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "32px",
               fontWeight: "700",
               lineHeight: "1.25",
@@ -335,7 +335,7 @@ export default function TencelBlendPage() {
         <h2
           style={{
             fontFamily: "'Cinzel Decorative', serif",
-            color: "#1a237e",
+            color: "#344886",
             fontSize: "36px",
             fontWeight: "700",
             textAlign: "center",
@@ -433,7 +433,7 @@ export default function TencelBlendPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "34px",
               fontWeight: "700",
               lineHeight: "1.25",
@@ -527,7 +527,7 @@ export default function TencelBlendPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "34px",
               fontWeight: "700",
               lineHeight: "1.25",
@@ -630,7 +630,7 @@ export default function TencelBlendPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,

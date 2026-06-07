@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,20 +6,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function JohnCavendishPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT MAKES JOHN CAVENDISH SUITING FABRIC IDEAL FOR FORMAL MENSWEAR?",
+            question: "What makes John Cavendish suiting fabric ideal for formal menswear?",
             answer:
                 "John Cavendish suiting fabrics are known for their fine wool content, excellent drape, and premium finish—making them ideal for crafting structured suits and business attire that maintain form and comfort over time.",
         },
         {
-            question: "CAN I ORDER JOHN CAVENDISH FABRICS IN BULK FOR COMMERCIAL TAILORING?",
+            question: "Can I order John Cavendish fabrics in bulk for commercial tailoring?",
             answer:
                 "Yes, Aurora Textiles provides bulk and wholesale supply of John Cavendish fabrics for commercial tailors, fashion houses, and uniform manufacturers across Dubai and the MENA region.",
         },
         {
-            question: "ARE JOHN CAVENDISH FABRICS AVAILABLE IN PURE WOOL AND BLENDED OPTIONS?",
+            question: "Are John Cavendish fabrics available in pure wool and blended options?",
             answer:
                 "Yes, our John Cavendish collection includes pure wool suit fabrics as well as high-performance blended options, catering to a range of budgets and end-use requirements.",
         },
@@ -29,8 +43,8 @@ export default function JohnCavendishPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>John Cavendish Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Buy John Cavendish fabrics wholesale in Dubai. Aurora Textiles supplies premium John Cavendish suiting and shirting fabrics across UAE and GCC." />
+                <title>John Cavendish Men&#39;s Fabric Supplier in Dubai, UAE | Formal Wear Fabrics by Aurora Textiles</title>
+                <meta name="description" content="Aurora Textiles is the leading John Cavendish men&#39;s fabric supplier in Dubai, UAE. It offers fine wool content, excellent drape, and a premium finish that is ideal for formal suits and business attire. Check out our website and contact us to shop now." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -83,10 +97,9 @@ export default function JohnCavendishPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        JOHN CAVENDISH FABRICS
+                        John Cavendish Fabrics
                     </h1>
                 </div>
             </section>
@@ -136,22 +149,21 @@ export default function JohnCavendishPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         John Cavendish Fabrics Supplier in Dubai, UAE
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         <strong>Aurora Textiles</strong> is a trusted{" "}
@@ -188,22 +200,21 @@ export default function JohnCavendishPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         John Cavendish Suiting
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         Our collection of <strong>John Cavendish suiting</strong> includes{" "}
@@ -270,22 +281,21 @@ export default function JohnCavendishPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         John Cavendish Men's Fabrics – Trusted by Professionals
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         From fashion houses to uniform suppliers,{" "}
@@ -296,11 +306,11 @@ export default function JohnCavendishPage() {
                     </p>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 16px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         At Aurora Textiles, we ensure you receive:
@@ -323,10 +333,10 @@ export default function JohnCavendishPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "19px",
                                     color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.4",
+                                    fontFamily: "\'Poppins\', sans-serif",
                                 }}
                             >
                                 {item}
@@ -358,22 +368,21 @@ export default function JohnCavendishPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Commercial-Grade Fabrics by Aurora Textiles
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         As a supplier focused exclusively on men's clothing fabrics,{" "}
@@ -384,43 +393,49 @@ export default function JohnCavendishPage() {
                     </p>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 28px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "\'Poppins\', sans-serif",
                         }}
                     >
                         <strong>Contact Aurora Textiles</strong> today to place your order
                         or request samples of our latest{" "}
                         <strong>John Cavendish suiting</strong> range.
                     </p>
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right — image */}
@@ -450,40 +465,41 @@ export default function JohnCavendishPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/john-4.webp"
-                        alt="John Cavendish Fabric Swatches"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "480px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -493,11 +509,14 @@ export default function JohnCavendishPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -509,25 +528,34 @@ export default function JohnCavendishPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -544,11 +572,11 @@ export default function JohnCavendishPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.4",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -560,7 +588,6 @@ export default function JohnCavendishPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -6,20 +6,34 @@ import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function RasmEthnicsPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF GARMENTS CAN BE MADE FROM RASM BY SAMMAAN FABRICS?",
+            question: "What types of garments can be made from Rasm by Sammaan fabrics?",
             answer:
                 "These fabrics are perfect for men's ethnic garments like kurtas, sherwanis, jackets, and festive Indo-western outfits.",
         },
         {
-            question: "ARE THESE FABRICS AVAILABLE IN BULK FOR TAILORING BUSINESSES?",
+            question: "Are these fabrics available in bulk for tailoring businesses?",
             answer:
                 "Yes, Aurora Textiles offers bulk supply of Rasm Ethnic fabrics for tailoring businesses, wholesalers, and fashion retailers across Dubai and the MENA region.",
         },
         {
-            question: "ARE RASM FABRICS PRE-STITCHED OR UNSTITCHED?",
+            question: "Are Rasm fabrics pre-stitched or unstitched?",
             answer:
                 "All Rasm fabrics by Sammaan are available unstitched, giving tailors and designers the freedom to craft garments as per their unique fit and style.",
         },
@@ -29,8 +43,8 @@ export default function RasmEthnicsPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Rasm Ethnics by Sammaan | Aurora Textiles Dubai</title>
-                <meta name="description" content="Shop Rasm Ethnics by Sammaan at Aurora Textiles Dubai. Premium ethnic fabric collection for men's traditional and festive wear. Wholesale supplier in UAE." />
+                <title>Rasm Ethnics by Sammaan - Luxury Ethnic Fabrics by Aurora Textiles</title>
+                <meta name="description" content="Check out Rasm Ethnics Fabrics by Sammaan at Aurora Textiles – your trusted source for premium luxury ethnic fabrics for men in Dubai. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -83,10 +97,9 @@ export default function RasmEthnicsPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        RASM ETHNIC BY SAMMAAN
+                        Rasm Ethnics by Sammaan
                     </h1>
                 </div>
             </section>
@@ -134,10 +147,9 @@ export default function RasmEthnicsPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             marginBottom: "28px",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                             margin: "0 0 28px 0",
                         }}
                     >
@@ -145,9 +157,9 @@ export default function RasmEthnicsPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "0",
                         }}
                     >
@@ -181,10 +193,9 @@ export default function RasmEthnicsPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                             margin: "0 0 24px 0",
                         }}
                     >
@@ -192,9 +203,9 @@ export default function RasmEthnicsPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "32px",
                         }}
                     >
@@ -205,22 +216,38 @@ export default function RasmEthnicsPage() {
                         ceremonies. These fabrics are designed to bring structure, sheen, and
                         sophistication to any traditional garment.
                     </p>
-                    <a
-                        href="/contact-us"
-                        style={{
-                            display: "inline-block",
-                            padding: "14px 32px",
-                            background: "#c8a84b",
-                            color: "#fff",
-                            fontWeight: "600",
-                            fontSize: "15px",
-                            textDecoration: "none",
-                            borderRadius: "4px",
-                            letterSpacing: "0.5px",
-                        }}
-                    >
-                        Contact Us
-                    </a>
+                        {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                 </div>
 
                 {/* Image Right */}
@@ -231,7 +258,7 @@ export default function RasmEthnicsPage() {
                         style={{
                             width: "100%",
                             height: "480px",
-                            objectFit: "cover",
+                            objectFit: "contain",
                             display: "block",
                             borderRadius: "4px",
                         }}
@@ -271,22 +298,21 @@ export default function RasmEthnicsPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "40px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        Wide Range Of Unstitched Fabrics
+                        Wide Range of Unstitched Fabrics
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "20px",
                         }}
                     >
@@ -302,9 +328,9 @@ export default function RasmEthnicsPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "16px",
+                                    fontSize: "19px",
                                     color: "#333",
-                                    lineHeight: "1.8",
+                                    lineHeight: "1.4",
                                     marginBottom: "8px",
                                 }}
                             >
@@ -314,7 +340,7 @@ export default function RasmEthnicsPage() {
                     </ul>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontSize: "19px",
                             color: "#333",
                             lineHeight: "1.8",
                         }}
@@ -344,10 +370,9 @@ export default function RasmEthnicsPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                             margin: "0 0 24px 0",
                         }}
                     >
@@ -355,7 +380,7 @@ export default function RasmEthnicsPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontSize: "19px",
                             color: "#333",
                             lineHeight: "1.8",
                         }}
@@ -387,127 +412,117 @@ export default function RasmEthnicsPage() {
             {/* ── SECTION 5: Image Left + FAQ Right ── */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    width: "100%",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Image Left */}
-                <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "380px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/rasm-4.webp"
-                        alt="Rasm Ethnic Garment"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "500px",
-                            objectFit: "cover",
-                            objectPosition: "top",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "520px",
+                            objectFit: "contain",
                             display: "block",
-                            borderRadius: "4px",
+                            borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* FAQ Right */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
-                    {/* FAQ Title */}
-                    <div style={{ marginBottom: "32px" }}>
-                        <h2
-                            style={{
-                                fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "42px",
-                                fontWeight: "700",
-                                color: "#1a1a5e",
-                                display: "inline-block",
-                                letterSpacing: "4px",
-                                margin: 0,
-                                position: "relative",
-                            }}
-                        >
-                            FAQ
-                            <span
-                                style={{
-                                    position: "absolute",
-                                    bottom: "-6px",
-                                    right: "-28px",
-                                    width: "55px",
-                                    height: "3px",
-                                    background: "#c8a84b",
-                                    borderRadius: "2px",
-                                }}
-                            />
-                        </h2>
-                    </div>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
+                    <h2
+                        style={{
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
+                        }}
+                    >
+                        FAQ
+                    </h2>
 
-                    {/* FAQ Items */}
-                    <div>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
                         {faqs.map((faq, i) => (
                             <div
                                 key={i}
                                 style={{
                                     border: "1px solid #ddd",
-                                    borderRadius: "4px",
-                                    marginBottom: "12px",
-                                    overflow: "hidden",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <button
+                                <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        width: "100%",
                                         display: "flex",
                                         justifyContent: "space-between",
                                         alignItems: "center",
-                                        padding: "18px 24px",
-                                        background: "#fff",
-                                        border: "none",
+                                        padding: "18px 20px",
                                         cursor: "pointer",
-                                        textAlign: "left",
+                                        gap: "16px",
                                     }}
                                 >
-                                    <span
+                                    <p
                                         style={{
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "12px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#c8a84b",
-                                            letterSpacing: "0.5px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            margin: 0,
                                             lineHeight: "1.4",
-                                            textTransform: "uppercase",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
-                                    </span>
+                                    </p>
                                     <span
                                         style={{
                                             fontSize: "22px",
-                                            color: "#1a1a5e",
-                                            fontWeight: "300",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            marginLeft: "16px",
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
                                     </span>
-                                </button>
+                                </div>
+
                                 {openFaq === i && (
-                                    <div
-                                        style={{
-                                            padding: "16px 24px 20px",
-                                            borderTop: "1px solid #eee",
-                                            background: "#fff",
-                                        }}
-                                    >
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.75",
-                                                margin: 0,
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -519,7 +534,6 @@ export default function RasmEthnicsPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

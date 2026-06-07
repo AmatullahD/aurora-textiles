@@ -1,26 +1,28 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 
 export default function SuitingPage() {
+    const navigate = useNavigate();
 
     const brands = [
-        "/john-cavendish.webp",
-        "/gullini.webp",
-        "/regency.webp",
-        "/donear-logo.png",
-        "/opulent.webp",
-        "/brand-3.jpg",
-        "/dignity.webp",
-        "/cotton-wool.webp",
-        "/fc-collection.webp",
-        "/elegant-3.webp",
-        "/platinum-collection.webp",
-        "/john-cavendish.webp",
-        "/gullini.webp",
-        "/regency.webp",
+        { src: "/john-cavendish.webp",      route: "/products/john-fabrics" },
+        { src: "/gullini.webp",              route: "/products/gullini" },
+        { src: "/regency.webp",              route: "" },
+        { src: "/donear-logo.png",           route: "/products/donear" },
+        { src: "/opulent.webp",              route: "" },
+        { src: "/brand-3.jpg",               route: "" },
+        { src: "/dignity.webp",              route: "" },
+        { src: "/cotton-wool.webp",          route: "" },
+        { src: "/fc-collection.webp",        route: "" },
+        { src: "/elegant-3.webp",            route: "" },
+        { src: "/platinum-collection.webp",  route: "" },
+        { src: "/john-cavendish.webp",       route: "/products/john-fabrics" },
+        { src: "/gullini.webp",              route: "/products/gullini" },
+        { src: "/regency.webp",              route: "" },
     ];
 
     const visibleItems = window.innerWidth < 768 ? 2 : 4;
@@ -218,7 +220,7 @@ export default function SuitingPage() {
                                 fontSize: window.innerWidth < 768 ? "14px" : "40px",
                                 lineHeight: "1.15",
                                 marginBottom: "20px",
-                                color: "#122a4b",
+                                color: "#344886",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
                                
@@ -368,15 +370,17 @@ export default function SuitingPage() {
                         {visibleBrands.map((brand, index) => (
                             <div
                                 key={index}
+                                onClick={() => brand.route && navigate(brand.route)}
                                 style={{
                                     width: "100%",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
+                                    cursor: brand.route ? "pointer" : "default",
                                 }}
                             >
                                 <img
-                                    src={brand}
+                                    src={brand.src}
                                     alt="brand"
                                     style={{
                                         width: "180px",   // ← change width here
@@ -495,7 +499,7 @@ export default function SuitingPage() {
                                 fontSize: window.innerWidth < 768 ? "26px" : "38px",
                                 lineHeight: "1.5",
                                 marginBottom: "12px",
-                                color: "#21408f",
+                                color: "#344886",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
                                
@@ -582,7 +586,7 @@ export default function SuitingPage() {
                                 fontSize: window.innerWidth < 768 ? "26px" : "40px",
                                 lineHeight: "1.15",
                                 marginBottom: "24px",
-                                color: "#122a4b",
+                                color: "#344886",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
                             }}
@@ -702,7 +706,7 @@ export default function SuitingPage() {
                                 fontSize: window.innerWidth < 768 ? "32px" : "32px",
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
-                                color: "#122a4b",
+                                color: "#344886",
                                
                                 marginBottom: "24px",
                                 display: "flex",

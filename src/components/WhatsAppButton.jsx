@@ -8,21 +8,21 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       style={{
         position: "fixed",
-        bottom: "25px",
-        right: "25px",
-        width: "62px",
-        height: "62px",
+        bottom: "80px",   /* sits above ScrollToTop (30px + 35px height + 15px gap) */
+        right: "20px",
+        width: "56px",
+        height: "56px",
         background: "#25D366",
         color: "white",
         borderRadius: "50%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        fontSize: "34px",
+        fontSize: "30px",
         textDecoration: "none",
-        zIndex: "9999",
+        zIndex: 9999,
         boxShadow: "0 4px 15px rgba(0,0,0,0.25)",
-        transition: "0.3s ease",
+        transition: "transform 0.3s ease",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = "scale(1.1)";
@@ -30,6 +30,7 @@ export default function WhatsAppButton() {
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = "scale(1)";
       }}
+      aria-label="Chat on WhatsApp"
     >
       <FaWhatsapp />
     </a>

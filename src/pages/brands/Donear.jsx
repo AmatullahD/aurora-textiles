@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,10 +6,19 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function DonearPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useEffect(() => {
+        if (faqColRef.current) {
+            setFaqImgHeight(faqColRef.current.offsetHeight);
+        }
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF DONEAR FABRICS DOES AURORA TEXTILES OFFER?",
+            question: "What types of Donear fabrics does Aurora Textiles offer?",
             answer: (
                 <>
                     We supply a full range of <strong>Donear suitings</strong> and{" "}
@@ -20,7 +29,7 @@ export default function DonearPage() {
             ),
         },
         {
-            question: "IS DONEAR FABRIC SUITABLE FOR CORPORATE UNIFORMS?",
+            question: "Is Donear fabric suitable for corporate uniforms?",
             answer: (
                 <>
                     Yes, Donear fabrics are widely used for corporate uniforms due to their
@@ -30,7 +39,7 @@ export default function DonearPage() {
             ),
         },
         {
-            question: "DOES AURORA TEXTILES OFFER DELIVERY ACROSS DUBAI AND THE UAE?",
+            question: "Does Aurora Textiles offer delivery across Dubai and the UAE?",
             answer: (
                 <>
                     Absolutely. We provide timely deliveries across Dubai and all emirates
@@ -46,8 +55,8 @@ export default function DonearPage() {
 
 
             <Helmet>
-                <title>Donear Fabrics Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Buy Donear suiting and shirting fabrics in Dubai. Aurora Textiles is an authorised Donear fabric supplier offering wholesale prices across UAE and GCC." />
+                <title>Buy Donear Men's Suiting &amp; Shirting Fabrics - Aurora Textiles</title>
+                <meta name="description" content="Buy Donear Men's cottons, linens, polyester blends, worsteds and more Unstitched Shirting &amp; Suiting Fabrics at Aurora Textile in Dubai, UAE. Contact or visit our shop to buy now." />
             </Helmet>
 
 
@@ -160,7 +169,6 @@ export default function DonearPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.15",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Donear Fabrics for <br /> Men's Clothing
@@ -168,9 +176,9 @@ export default function DonearPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.5",
                             margin: 0,
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
@@ -208,7 +216,6 @@ export default function DonearPage() {
                         fontFamily: "'Cinzel Decorative', serif",
                         lineHeight: "1.2",
                         margin: "0 0 30px 0",
-                        textTransform: "uppercase",
                         textAlign: "center",
                     }}
                 >
@@ -218,7 +225,7 @@ export default function DonearPage() {
                     style={{
                         fontSize: "19px",
                         color: "#333",
-                        lineHeight: "1.2",
+                        lineHeight: "1.5",
                         margin: "0 0 20px 0",
                         fontFamily: "'Cinzel Decorative', serif",
                     }}
@@ -234,7 +241,7 @@ export default function DonearPage() {
                     style={{
                         fontSize: "19px",
                         color: "#333",
-                        lineHeight: "1.2",
+                        lineHeight: "1.5",
                         margin: 0,
                         fontFamily: "'Cinzel Decorative', serif",
                     }}
@@ -272,7 +279,6 @@ export default function DonearPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 32px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Why Choose Aurora Textiles for Donear Fabric?
@@ -310,7 +316,6 @@ export default function DonearPage() {
                                         fontWeight: "700",
                                         color: "#1e2a5e",
                                         letterSpacing: "0.8px",
-                                        textTransform: "uppercase",
                                         margin: 0,
                                         lineHeight: "1.6",
                                         fontFamily: "'Cinzel Decorative', serif",
@@ -424,16 +429,15 @@ export default function DonearPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Donear Shirting
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.5",
                             margin: 0,
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
@@ -475,16 +479,15 @@ export default function DonearPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Donear Fabric
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.5",
                             margin: "0 0 14px 0",
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
@@ -525,9 +528,9 @@ export default function DonearPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.5",
                             margin: "0 0 28px 0",
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
@@ -537,32 +540,38 @@ export default function DonearPage() {
                         hassle.
                     </p>
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#bd930c";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#bd930c";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                   {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                            </div>
                 </div>
 
                 {/* Right — image */}
@@ -597,35 +606,36 @@ export default function DonearPage() {
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <img
                         src="/donear-4.webp"
-                        alt="Fabric Swatches FAQ"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "480px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 60px)", width: "calc(50% - 60px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
                             color: "#1e2a5e",
-                            fontFamily: "'Cinzel Decorative', sans-serif",
+                            fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -635,11 +645,14 @@ export default function DonearPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -651,25 +664,34 @@ export default function DonearPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "18px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', sans-serif",
+                                            lineHeight: "1.5",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -686,11 +708,11 @@ export default function DonearPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "17px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.5",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', sans-serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -702,7 +724,6 @@ export default function DonearPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

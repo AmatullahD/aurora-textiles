@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,20 +6,36 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function NemssisPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.getBoundingClientRect().height);
+        const ro = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                setFaqImgHeight(entry.contentRect.height);
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF NEMSSIS SHIRTING FABRICS DOES AURORA TEXTILES OFFER?",
+            question: "What types of Nemssis shirting fabrics does Aurora Textiles offer?",
             answer:
                 "We stock Nemssis shirting fabrics in popular blends like 100% cotton, poly-cotton, linen, and tencel. They are available in printed, plain, and jacquard variants.",
         },
         {
-            question: "WHAT MAKES NEMSSIS SHIRTING A GOOD CHOICE FOR INSTITUTIONAL OR COMMERCIAL BUYERS?",
+            question: "What makes Nemssis shirting a good choice for institutional or commercial buyers?",
             answer:
                 "Nemssis shirting fabrics are designed for consistent quality and high-volume production. They are wrinkle-resistant, easy to maintain, and ideal for uniforms, corporate shirts, and retail collections.",
         },
         {
-            question: "ARE NEMSSIS SHIRTING FABRICS SUITABLE FOR MEN'S FORMALWEAR AND DAILY SHIRTS?",
+            question: "Are Nemssis shirting fabrics suitable for men's formalwear and daily shirts?",
             answer:
                 "Yes, Nemssis fabrics are crafted for both formal and daily-wear applications. Their smooth finish and durable construction make them a preferred choice for tailors and garment brands alike.",
         },
@@ -29,8 +45,8 @@ export default function NemssisPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Nemssis Ethnic Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Explore Nemssis ethnic fabric collections at Aurora Textiles Dubai. Wholesale supplier of Shiddat, Sanskriti, Raag Resham, Zarista and Nawabi collections." />
+                <title>Buy Nemssis Shirting Fabric | Shop Nemssis Cotton Shirting Fabric</title>
+                <meta name="description" content="The Nemssis fabric is of premium quality and it ensures a skin friendly feel. Woven by using latest knitting technology and quality tested threads. Contact Aurora Textiles to buy Nemssis premium cotton Shirting Fabrics in Dubai." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -83,7 +99,6 @@ export default function NemssisPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
                         NEMSSIS FABRICS
@@ -104,17 +119,14 @@ export default function NemssisPage() {
                     gap: "60px",
                 }}
             >
-                {/* Left: Nemssis brand logo */}
+                {/* Left: Nemssis brand logo — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "420px",
-                        height: "300px",
-                        flexShrink: 0,
+                        flex: "0 0 50%",
+                        width: "50%",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        overflow: "hidden",
                     }}
                 >
                     <img
@@ -122,22 +134,21 @@ export default function NemssisPage() {
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
-                            height: "100%",
+                            height: "auto",
                             objectFit: "contain",
                             display: "block",
                         }}
                     />
                 </div>
 
-                {/* Right: heading + paragraph */}
-                <div style={{ flex: 1 }}>
+                {/* Right: heading + paragraph — 50% */}
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
@@ -146,9 +157,9 @@ export default function NemssisPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -181,8 +192,7 @@ export default function NemssisPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
@@ -191,9 +201,9 @@ export default function NemssisPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -205,9 +215,9 @@ export default function NemssisPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "16px",
                             fontWeight: "700",
@@ -219,9 +229,9 @@ export default function NemssisPage() {
                         style={{
                             listStyle: "disc",
                             paddingLeft: "24px",
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -241,9 +251,9 @@ export default function NemssisPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -320,8 +330,7 @@ export default function NemssisPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
@@ -330,9 +339,9 @@ export default function NemssisPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -342,9 +351,9 @@ export default function NemssisPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             fontWeight: "700",
                             marginBottom: "10px",
@@ -356,9 +365,9 @@ export default function NemssisPage() {
                         style={{
                             listStyle: "disc",
                             paddingLeft: "24px",
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -370,9 +379,9 @@ export default function NemssisPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             fontWeight: "700",
                             marginBottom: "10px",
@@ -384,9 +393,9 @@ export default function NemssisPage() {
                         style={{
                             listStyle: "disc",
                             paddingLeft: "24px",
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -397,9 +406,9 @@ export default function NemssisPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -426,8 +435,7 @@ export default function NemssisPage() {
                         fontFamily: "'Cinzel Decorative', serif",
                         fontSize: "36px",
                         fontWeight: "700",
-                        color: "#1a2a6c",
-                        textTransform: "uppercase",
+                        color: "#344886",
                         lineHeight: "1.2",
                         margin: "0 auto 28px auto",
                         maxWidth: "900px",
@@ -437,9 +445,9 @@ export default function NemssisPage() {
                 </h2>
                 <p
                     style={{
-                        fontFamily: "'Georgia', serif",
-                        fontSize: "16px",
-                        lineHeight: "1.8",
+                        fontFamily: "'Poppins', sans-serif",
+                        fontSize: "19px",
+                        lineHeight: "1.4",
                         color: "#333",
                         maxWidth: "1000px",
                         margin: "0 auto",
@@ -472,8 +480,7 @@ export default function NemssisPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 36px 0",
                         }}
@@ -512,8 +519,7 @@ export default function NemssisPage() {
                                     fontFamily: "'Cinzel Decorative', serif",
                                     fontSize: "13px",
                                     fontWeight: "700",
-                                    color: "#1a2a6c",
-                                    textTransform: "uppercase",
+                                    color: "#344886",
                                     lineHeight: "1.5",
                                     margin: 0,
                                     letterSpacing: "0.5px",
@@ -524,32 +530,37 @@ export default function NemssisPage() {
                         </div>
                     ))}
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                        {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                 </div>
 
                 {/* Right: Nemssis fabric folded image */}
@@ -575,33 +586,33 @@ export default function NemssisPage() {
                 </div>
             </section>
 
-            {/* SECTION 6 — FAQ: image left, accordion right */}
+            {/* SECTION — FAQ: image left, accordion right */}
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left: striped fabric close-up image */}
-                <div
-                    style={{
-                        flex: "0 0 auto",
-                        width: "540px",
-                        height: "500px",
-                        overflow: "hidden",
-                        flexShrink: 0,
-                        borderRadius: "8px",
-                    }}
-                >
+                {/* Left — image 50% */}
+                <div style={{
+                    flex: "0 0 calc(50% - 30px)",
+                    width: "calc(50% - 30px)",
+                    height: `${faqImgHeight}px`,
+                    minHeight: "500px",
+                    transition: "height 0.4s ease",
+                    overflow: "hidden",
+                    borderRadius: "8px",
+                }}>
                     <img
                         src="/nemssis-5.webp"
-                        alt="Nemssis Striped Fabric"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
                             height: "100%",
@@ -611,91 +622,100 @@ export default function NemssisPage() {
                     />
                 </div>
 
-                {/* Right: FAQ accordion */}
-                <div style={{ flex: 1 }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "32px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            margin: "0 0 30px 0",
-                            borderBottom: "2px solid #b8860b",
-                            paddingBottom: "8px",
-                            display: "inline-block",
+                            color: "#344886",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
                         }}
                     >
                         FAQ
                     </h2>
 
-                    {faqs.map((faq, idx) => (
-                        <div
-                            key={idx}
-                            style={{
-                                border: "1px solid #ddd",
-                                marginBottom: "12px",
-                            }}
-                        >
-                            <button
-                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
                                 style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                    padding: "18px 20px",
-                                    background: "none",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    gap: "12px",
+                                    border: "1px solid #ddd",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <span
-                                    style={{
-                                        fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "13px",
-                                        fontWeight: "700",
-                                        color: "#b8860b",
-                                        textTransform: "uppercase",
-                                        lineHeight: "1.4",
-                                        letterSpacing: "0.4px",
-                                    }}
-                                >
-                                    {faq.question}
-                                </span>
-                                <span
-                                    style={{
-                                        fontSize: "22px",
-                                        color: "#1a2a6c",
-                                        fontWeight: "300",
-                                        flexShrink: 0,
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    {openFaq === idx ? "−" : "+"}
-                                </span>
-                            </button>
-
-                            {openFaq === idx && (
                                 <div
+                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        padding: "16px 20px 20px 20px",
-                                        fontFamily: "'Georgia', serif",
-                                        fontSize: "15px",
-                                        lineHeight: "1.8",
-                                        color: "#333",
-                                        borderTop: "1px solid #eee",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        padding: "18px 20px",
+                                        cursor: "pointer",
+                                        gap: "16px",
                                     }}
                                 >
-                                    <p style={{ margin: 0 }}>{faq.answer}</p>
+                                    <p
+                                        style={{
+                                            fontSize: "17px",
+                                            fontWeight: "700",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            margin: 0,
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
+                                        }}
+                                    >
+                                        {faq.question}
+                                    </p>
+                                    <span
+                                        style={{
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            flexShrink: 0,
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
+                                        }}
+                                    >
+                                        {openFaq === i ? "−" : "+"}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {openFaq === i && (
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                                color: "#333",
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
+                                            }}
+                                        >
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

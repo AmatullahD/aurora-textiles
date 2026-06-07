@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -6,20 +6,36 @@ import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function RaagReshamPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.getBoundingClientRect().height);
+        const ro = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                setFaqImgHeight(entry.contentRect.height);
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT IS UNIQUE ABOUT RAAG RESHAM BY NEMSSIS?",
+            question: "What is unique about Raag Resham by Nemssis?",
             answer:
                 "Raag Resham offers a blend of festive flair and traditional aesthetics, crafted especially for men's ethnic wear like kurtas, sherwanis, and jackets.",
         },
         {
-            question: "ARE RAAG RESHAM FABRICS SUITABLE FOR BULK PURCHASE?",
+            question: "Are Raag Resham fabrics suitable for bulk purchase?",
             answer:
                 "Yes, Aurora Textiles supports bulk orders of Raag Resham fabrics for tailors, retailers, and fashion exporters across Dubai and the MENA region with competitive pricing and on-time delivery.",
         },
         {
-            question: "WHAT FABRIC TYPES ARE AVAILABLE IN THE RAAG RESHAM COLLECTION?",
+            question: "What fabric types are available in the Raag Resham collection?",
             answer:
                 "The Raag Resham collection includes unstitched fabrics in poly-viscose, cotton blends, and silk-touch finishes, available in jacquard, printed, and embellished options for premium ethnic menswear.",
         },
@@ -29,8 +45,8 @@ export default function RaagReshamPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Raag Resham by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
-                <meta name="description" content="Explore Raag Resham by Nemssis at Aurora Textiles Dubai. Premium ethnic fabric collection with rich textures for men's traditional wear. Wholesale in UAE." />
+                <title>Raag Resham by Nemssis - Festival Collection Ethnic Fabrics for Mens</title>
+                <meta name="description" content="Check out Raag Resham by Nemssis – a premium festive collection of ethnic fabrics for men. Perfect for kurtas, sherwanis, and jackets. Available now at Aurora Textiles, Dubai." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -83,32 +99,31 @@ export default function RaagReshamPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        RAAG RESHAM BY NEMSSIS
+                      Raag Resham by Nemssis
                     </h1>
                 </div>
             </section>
 
-            {/* ── SECTION 1: Brand Logo Left + Text Right ── */}
+            {/* SECTION 1: Brand Logo Left + Text Right */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1280px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Brand Logo/Image Left */}
+                {/* Left: Logo — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "100%",
-                        maxWidth: "500px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -127,26 +142,26 @@ export default function RaagReshamPage() {
                     />
                 </div>
 
-                {/* Text Right */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
+                {/* Right: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             margin: "0 0 28px 0",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                         }}
                     >
                         Raag Resham By Nemssis By Aurora Textiles, Dubai
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "0",
                         }}
                     >
@@ -161,38 +176,39 @@ export default function RaagReshamPage() {
                 </div>
             </section>
 
-            {/* ── SECTION 2: Text Left + Image Right ── */}
+            {/* SECTION 2: Text Left + Image Right */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1280px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Text Left */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             margin: "0 0 24px 0",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                         }}
                     >
                         Premium Ethnic Fabrics With Festive Appeal
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "32px",
                         }}
                     >
@@ -203,88 +219,118 @@ export default function RaagReshamPage() {
                         wedding, cultural event, or religious celebration, Raag Resham offers the
                         perfect base for impactful attire.
                     </p>
-                    <a
-                        href="/contact-us"
-                        style={{
-                            display: "inline-block",
-                            padding: "14px 32px",
-                            background: "#c8a84b",
-                            color: "#fff",
-                            fontWeight: "600",
-                            fontSize: "15px",
-                            textDecoration: "none",
-                            borderRadius: "4px",
-                            letterSpacing: "0.5px",
-                        }}
-                    >
-                        Contact Us
-                    </a>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
-                {/* Image Right */}
-                <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "540px" }}>
+                {/* Right: Image — 50% */}
+                <div
+                    style={{
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: "500px",
+                        overflow: "hidden",
+                        borderRadius: "4px",
+                    }}
+                >
                     <img
                         src="/resham-2.webp"
                         alt="Premium Ethnic Fabrics with Festive Appeal"
                         style={{
                             width: "100%",
-                            height: "500px",
+                            height: "100%",
                             objectFit: "cover",
                             objectPosition: "top",
                             display: "block",
-                            borderRadius: "4px",
                         }}
                     />
                 </div>
             </section>
 
-            {/* ── SECTION 3: Image Left + Text Right ── */}
+            {/* SECTION 3: Image Left + Text Right */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1280px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Image Left */}
-                <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
+                {/* Left: Image — 50% */}
+                <div
+                    style={{
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: "500px",
+                        overflow: "hidden",
+                        borderRadius: "4px",
+                    }}
+                >
                     <img
                         src="/resham-3.webp"
                         alt="Raag Resham Fabric Features"
                         style={{
                             width: "100%",
-                            height: "500px",
+                            height: "100%",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "4px",
                         }}
                     />
                 </div>
 
-                {/* Text Right */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
+                {/* Right: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             margin: "0 0 24px 0",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                         }}
                     >
                         Fabric Features &amp; Composition
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                             marginBottom: "20px",
                         }}
                     >
@@ -300,9 +346,10 @@ export default function RaagReshamPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "16px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "19px",
                                     color: "#333",
-                                    lineHeight: "1.8",
+                                    lineHeight: "1.4",
                                     marginBottom: "10px",
                                 }}
                             >
@@ -312,9 +359,10 @@ export default function RaagReshamPage() {
                     </ul>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                         }}
                     >
                         The fabrics are tailored to ensure comfortable wear and ease of stitching while
@@ -323,38 +371,39 @@ export default function RaagReshamPage() {
                 </div>
             </section>
 
-            {/* ── SECTION 4: Text Left + Image Right ── */}
+            {/* SECTION 4: Text Left + Image Right */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1280px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Text Left */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a1a5e",
+                            color: "#344886",
                             margin: "0 0 24px 0",
                             lineHeight: "1.2",
-                            textTransform: "uppercase",
                         }}
                     >
                         Why Choose Aurora Textiles For Raag Resham?
                     </h2>
                     <p
                         style={{
-                            fontSize: "16px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.8",
+                            lineHeight: "1.4",
                         }}
                     >
                         Aurora Textiles is a trusted supplier of men's ethnic fabrics in Dubai, known
@@ -366,145 +415,149 @@ export default function RaagReshamPage() {
                     </p>
                 </div>
 
-                {/* Image Right */}
-                <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "520px" }}>
+                {/* Right: Image — 50% */}
+                <div
+                    style={{
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: "420px",
+                        overflow: "hidden",
+                        borderRadius: "4px",
+                    }}
+                >
                     <img
                         src="/resham-4.webp"
                         alt="Why Choose Aurora Textiles for Raag Resham"
                         style={{
                             width: "100%",
-                            height: "420px",
+                            height: "100%",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "4px",
                         }}
                     />
                 </div>
             </section>
 
-            {/* ── SECTION 5: Image Left + FAQ Right ── */}
+            {/* SECTION 5: Image Left + FAQ Right */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1280px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
+                    boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Image Left */}
-                <div style={{ flex: "0 0 auto", width: "100%", maxWidth: "500px" }}>
+                {/* Left: Image — 50% (dynamic height) */}
+                <div
+                    style={{
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: `${faqImgHeight}px`,
+                        minHeight: "500px",
+                        transition: "height 0.4s ease",
+                        overflow: "hidden",
+                        borderRadius: "8px",
+                    }}
+                >
                     <img
                         src="/resham-5.webp"
                         alt="Raag Resham Fabric Swatch"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: "100%",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "4px",
                         }}
                     />
                 </div>
 
-                {/* FAQ Right */}
-                <div style={{ flex: 1, minWidth: "280px" }}>
-                    {/* FAQ Title */}
-                    <div style={{ marginBottom: "32px" }}>
-                        <h2
-                            style={{
-                                fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "42px",
-                                fontWeight: "700",
-                                color: "#1a1a5e",
-                                display: "inline-block",
-                                letterSpacing: "4px",
-                                margin: 0,
-                                position: "relative",
-                            }}
-                        >
-                            FAQ
-                            <span
-                                style={{
-                                    position: "absolute",
-                                    bottom: "-6px",
-                                    right: "-28px",
-                                    width: "55px",
-                                    height: "3px",
-                                    background: "#c8a84b",
-                                    borderRadius: "2px",
-                                }}
-                            />
-                        </h2>
-                    </div>
+                {/* Right: FAQ — 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
+                        }}
+                    >
+                        FAQ
+                    </h2>
 
-                    {/* FAQ Items */}
-                    <div>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
                         {faqs.map((faq, i) => (
                             <div
                                 key={i}
                                 style={{
                                     border: "1px solid #ddd",
-                                    borderRadius: "4px",
-                                    marginBottom: "12px",
-                                    overflow: "hidden",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <button
+                                <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        width: "100%",
                                         display: "flex",
                                         justifyContent: "space-between",
                                         alignItems: "center",
-                                        padding: "18px 24px",
-                                        background: "#fff",
-                                        border: "none",
+                                        padding: "18px 20px",
                                         cursor: "pointer",
-                                        textAlign: "left",
+                                        gap: "16px",
                                     }}
                                 >
-                                    <span
+                                    <p
                                         style={{
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "12px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#c8a84b",
-                                            letterSpacing: "0.5px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            margin: 0,
                                             lineHeight: "1.4",
-                                            textTransform: "uppercase",
+                                            fontFamily: "'Cinzel Decorative', serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
-                                    </span>
+                                    </p>
                                     <span
                                         style={{
                                             fontSize: "22px",
-                                            color: "#1a1a5e",
-                                            fontWeight: "300",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            marginLeft: "16px",
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
                                     </span>
-                                </button>
+                                </div>
+
                                 {openFaq === i && (
-                                    <div
-                                        style={{
-                                            padding: "16px 24px 20px",
-                                            borderTop: "1px solid #eee",
-                                            background: "#fff",
-                                        }}
-                                    >
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.75",
-                                                margin: 0,
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}

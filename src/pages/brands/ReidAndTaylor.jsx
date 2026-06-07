@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,20 +6,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function ReidAndTaylorPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF REID & TAYLOR FABRICS DO YOU SUPPLY?",
+            question: "What types of Reid & Taylor fabrics do you supply?",
             answer:
                 "We offer a wide range of original Reid & Taylor suitings and shirtings, including wool-rich, poly wool, merino wool and easy-care blends designed for tailored menswear.",
         },
         {
-            question: "CAN I PLACE BULK ORDERS FOR REID & TAYLOR FABRICS?",
+            question: "Can I place bulk orders for Reid & Taylor fabrics?",
             answer:
                 "Yes, Aurora Textiles specializes in bulk and wholesale orders for Reid & Taylor fabrics. We ensure consistent quality, reliable stock availability, and quick turnaround on large orders.",
         },
         {
-            question: "DO YOU EXPORT REID & TAYLOR FABRICS TO OTHER COUNTRIES?",
+            question: "Do you export Reid & Taylor fabrics to other countries?",
             answer:
                 "Yes, we export Reid & Taylor fabrics across the MENA region including Oman, Qatar, Bahrain, and other GCC countries. Contact us for export inquiries and pricing.",
         },
@@ -30,8 +44,8 @@ export default function ReidAndTaylorPage() {
 
 
             <Helmet>
-                <title>Reid & Taylor Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop Reid & Taylor luxury suiting fabrics in Dubai. Aurora Textiles is your trusted wholesale supplier of Reid & Taylor fabrics across UAE and GCC." />
+                <title>Reid &amp; Taylor Men&#39;s Suiting &amp; Shirting Fabrics| Buy Reid and Taylor Fabrics in UAE</title>
+                <meta name="description" content="Aurora Textiles offers Reid &amp; Taylor premium collection of suitings and shirtings Men&#39;s Fabrics in Dubai, UAE. Buy Reid and Taylor Fabrics and fill your wardrobe with our collection of men &amp; formal wear." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -84,10 +98,9 @@ export default function ReidAndTaylorPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        REID & TAYLOR FABRICS
+                        Reid & Taylor Fabrics
                     </h1>
                 </div>
             </section>
@@ -137,22 +150,21 @@ export default function ReidAndTaylorPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Reid & Taylor Fabrics for Men's Wear
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <strong>Aurora Textiles</strong> is a trusted distributor of{" "}
@@ -188,22 +200,21 @@ export default function ReidAndTaylorPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Reid & Taylor Suiting
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         Our extensive collection of{" "}
@@ -216,11 +227,11 @@ export default function ReidAndTaylorPage() {
                     </p>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         At <strong>Aurora Textiles</strong>, we ensure bulk availability of
@@ -237,7 +248,7 @@ export default function ReidAndTaylorPage() {
                         alt="Reid and Taylor Suiting"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: "680px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -257,7 +268,6 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -269,7 +279,7 @@ export default function ReidAndTaylorPage() {
                         alt="Reid and Taylor Shirting"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: "560px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -283,22 +293,21 @@ export default function ReidAndTaylorPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
-                            margin: "0 0 24px 0",
-                            textTransform: "uppercase",
+                            margin: "0 0 15px 0",
                         }}
                     >
                         Reid & Taylor Shirting
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <strong>Reid & Taylor shirting fabrics</strong> are created using
@@ -334,22 +343,21 @@ export default function ReidAndTaylorPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Supplying Reid & Taylor Men's Fabric Across the UAE
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 16px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         As dedicated textile suppliers,{" "}
@@ -361,8 +369,8 @@ export default function ReidAndTaylorPage() {
 
                     <ul
                         style={{
-                            margin: "0 0 28px 0",
-                            paddingLeft: "20px",
+                            margin: "0 0 30px 0",
+                            paddingLeft: "40px",
                             display: "flex",
                             flexDirection: "column",
                             gap: "10px",
@@ -381,10 +389,10 @@ export default function ReidAndTaylorPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "17px",
                                     color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.2",
+                                    fontFamily: "'Poppins', sans-serif",
                                 }}
                             >
                                 {item}
@@ -392,32 +400,38 @@ export default function ReidAndTaylorPage() {
                         ))}
                     </ul>
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right — image */}
@@ -427,7 +441,7 @@ export default function ReidAndTaylorPage() {
                         alt="Reid and Taylor Fabric Supply UAE"
                         style={{
                             width: "100%",
-                            height: "520px",
+                            height: "680px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -447,40 +461,41 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/reid&taylor-4.webp"
-                        alt="Reid and Taylor Fabric Rolls"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "500px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "420px",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "8px",
+                            borderRadius: "15px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        Faq
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -490,11 +505,14 @@ export default function ReidAndTaylorPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -506,25 +524,34 @@ export default function ReidAndTaylorPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -541,11 +568,11 @@ export default function ReidAndTaylorPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.4",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -557,7 +584,6 @@ export default function ReidAndTaylorPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

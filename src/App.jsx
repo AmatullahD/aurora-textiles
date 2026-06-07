@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import FloatingButtons from "./components/FloatingButtons";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -33,51 +34,63 @@ import PolyWoolLycra from "./pages/fabrics/PolyWoolLycra";
 import PvLycra from "./pages/fabrics/PvLycra";
 import TencelBlend from "./pages/fabrics/TencelBlend";
 import Wool from "./pages/fabrics/Wool";
+import SouthAfrica from "./pages/locations/SouthAfrica";
+import Egypt from "./pages/locations/Egypt";
+import SaudiArabia from "./pages/locations/SaudiArabia";
 
 function App() {
   return (
-    <Routes>
-      {/* Main Pages */}
-      <Route path="/" element={<Home />} />
-      <Route path="/about-us" element={<About />} />
-      <Route path="/contact-us" element={<Contact />} />
+    <>
+      <FloatingButtons />
 
-      {/* Products */}
-      <Route path="/products/suiting" element={<Suiting />} />
-      <Route path="/products/shirting" element={<Shirting />} />
-      <Route path="/products/uniform" element={<Uniform />} />
-      <Route path="/products/ethnic" element={<Ethnic />} />
+      <Routes>
+        {/* Main Pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
 
-      {/* Brands */}
-      <Route path="/products/donear" element={<Donear />} />
-      <Route path="/products/klopman" element={<Klopman />} />
-      <Route path="/products/oxford" element={<Oxford />} />
-      <Route path="/products/reid-and-taylor" element={<ReidAndTaylor />} />
-      <Route path="/products/john-fabrics" element={<John />} />
-      <Route path="/products/sammaan-fabrics" element={<Sammaan />} />
-      <Route path="/products/sammaan-fabrics/rasm-ethnics" element={<RasmEthnics />} />
-      <Route path="/products/gullini" element={<Gullini />} />
-      <Route path="/products/reliance" element={<Reliance />} />
-      <Route path="/products/nemssis" element={<Nemssis />} />
-      <Route path="/products/nemssis/shiddat" element={<Shiddat />} />
-      <Route path="/products/nemssis/sanskriti" element={<Sanskriti />} />
-      <Route path="/products/nemssis/raag-resham" element={<RaagResham />} />
-      <Route path="/products/nemssis/zarista" element={<Zarista />} />
-      <Route path="/products/nemssis/nawabi" element={<Nawabi />} />
-      <Route path="/products/spaadaa" element={<Spaadaa />} />
+        {/* Products */}
+        <Route path="/products/suiting" element={<Suiting />} />
+        <Route path="/products/shirting" element={<Shirting />} />
+        <Route path="/products/uniform" element={<Uniform />} />
+        <Route path="/products/ethnic" element={<Ethnic />} />
 
-      {/* Fabrics */}
-      <Route path="/cotton-fabric" element={<Cotton />} />
-      <Route path="/denim-fabric" element={<Denim />} />
-      <Route path="/linen-fabric" element={<Linen />} />
-      <Route path="/poly-cotton-fabric" element={<PolyCotton />} />
-      <Route path="/poly-viscose-fabric" element={<PolyViscose />} />
-      <Route path="/poly-wool-fabric" element={<PolyWool />} />
-      <Route path="/poly-wool-lycra-fabric" element={<PolyWoolLycra />} />
-      <Route path="/pv-lycra" element={<PvLycra />} />
-      <Route path="/tencel-blend-fabric" element={<TencelBlend />} />
-      <Route path="/wool-fabric" element={<Wool />} />
-    </Routes>
+        {/* Brands */}
+        <Route path="/products/donear" element={<Donear />} />
+        <Route path="/products/klopman" element={<Klopman />} />
+        <Route path="/products/oxford" element={<Oxford />} />
+        <Route path="/products/reid-and-taylor" element={<ReidAndTaylor />} />
+        <Route path="/products/john-fabrics" element={<John />} />
+        <Route path="/products/sammaan-fabrics" element={<Sammaan />} />
+        <Route path="/products/rasm-ethnics-by-sammaan" element={<RasmEthnics />} />
+        <Route path="/products/gullini" element={<Gullini />} />
+        <Route path="/products/reliance" element={<Reliance />} />
+        <Route path="/products/nemssis" element={<Nemssis />} />
+        <Route path="/products/shiddat-by-nemssis" element={<Shiddat />} />
+        <Route path="/products/sanskriti-by-nemssis" element={<Sanskriti />} />
+        <Route path="/products/raag-resham-by-nemssis" element={<RaagResham />} />
+        <Route path="/products/zarista-by-nemssis" element={<Zarista />} />
+        <Route path="/products/nawabi-by-nemssis" element={<Nawabi />} />
+        <Route path="/products/spaadaa" element={<Spaadaa />} />
+
+        {/* Fabrics */}
+        <Route path="/cotton-fabric" element={<Cotton />} />
+        <Route path="/denim-fabric" element={<Denim />} />
+        <Route path="/linen-fabric" element={<Linen />} />
+        <Route path="/poly-cotton-fabric" element={<PolyCotton />} />
+        <Route path="/poly-viscose-fabric" element={<PolyViscose />} />
+        <Route path="/poly-wool-fabric" element={<PolyWool />} />
+        <Route path="/poly-wool-lycra-fabric" element={<PolyWoolLycra />} />
+        <Route path="/pv-lycra" element={<PvLycra />} />
+        <Route path="/tencel-blend-fabric" element={<TencelBlend />} />
+        <Route path="/wool-fabric" element={<Wool />} />
+
+        {/* Locations */}
+        <Route path="/south-africa" element={<SouthAfrica />} />
+        <Route path="/egypt" element={<Egypt />} />
+        <Route path="/saudi-arabia" element={<SaudiArabia />} />
+      </Routes>
+    </>
   );
 }
 

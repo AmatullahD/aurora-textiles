@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -6,22 +6,35 @@ import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function ZaristaPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.getBoundingClientRect().height);
+        const ro = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                setFaqImgHeight(entry.contentRect.height);
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF GARMENTS CAN BE MADE FROM ZARISTA FABRICS?",
-            answer:
-                "Zarista fabrics are ideal for men's kurtas, sherwanis, Indo-western jackets, and festive ethnic wear.",
+            question: "What types of garments can be made from Zarista fabrics?",
+            answer: "Zarista fabrics are ideal for men's kurtas, sherwanis, Indo-western jackets, and festive ethnic wear.",
         },
         {
-            question: "ARE ZARISTA BY NEMSSIS FABRICS AVAILABLE UNSTITCHED?",
-            answer:
-                "Yes, all Zarista fabrics are available in unstitched format, perfect for bespoke tailoring and custom garment production.",
+            question: "Are Zarista by Nemssis fabrics available unstitched?",
+            answer: "Yes, all Zarista fabrics are available in unstitched format, perfect for bespoke tailoring and custom garment production.",
         },
         {
-            question: "CAN I BULK ORDER ZARISTA ETHNIC FABRICS?",
-            answer:
-                "Absolutely. Aurora Textiles fulfils bulk orders for Zarista ethnic fabrics across Dubai and the MENA region with consistent quality and timely delivery.",
+            question: "Can I bulk order Zarista ethnic fabrics?",
+            answer: "Absolutely. Aurora Textiles fulfils bulk orders for Zarista ethnic fabrics across Dubai and the MENA region with consistent quality and timely delivery.",
         },
     ];
 
@@ -29,8 +42,8 @@ export default function ZaristaPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Zarista by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop Zarista by Nemssis at Aurora Textiles Dubai. Exclusive ethnic fabric collection for men's festive and traditional wear. Wholesale supplier in UAE." />
+                <title>Zarista by Nemssis - Ethnic Fabrics For Men</title>
+                <meta name="description" content="Check out Zarista Ethnic by Nemssis at Aurora Textiles – your trusted source for premium ethnic fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -49,20 +62,9 @@ export default function ZaristaPage() {
                 <img
                     src="/about-banner.jpg"
                     alt="Ethnic Fabrics Banner"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                    }}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
-                <div
-                    style={{
-                        position: "absolute",
-                        inset: 0,
-                        background: "rgba(0,0,0,0.45)",
-                    }}
-                />
+                <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
                 <div
                     style={{
                         position: "absolute",
@@ -83,15 +85,14 @@ export default function ZaristaPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        ZARISTA BY NEMSSIS
+                        Zarista by Nemssis
                     </h1>
                 </div>
             </section>
 
-            {/* SECTION 1 — Brand Intro: Logo left, Heading + Two paragraphs right */}
+            {/* SECTION 1 — Brand Intro: Logo left, Text right */}
             <section
                 style={{
                     width: "100%",
@@ -102,14 +103,14 @@ export default function ZaristaPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Logo */}
+                {/* Left: Logo — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "340px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -118,35 +119,31 @@ export default function ZaristaPage() {
                     <img
                         src="/nemssis-1.webp"
                         alt="Nemssis Logo"
-                        style={{
-                            width: "100%",
-                            maxWidth: "320px",
-                            objectFit: "contain",
-                        }}
+                        style={{ width: "100%", maxWidth: "320px", objectFit: "contain" }}
                     />
                 </div>
 
-                {/* Right: Heading + Two paragraphs */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
                         }}
                     >
-                        Zarista By Nemssis – Ethnic Elegance For Men's Fashion
+                        Zarista by Nemssis – Ethnic Elegance for Men’s Fashion
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "20px",
                         }}
                     >
@@ -156,15 +153,14 @@ export default function ZaristaPage() {
                         for its bold aesthetics and regal textures, Zarista blends
                         time-honored heritage with contemporary appeal—making it an
                         excellent choice for{" "}
-                        <strong>kurtas, sherwanis, ethnic jackets</strong>, and festive
-                        menswear.
+                        <strong>kurtas, sherwanis, ethnic jackets</strong>, and festive menswear.
                     </p>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
                         }}
                     >
@@ -177,7 +173,7 @@ export default function ZaristaPage() {
                 </div>
             </section>
 
-            {/* SECTION 2 — Refined Ethnic Fabrics: Text + bullets + Contact Us left, Image right */}
+            {/* SECTION 2 — Refined Ethnic Fabrics: Text left, Image right */}
             <section
                 style={{
                     width: "100%",
@@ -188,31 +184,30 @@ export default function ZaristaPage() {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
-                            textTransform: "uppercase",
                         }}
                     >
                         Refined Ethnic Fabrics For Every Occasion
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "16px",
                         }}
                     >
@@ -223,64 +218,69 @@ export default function ZaristaPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "2.4",
+                            lineHeight: "1.4",
                             paddingLeft: "24px",
                             marginBottom: "24px",
                         }}
                     >
-                        <li>Designer Kurtas &amp; Pathani Suits</li>
-                        <li>Grand Sherwanis for Weddings &amp; Functions</li>
-                        <li>Statement-Making Jackets &amp; Waistcoats</li>
-                        <li>Customised Festive Outfits</li>
+                        <li style={{ marginBottom: "10px" }}>Designer Kurtas &amp; Pathani Suits</li>
+                        <li style={{ marginBottom: "10px" }}>Grand Sherwanis for Weddings &amp; Functions</li>
+                        <li style={{ marginBottom: "10px" }}>Statement-Making Jackets &amp; Waistcoats</li>
+                        <li style={{ marginBottom: "10px" }}>Customised Festive Outfits</li>
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "36px",
                         }}
                     >
                         These fabrics are ideal for tailors and designers creating high-end
                         ethnic wear that demands elegance and durability.
                     </p>
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
-                {/* Right: Image */}
+                {/* Right: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "560px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "620px",
                         overflow: "hidden",
                     }}
@@ -288,17 +288,12 @@ export default function ZaristaPage() {
                     <img
                         src="/zarista-1.jpg"
                         alt="Refined Ethnic Fabrics"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                        }}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
                 </div>
             </section>
 
-            {/* SECTION 3 — Why Choose Zarista: Image left, Heading + bullets right */}
+            {/* SECTION 3 — Why Choose Zarista: Image left, Text right */}
             <section
                 style={{
                     width: "100%",
@@ -309,14 +304,14 @@ export default function ZaristaPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Image */}
+                {/* Left: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "560px",
                         borderRadius: "16px",
                         overflow: "hidden",
@@ -325,23 +320,18 @@ export default function ZaristaPage() {
                     <img
                         src="/zarista-2.jpg"
                         alt="Why Choose Zarista"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                        }}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
                 </div>
 
-                {/* Right: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "20px",
                             marginTop: 0,
@@ -351,33 +341,30 @@ export default function ZaristaPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "16px",
                         }}
                     >
-                        As one of the leading textile suppliers in Dubai, Aurora Textiles
-                        ensures:
+                        As one of the leading textile suppliers in Dubai, Aurora Textiles ensures:
                     </p>
                     <ul
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "2.4",
+                            lineHeight: "1.4",
                             paddingLeft: "24px",
                             margin: 0,
                         }}
                     >
-                        <li>
-                            Original Nemssis fabric collections like <strong>Zarista</strong>
-                        </li>
-                        <li>Unstitched ethnic fabrics tailored for men's clothing</li>
-                        <li>Quick access to seasonal festive lines</li>
-                        <li>Expert guidance for fabric selection and bulk buying</li>
-                        <li>Delivery and export options across the UAE and MENA region</li>
+                        <li style={{ marginBottom: "10px" }}>Original Nemssis fabric collections like <strong>Zarista</strong></li>
+                        <li style={{ marginBottom: "10px" }}>Unstitched ethnic fabrics tailored for men's clothing</li>
+                        <li style={{ marginBottom: "10px" }}>Quick access to seasonal festive lines</li>
+                        <li style={{ marginBottom: "10px" }}>Expert guidance for fabric selection and bulk buying</li>
+                        <li style={{ marginBottom: "10px" }}>Delivery and export options across the UAE and MENA region</li>
                     </ul>
                 </div>
             </section>
@@ -393,31 +380,30 @@ export default function ZaristaPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
-                            textTransform: "uppercase",
                         }}
                     >
                         Designed With Quality For Celebration
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
                         }}
                     >
@@ -429,11 +415,11 @@ export default function ZaristaPage() {
                     </p>
                 </div>
 
-                {/* Right: Image */}
+                {/* Right: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "400px",
                         overflow: "hidden",
                     }}
@@ -441,12 +427,7 @@ export default function ZaristaPage() {
                     <img
                         src="/zarista-3.webp"
                         alt="Designed With Quality"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                        }}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
                 </div>
             </section>
@@ -460,17 +441,19 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left: Image */}
+                {/* Left: Image — 50% (dynamic height) */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
-                        height: "460px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: `${faqImgHeight}px`,
+                        minHeight: "500px",
+                        transition: "height 0.4s ease",
                         borderRadius: "16px",
                         overflow: "hidden",
                     }}
@@ -478,108 +461,94 @@ export default function ZaristaPage() {
                     <img
                         src="/zarista-4.webp"
                         alt="FAQ Fabric"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                        }}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
                 </div>
 
-                {/* Right: FAQ Accordion */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: FAQ Accordion — 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1a2657",
-                            marginBottom: "32px",
-                            marginTop: 0,
-                            borderBottom: "3px solid #1a2657",
-                            paddingBottom: "8px",
-                            display: "inline-block",
+                            color: "#344886",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
-                    {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            style={{
-                                border: "1px solid #d0d0d0",
-                                marginBottom: "16px",
-                                borderRadius: "4px",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <button
-                                onClick={() =>
-                                    setOpenFaq(openFaq === index ? -1 : index)
-                                }
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
                                 style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-between",
-                                    padding: "18px 20px",
-                                    background: openFaq === index ? "#f9f6ee" : "#fff",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    gap: "12px",
+                                    border: "1px solid #ddd",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <span
-                                    style={{
-                                        fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "13px",
-                                        fontWeight: "700",
-                                        color: openFaq === index ? "#8b8000" : "#1a2657",
-                                        lineHeight: "1.4",
-                                        textTransform: "uppercase",
-                                        letterSpacing: "0.3px",
-                                    }}
-                                >
-                                    {faq.question}
-                                </span>
-                                <span
-                                    style={{
-                                        flexShrink: 0,
-                                        fontSize: "22px",
-                                        color: openFaq === index ? "#1a2657" : "#8b8000",
-                                        fontWeight: "300",
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    {openFaq === index ? "−" : "+"}
-                                </span>
-                            </button>
-
-                            {openFaq === index && (
                                 <div
+                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        padding: "0 20px 20px 20px",
-                                        background: "#fff",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        padding: "18px 20px",
+                                        cursor: "pointer",
+                                        gap: "16px",
                                     }}
                                 >
                                     <p
                                         style={{
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "14px",
-                                            color: "#444",
-                                            lineHeight: "1.8",
+                                            fontSize: "18px",
+                                            fontWeight: "700",
+                                            color: openFaq === i ? "#b9972f" : hoveredFaq === i ? "#070e46" : "#0b18a1",
                                             margin: 0,
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Cinzel Decorative', serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
-                                        {faq.answer}
+                                        {faq.question}
                                     </p>
+                                    <span
+                                        style={{
+                                            fontSize: "22px",
+                                            color: openFaq === i ? "#b9972f" : hoveredFaq === i ? "#070e46" : "#0b18a1",
+                                            flexShrink: 0,
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
+                                        }}
+                                    >
+                                        {openFaq === i ? "−" : "+"}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {openFaq === i && (
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
+                                        <p
+                                            style={{
+                                                fontSize: "17px",
+                                                color: "#333",
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
+                                            }}
+                                        >
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 

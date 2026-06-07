@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 
 export default function EthnicPage() {
+    const navigate = useNavigate();
     const [activeSlide, setActiveSlide] = useState(0);
     const [openFaq, setOpenFaq] = useState(0);
     const [hoveredFaq, setHoveredFaq] = useState(null);
@@ -20,13 +21,12 @@ export default function EthnicPage() {
     }, [openFaq]);
 
     const brandLogos = [
-        { name: "Rasm", subtitle: "ETHNIC BY SAMMAAN", src: "/ethnic-icon1.webp" },
-        { name: "Sanskriti", subtitle: "THE ART OF EMBROIDERY FROM ACROSS INDIA", src: "/ethnic-icon2.webp" },
-        { name: "Raag Resham", subtitle: "PRECIOUS SILK EMBROIDERY FABRICS FROM VARANASI", src: "/ethnic-icon3.webp" },
-        { name: "Nawabi", subtitle: "TRADITIONAL EMBROIDERY FROM UTTAR PRADESH", src: "/ethnic-icon4.webp" },
-        { name: "Zarista", subtitle: "MODERN ETHNIC FABRICS FOR CONTEMPORARY STYLE", src: "/ethnic-icon5.webp" },
-        { name: "Shiddat", subtitle: "EMBROIDERY FABRICS CRAFTED WITH PASSION", src: "/ethnic-icon6.webp" },
-
+        { name: "Rasm", subtitle: "ETHNIC BY SAMMAAN", src: "/ethnic-icon1.webp", route: "/products/rasm-ethnics-by-sammaan" },
+        { name: "Sanskriti", subtitle: "THE ART OF EMBROIDERY FROM ACROSS INDIA", src: "/ethnic-icon2.webp", route: "/products/sanskriti-by-nemssis" },
+        { name: "Raag Resham", subtitle: "PRECIOUS SILK EMBROIDERY FABRICS FROM VARANASI", src: "/ethnic-icon3.webp", route: "/products/raag-resham-by-nemssis" },
+        { name: "Nawabi", subtitle: "TRADITIONAL EMBROIDERY FROM UTTAR PRADESH", src: "/ethnic-icon4.webp", route: "/products/nawabi-by-nemssis" },
+        { name: "Zarista", subtitle: "MODERN ETHNIC FABRICS FOR CONTEMPORARY STYLE", src: "/ethnic-icon5.webp", route: "/products/zarista-by-nemssis" },
+        { name: "Shiddat", subtitle: "EMBROIDERY FABRICS CRAFTED WITH PASSION", src: "/ethnic-icon6.webp", route: "/products/shiddat-by-nemssis" },
     ];
 
     const totalSlides = brandLogos.length;
@@ -187,7 +187,7 @@ export default function EthnicPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "38px",
                             fontWeight: "700",
-                            color: "#1a237e",
+                            color: "#344886",
                             lineHeight: "1.3",
                             margin: "0 0 24px 0",
                         }}
@@ -226,7 +226,7 @@ export default function EthnicPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "17px",
                             fontWeight: "700",
-                            color: "#1a237e",
+                            color: "#344886",
                             letterSpacing: "1px",
                             margin: "0 0 16px 0",
                         }}
@@ -273,7 +273,7 @@ export default function EthnicPage() {
                     >
                         Whether you're a boutique, fashion brand, or designer, we have the perfect{" "}
                         <strong>ethnic</strong>{" "}
-                        <span style={{ color: "#1a237e", textDecoration: "none" }}>fabric</span>{" "}
+                        <span style={{ color: "#344886", textDecoration: "none" }}>fabric</span>{" "}
                       for sale to meet your vision with consistent quality and creative freedom.
                     </p>
                 </div>
@@ -326,6 +326,7 @@ export default function EthnicPage() {
                         {visibleLogos.map((brand, i) => (
                             <div
                                 key={i}
+                                onClick={() => brand.route && navigate(brand.route)}
                                 style={{
                                     flex: 1,
                                     display: "flex",
@@ -333,6 +334,7 @@ export default function EthnicPage() {
                                     alignItems: "center",
                                     justifyContent: "center",
                                     minHeight: "100px",
+                                    cursor: brand.route ? "pointer" : "default",
                                 }}
                             >
                                 {brand.src ? (
@@ -441,7 +443,7 @@ export default function EthnicPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "44px",
                             fontWeight: "700",
-                            color: "#1a237e",
+                            color: "#344886",
 
                             lineHeight: "1.1",
                             margin: "0 0 28px 0",
@@ -460,7 +462,7 @@ export default function EthnicPage() {
                     >
                         Our ethnic fabric range blends timeless artistry with contemporary textile innovation. As a
                         trusted seller of unstitched{" "}
-                        <span style={{ color: "#1a237e", textDecoration: "underline" }}>ethnic fabrics</span>{" "}
+                        <span style={{ color: "#344886", textDecoration: "underline" }}>ethnic fabrics</span>{" "}
                         in Dubai, we cater to customers who appreciate fabric as a medium of personal expression and
                         cultural pride. From handloom-inspired weaves to traditional embroidery and trendy ethnic
                         prints, our offerings help you create garments that carry tradition forward with a fresh,
@@ -545,7 +547,7 @@ export default function EthnicPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "46px",
                             fontWeight: "700",
-                            color: "#1a237e",
+                            color: "#344886",
 
                             lineHeight: "1.1",
                             margin: "0 0 28px 0",
@@ -557,7 +559,7 @@ export default function EthnicPage() {
                     <p
                         style={{
                             fontSize: "19px",
-                            color: "#1a237e",
+                            color: "#344886",
                             lineHeight: "1.8",
                             margin: "0 0 20px 0",
                         }}
@@ -570,7 +572,7 @@ export default function EthnicPage() {
                     <p
                         style={{
                             fontSize: "19px",
-                            color: "#1a237e",
+                            color: "#344886",
                             lineHeight: "1.8",
                             margin: "0 0 36px 0",
                         }}
@@ -783,7 +785,7 @@ export default function EthnicPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: window.innerWidth < 768 ? "32px" : "32px",
                             fontWeight: "700",
-                            color: "#122a4b",
+                            color: "#344886",
                             margin: "0 0 28px 0",
                             display: "flex",
                             alignItems: "baseline",

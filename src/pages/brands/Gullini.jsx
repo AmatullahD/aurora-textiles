@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import WhatsappButton from "../../components/WhatsappButton";
 
 export default function GulliniPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
@@ -26,8 +41,8 @@ export default function GulliniPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Georgia Gullini Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Buy Georgia Gullini premium fabrics wholesale in Dubai. Aurora Textiles supplies luxury Georgia Gullini suiting fabrics across UAE and GCC." />
+                <title>Shop Georgia Gullini Shirting, Suitings, and Blazer Fabrics in Dubai</title>
+                <meta name="description" content="Shop premium Georgia Gullini shirting, suiting, and blazer fabrics in Dubai with Aurora Textiles – trusted wholesale fabric suppliers for men's clothing across the UAE and MENA." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -80,10 +95,9 @@ export default function GulliniPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        GEORGIA GULLINI FABRICS
+                       Georgia Gullini Fabrics
                     </h1>
                 </div>
             </section>
@@ -167,22 +181,20 @@ export default function GulliniPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "48px",
+                            fontSize: "45px",
                             lineHeight: "1.25",
-                            color: "#233f8c",
+                            color: "#344886",
                             margin: "0 0 25px 0",
-                            textTransform: "uppercase",
                             fontWeight: "700",
                         }}
                     >
-                        GEORGIA GULLINI FABRICS – PREMIUM SUITING
-                        SOLUTIONS FROM AURORA TEXTILES
+                     Georgia Gullini Fabrics – Premium Suiting Solutions from Aurora Textiles
                     </h2>
 
                     <p
                         style={{
-                            fontSize: "18px",
-                            lineHeight: "1.9",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -219,20 +231,19 @@ export default function GulliniPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             marginBottom: "24px",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        GEORGIA GULLINI SUIT FABRICS
+                       Georgia Gullini Suit Fabrics
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -243,9 +254,9 @@ export default function GulliniPage() {
                         style={{
                             listStyle: "disc",
                             paddingLeft: "24px",
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -257,9 +268,9 @@ export default function GulliniPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -302,7 +313,6 @@ export default function GulliniPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                 }}
             >
@@ -335,20 +345,19 @@ export default function GulliniPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             marginBottom: "24px",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        GEORGIA GULLINI BLAZER FABRICS
+                      Georgia Gullini Blazer Fabrics
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "18px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -381,14 +390,13 @@ export default function GulliniPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             marginBottom: "36px",
                             margin: "0 0 36px 0",
                         }}
                     >
-                        WHY SOURCE GEORGIA GULLINI FROM AURORA TEXTILES?
+                        Why Source Georgia Gullini from Aurora Textiles?
                     </h2>
 
                     {[
@@ -415,8 +423,7 @@ export default function GulliniPage() {
                                     fontFamily: "'Cinzel Decorative', serif",
                                     fontSize: "13px",
                                     fontWeight: "700",
-                                    color: "#1a2a6c",
-                                    textTransform: "uppercase",
+                                    color: "#344886",
                                     lineHeight: "1.5",
                                     margin: 0,
                                     letterSpacing: "0.5px",
@@ -429,9 +436,9 @@ export default function GulliniPage() {
 
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: "24px 0 32px 0",
                         }}
@@ -441,32 +448,38 @@ export default function GulliniPage() {
                         <strong>Georgia Gullini</strong>.
                     </p>
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                        {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                 </div>
 
                 {/* Right: two fabric images stacked */}
@@ -547,140 +560,132 @@ export default function GulliniPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left: fabric close-up image */}
-                <div
-                    style={{
-                        flex: "0 0 auto",
-                        width: "540px",
-                        height: "360px",
-                        overflow: "hidden",
-                        flexShrink: 0,
-                    }}
-                >
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/gullini-7.webp"
-                        alt="Georgia Gullini Teal Fabric"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "100%",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "430px",
                             objectFit: "cover",
                             display: "block",
+                            borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right: FAQ accordion */}
-                <div style={{ flex: 1 }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "32px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            marginBottom: "30px",
-                            margin: "0 0 30px 0",
-                            borderBottom: "2px solid #b8860b",
-                            paddingBottom: "8px",
-                            display: "inline-block",
+                            color: "#344886",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
                         }}
                     >
                         FAQ
                     </h2>
 
-                    {faqs.map((faq, idx) => (
-                        <div
-                            key={idx}
-                            style={{
-                                border: "1px solid #ddd",
-                                marginBottom: "12px",
-                            }}
-                        >
-                            <button
-                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
                                 style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                    padding: "18px 20px",
-                                    background: "none",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    gap: "12px",
+                                    border: "1px solid #ddd",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <span
-                                    style={{
-                                        fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "13px",
-                                        fontWeight: "700",
-                                        color: "#b8860b",
-                                        textTransform: "uppercase",
-                                        lineHeight: "1.4",
-                                        letterSpacing: "0.4px",
-                                    }}
-                                >
-                                    {faq.question}
-                                </span>
-                                <span
-                                    style={{
-                                        fontSize: "22px",
-                                        color: "#1a2a6c",
-                                        fontWeight: "300",
-                                        flexShrink: 0,
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    {openFaq === idx ? "−" : "+"}
-                                </span>
-                            </button>
-
-                            {openFaq === idx && (
                                 <div
+                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        padding: "0 20px 20px 20px",
-                                        fontFamily: "'Georgia', serif",
-                                        fontSize: "15px",
-                                        lineHeight: "1.8",
-                                        color: "#333",
-                                        borderTop: "1px solid #eee",
-                                        paddingTop: "16px",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        padding: "18px 20px",
+                                        cursor: "pointer",
+                                        gap: "16px",
                                     }}
                                 >
-                                    <p style={{ margin: 0 }}>
-                                        {faq.answer.split("Georgia Gullini suit").map((part, i) =>
-                                            i === 0 ? (
-                                                part
-                                            ) : (
-                                                <span key={i}>
-                                                    <strong>Georgia Gullini suit</strong>
-                                                    {part.split("blazer fabrics").map((p2, j) =>
-                                                        j === 0 ? p2 : <span key={j}><strong>blazer fabrics</strong>{p2}</span>
-                                                    )}
-                                                </span>
-                                            )
-                                        )}
+                                    <p
+                                        style={{
+                                            fontSize: "17px",
+                                            fontWeight: "700",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            margin: 0,
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
+                                        }}
+                                    >
+                                        {faq.question}
                                     </p>
+                                    <span
+                                        style={{
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            flexShrink: 0,
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
+                                        }}
+                                    >
+                                        {openFaq === i ? "−" : "+"}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {openFaq === i && (
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                                color: "#333",
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
+                                            }}
+                                        >
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
+             <WhatsappButton />
             <ScrollToTop />
+           
         </div>
     );
 }

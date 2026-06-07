@@ -1,36 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
 
 export default function Uniform() {
+  const navigate = useNavigate();
   // ─── Brand logos data ───
   const brandLogos = [
-    {
-      name: "Klopman International",
-      src: "/klopman.webp",
-    },
-    {
-      name: "Oxford",
-      src: "/oxford.webp",
-    },
-    {
-      name: "Harrods",
-      src: "/harrod.webp",
-    },
-    {
-      name: "Thai Power",
-      src: "/thai-power.webp",
-    },
-    {
-      name: "Master Stroke",
-      src: "/master-stroke.webp",
-    },
-    {
-      name: "Elite Shirting",
-      src: "/elite-shirting.webp",
-    },
+    { name: "Klopman International", src: "/klopman.webp", route: "/products/klopman" },
+    { name: "Oxford", src: "/oxford.webp", route: "/products/oxford" },
+    { name: "Harrods", src: "/harrod.webp", route: "" },
+    { name: "Thai Power", src: "/thai-power.webp", route: "" },
+    { name: "Master Stroke", src: "/master-stroke.webp", route: "" },
+    { name: "Elite Shirting", src: "/elite-shirting.webp", route: "" },
   ];
 
   // ─── FAQ data ───
@@ -104,10 +88,9 @@ export default function Uniform() {
   ];
 
   // ─── Brand Slider state (Suiting-style) ───
-  const brands = brandLogos.map((b) => b.src);
   const visibleItems = window.innerWidth < 768 ? 2 : 4;
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = brands.length - visibleItems + 1;
+  const totalSlides = brandLogos.length - visibleItems + 1;
 
   const autoSlideRef = useRef(null);
 
@@ -142,7 +125,7 @@ export default function Uniform() {
     startAutoSlide();
   };
 
-  const visibleBrands = brands.slice(currentSlide, currentSlide + visibleItems);
+  const visibleBrands = brandLogos.slice(currentSlide, currentSlide + visibleItems);
 
   // ─── FAQ open state ───
   const [openFaq, setOpenFaq] = useState(null);
@@ -227,7 +210,7 @@ export default function Uniform() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "clamp(28px, 3.5vw, 46px)",
               fontWeight: "700",
-              color: "#1a2b6d",
+              color: "#344886",
              
               lineHeight: "1.2",
               marginBottom: "24px",
@@ -336,16 +319,18 @@ export default function Uniform() {
             {visibleBrands.map((brand, index) => (
               <div
                 key={index}
+                onClick={() => brand.route && navigate(brand.route)}
                 style={{
                   width: "100%",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor: brand.route ? "pointer" : "default",
                 }}
               >
                 <img
-                  src={brand}
-                  alt="brand"
+                  src={brand.src}
+                  alt={brand.name}
                   style={{
                     width: "120px",
                     height: "120px",
@@ -493,7 +478,7 @@ export default function Uniform() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "clamp(26px, 3vw, 42px)",
               fontWeight: "700",
-              color: "#1a2b6d",
+              color: "#344886",
               
               lineHeight: "1.25",
               marginBottom: "24px",
@@ -526,7 +511,7 @@ export default function Uniform() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "clamp(26px, 3vw, 42px)",
               fontWeight: "700",
-              color: "#1a2b6d",
+              color: "#344886",
               lineHeight: "1.25",
               marginBottom: "22px",
             }}
@@ -615,7 +600,7 @@ export default function Uniform() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "32px",
               fontWeight: "700",
-              color: "#122a4b",
+              color: "#344886",
               marginBottom: "24px",
               display: "flex",
               alignItems: "baseline",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,25 +6,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function KlopmanPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(520);
+
+    useEffect(() => {
+        if (faqColRef.current) {
+            setFaqImgHeight(faqColRef.current.offsetHeight);
+        }
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPE OF KLOPMAN FABRICS DOES AURORA TEXTILES OFFER?",
+            question: "What Type of Klopman Fabrics Does Aurora Textiles Offer?",
             answer:
                 "A wide range of Fit for purpose durable fabrics for all work applications – From Health Care, Hospitality, Facility Management , Food Production, Police, Military, Civil Defence , Construction, Landscape, Railways, Utilities Workers, Oil and Gas, Welding , Molten Metal etc....",
         },
         {
-            question: "CAN I ORDER KLOPMAN FABRICS IN BULK FROM AURORA TEXTILES?",
+            question: "Can I order Klopman fabrics in bulk from Aurora Textiles?",
             answer:
                 "Yes, we specialize in bulk and wholesale orders. Whether you need 100 meters or 10,000, Aurora Textiles can fulfill your requirements with consistent quality and timely delivery.",
         },
         {
-            question: "DO YOU PROVIDE FLAME-RETARDANT KLOPMAN FABRICS FOR INDUSTRIAL USE?",
+            question: "Do you provide flame-retardant Klopman fabrics for industrial use?",
             answer:
                 "Absolutely. We stock Klopman's flame-retardant and antistatic fabric ranges specifically designed for oil & gas, welding, and other high-risk industrial environments.",
         },
         {
-            question: "CAN I REQUEST FABRIC SWATCHES BEFORE PLACING AN ORDER?",
+            question: "Can I request fabric swatches before placing an order?",
             answer:
                 "Yes, we can arrange fabric swatches for your review before committing to a bulk order. Contact our team to request samples tailored to your specific application.",
         },
@@ -35,8 +44,8 @@ export default function KlopmanPage() {
 
 
             <Helmet>
-                <title>Klopman Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop Klopman uniform and workwear fabrics in Dubai. Aurora Textiles supplies premium Klopman fabrics wholesale across UAE, GCC and Africa." />
+                <title>Buy Klopman Fabrics in Dubai | Klopman Workwear Fabrics</title>
+                <meta name="description" content="The Klopman fabrics are engineered for performance, sustainability, and economical for the long run. At Aurora Textiles, we offer Corporate, Industrial workwear, Protective wear, and medical apparel fabrics in Dubai." />
             </Helmet>
 
 
@@ -90,10 +99,9 @@ export default function KlopmanPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        KLOPMAN FABRICS
+                        Klopman fabrics
                     </h1>
                 </div>
             </section>
@@ -141,24 +149,24 @@ export default function KlopmanPage() {
                 <div style={{ flex: "1 1 0" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "28px" : "46px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "30px",
                             fontWeight: "700",
                             color: "#1e2a5e",
                             fontFamily: "'Cinzel Decorative', serif",
-                            lineHeight: "1.15",
+                            lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Aurora Textiles – Premier Klopman Fabrics Supplier in Dubai, UAE
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            lineHeight: "1.9",
+                            fontSize: "17px",
+                            color: "#221f1f",
+                            lineHeight: "1.4",
+                            fontFamily: "'Poppins', Sans-serif",
+                            fontWeight: "400",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
                         Aurora Textiles is a trusted name in the UAE's textile industry,
@@ -200,18 +208,19 @@ export default function KlopmanPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Klopman Workwear Fabric Dubai
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            lineHeight: "1.85",
+                            fontSize: "17px",
+                            color: "#221f1f",
+                            lineHeight: "1.4",
+                            fontFamily: "'Poppins', Sans-serif",
+                            fontWeight: "400",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+
                         }}
                     >
                         Klopman is a European leader in technical fabrics that are
@@ -250,10 +259,11 @@ export default function KlopmanPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
-                                    color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    fontSize: "17px",
+                                    color: "#221f1f",
+                                    lineHeight: "1.4",
+                                    fontFamily: "'Poppins', Sans-serif",
+                                    fontWeight: "400",
                                 }}
                             >
                                 <strong>{item.label}</strong> {item.desc}
@@ -269,10 +279,10 @@ export default function KlopmanPage() {
                         alt="Klopman Workwear Fabric"
                         style={{
                             width: "100%",
-                            height: "420px",
+                            height: "560px",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "8px",
+                            borderRadius: "15px",
                         }}
                     />
                 </div>
@@ -301,10 +311,10 @@ export default function KlopmanPage() {
                         alt="Klopman Textile UAE"
                         style={{
                             width: "100%",
-                            height: "500px",
+                            height: "680px",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "8px",
+                            borderRadius: "15px",
                         }}
                     />
                 </div>
@@ -319,18 +329,17 @@ export default function KlopmanPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Benefits of Buying Klopman Textile UAE
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
-                            color: "#333",
-                            lineHeight: "1.85",
+                            fontSize: "17px",
+                            color: "#221f1f",
+                            lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', Sans-serif",
                         }}
                     >
                         Klopman's reputation is built on advanced fabric technology and
@@ -341,7 +350,7 @@ export default function KlopmanPage() {
                     <ul
                         style={{
                             margin: 0,
-                            paddingLeft: "20px",
+                            paddingLeft: "30px",
                             display: "flex",
                             flexDirection: "column",
                             gap: "14px",
@@ -383,10 +392,10 @@ export default function KlopmanPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
-                                    color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    fontSize: "18px",
+                                    color: "#221f1f",
+                                    lineHeight: "1.5",
+                                    fontFamily: "'Poppins', Sans-serif",
                                     listStyle: "none",
                                     marginLeft: "-20px",
                                 }}
@@ -448,18 +457,17 @@ export default function KlopmanPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Why Choose Aurora Textiles as Klopman Fabric Supplier in UAE?
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.2",
                             margin: "0 0 16px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'poppins', sans-serif",
                             textAlign: "center",
                             width: "100%",
                         }}
@@ -502,10 +510,10 @@ export default function KlopmanPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "18px",
                                     color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.2",
+                                    fontFamily: "'Poppins', sans-serif",
                                     textAlign: "center",
                                     display: "flex",
                                     alignItems: "flex-start",
@@ -522,11 +530,11 @@ export default function KlopmanPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.2",
                             margin: "0 0 28px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         We ensure availability and timely delivery for all popular{" "}
@@ -534,32 +542,38 @@ export default function KlopmanPage() {
                         across the Middle East.
                     </p>
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#bd930c";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#bd930c";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right — image (full figure, no crop) */}
@@ -577,7 +591,7 @@ export default function KlopmanPage() {
                         alt="Klopman Workwear Model"
                         style={{
                             width: "100%",
-                            maxWidth: "500px",
+                            maxWidth: "720px",
                             height: "auto",
                             objectFit: "contain",
                             display: "block",
@@ -607,18 +621,17 @@ export default function KlopmanPage() {
                         fontFamily: "'Cinzel Decorative', serif",
                         lineHeight: "1.2",
                         margin: "0 0 28px 0",
-                        textTransform: "uppercase",
                     }}
                 >
                     Buy Klopman Fabrics in Dubai at Aurora Textiles
                 </h2>
                 <p
                     style={{
-                        fontSize: "15px",
+                        fontSize: "17px",
                         color: "#333",
-                        lineHeight: "1.9",
+                        lineHeight: "1.2",
                         margin: "0 0 16px 0",
-                        fontFamily: "'Cinzel Decorative', serif",
+                        fontFamily: "'poppins', sans-serif",
                     }}
                 >
                     Whether you're a garment manufacturer, industrial supplier, or uniform
@@ -629,11 +642,11 @@ export default function KlopmanPage() {
                 </p>
                 <p
                     style={{
-                        fontSize: "15px",
+                        fontSize: "17px",
                         color: "#333",
-                        lineHeight: "1.9",
+                        lineHeight: "1.2",
                         margin: 0,
-                        fontFamily: "'Cinzel Decorative', serif",
+                        fontFamily: "'poppins', sans-serif",
                     }}
                 >
                     <strong>Contact Aurora Textiles Today</strong> – For quality you can
@@ -657,35 +670,36 @@ export default function KlopmanPage() {
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <img
                         src="/klopman-4.webp"
-                        alt="Klopman Fabric Swatches"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "520px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "520px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 60px)", width: "calc(50% - 60px)" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "32px",
                             fontWeight: "700",
                             color: "#1e2a5e",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -695,11 +709,14 @@ export default function KlopmanPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -711,25 +728,34 @@ export default function KlopmanPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            lineHeight: "1.5",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -746,11 +772,11 @@ export default function KlopmanPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.5",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -762,7 +788,6 @@ export default function KlopmanPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

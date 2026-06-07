@@ -279,7 +279,7 @@ export default function Navbar() {
                                         >
                                             <li>
                                                 <a
-                                                    href="/products/sammaan-fabrics/rasm-ethnics"
+                                                    href="/products/rasm-ethnics-by-sammaan"
                                                     style={{
                                                         display: "block",
                                                         padding: "11px 20px",
@@ -396,11 +396,11 @@ export default function Navbar() {
                                             }}
                                         >
                                             {[
-                                                { label: "Shiddat by Nemssis", href: "/products/nemssis/shiddat" },
-                                                { label: "Sanskriti by Nemssis", href: "/products/nemssis/sanskriti" },
-                                                { label: "Raag Resham by Nemssis", href: "/products/nemssis/raag-resham" },
-                                                { label: "Zarista by Nemssis", href: "/products/nemssis/zarista" },
-                                                { label: "Nawabi by Nemssis", href: "/products/nemssis/nawabi" },
+                                                { label: "Shiddat by Nemssis", href: "/products/shiddat-by-nemssis" },
+                                                { label: "Sanskriti by Nemssis", href: "/products/sanskriti-by-nemssis" },
+                                                { label: "Raag Resham by Nemssis", href: "/products/raag-resham-by-nemssis" },
+                                                { label: "Zarista by Nemssis", href: "/products/zarista-by-nemssis" },
+                                                { label: "Nawabi by Nemssis", href: "/products/nawabi-by-nemssis" },
                                             ].map((sub) => (
                                                 <li key={sub.label}>
                                                     <a

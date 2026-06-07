@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,20 +6,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function SammaanPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF SAMMAAN SHIRTING FABRICS DOES AURORA TEXTILES SUPPLY?",
+            question: "What types of Sammaan shirting fabrics does Aurora Textiles supply?",
             answer:
                 "We supply a broad selection of Sammaan men's shirting fabrics, including blends such as polyester cotton, linen, and their various combinations—tailored to suit diverse menswear styles and market needs.",
         },
         {
-            question: "ARE SAMMAAN SHIRTING FABRICS SUITABLE FOR BOTH CASUAL AND FORMAL SHIRTS?",
+            question: "Are Sammaan shirting fabrics suitable for both casual and formal shirts?",
             answer:
                 "Yes, Sammaan fabrics are engineered for formalwear, semi-formals, and casual shirts alike. Their wide range of textures, patterns, and finishes makes them suitable for all menswear occasions.",
         },
         {
-            question: "ARE SAMMAAN SHIRTING FABRICS SUITABLE FOR BOTH CASUAL AND FORMAL SHIRTS?",
+            question: "Are Sammaan shirting fabrics suitable for both casual and formal shirts?",
             answer:
                 "Absolutely. Aurora Textiles provides bulk and wholesale supply of Sammaan shirting fabrics across Dubai and the wider UAE, with export support to MENA countries.",
         },
@@ -30,8 +44,8 @@ export default function SammaanPage() {
 
 
             <Helmet>
-                <title>Sammaan Fabrics Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Explore Sammaan ethnic and suiting fabrics in Dubai. Aurora Textiles is a wholesale supplier of Sammaan Fabrics collections across UAE and GCC." />
+                <title>Sammaan Men&#39;s Shirting Fabrics in Dubai, UAE - Aurora Textiles</title>
+                <meta name="description" content="Check out Premium Sammaan men&#39;s shirting fabrics from Aurora Textiles in Dubai, UAE. Explore quality blends, stylish prints, jacquards, embroidery, and custom fabric finishes." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -84,10 +98,9 @@ export default function SammaanPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        SAMMAAN FABRICS
+                        Sammaan Fabrics
                     </h1>
                 </div>
             </section>
@@ -137,22 +150,21 @@ export default function SammaanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Sammaan Fabrics by Aurora Textiles in Dubai
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <strong>Aurora Textiles</strong> is a trusted supplier of{" "}
@@ -188,22 +200,21 @@ export default function SammaanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Sammaan Men's Shirting Fabric
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <strong>Sammaan men's shirting fabrics</strong> are known for their
@@ -215,11 +226,11 @@ export default function SammaanPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 12px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontWeight: "700",
                         }}
                     >
@@ -244,10 +255,10 @@ export default function SammaanPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "17px",
                                     color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.4",
+                                    fontFamily: "'Poppins', sans-serif",
                                 }}
                             >
                                 {item}
@@ -257,22 +268,22 @@ export default function SammaanPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 8px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         Mixtures or blends of any of the above combinations
                     </p>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         These fabrics are available in a wide range of patterns, textures, and
@@ -287,7 +298,7 @@ export default function SammaanPage() {
                         alt="Sammaan Shirting Fabric"
                         style={{
                             width: "100%",
-                            height: "500px",
+                            height: "620px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -333,22 +344,21 @@ export default function SammaanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Value-Added Designs: Prints, Embroidery & Jacquard Fabrics
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         Sammaan is also known for its <strong>value-added prints</strong>,
@@ -383,11 +393,10 @@ export default function SammaanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 32px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Why Source Sammaan Fabrics from Aurora Textiles?
@@ -428,14 +437,13 @@ export default function SammaanPage() {
                                 </span>
                                 <p
                                     style={{
-                                        fontSize: "13px",
+                                        fontSize: "19px",
                                         fontWeight: "700",
-                                        color: "#1e2a5e",
+                                        color: "#344886",
                                         letterSpacing: "0.6px",
-                                        textTransform: "uppercase",
                                         margin: 0,
                                         lineHeight: "1.6",
-                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontFamily: "'Poppins', sans-serif",
                                     }}
                                 >
                                     {point}
@@ -444,22 +452,38 @@ export default function SammaanPage() {
                         ))}
                     </div>
 
-                    <button
-                        style={{
-                            background: "#b8860b",
-                            color: "#fff",
-                            border: "none",
-                            padding: "14px 38px",
-                            fontSize: "15px",
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontWeight: "600",
-                            cursor: "pointer",
-                            borderRadius: "4px",
-                            letterSpacing: "0.5px",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right — image */}
@@ -469,7 +493,7 @@ export default function SammaanPage() {
                         alt="Sammaan Fabric Supply Aurora Textiles"
                         style={{
                             width: "100%",
-                            height: "520px",
+                            height: "780px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -489,40 +513,41 @@ export default function SammaanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/sammaan-5.webp"
-                        alt="Sammaan Fabric Rolls"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "480px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -532,11 +557,14 @@ export default function SammaanPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -548,25 +576,34 @@ export default function SammaanPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -583,11 +620,11 @@ export default function SammaanPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.4",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -599,7 +636,6 @@ export default function SammaanPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

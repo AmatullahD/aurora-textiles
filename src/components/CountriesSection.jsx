@@ -4,6 +4,7 @@ export default function CountriesSection() {
   const countries = [
     {
       name: "South Africa",
+      href: "/south-africa",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/safari.png.webp"
@@ -14,6 +15,7 @@ export default function CountriesSection() {
     },
     {
       name: "Egypt",
+      href: "/egypt",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/pyramids.png.webp"
@@ -24,6 +26,7 @@ export default function CountriesSection() {
     },
     {
       name: "Saudi Arabia",
+      href: "/saudi-arabia",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/saudi-arabia.png.webp"
@@ -34,6 +37,7 @@ export default function CountriesSection() {
     },
     {
       name: "Tanzania",
+      href: "/tanzania",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/dodoma.png.webp"
@@ -42,6 +46,7 @@ export default function CountriesSection() {
         />
       ),
     },
+      
   ];
 
   return (
@@ -84,30 +89,31 @@ export default function CountriesSection() {
           boxSizing: "border-box",
         }}
       >
-        {countries.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: "#00285E",
-              borderRadius: "18px",
-              minHeight: "190px",
-              padding: "20px",
-              boxSizing: "border-box",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-5px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "translateY(0px)";
-            }}
-          >
+        {countries.map((item, index) => {
+          const card = (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#00285E",
+                borderRadius: "18px",
+                minHeight: "190px",
+                padding: "20px",
+                boxSizing: "border-box",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                color: "white",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-5px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0px)";
+              }}
+            >
             {/* Icon */}
             <div
               style={{
@@ -137,7 +143,11 @@ export default function CountriesSection() {
               {item.name}
             </h3>
           </div>
-        ))}
+          );
+          return item.href ? (
+            <a key={index} href={item.href} style={{ textDecoration: "none" }}>{card}</a>
+          ) : card;
+        })}
       </div>
     </section>
   );

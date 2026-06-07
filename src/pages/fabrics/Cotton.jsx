@@ -137,7 +137,7 @@ export default function CottonPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "36px",
               fontWeight: "700",
               lineHeight: "1.25",
@@ -212,8 +212,6 @@ export default function CottonPage() {
                             >
                                 Contact Us
                             </button>
-                       
-
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
@@ -278,7 +276,7 @@ export default function CottonPage() {
         <h2
           style={{
             fontFamily: "'Cinzel Decorative', serif",
-            color: "#1a237e",
+            color: "#344886",
             fontSize: "38px",
             fontWeight: "700",
             textAlign: "center",
@@ -501,7 +499,7 @@ export default function CottonPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "38px",
               fontWeight: "700",
               
@@ -628,7 +626,7 @@ export default function CottonPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#1a237e",
+              color: "#344886",
               fontSize: "38px",
               fontWeight: "700",
               margin: 0,
@@ -718,3 +716,8 @@ export default function CottonPage() {
     </div>
   );
 }
+
+
+
+
+ 

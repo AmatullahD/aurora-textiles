@@ -1,219 +1,193 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const fabrics = [
-  {
-    title: "Cotton",
-    image: "/cotton.png",
-  },
-  {
-    title: "Wool",
-    image: "/wool.webp",
-  },
-  {
-    title: "Linen",
-    image: "/linen.png",
-  },
-  {
-    title: "Polyviscose",
-    image: "/polyviscose.webp",
-  },
-  {
-    title: "Denim",
-    image: "/denim.jpg",
-  },
-  {
-    title: "Cotton",
-    image: "/cotton.png",
-  },
-  {
-    title: "Wool",
-    image: "/wool.webp",
-  },
-  {
-    title: "Linen",
-    image: "/linen.png",
-  },
-  {
-    title: "Polyviscose",
-    image: "/polyviscose.webp",
-  },
+  { title: "Cotton",          image: "/cotton.png",          href: "/cotton-fabric" },
+  { title: "Wool",            image: "/wool.webp",           href: "/wool-fabric" },
+  { title: "Linen",           image: "/linen.png",           href: "/linen-fabric" },
+  { title: "Polyviscose",     image: "/polyviscose.webp",    href: "/poly-viscose-fabric" },
+  { title: "Denim",           image: "/denim.jpg",           href: "/denim-fabric" },
+  // { title: "Polycotton",      image: "/polycotton.webp",     href: "/poly-cotton-fabric" },
+  // { title: "Poly Wool",       image: "/polywool.webp",       href: "/poly-wool-fabric" },
+  // { title: "Poly Wool Lycra", image: "/polywoollycra.webp",  href: "/poly-wool-lycra-fabric" },
+  // { title: "PV Lycra",        image: "/pvlycra.webp",        href: "/pv-lycra" },
+  // { title: "Tencel Blend",    image: "/tencelblend.webp",    href: "/tencel-blend-fabric" },
 ];
 
+const VISIBLE  = 5;
+const GAP      = 12;
+const DURATION = 500;
+
+// Clone first VISIBLE items at end for seamless forward loop
+const extended = [...fabrics, ...fabrics.slice(0, VISIBLE)];
+
 function FabricSliderSection() {
-  const [startIndex, setStartIndex] = useState(0);
+  const [index, setIndex]       = useState(0);
+  const [animated, setAnimated] = useState(true);
+  const [cardPx, setCardPx]     = useState(0);
+  const viewportRef             = useRef(null);
 
-  // Show 5 items with infinite loop
-  const visibleItems = [];
+  // Measure actual card width in px from the viewport
+  useEffect(() => {
+    const measure = () => {
+      if (viewportRef.current) {
+        const vw = viewportRef.current.offsetWidth;
+        // card = (viewport - gaps between VISIBLE cards) / VISIBLE
+        setCardPx((vw - GAP * (VISIBLE - 1)) / VISIBLE);
+      }
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
 
-  for (let i = 0; i < 5; i++) {
-    visibleItems.push(
-      fabrics[(startIndex + i) % fabrics.length]
-    );
-  }
+  // step = one card width + one gap
+  const step = cardPx + GAP;
 
-  // Next Slide
-  const nextSlide = () => {
-    setStartIndex((prev) => (prev + 1) % fabrics.length);
+  const goNext = () => {
+    if (index === fabrics.length - 1) {
+      // animate to clone zone, then silently reset to 0
+      setAnimated(true);
+      setIndex(fabrics.length);
+      setTimeout(() => {
+        setAnimated(false);
+        setIndex(0);
+        setTimeout(() => setAnimated(true), 30);
+      }, DURATION);
+    } else {
+      setAnimated(true);
+      setIndex(i => i + 1);
+    }
   };
 
-  // Previous Slide
-  const prevSlide = () => {
-    setStartIndex((prev) =>
-      prev === 0 ? fabrics.length - 1 : prev - 1
-    );
+  const goPrev = () => {
+    if (index === 0) {
+      // jump instantly to clone zone end, then animate back
+      setAnimated(false);
+      setIndex(fabrics.length);
+      setTimeout(() => {
+        setAnimated(true);
+        setIndex(fabrics.length - 1);
+      }, 30);
+    } else {
+      setAnimated(true);
+      setIndex(i => i - 1);
+    }
   };
+
+  const dotIndex = index % fabrics.length;
+  const isMobile = window.innerWidth < 768;
 
   return (
-    <section
-      style={{
-        width: "100%",
-        backgroundColor: "#fff",
-        padding: "20px 0 20px",
-        overflow: "hidden",
-      }}
-    >
-      {/* Slider Wrapper */}
+    <section style={{ width: "100%", backgroundColor: "#fff", padding: "20px 0" }}>
       <div
         style={{
           position: "relative",
           width: "100%",
           maxWidth: "1450px",
           margin: "0 auto",
-          padding: "0 10px",
+          padding: "0 36px",
           boxSizing: "border-box",
         }}
       >
-        {/* Left Arrow */}
+        {/* Left arrow */}
         <button
-          onClick={prevSlide}
+          onClick={goPrev}
           style={{
-            position: "absolute",
-            left: window.innerWidth < 768 ? "5px" : "10px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 10,
-            background: "rgba(255,255,255,0.2)",
-            border: "none",
-            color: "#fff",
-            fontSize: window.innerWidth < 768 ? "28px" : "38px",
-            cursor: "pointer",
+            position: "absolute", left: 0, top: "50%",
+            transform: "translateY(-65%)", zIndex: 10,
+            background: "none", border: "none", outline: "none",
+            color: "#333", fontSize: isMobile ? "36px" : "50px",
+            cursor: "pointer", padding: 0, lineHeight: 1,
           }}
-        >
-          ‹
-        </button>
+        >‹</button>
 
-        {/* Right Arrow */}
+        {/* Right arrow */}
         <button
-          onClick={nextSlide}
+          onClick={goNext}
           style={{
-            position: "absolute",
-            right: window.innerWidth < 768 ? "5px" : "10px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 10,
-            background: "rgba(255,255,255,0.2)",
-            border: "none",
-            color: "#fff",
-            fontSize: window.innerWidth < 768 ? "28px" : "38px",
-            cursor: "pointer",
+            position: "absolute", right: 0, top: "50%",
+            transform: "translateY(-65%)", zIndex: 10,
+            background: "none", border: "none", outline: "none",
+            color: "#333", fontSize: isMobile ? "36px" : "50px",
+            cursor: "pointer", padding: 0, lineHeight: 1,
           }}
-        >
-          ›
-        </button>
+        >›</button>
 
-        {/* Cards */}
+        {/* Viewport — clips the track */}
         <div
-          style={{
-            display: "flex",
-            gap: window.innerWidth < 768 ? "10px" : "12px",
-            justifyContent: "center",
-            alignItems: "center",
-            overflow: "hidden",
-            transition: "all 0.5s ease",
-          }}
+          ref={viewportRef}
+          style={{ overflow: "hidden", width: "100%" }}
         >
-          {visibleItems.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                position: "relative",
-                width: window.innerWidth < 768 ? "48%" : "19%",
-               height: window.innerWidth < 768 ? "280px" : "460px",
-                overflow: "hidden",
-                flexShrink: 0,
-              }}
-            >
-              {/* Image */}
-              <img
-                src={item.image}
-                alt={item.title}
+          {/* Track — slides left/right */}
+          <div
+            style={{
+              display: "flex",
+              gap: `${GAP}px`,
+              transition: animated ? `transform ${DURATION}ms cubic-bezier(0.4,0,0.2,1)` : "none",
+              transform: cardPx ? `translateX(${-index * step}px)` : "none",
+              willChange: "transform",
+            }}
+          >
+            {extended.map((item, i) => (
+              <a
+                key={i}
+                href={item.href}
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                  position: "relative",
+                  flexShrink: 0,
+                  width: cardPx ? `${cardPx}px` : `calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
+                  height: isMobile ? "280px" : "460px",
+                  overflow: "hidden",
                   display: "block",
-                  transition: "transform 0.5s ease",
-                }}
-              />
-
-              {/* White Border Frame */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "15px",
-                  left: "15px",
-                  right: "15px",
-                  bottom: "15px",
-                  border: "2px solid rgba(255,255,255,0.9)",
-                  pointerEvents: "none",
-                }}
-              />
-
-              {/* Title */}
-              <h3
-                style={{
-                  position: "absolute",
-                  bottom: "22px",
-                  left: "0",
-                  right: "0",
-                  textAlign: "center",
-                  color: "#fff",
-                  fontSize: window.innerWidth < 768 ? "22px" : "26px",
-                  fontWeight: "600",
-                  margin: 0,
-                  fontFamily: "sans-serif",
-                  letterSpacing: "0.5px",
+                  textDecoration: "none",
                 }}
               >
-                {item.title}
-              </h3>
-            </div>
-          ))}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={{
+                    width: "100%", height: "100%",
+                    objectFit: "cover", display: "block",
+                    transition: "transform 0.45s ease",
+                  }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                />
+                {/* White inner border */}
+                <div style={{
+                  position: "absolute", top: 15, left: 15, right: 15, bottom: 15,
+                  border: "2px solid rgba(255,255,255,0.88)", pointerEvents: "none",
+                }} />
+                {/* Title */}
+                <h3 style={{
+                  position: "absolute", bottom: 22, left: 0, right: 0,
+                  textAlign: "center", color: "#fff",
+                  fontSize: isMobile ? "20px" : "26px",
+                  fontWeight: 600, margin: 0,
+                  fontFamily: "'Poppins', sans-serif",
+                  letterSpacing: "0.5px",
+                  textShadow: "0 1px 6px rgba(0,0,0,0.55)",
+                }}>
+                  {item.title}
+                </h3>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Dots */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "18px",
-            gap: "10px",
-          }}
-        >
-          {[0, 1, 2, 3, 4].map((dot) => (
+        <div style={{ display: "flex", justifyContent: "center", marginTop: "18px", gap: "10px" }}>
+          {fabrics.map((_, d) => (
             <div
-              key={dot}
-              onClick={() => setStartIndex(dot)}
+              key={d}
+              onClick={() => { setAnimated(true); setIndex(d); }}
               style={{
-                width: startIndex === dot ? "10px" : "8px",
-                height: startIndex === dot ? "10px" : "8px",
+                width: dotIndex === d ? "10px" : "8px",
+                height: dotIndex === d ? "10px" : "8px",
                 borderRadius: "50%",
-                backgroundColor:
-                  startIndex === dot
-                    ? "#111"
-                    : "rgba(0,0,0,0.2)",
+                backgroundColor: dotIndex === d ? "#111" : "rgba(0,0,0,0.2)",
                 cursor: "pointer",
                 transition: "0.3s ease",
               }}

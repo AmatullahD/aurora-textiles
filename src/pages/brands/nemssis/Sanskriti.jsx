@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
@@ -6,20 +6,36 @@ import ScrollToTop from "../../../components/ScrollToTop";
 
 export default function SanskritiPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.getBoundingClientRect().height);
+        const ro = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                setFaqImgHeight(entry.contentRect.height);
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT IS UNIQUE ABOUT SANSKRITI ETHNIC FABRICS FOR MEN?",
+            question: "What is unique about Sanskriti ethnic fabrics for men?",
             answer:
                 "These fabrics feature timeless prints and versatile textures crafted especially for ethnic menswear. They combine tradition with modern wearability.",
         },
         {
-            question: "DO YOU OFFER CUSTOMIZATION OR GUIDANCE ON SELECTION?",
+            question: "Do you offer customization or guidance on selection?",
             answer:
                 "Yes, our team at Aurora Textiles provides expert guidance on fabric selection, customization options, and design recommendations tailored to your specific requirements.",
         },
         {
-            question: "ARE SANSKRITI FABRICS AVAILABLE FOR EXPORT OR LARGE-SCALE RETAIL?",
+            question: "Are Sanskriti fabrics available for export or large-scale retail?",
             answer:
                 "Absolutely. We supply Sanskriti by Nemssis fabrics across the UAE and MENA region, and support large-scale retail and export orders with consistent quality and timely logistics.",
         },
@@ -29,8 +45,8 @@ export default function SanskritiPage() {
         <div style={{ width: "100%", background: "#fff" }}>
 
             <Helmet>
-                <title>Sanskriti by Nemssis | Ethnic Fabric Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop Sanskriti by Nemssis at Aurora Textiles Dubai. Elegant ethnic fabric collection for men's traditional wear. Wholesale supplier in UAE." />
+                <title>Sanskriti by Nemssis - Luxury Ethnic Print &amp; Embroidery Fabrics</title>
+                <meta name="description" content="Check out Sanskriti Ethnic by Nemssis at Aurora Textiles – your trusted source for premium luxury ethnic Print and embroidery fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -83,15 +99,14 @@ export default function SanskritiPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        SANSKRITI BY NEMSSIS
+                        Sanskriti by Nemssis
                     </h1>
                 </div>
             </section>
 
-            {/* SECTION 1 — Brand Intro: Logo + Description */}
+            {/* SECTION 1 — Brand Intro: Logo left, Text right */}
             <section
                 style={{
                     width: "100%",
@@ -102,16 +117,15 @@ export default function SanskritiPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Logo */}
+                {/* Left: Logo — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "340px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         display: "flex",
-                        flexDirection: "column",
                         alignItems: "center",
                         justifyContent: "center",
                     }}
@@ -127,27 +141,28 @@ export default function SanskritiPage() {
                     />
                 </div>
 
-                {/* Right: Heading + Description */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: Heading + Description — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
                         }}
                     >
-                        Sanskriti Ethnic By Nemssis – Supplied By Aurora Textiles, Dubai
+
+                        Sanskriti Ethnic by Nemssis – Supplied by Aurora Textiles, Dubai
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
                         }}
                     >
@@ -174,31 +189,30 @@ export default function SanskritiPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
-                            textTransform: "uppercase",
                         }}
                     >
                         Ethnic Print Fabrics For Elegant Occasions
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "36px",
                         }}
                     >
@@ -210,41 +224,45 @@ export default function SanskritiPage() {
                         and color palettes suited for every festive mood, this line is a
                         go-to for ethnic elegance.
                     </p>
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
-                {/* Right: Image */}
+                {/* Right: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "560px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "480px",
-                        borderRadius: "0px",
                         overflow: "hidden",
                     }}
                 >
@@ -272,14 +290,14 @@ export default function SanskritiPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Image */}
+                {/* Left: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "440px",
                         borderRadius: "16px",
                         overflow: "hidden",
@@ -297,28 +315,27 @@ export default function SanskritiPage() {
                     />
                 </div>
 
-                {/* Right: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "20px",
                             marginTop: 0,
-                            textTransform: "uppercase",
                         }}
                     >
-                        Fabric Types & Finish Options
+                        Fabric Types &amp; Finish Options
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             marginBottom: "16px",
                         }}
                     >
@@ -326,10 +343,10 @@ export default function SanskritiPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "2",
+                            lineHeight: "1.4",
                             paddingLeft: "24px",
                             marginBottom: "24px",
                         }}
@@ -341,10 +358,10 @@ export default function SanskritiPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
                         }}
                     >
@@ -366,17 +383,17 @@ export default function SanskritiPage() {
                     display: "flex",
                     alignItems: "center",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: "nowrap",
                 }}
             >
-                {/* Left: Text */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Left: Text — 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2657",
+                            color: "#344886",
                             lineHeight: "1.25",
                             marginBottom: "24px",
                             marginTop: 0,
@@ -386,10 +403,10 @@ export default function SanskritiPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "15px",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
                         }}
                     >
@@ -402,13 +419,12 @@ export default function SanskritiPage() {
                     </p>
                 </div>
 
-                {/* Right: Image */}
+                {/* Right: Image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "560px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
                         height: "380px",
-                        borderRadius: "0px",
                         overflow: "hidden",
                     }}
                 >
@@ -434,17 +450,19 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
-                    flexWrap: "wrap",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left: Image */}
+                {/* Left: Image — 50% (dynamic height) */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
-                        height: "500px",
+                        flex: "0 0 calc(50% - 30px)",
+                        width: "calc(50% - 30px)",
+                        height: `${faqImgHeight}px`,
+                        minHeight: "500px",
+                        transition: "height 0.4s ease",
                         borderRadius: "16px",
                         overflow: "hidden",
                     }}
@@ -461,99 +479,99 @@ export default function SanskritiPage() {
                     />
                 </div>
 
-                {/* Right: FAQ Accordion */}
-                <div style={{ flex: "1 1 400px" }}>
+                {/* Right: FAQ Accordion — 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1a2657",
-                            marginBottom: "32px",
+                            color: "#344886",
+                            marginBottom: "28px",
                             marginTop: 0,
-                            borderBottom: "3px solid #1a2657",
-                            paddingBottom: "8px",
-                            display: "inline-block",
+                            letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        FAQ
                     </h2>
 
-                    {faqs.map((faq, index) => (
-                        <div
-                            key={index}
-                            style={{
-                                border: "1px solid #d0d0d0",
-                                marginBottom: "16px",
-                                borderRadius: "4px",
-                                overflow: "hidden",
-                            }}
-                        >
-                            <button
-                                onClick={() =>
-                                    setOpenFaq(openFaq === index ? -1 : index)
-                                }
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
                                 style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "space-between",
-                                    padding: "18px 20px",
-                                    background: "#fff",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    gap: "12px",
+                                    border: "1px solid #ddd",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <span
-                                    style={{
-                                        fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "13px",
-                                        fontWeight: "700",
-                                        color: "#1a2657",
-                                        lineHeight: "1.4",
-                                        textTransform: "uppercase",
-                                        letterSpacing: "0.3px",
-                                    }}
-                                >
-                                    {faq.question}
-                                </span>
-                                <span
-                                    style={{
-                                        flexShrink: 0,
-                                        fontSize: "22px",
-                                        color: openFaq === index ? "#1a2657" : "#8b8000",
-                                        fontWeight: "300",
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    {openFaq === index ? "−" : "+"}
-                                </span>
-                            </button>
-
-                            {openFaq === index && (
                                 <div
+                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        padding: "0 20px 20px 20px",
-                                        background: "#fff",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        padding: "18px 20px",
+                                        cursor: "pointer",
+                                        gap: "16px",
                                     }}
                                 >
                                     <p
                                         style={{
-                                            fontFamily: "'Cinzel Decorative', serif",
-                                            fontSize: "14px",
-                                            color: "#444",
-                                            lineHeight: "1.8",
+                                            fontSize: "18px",
+                                            fontWeight: "700",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
-                                        {faq.answer}
+                                        {faq.question}
                                     </p>
+                                    <span
+                                        style={{
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            flexShrink: 0,
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
+                                        }}
+                                    >
+                                        {openFaq === i ? "−" : "+"}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {openFaq === i && (
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
+                                        <p
+                                            style={{
+                                                fontSize: "17px",
+                                                color: "#333",
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
+                                            }}
+                                        >
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -568,11 +586,11 @@ export default function SanskritiPage() {
             >
                 <p
                     style={{
-                        fontFamily: "'Cinzel Decorative', serif",
-                        fontSize: "15px",
+                        fontFamily: "'Poppins', sans-serif",
+                        fontSize: "16px",
                         color: "#333",
                         margin: 0,
-                        lineHeight: "1.8",
+                        lineHeight: "1.4",
                     }}
                 >
                     Get in touch with Aurora Textiles to supply Sanskriti by Nemssis ethnic fabrics—crafted for refined tradition and modern versatility.

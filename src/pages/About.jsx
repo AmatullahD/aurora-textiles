@@ -112,11 +112,11 @@ export default function AboutPage() {
               fontWeight: "600",
               margin: 0,
               lineHeight: "1.1",
-              fontFamily: "'Cinzel Decorative', serif",
-              textTransform: "uppercase",
+              fontFamily: "'Cinzel Decorative', sans-serif",
+             
             }}
           >
-            ABOUT US
+            About Us
           </h1>
         </div>
       </section>
@@ -156,15 +156,15 @@ export default function AboutPage() {
               <h2
                 style={{
                   fontSize: window.innerWidth < 768 ? "20px" : "35px",
-                  color: "#122a4b",
-                  fontFamily: "'Cinzel Decorative', serif",
+                  color: "#344886",
+                  fontFamily: "'Cinzel Decorative', sans-serif",
                   margin: 0,
                   fontWeight: "600",
-                  textTransform: "uppercase",
+                 
                   letterSpacing: "1px",
                 }}
               >
-                OUR STORY
+                Our Story
               </h2>
 
               {/* UNDERLINE */}

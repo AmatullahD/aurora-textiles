@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,10 +6,26 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function ReliancePage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(500);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.getBoundingClientRect().height);
+        const ro = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                setFaqImgHeight(entry.contentRect.height);
+            }
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "WHAT TYPES OF RELIANCE FABRICS DOES AURORA TEXTILES CARRY?",
+            question: "What types of Reliance fabrics does Aurora Textiles carry?",
             answer: (
                 <>
                     We stock <strong>Reliance poly-wool suit fabrics</strong> in various weaves, finishes, and blend
@@ -19,7 +35,7 @@ export default function ReliancePage() {
             ),
         },
         {
-            question: "CAN I GET SPECIFIC POLY-WOOL BLENDS OR STRETCH FABRICS FROM RELIANCE AT AURORA?",
+            question: "Can I get specific poly-wool blends or stretch fabrics from Reliance at Aurora?",
             answer: (
                 <>
                     Yes, we carry multiple blend ratios and weave types including stretch and non-stretch options. Contact
@@ -28,7 +44,7 @@ export default function ReliancePage() {
             ),
         },
         {
-            question: "DO YOU SUPPLY RELIANCE FABRICS IN BULK FOR TAILORS AND CLOTHING BRANDS?",
+            question: "Do you supply Reliance fabrics in bulk for tailors and clothing brands?",
             answer: (
                 <>
                     Absolutely. We supply Reliance fabrics in bulk to tailors, fashion houses, and clothing brands across
@@ -43,8 +59,8 @@ export default function ReliancePage() {
 
 
             <Helmet>
-                <title>Reliance Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Shop Reliance fabrics wholesale in Dubai. Aurora Textiles offers a wide range of Reliance suiting and shirting fabrics for retailers and tailors across UAE." />
+                <title>Buy Reliance Fabrics For Men's Suiting | Reliance Textiles - Aurora Textiles</title>
+                <meta name="description" content="Buy Reliance poly-wool &amp; Polyester fabrics for men's suiting from Aurora Textiles – trusted fabric supplier in Dubai. Bulk supply, consistent quality, and fast delivery across UAE &amp; MENA." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -97,10 +113,9 @@ export default function ReliancePage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        RELIANCE FABRICS
+                      Reliance Fabrics
                     </h1>
                 </div>
             </section>
@@ -118,13 +133,11 @@ export default function ReliancePage() {
                     gap: "60px",
                 }}
             >
-                {/* Left: Reliance brand logo image */}
+                {/* Left: Reliance brand logo image — 40% */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "420px",
-                        height: "320px",
-                        flexShrink: 0,
+                        flex: "0 0 40%",
+                        width: "40%",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -136,33 +149,32 @@ export default function ReliancePage() {
                         alt="Reliance Industries Limited Logo"
                         style={{
                             width: "100%",
-                            height: "100%",
+                            height: "auto",
                             objectFit: "contain",
                             display: "block",
                         }}
                     />
                 </div>
 
-                {/* Right: heading + paragraph */}
-                <div style={{ flex: 1 }}>
+                {/* Right: heading + paragraph — 60% */}
+                <div style={{ flex: "0 0 60%", width: "60%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        WHOLESALE RELIANCE FABRICS
+                       Wholesale Reliance Fabrics
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -196,19 +208,18 @@ export default function ReliancePage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        PREMIUM POLY-WOOL SUITING FROM RELIANCE
+                        Premium Poly-Wool Suiting from Reliance
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -219,9 +230,9 @@ export default function ReliancePage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "16px",
                         }}
@@ -232,9 +243,9 @@ export default function ReliancePage() {
                         style={{
                             listStyle: "disc",
                             paddingLeft: "24px",
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -254,9 +265,9 @@ export default function ReliancePage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -332,19 +343,18 @@ export default function ReliancePage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "34px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        100% POLYESTER FABRIC FOR DISHDASHA
+                      100% Polyester Fabric for Dishdasha
                     </h2>
                     <p
                         style={{
-                            fontFamily: "'Georgia', serif",
-                            fontSize: "16px",
-                            lineHeight: "1.8",
+                            fontFamily: "'Poppins', sans-serif",
+                            fontSize: "19px",
+                            lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
                         }}
@@ -376,20 +386,19 @@ export default function ReliancePage() {
                             fontFamily: "'Cinzel Decorative', serif",
                             fontSize: "36px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            textTransform: "uppercase",
+                            color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 36px 0",
                         }}
                     >
-                        WHY CHOOSE AURORA TEXTILES FOR RELIANCE FABRIC?
+                       Why Choose Aurora Textiles For Reliance Fabric?
                     </h2>
 
                     {[
-                        "FOCUSED STOCK: ONLY THE MOST PRACTICAL RELIANCE POLY-WOOL AND POLYESTER OPTIONS",
-                        "TRUSTED SUPPLIER FOR DUBAI AND MENA REGION BULK BUYERS",
-                        "COMPETITIVE WHOLESALE PRICING AND RELIABLE DELIVERY TIMELINES",
-                        "MEN'S FABRICS ONLY—NO MIXED INVENTORY, NO CONFUSION",
+                        "Focused stock: Only the most practical Reliance poly-wool and polyester options",
+                        "Trusted supplier for Dubai and MENA region bulk buyers",
+                        "Competitive wholesale pricing and reliable delivery timelines",
+                        "Men’s fabrics only—no mixed inventory, no confusion",
                     ].map((item, idx) => (
                         <div
                             key={idx}
@@ -408,8 +417,7 @@ export default function ReliancePage() {
                                     fontFamily: "'Cinzel Decorative', serif",
                                     fontSize: "19px",
                                     fontWeight: "700",
-                                    color: "#1a2a6c",
-                                    textTransform: "uppercase",
+                                    color: "#344886",
                                     lineHeight: "1.5",
                                     margin: 0,
                                     letterSpacing: "0.5px",
@@ -420,32 +428,37 @@ export default function ReliancePage() {
                         </div>
                     ))}
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                        {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                            <button
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 36px",
+                                    fontSize: "15px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                }}
+                            >
+                                Contact Us
+                            </button>
+                        </div>
                 </div>
 
                 {/* Right: fabric swatches image */}
@@ -476,29 +489,29 @@ export default function ReliancePage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left: colourful layered fabric image */}
-                <div
-                    style={{
-                        flex: "0 0 auto",
-                        width: "540px",
-                        height: "500px",
-                        overflow: "hidden",
-                        flexShrink: 0,
-                        borderRadius: "8px",
-                    }}
-                >
+                {/* Left — image 50%, height driven by right column */}
+                <div style={{
+                    flex: "0 0 calc(50% - 30px)",
+                    width: "calc(50% - 30px)",
+                    height: `${faqImgHeight}px`,
+                    minHeight: "420px",
+                    transition: "height 0.4s ease",
+                    overflow: "hidden",
+                    borderRadius: "8px",
+                }}>
                     <img
                         src="/reliance-5.webp"
-                        alt="Reliance Colourful Fabrics"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
                             height: "100%",
@@ -508,91 +521,101 @@ export default function ReliancePage() {
                     />
                 </div>
 
-                {/* Right: FAQ accordion */}
-                <div style={{ flex: 1 }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
-                            fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "32px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1a2a6c",
-                            margin: "0 0 30px 0",
-                            borderBottom: "2px solid #b8860b",
-                            paddingBottom: "8px",
-                            display: "inline-block",
+                            color: "#344886",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            margin: "0 0 28px 0",
+                            letterSpacing: "1px",
                         }}
                     >
-                        FAQ
+                      FAQ
                     </h2>
 
-                    {faqs.map((faq, idx) => (
-                        <div
-                            key={idx}
-                            style={{
-                                border: "1px solid #ddd",
-                                marginBottom: "12px",
-                            }}
-                        >
-                            <button
-                                onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                        {faqs.map((faq, i) => (
+                            <div
+                                key={i}
                                 style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    justifyContent: "space-between",
-                                    alignItems: "center",
-                                    padding: "18px 20px",
-                                    background: "none",
-                                    border: "none",
-                                    cursor: "pointer",
-                                    textAlign: "left",
-                                    gap: "12px",
+                                    border: "1px solid #ddd",
+                                    borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
-                                <span
-                                    style={{
-                                        fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "13px",
-                                        fontWeight: "700",
-                                        color: "#b8860b",
-                                        textTransform: "uppercase",
-                                        lineHeight: "1.4",
-                                        letterSpacing: "0.4px",
-                                    }}
-                                >
-                                    {faq.question}
-                                </span>
-                                <span
-                                    style={{
-                                        fontSize: "22px",
-                                        color: "#1a2a6c",
-                                        fontWeight: "300",
-                                        flexShrink: 0,
-                                        lineHeight: 1,
-                                    }}
-                                >
-                                    {openFaq === idx ? "−" : "+"}
-                                </span>
-                            </button>
-
-                            {openFaq === idx && (
                                 <div
+                                    onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
-                                        padding: "16px 20px 20px 20px",
-                                        fontFamily: "'Georgia', serif",
-                                        fontSize: "15px",
-                                        lineHeight: "1.8",
-                                        color: "#333",
-                                        borderTop: "1px solid #eee",
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                        alignItems: "center",
+                                        padding: "18px 20px",
+                                        cursor: "pointer",
+                                        gap: "16px",
                                     }}
                                 >
-                                    <p style={{ margin: 0 }}>{faq.answer}</p>
+                                    <p
+                                        style={{
+                                            fontSize: "17px",
+                                            fontWeight: "700",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            margin: 0,
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            textTransform: "uppercase",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
+                                        }}
+                                    >
+                                        {faq.question}
+                                    </p>
+                                    <span
+                                        style={{
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
+                                            flexShrink: 0,
+                                            fontWeight: "500",
+                                            lineHeight: 1,
+                                            transition: "color 0.2s ease",
+                                        }}
+                                    >
+                                        {openFaq === i ? "−" : "+"}
+                                    </span>
                                 </div>
-                            )}
-                        </div>
-                    ))}
+
+                                {openFaq === i && (
+                                    <div style={{ padding: "0 20px 20px 20px", borderTop: "1px solid #eee" }}>
+                                        <p
+                                            style={{
+                                                fontSize: "16px",
+                                                color: "#333",
+                                                lineHeight: "1.4",
+                                                margin: "16px 0 0 0",
+                                                fontFamily: "'Poppins', sans-serif",
+                                            }}
+                                        >
+                                            {faq.answer}
+                                        </p>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -6,20 +6,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function OxfordPage() {
     const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(480);
+
+    useLayoutEffect(() => {
+        const el = faqColRef.current;
+        if (!el) return;
+        setFaqImgHeight(el.offsetHeight);
+        const ro = new ResizeObserver(() => {
+            setFaqImgHeight(el.offsetHeight);
+        });
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [openFaq]);
 
     const faqs = [
         {
-            question: "DO YOU SUPPLY OXFORD FABRIC IN BULK?",
+            question: "Do you supply Oxford fabric in bulk?",
             answer:
                 "Yes, Aurora Textiles offers Oxford fabric in bulk quantities with consistent quality and competitive pricing for garment manufacturers, brands, and tailors.",
         },
         {
-            question: "CAN I ORDER OXFORD FABRIC IN CUSTOM COLORS OR FINISHES?",
+            question: "Can I order Oxford fabric in custom colors or finishes?",
             answer:
                 "Yes, we can source Oxford fabrics in a wide range of custom colors and finishes to match your brand requirements. Contact our team to discuss your specific needs.",
         },
         {
-            question: "IS OXFORD FABRIC SUITABLE FOR UNIFORMS?",
+            question: "Is Oxford fabric suitable for uniforms?",
             answer:
                 "Absolutely. Oxford fabrics are widely used for corporate uniforms, school uniforms, and hospitality uniforms due to their durability, structure, and professional appearance.",
         },
@@ -30,8 +44,8 @@ export default function OxfordPage() {
 
 
             <Helmet>
-                <title>Oxford Fabric Supplier in Dubai | Aurora Textiles</title>
-                <meta name="description" content="Buy Oxford fabrics wholesale in Dubai. Aurora Textiles offers a wide range of Oxford weave fabrics for shirting, suiting and uniform use across UAE." />
+                <title>Oxford Fabric in Dubai | Shop Oxford Men&#39;s Shirt Fabric Material</title>
+                <meta name="description" content="Oxford fabric is elegant, durable, &amp; breathable. Shop Oxford Fabric in Dubai, UAE at Aurora Textiles to sew lightweight and stylish men&#39;s casual, formal, and daily wear shirts." />
             </Helmet>
 
             {/* NAVBAR */}
@@ -84,10 +98,9 @@ export default function OxfordPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
                         }}
                     >
-                        OXFORD FABRICS
+                        Oxford Fabrics
                     </h1>
                 </div>
             </section>
@@ -114,22 +127,21 @@ export default function OxfordPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Oxford Fabric for Men's Clothing Supplier in UAE
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "17px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         At{" "}
@@ -207,22 +219,21 @@ export default function OxfordPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Oxford Shirt Men – Tailored for Style & Function
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         Built for versatility, our collection of Oxford's shirtings fabric
@@ -256,24 +267,23 @@ export default function OxfordPage() {
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "26px" : "40px",
+                            fontSize: window.innerWidth < 768 ? "26px" : "36px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Oxford Shirt Fabric
                     </h2>
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         At <strong>Aurora Textiles</strong>, we supply high-quality{" "}
@@ -294,10 +304,10 @@ export default function OxfordPage() {
                         alt="Oxford Shirt Fabric"
                         style={{
                             width: "100%",
-                            height: "380px",
+                            height: "340px",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "8px",
+                            borderRadius: "15px",
                         }}
                     />
                 </div>
@@ -327,10 +337,10 @@ export default function OxfordPage() {
                         alt="Oxford Shirting Dubai"
                         style={{
                             width: "100%",
-                            height: "580px",
+                            height: "620px",
                             objectFit: "cover",
                             display: "block",
-                            borderRadius: "8px",
+                            borderRadius: "15px",
                         }}
                     />
                 </div>
@@ -341,11 +351,10 @@ export default function OxfordPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Shop Shirting Fabric for Oxford in Dubai
@@ -353,11 +362,11 @@ export default function OxfordPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.3",
                             margin: "0 0 20px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         As a leading name in fabric distribution, Aurora Textiles serves as a
@@ -376,11 +385,11 @@ export default function OxfordPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: "0 0 14px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontWeight: "700",
                         }}
                     >
@@ -415,10 +424,10 @@ export default function OxfordPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "18px",
                                     color: "#333",
-                                    lineHeight: "1.75",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.3",
+                                    fontFamily: "'Poppins', sans-serif",
                                 }}
                             >
                                 <strong>{item.label}</strong>
@@ -437,11 +446,11 @@ export default function OxfordPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.9",
+                            lineHeight: "1.4",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         Oxford's fabrics are carefully selected to match the expectations of
@@ -474,11 +483,10 @@ export default function OxfordPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                         }}
                     >
                         Why Choose Aurora Textiles?
@@ -518,14 +526,13 @@ export default function OxfordPage() {
                                 </span>
                                 <p
                                     style={{
-                                        fontSize: "13px",
+                                        fontSize: "18px",
                                         fontWeight: "700",
-                                        color: "#1e2a5e",
+                                        color: "#344886",
                                         letterSpacing: "0.6px",
-                                        textTransform: "uppercase",
                                         margin: 0,
-                                        lineHeight: "1.6",
-                                        fontFamily: "'Cinzel Decorative', serif",
+                                        lineHeight: "1.3",
+                                        fontFamily: "\'Poppins\', sans-serif",
                                     }}
                                 >
                                     {point}
@@ -536,11 +543,11 @@ export default function OxfordPage() {
 
                     <p
                         style={{
-                            fontSize: "15px",
+                            fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.85",
+                            lineHeight: "1.4",
                             margin: "0 0 28px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <span style={{ color: "#b8860b", fontWeight: "600" }}>
@@ -550,32 +557,38 @@ export default function OxfordPage() {
                         pricing, or place your wholesale order.
                     </p>
 
-                    <button
-                        onMouseEnter={e => {
-                            e.currentTarget.style.background = "#0a089bd3";
-                            e.currentTarget.style.borderColor = "#e0b219";
-                            e.currentTarget.style.color = "#ffffff";
-                        }}
-                        onMouseLeave={e => {
-                            e.currentTarget.style.background = "#e0b219";
-                            e.currentTarget.style.borderColor = "#0a089bd3";
-                            e.currentTarget.style.color = "#fff";
-                        }}
-                        style={{
-                            background: "#8b7d3a",
-                            color: "#fff",
-                            border: "2px solid #050e5f",
-                            padding: "14px 36px",
-                            fontSize: "15px",
-                            fontWeight: "500",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            letterSpacing: "0.5px",
-                            transition: "all 0.3s ease",
-                        }}
-                    >
-                        Contact Us
-                    </button>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#344886";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right — image */}
@@ -605,40 +618,41 @@ export default function OxfordPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "stretch",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
-                {/* Left — image */}
-                <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
+                {/* Left — image 50% */}
+                <div style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <img
                         src="/oxford-5.webp"
-                        alt="Oxford Fabric Swatches"
+                        alt="FAQ Image"
                         style={{
                             width: "100%",
-                            height: "480px",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "480px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
+                            transition: "height 0.4s ease",
                         }}
                     />
                 </div>
 
-                {/* Right — FAQ accordion */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                {/* Right — FAQ accordion 50% */}
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                           color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
-                            textTransform: "uppercase",
                             letterSpacing: "1px",
                         }}
                     >
-                        FAQ_
+                        Faq
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -648,11 +662,14 @@ export default function OxfordPage() {
                                 style={{
                                     border: "1px solid #ddd",
                                     borderTop: i === 0 ? "1px solid #ddd" : "none",
+                                    borderRadius: i === 0 ? "8px 8px 0 0" : i === faqs.length - 1 ? "0 0 8px 8px" : "0",
                                 }}
                             >
                                 {/* Question row */}
                                 <div
                                     onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
+                                    onMouseEnter={() => setHoveredFaq(i)}
+                                    onMouseLeave={() => setHoveredFaq(null)}
                                     style={{
                                         display: "flex",
                                         justifyContent: "space-between",
@@ -664,25 +681,34 @@ export default function OxfordPage() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "13px",
+                                            fontSize: "17px",
                                             fontWeight: "700",
-                                            color: "#b8860b",
-                                            letterSpacing: "0.6px",
-                                            textTransform: "uppercase",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             margin: 0,
-                                            lineHeight: "1.55",
-                                            fontFamily: "'Cinzel Decorative', serif",
+                                            lineHeight: "1.4",
+                                            fontFamily: "'Poppins', sans-serif",
+                                            transition: "color 0.2s ease",
+                                            flex: 1,
                                         }}
                                     >
                                         {faq.question}
                                     </p>
                                     <span
                                         style={{
-                                            fontSize: "24px",
-                                            color: "#1e2a5e",
+                                            fontSize: "22px",
+                                            color: openFaq === i
+                                                ? "#b9972f"
+                                                : hoveredFaq === i
+                                                    ? "#070e46"
+                                                    : "#0b18a1",
                                             flexShrink: 0,
-                                            fontWeight: "300",
+                                            fontWeight: "500",
                                             lineHeight: 1,
+                                            transition: "color 0.2s ease",
                                         }}
                                     >
                                         {openFaq === i ? "−" : "+"}
@@ -699,11 +725,11 @@ export default function OxfordPage() {
                                     >
                                         <p
                                             style={{
-                                                fontSize: "15px",
+                                                fontSize: "16px",
                                                 color: "#333",
-                                                lineHeight: "1.85",
+                                                lineHeight: "1.4",
                                                 margin: "16px 0 0 0",
-                                                fontFamily: "'Cinzel Decorative', serif",
+                                                fontFamily: "'Poppins', sans-serif",
                                             }}
                                         >
                                             {faq.answer}
@@ -715,7 +741,6 @@ export default function OxfordPage() {
                     </div>
                 </div>
             </section>
-
             {/* FOOTER */}
             <Footer />
             <ScrollToTop />

@@ -74,10 +74,10 @@ export default function ContactPage() {
                             margin: 0,
                             lineHeight: "1.1",
                             fontFamily: "'Cinzel Decorative', serif",
-                            textTransform: "uppercase",
+                            
                         }}
                     >
-                        CONTACT US
+                        Contact Us
                     </h1>
                 </div>
             </section>
@@ -100,12 +100,12 @@ export default function ContactPage() {
                 >
                     <h2
                         style={{
-                            color: "#122a4b",
+                            color: "#344886",
                             fontSize: window.innerWidth < 768 ? "28px" : "32px",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Cinzel Decorative', sans-serif",
                             margin: 0,
                             fontWeight: "600",
-                            textTransform: "uppercase",
+                          
                         }}
                     >
                         Reach Us At
