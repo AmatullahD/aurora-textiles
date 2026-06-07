@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
-import WhatsappButton from "../../components/WhatsappButton";
+import WhatsAppButton from "../../components/WhatsAppButton";
 
 export default function GulliniPage() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -683,7 +683,7 @@ export default function GulliniPage() {
             </section>
             {/* FOOTER */}
             <Footer />
-             <WhatsappButton />
+             <WhatsAppButton />
             <ScrollToTop />
            
         </div>
