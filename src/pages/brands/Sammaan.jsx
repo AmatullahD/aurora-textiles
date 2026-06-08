@@ -457,7 +457,8 @@ export default function SammaanPage() {
                         onClick={() => (window.location.href = "/contact-us")}
                         style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                        <button
+                        <a
+                            href="/contact-us"
                             onMouseEnter={e => {
                                 e.currentTarget.style.background = "#0a089bd3";
                                 e.currentTarget.style.borderColor = "#e0b219";
@@ -479,10 +480,14 @@ export default function SammaanPage() {
                                 cursor: "pointer",
                                 letterSpacing: "0.5px",
                                 transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
                             }}
                         >
                             Contact Us
-                        </button>
+                        </a>
                     </div>
                 </div>
 

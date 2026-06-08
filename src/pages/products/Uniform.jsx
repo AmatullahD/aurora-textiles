@@ -332,8 +332,8 @@ export default function Uniform() {
                   src={brand.src}
                   alt={brand.name}
                   style={{
-                    width: "120px",
-                    height: "120px",
+                    width: "150px",
+                    height: "150px",
                     objectFit: "contain",
                     borderRadius: "12px",
                     display: "block",
@@ -532,7 +532,8 @@ export default function Uniform() {
                             onClick={() => (window.location.href = "/contact-us")}
                             style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <button
+                            <a
+                                href="/contact-us"
                                 onMouseEnter={e => {
                                     e.currentTarget.style.background = "#0a089bd3";
                                     e.currentTarget.style.borderColor = "#e0b219";
@@ -554,10 +555,14 @@ export default function Uniform() {
                                     cursor: "pointer",
                                     letterSpacing: "0.5px",
                                     transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
         </div>
         <div style={{ flex: "0 0 50%" }}>

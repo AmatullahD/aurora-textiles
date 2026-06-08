@@ -23,7 +23,7 @@ const collections = [
   {
     title: "Ethnic",
     image: "https://aurora-textiles.com/wp-content/uploads/2025/01/PXL_20241205_093615144-771x1024.jpg.webp",
-    route: "/products/ethnic",
+    route: "/products/ethnic-fabrics",
   },
 ];
 
@@ -78,8 +78,18 @@ function CollectionSection() {
             transition={{ duration: 1, delay: index * 0.2 }}
             viewport={{ once: true }}
             style={{ textAlign: "center", cursor: "pointer" }}
-            onClick={() => navigate(item.route)}
           >
+            <a
+              href={item.route}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(item.route);
+                window.scrollTo(0, 0);
+              }}
+              style={{ textDecoration: "none", display: "block" }}
+            >
+            
+
             {/* Rounded Sides Image */}
             <div
               style={{
@@ -122,6 +132,7 @@ function CollectionSection() {
             >
               {item.title}
             </h3>
+          </a>
           </motion.div>
         ))}
       </div>

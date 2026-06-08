@@ -4,7 +4,7 @@ export default function CountriesSection() {
   const countries = [
     {
       name: "South Africa",
-      href: "/south-africa",
+      href: "/south-africa/",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/safari.png.webp"
@@ -15,7 +15,7 @@ export default function CountriesSection() {
     },
     {
       name: "Egypt",
-      href: "/egypt",
+      href: "/egypt/",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/pyramids.png.webp"
@@ -26,7 +26,7 @@ export default function CountriesSection() {
     },
     {
       name: "Saudi Arabia",
-      href: "/saudi-arabia",
+      href: "/saudi-arabia/",
       icon: (
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/saudi-arabia.png.webp"

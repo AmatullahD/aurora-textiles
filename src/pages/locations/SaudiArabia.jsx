@@ -376,7 +376,8 @@ export default function SaudiArabiaPage() {
                             onClick={() => (window.location.href = "/contact-us")}
                             style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <button
+                            <a
+                                href="/contact-us"
                                 onMouseEnter={e => {
                                     e.currentTarget.style.background = "#0a089bd3";
                                     e.currentTarget.style.borderColor = "#e0b219";
@@ -398,10 +399,14 @@ export default function SaudiArabiaPage() {
                                     cursor: "pointer",
                                     letterSpacing: "0.5px",
                                     transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
                 </div>
 
@@ -872,10 +877,10 @@ export default function SaudiArabiaPage() {
 
                     {/* Contact Us Button */}
                       <div
-                            onClick={() => (window.location.href = "/contact-us")}
                             style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <button
+                            <a
+                                href="/contact-us"
                                 onMouseEnter={e => {
                                     e.currentTarget.style.background = "#0a089bd3";
                                     e.currentTarget.style.borderColor = "#e0b219";
@@ -897,10 +902,14 @@ export default function SaudiArabiaPage() {
                                     cursor: "pointer",
                                     letterSpacing: "0.5px",
                                     transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
                 </div>
             </section>

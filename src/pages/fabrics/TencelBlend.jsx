@@ -240,10 +240,10 @@ export default function TencelBlendPage() {
 
           {/* Button */}
                         <div
-                            onClick={() => (window.location.href = "/contact-us")}
                             style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <button
+                            <a
+                                href="/contact-us"
                                 onMouseEnter={e => {
                                     e.currentTarget.style.background = "#0a089bd3";
                                     e.currentTarget.style.borderColor = "#e0b219";
@@ -265,10 +265,14 @@ export default function TencelBlendPage() {
                                     cursor: "pointer",
                                     letterSpacing: "0.5px",
                                     transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 Contact Us
-                            </button>
+                            </a>
 
             {/* Call Button */}
             <a
@@ -619,7 +623,7 @@ export default function TencelBlendPage() {
       <section
         style={{
           width: "100%",
-          maxWidth: "1100px",
+          maxWidth: "1300px",
           margin: "0 auto 80px auto",
           padding: "0 40px",
           boxSizing: "border-box",

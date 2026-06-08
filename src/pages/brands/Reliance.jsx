@@ -124,20 +124,20 @@ export default function ReliancePage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1000px",
                     margin: "0 auto 80px auto",
-                    padding: "0 40px",
+                    padding: "0 20px",
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
-                    gap: "60px",
+                    gap: "50px",
                 }}
             >
-                {/* Left: Reliance brand logo image — 40% */}
+                {/* Left: Reliance brand logo image — 50% */}
                 <div
                     style={{
-                        flex: "0 0 40%",
-                        width: "40%",
+                        flex: "0 0 50%",
+                        width: "50%",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -149,23 +149,23 @@ export default function ReliancePage() {
                         alt="Reliance Industries Limited Logo"
                         style={{
                             width: "100%",
-                            height: "auto",
+                            height: "340px",
                             objectFit: "contain",
                             display: "block",
                         }}
                     />
                 </div>
 
-                {/* Right: heading + paragraph — 60% */}
-                <div style={{ flex: "0 0 60%", width: "60%" }}>
+                {/* Right: heading + paragraph — 50% */}
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "40px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.2",
-                            margin: "0 0 24px 0",
+                            margin: "0 0 30px 0",
                         }}
                     >
                        Wholesale Reliance Fabrics
@@ -173,7 +173,7 @@ export default function ReliancePage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "17px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -198,11 +198,11 @@ export default function ReliancePage() {
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "flex-start",
-                    gap: "60px",
+                    gap: "40px",
                 }}
             >
                 {/* Left: text */}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
@@ -279,10 +279,9 @@ export default function ReliancePage() {
                 {/* Right: image */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
+                        flex: "0 0 50%",
+                        width: "50%",
                         height: "560px",
-                        flexShrink: 0,
                         overflow: "hidden",
                     }}
                 >
@@ -308,19 +307,18 @@ export default function ReliancePage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
-                    gap: "60px",
+
+                    gap: "40px",
                 }}
             >
                 {/* Left: single image */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "600px",
-                        height: "320px",
-                        flexShrink: 0,
+                        flex: "0 0 50%",
+                        width: "50%",
+                        height: "360px",
                         overflow: "hidden",
-                        borderRadius: "8px",
+                        borderRadius: "20px",
                     }}
                 >
                     <img
@@ -328,8 +326,8 @@ export default function ReliancePage() {
                         alt="Reliance Fabric"
                         style={{
                             width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
+                            height: "560px",
+                            objectFit: "cover",
                             display: "block",
                         }}
                     />
@@ -337,7 +335,7 @@ export default function ReliancePage() {
 
 
                 {/* Right: heading + paragraph */}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
@@ -376,11 +374,11 @@ export default function ReliancePage() {
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "center",
-                    gap: "60px",
+                    gap: "40px",
                 }}
             >
                 {/* Left: heading + bullets + button */}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: "0 0 50%", width: "50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
@@ -430,9 +428,9 @@ export default function ReliancePage() {
 
                         {/* Button */}
                         <div
-                            onClick={() => (window.location.href = "/contact-us")}
                             style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                            <button
+                            <a
+                                href="/contact-us"
                                 onMouseEnter={e => {
                                     e.currentTarget.style.background = "#0a089bd3";
                                     e.currentTarget.style.borderColor = "#e0b219";
@@ -454,20 +452,23 @@ export default function ReliancePage() {
                                     cursor: "pointer",
                                     letterSpacing: "0.5px",
                                     transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
                                 }}
                             >
                                 Contact Us
-                            </button>
+                            </a>
                         </div>
                 </div>
 
                 {/* Right: fabric swatches image */}
                 <div
                     style={{
-                        flex: "0 0 auto",
-                        width: "540px",
+                        flex: "0 0 50%",
+                        width: "50%",
                         height: "560px",
-                        flexShrink: 0,
                         overflow: "hidden",
                     }}
                 >
@@ -495,14 +496,14 @@ export default function ReliancePage() {
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "stretch",
-                    gap: "60px",
+                    gap: "40px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
                 {/* Left — image 50%, height driven by right column */}
                 <div style={{
-                    flex: "0 0 calc(50% - 30px)",
-                    width: "calc(50% - 30px)",
+                    flex: "0 0 calc(50% - 20px)",
+                    width: "calc(50% - 20px)",
                     height: `${faqImgHeight}px`,
                     minHeight: "420px",
                     transition: "height 0.4s ease",
@@ -522,7 +523,7 @@ export default function ReliancePage() {
                 </div>
 
                 {/* Right — FAQ accordion 50% */}
-                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 30px)", width: "calc(50% - 30px)" }}>
+                <div ref={faqColRef} style={{ flex: "0 0 calc(50% - 20px)", width: "calc(50% - 20px)" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",

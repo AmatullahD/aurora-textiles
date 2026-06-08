@@ -180,7 +180,7 @@ export default function DonearPage() {
                             color: "#333",
                             lineHeight: "1.5",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'poppins', sans-serif",
                         }}
                     >
                         At <strong>Aurora Textiles</strong>, we are proud to supply premium{" "}
@@ -227,7 +227,7 @@ export default function DonearPage() {
                         color: "#333",
                         lineHeight: "1.5",
                         margin: "0 0 20px 0",
-                        fontFamily: "'Cinzel Decorative', serif",
+                        fontFamily: "'poppins', sans-serif",
                     }}
                 >
                     Our range of <strong>Donear suitings</strong> includes a variety of poly
@@ -243,7 +243,7 @@ export default function DonearPage() {
                         color: "#333",
                         lineHeight: "1.5",
                         margin: 0,
-                        fontFamily: "'Cinzel Decorative', serif",
+                        fontFamily: "'poppins', sans-serif",
                     }}
                 >
                     Whether you're looking for lightweight suiting fabrics for all-season
@@ -264,7 +264,7 @@ export default function DonearPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                 
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -276,7 +276,7 @@ export default function DonearPage() {
                             fontSize: window.innerWidth < 768 ? "26px" : "38px",
                             fontWeight: "700",
                             color: "#1e2a5e",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'cinzel decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 32px 0",
                         }}
@@ -284,7 +284,7 @@ export default function DonearPage() {
                         Why Choose Aurora Textiles for Donear Fabric?
                     </h2>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
                         {[
                             "Exclusive Authorized Distributor & Dealer of Donear Fabrics in UAE",
                             "Specialization in Fabrics for Men's Clothing",
@@ -312,13 +312,13 @@ export default function DonearPage() {
                                 </span>
                                 <p
                                     style={{
-                                        fontSize: "13px",
+                                        fontSize: "18px",
                                         fontWeight: "700",
                                         color: "#1e2a5e",
                                         letterSpacing: "0.8px",
                                         margin: 0,
-                                        lineHeight: "1.6",
-                                        fontFamily: "'Cinzel Decorative', serif",
+                                        lineHeight: "1.4",
+                                        fontFamily: "'Cinzel decorative', serif",
                                     }}
                                 >
                                     {point}
@@ -355,64 +355,30 @@ export default function DonearPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
 
-                {/* Left — image with layered accent blocks */}
+                {/* Left — rectangular image */}
                 <div
                     style={{
                         flex: "1 1 45%",
                         minWidth: "280px",
-                        position: "relative",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        padding: "40px",
+                        overflow: "hidden",
+                        borderRadius: "8px",
                     }}
                 >
-                    {/* Top-right beige block */}
-                    <div
-                        style={{
-                            position: "absolute",
-                            top: "5%",
-                            right: "0%",
-                            width: "75%",
-                            height: "82%",
-                            background: "#e8e0d0",
-                            borderRadius: "12px",
-                            zIndex: 0,
-                        }}
-                    />
-
-                    {/* Bottom-left light block */}
-                    <div
-                        style={{
-                            position: "absolute",
-                            bottom: "5%",
-                            left: "0%",
-                            width: "55%",
-                            height: "40%",
-                            background: "#f5f3ef",
-                            borderRadius: "12px",
-                            zIndex: 0,
-                        }}
-                    />
-
-                    {/* Image */}
                     <img
                         src="/donear-2.png"
                         alt="Donear Shirting"
                         style={{
-                            width: "85%",
-                            aspectRatio: "3/4",
+                            width: "100%",
+                            height: "420px",
                             objectFit: "cover",
                             display: "block",
-                            position: "relative",
-                            zIndex: 1,
-                            borderRadius: "4px",
+                            borderRadius: "8px",
                         }}
                     />
                 </div>
@@ -435,11 +401,11 @@ export default function DonearPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.5",
                             margin: 0,
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'poppins', serif",
                         }}
                     >
                         <strong>Donear shirting fabrics</strong> are engineered for comfort
@@ -464,7 +430,7 @@ export default function DonearPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -489,7 +455,7 @@ export default function DonearPage() {
                             color: "#333",
                             lineHeight: "1.5",
                             margin: "0 0 14px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'poppins', serif",
                         }}
                     >
                         Sourcing <strong>Donear fabric</strong> through Aurora Textiles means
@@ -500,7 +466,7 @@ export default function DonearPage() {
                     <ul
                         style={{
                             margin: "0 0 18px 0",
-                            paddingLeft: "20px",
+                            paddingLeft: "30px",
                             display: "flex",
                             flexDirection: "column",
                             gap: "8px",
@@ -515,10 +481,10 @@ export default function DonearPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "15px",
+                                    fontSize: "18px",
                                     color: "#333",
-                                    lineHeight: "1.7",
-                                    fontFamily: "'Cinzel Decorative', serif",
+                                    lineHeight: "1.5",
+                                    fontFamily: "'poppins', serif",
                                 }}
                             >
                                 {item}
@@ -532,7 +498,7 @@ export default function DonearPage() {
                             color: "#333",
                             lineHeight: "1.5",
                             margin: "0 0 28px 0",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'poppins', serif",
                         }}
                     >
                         As a committed men's fabric supplier, we help businesses maintain

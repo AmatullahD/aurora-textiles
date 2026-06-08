@@ -5,24 +5,16 @@ import React from "react";
 export default function BlogsSection() {
   const blogs = [
     {
-      image:
-        "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform_01-1024x683.png.webp",
-      title:
-        "WHY WHITE DOMINATES 30% OF THE GLOBAL UNIFORM MARKET",
+      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform_01-1024x683.png.webp",
+      title: "WHY WHITE DOMINATES 30% OF THE GLOBAL UNIFORM MARKET",
     },
-
     {
-      image:
-        "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform2-01-1024x492.png.webp",
-      title:
-        "WHAT ARE THE DIFFERENT TYPES OF PROTECTIVE WEAR? ALL YOU NEED TO KNOW",
+      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform2-01-1024x492.png.webp",
+      title: "WHAT ARE THE DIFFERENT TYPES OF PROTECTIVE WEAR? ALL YOU NEED TO KNOW",
     },
-
     {
-      image:
-        "https://aurora-textiles.com/wp-content/uploads/2026/04/Mass-uniform.png.webp",
-      title:
-        "MASS-PRODUCED VS QUALITY-FOCUSED UNIFORMS: HOW MANUFACTURERS CAN BUILD A STRONG REPUTATION",
+      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Mass-uniform.png.webp",
+      title: "MASS-PRODUCED VS QUALITY-FOCUSED UNIFORMS: HOW MANUFACTURERS CAN BUILD A STRONG REPUTATION",
     },
   ];
 
@@ -62,12 +54,8 @@ export default function BlogsSection() {
         }}
       >
         {blogs.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              width: "360px",
-            }}
-          >
+          <div key={index} style={{ width: "360px" }}>
+
             {/* IMAGE BOX */}
             <div
               style={{
@@ -77,18 +65,16 @@ export default function BlogsSection() {
                 overflow: "hidden",
               }}
             >
+              {/* PLAIN IMAGE — not clickable */}
               <img
                 src={item.image}
                 alt="blog"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
 
-              {/* BLOG BUTTON */}
-              <div
+              {/* BLACK BLOGS TAG — anchor, same tab, URL shows on hover */}
+              <a
+                href="https://aurora-textiles.com/category/blogs/"
                 style={{
                   position: "absolute",
                   top: "16px",
@@ -100,10 +86,12 @@ export default function BlogsSection() {
                   fontSize: "15px",
                   fontWeight: "500",
                   fontFamily: "'Poppins', sans-serif",
+                  textDecoration: "none",
+                  display: "inline-block",
                 }}
               >
                 Blogs
-              </div>
+              </a>
             </div>
 
             {/* TITLE */}
@@ -122,8 +110,9 @@ export default function BlogsSection() {
               {item.title}
             </h3>
 
-            {/* READ MORE */}
-            <button
+            {/* CARD READ MORE — each card, same tab */}
+            <a
+              href="/blog"
               style={{
                 background: "transparent",
                 border: "none",
@@ -133,15 +122,18 @@ export default function BlogsSection() {
                 cursor: "pointer",
                 padding: 0,
                 fontFamily: "'Poppins', sans-serif",
+                textDecoration: "none",
+                display: "inline-block",
               }}
             >
               Read More →
-            </button>
+            </a>
+
           </div>
         ))}
       </div>
 
-      {/* BOTTOM BUTTON */}
+      {/* BOTTOM GOLDEN READ MORE BUTTON */}
       <div
         style={{
           display: "flex",
@@ -149,7 +141,8 @@ export default function BlogsSection() {
           marginTop: "60px",
         }}
       >
-        <button
+        <a
+          href="/blog"
           style={{
             background: "#BE9B33",
             color: "#fff",
@@ -160,10 +153,12 @@ export default function BlogsSection() {
             cursor: "pointer",
             fontWeight: "500",
             fontFamily: "'Poppins', sans-serif",
+            textDecoration: "none",
+            display: "inline-block",
           }}
         >
           Read More
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -1,90 +1,71 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function PartnerBrands() {
     const navigate = useNavigate();
 
     const brands = [
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
-            route: "/products/donear",
-            alt: "Donear",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
-            route: "/products/sammaan-fabrics",
-            alt: "Sammaan",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
-            route: "/products/reid-and-taylor",
-            alt: "Reid & Taylor",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp",
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
+             route: "/products/donear", 
+            alt: "Donear" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
+             route: "/products/sammaan-fabrics",
+             alt: "Sammaan" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
+             route: "/products/reid-and-taylor",
+             alt: "Reid & Taylor" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp", route: "/products/john-cavendish-fabrics", alt: "John Cavendish" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
+             route: "/products/reliance",
+             alt: "Reliance" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Oxford-Logo_page-0001-e1736148501624.jpg.webp",
+             route: "/products/oxford",
+             alt: "Oxford" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/kolpaam.jpg.webp",
+             route: "/products/klopman",
+             alt: "Klopman" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/lino.jpg.webp",
+             route: "/products/lino", 
+            alt: "lino" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/nemssis.jpg.webp",
+             route: "/products/nemssis",
+             alt: "Nemssis" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/spada.jpg.webp",
+             route: "/products/spaadaa", 
+            alt: "Spaadaa" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-4.png.webp",
+              route: "/products/gullini", 
+            alt: "Georgia Gullini" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
+             route: "/products/donear", 
+            alt: "Donear" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
+             route: "/products/sammaan-fabrics",
+             alt: "Sammaan" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
+             route: "/products/reid-and-taylor", 
+            alt: "Reid & Taylor" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp", 
             route: "/products/john-fabrics",
-            alt: "John Cavendish",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
-            route: "/products/reliance",
-            alt: "Reliance",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Oxford-Logo_page-0001-e1736148501624.jpg.webp",
-            route: "/products/oxford",
-            alt: "Oxford",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/kolpaam.jpg.webp",
-            route: "/products/klopman",
-            alt: "Klopman",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/lino.jpg.webp",
-            route: "/products/gullini",
-            alt: "Georgia Gullini",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/nemssis.jpg.webp",
-            route: "/products/nemssis",
-            alt: "Nemssis",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/spada.jpg.webp",
-            route: "/products/spaadaa",
-            alt: "Spaadaa",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-4.png.webp",
-            route: "/products/suiting",
-            alt: "Suiting",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
-            route: "/products/donear",
-            alt: "Donear",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
-            route: "/products/sammaan-fabrics",
-            alt: "Sammaan",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
-            route: "/products/reid-and-taylor",
-            alt: "Reid & Taylor",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp",
-            route: "/products/john-fabrics",
-            alt: "John Cavendish",
-        },
-        {
-            src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
-            route: "/products/reliance",
-            alt: "Reliance",
-        },
+             alt: "John Cavendish" },
+
+        { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
+             route: "/products/reliance",
+             alt: "Reliance" },
     ];
 
     const visibleItems = 6;
@@ -93,16 +74,49 @@ export default function PartnerBrands() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const getVisibleBrands = () => {
-        return brands.slice(currentSlide, currentSlide + visibleItems);
+    // Drag-to-scroll state
+    const dragRef = useRef(null);
+    const dragStartX = useRef(0);
+    const dragStartSlide = useRef(0);
+    const isDragging = useRef(false);
+
+    const getVisibleBrands = () => brands.slice(currentSlide, currentSlide + visibleItems);
+
+    const handlePrev = () => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+    const handleNext = () => setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+
+    const onMouseDown = (e) => {
+        isDragging.current = true;
+        dragStartX.current = e.clientX;
+        dragStartSlide.current = currentSlide;
+        dragRef.current.style.cursor = "grabbing";
+    };
+    const onMouseMove = (e) => {
+        if (!isDragging.current) return;
+        const diff = dragStartX.current - e.clientX;
+        const threshold = 60;
+        if (diff > threshold) {
+            const newSlide = Math.min(dragStartSlide.current + 1, totalSlides - 1);
+            setCurrentSlide(newSlide);
+            isDragging.current = false;
+        } else if (diff < -threshold) {
+            const newSlide = Math.max(dragStartSlide.current - 1, 0);
+            setCurrentSlide(newSlide);
+            isDragging.current = false;
+        }
+    };
+    const onMouseUp = () => {
+        isDragging.current = false;
+        if (dragRef.current) dragRef.current.style.cursor = "grab";
     };
 
-    const handlePrev = () => {
-        setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-    };
-
-    const handleNext = () => {
-        setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    // Touch support
+    const touchStartX = useRef(0);
+    const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+    const onTouchEnd = (e) => {
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        if (diff > 50) handleNext();
+        else if (diff < -50) handlePrev();
     };
 
     return (
@@ -115,7 +129,6 @@ export default function PartnerBrands() {
                 textAlign: "center",
             }}
         >
-            {/* Heading */}
             <h4
                 style={{
                     fontSize: window.innerWidth < 768 ? "28px" : "38px",
@@ -129,7 +142,6 @@ export default function PartnerBrands() {
                 Partner Brands
             </h4>
 
-            {/* Slider Row with Arrows */}
             <div
                 style={{
                     display: "flex",
@@ -142,39 +154,39 @@ export default function PartnerBrands() {
                 {/* Left Arrow */}
                 <div
                     onClick={handlePrev}
-                    style={{
-                        cursor: "pointer",
-                        flexShrink: 0,
-                        color: "#aaaaaa",
-                        fontSize: "40px",
-                        userSelect: "none",
-                        lineHeight: 1,
-                    }}
+                    style={{ cursor: "pointer", flexShrink: 0, color: "#aaaaaa", fontSize: "40px", userSelect: "none", lineHeight: 1 }}
                 >
                     &#8249;
                 </div>
 
-                {/* Brands Grid */}
+                {/* Brands Grid — draggable */}
                 <div
+                    ref={dragRef}
+                    onMouseDown={onMouseDown}
+                    onMouseMove={onMouseMove}
+                    onMouseUp={onMouseUp}
+                    onMouseLeave={onMouseUp}
+                    onTouchStart={onTouchStart}
+                    onTouchEnd={onTouchEnd}
                     style={{
                         display: "grid",
-                        gridTemplateColumns:
-                            window.innerWidth < 768
-                                ? "repeat(2, 1fr)"
-                                : "repeat(6, 1fr)",
+                        gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(6, 1fr)",
                         gap: window.innerWidth < 768 ? "30px" : "40px",
                         alignItems: "center",
                         justifyItems: "center",
                         flex: 1,
+                        cursor: "grab",
+                        userSelect: "none",
                         transition: "0.4s ease",
                     }}
                 >
                     {getVisibleBrands().map((brand, index) => {
                         const globalIndex = currentSlide + index;
                         return (
-                            <div
+                            <a
                                 key={index}
-                                onClick={() => navigate(brand.route)}
+                                href={brand.route}
+                                onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                 onMouseEnter={() => setHoveredIndex(globalIndex)}
                                 onMouseLeave={() => setHoveredIndex(null)}
                                 style={{
@@ -182,7 +194,7 @@ export default function PartnerBrands() {
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    cursor: "pointer",
+                                    textDecoration: "none",
                                     transform: hoveredIndex === globalIndex ? "scale(1.07)" : "scale(1)",
                                     transition: "transform 0.25s ease",
                                 }}
@@ -190,15 +202,17 @@ export default function PartnerBrands() {
                                 <img
                                     src={brand.src}
                                     alt={brand.alt}
+                                    draggable="false"
                                     style={{
                                         width: "100%",
                                         maxWidth: window.innerWidth < 768 ? "120px" : "180px",
                                         objectFit: "contain",
                                         transition: "0.3s ease",
                                         opacity: hoveredIndex === globalIndex ? 0.85 : 1,
+                                        pointerEvents: "none",
                                     }}
                                 />
-                            </div>
+                            </a>
                         );
                     })}
                 </div>
@@ -206,29 +220,14 @@ export default function PartnerBrands() {
                 {/* Right Arrow */}
                 <div
                     onClick={handleNext}
-                    style={{
-                        cursor: "pointer",
-                        flexShrink: 0,
-                        color: "#aaaaaa",
-                        fontSize: "40px",
-                        userSelect: "none",
-                        lineHeight: 1,
-                    }}
+                    style={{ cursor: "pointer", flexShrink: 0, color: "#aaaaaa", fontSize: "40px", userSelect: "none", lineHeight: 1 }}
                 >
                     &#8250;
                 </div>
             </div>
 
             {/* Dots */}
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap: "12px",
-                    flexWrap: "wrap",
-                }}
-            >
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
                 {Array.from({ length: totalSlides }).map((_, index) => (
                     <div
                         key={index}

@@ -127,7 +127,7 @@ export default function Navbar() {
                                     { label: "Suiting", href: "/products/suiting" },
                                     { label: "Shirting", href: "/products/shirting" },
                                     { label: "Uniform", href: "/products/uniform" },
-                                    { label: "Ethnic", href: "/products/ethnic" },
+                                    { label: "Ethnic Fabrics", href: "/products/ethnic-fabrics" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -205,11 +205,11 @@ export default function Navbar() {
                             >
                                 {/* Simple brand items */}
                                 {[
-                                    { label: "Donear", href: "/products/donear" },
-                                    { label: "Klopman", href: "/products/klopman" },
-                                    { label: "Oxford", href: "/products/oxford" },
-                                    { label: "Reid & Taylor", href: "/products/reid-and-taylor" },
-                                    { label: "John Cavendish", href: "/products/john-fabrics" },
+                                    { label: "Donear", href: "/products/donear/" },
+                                    { label: "Klopman", href: "/products/klopman/" },
+                                    { label: "Oxford", href: "/products/oxford/" },
+                                    { label: "Reid & Taylor", href: "/products/reid-and-taylor/" },
+                                    { label: "John Cavendish", href: "/products/john-cavendish-fabrics/" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -246,7 +246,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setSammaanOpen(false)}
                                 >
                                     <a
-                                        href="/products/sammaan-fabrics"
+                                        href="/products/sammaan-fabrics/"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -279,7 +279,7 @@ export default function Navbar() {
                                         >
                                             <li>
                                                 <a
-                                                    href="/products/rasm-ethnics-by-sammaan"
+                                                    href="/products/rasm-ethnics-by-sammaan/"
                                                     style={{
                                                         display: "block",
                                                         padding: "11px 20px",
@@ -307,7 +307,7 @@ export default function Navbar() {
                                 {/* GEORGIA GULLINI */}
                                 <li>
                                     <a
-                                        href="/products/gullini"
+                                        href="/products/georgia-gullini-fabrics/"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -332,7 +332,7 @@ export default function Navbar() {
                                 {/* RELIANCE */}
                                 <li>
                                     <a
-                                        href="/products/reliance"
+                                        href="/products/reliance-fabrics/"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -364,7 +364,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setNemssisOpen(false)}
                                 >
                                     <a
-                                        href="/products/nemssis"
+                                        href="/products/nemssis-fabrics/"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -396,11 +396,11 @@ export default function Navbar() {
                                             }}
                                         >
                                             {[
-                                                { label: "Shiddat by Nemssis", href: "/products/shiddat-by-nemssis" },
-                                                { label: "Sanskriti by Nemssis", href: "/products/sanskriti-by-nemssis" },
-                                                { label: "Raag Resham by Nemssis", href: "/products/raag-resham-by-nemssis" },
-                                                { label: "Zarista by Nemssis", href: "/products/zarista-by-nemssis" },
-                                                { label: "Nawabi by Nemssis", href: "/products/nawabi-by-nemssis" },
+                                                { label: "Shiddat by Nemssis", href: "/products/shiddat-by-nemssis/" },
+                                                { label: "Sanskriti by Nemssis", href: "/products/sanskriti-by-nemssis/" },
+                                                { label: "Raag Resham by Nemssis", href: "/products/raag-resham-by-nemssis/" },
+                                                { label: "Zarista by Nemssis", href: "/products/zarista-by-nemssis/" },
+                                                { label: "Nawabi by Nemssis", href: "/products/nawabi-by-nemssis/" },
                                             ].map((sub) => (
                                                 <li key={sub.label}>
                                                     <a
@@ -433,7 +433,7 @@ export default function Navbar() {
                                 {/* SPAADAA */}
                                 <li>
                                     <a
-                                        href="/products/spaadaa"
+                                        href="/products/spaadaa-fabrics/"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -502,16 +502,16 @@ export default function Navbar() {
                                 }}
                             >
                                 {[
-                                    { label: "Cotton Fabric", href: "/cotton-fabric" },
-                                    { label: "Wool Fabrics", href: "/wool-fabric" },
-                                    { label: "Polywool Fabric", href: "/poly-wool-fabric" },
-                                    { label: "Linen", href: "/linen-fabric" },
-                                    { label: "Polycotton", href: "/poly-cotton-fabric" },
-                                    { label: "Denim", href: "/denim-fabric" },
-                                    { label: "Poly Viscose", href: "/poly-viscose-fabric" },
-                                    { label: "Tencel Blend", href: "/tencel-blend-fabric" },
-                                    { label: "PV Lycra", href: "/pv-lycra" },
-                                    { label: "Poly Wool Lycra", href: "/poly-wool-lycra-fabric" },
+                                    { label: "Cotton Fabric", href: "/cotton-fabric/" },
+                                    { label: "Wool Fabrics", href: "/wool-fabric/" },
+                                    { label: "Polywool Fabric", href: "/poly-wool-fabric/" },
+                                    { label: "Linen", href: "/linen-fabric/" },
+                                    { label: "Polycotton", href: "/poly-cotton-fabric/" },
+                                    { label: "Denim", href: "/denim/" },
+                                    { label: "Poly Viscose", href: "/poly-viscose/" },
+                                    { label: "Tencel Blend", href: "/tencel-fabric/" },
+                                    { label: "PV Lycra", href: "/pv-lycra/" },
+                                    { label: "Poly Wool Lycra", href: "/poly-wool-lycra/" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a

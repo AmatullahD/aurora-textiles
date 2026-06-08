@@ -85,14 +85,14 @@ export default function WhyChooseUsSection() {
           <h2
             style={{
               fontSize: "40px",
-             fontFamily: "'Cinzel Decorative', Sans-serif",
+              fontFamily: "'Cinzel Decorative', Sans-serif",
               fontWeight: "600",
               marginTop: 0,
               marginBottom: "10px",
               lineHeight: "1",
             }}
           >
-           Why Choose Us?
+            Why Choose Us?
           </h2>
 
           {/* Paragraph */}
@@ -160,29 +160,42 @@ export default function WhyChooseUsSection() {
             ))}
           </div>
 
-          {/* BUTTON */}
-          <button
+          {/* Button */}
+          <a
+            href="/contact-us"
+            onMouseEnter={e => {
+              e.currentTarget.style.background = "#0a089bd3";
+              e.currentTarget.style.borderColor = "#e0b219";
+              e.currentTarget.style.color = "#ffffff";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = "#8b7d3a";
+              e.currentTarget.style.borderColor = "#050e5f";
+              e.currentTarget.style.color = "#fff";
+            }}
             style={{
-              backgroundColor: "#C8A13B",
-              color: "white",
-              border: "none",
-              padding: "16px 38px",
-              fontSize: "18px",
+              background: "#8b7d3a",
+              color: "#fff",
+              border: "2px solid #050e5f",
+              padding: "14px 36px",
+              fontSize: "19px",
+              fontWeight: "500",
               borderRadius: "10px",
               cursor: "pointer",
-              width: "fit-content",
-              fontWeight: "500",
+              letterSpacing: "0.5px",
               transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.opacity = "0.9";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.opacity = "1";
+              // width: "fit-content",
+              // alignSelf: "flex-start",
+              width: "190px",
+              height: "55px",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textDecoration: "none",
             }}
           >
             Contact Us
-          </button>
+          </a>
         </div>
 
         {/* RIGHT SIDE IMAGE */}

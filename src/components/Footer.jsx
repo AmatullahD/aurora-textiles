@@ -182,8 +182,13 @@ export default function Footer() {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            <div style={{ display: "flex", gap: "14px" }}>
-              <FaMapMarkerAlt style={{ marginTop: "6px", minWidth: "18px" }} />
+            <a
+              href="https://maps.google.com/?q=Dubai+Textile+City,+Warehouse+47,+Al+Awir+Road,+Dubai"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+            >
+              <FaMapMarkerAlt style={{ marginTop: "6px", minWidth: "18px", flexShrink: 0 }} />
               <span>
                 Dubai Textile City - Warehouse # 47
                 <br />
@@ -191,22 +196,31 @@ export default function Footer() {
                 <br />
                 City - Dubai - United Arab Emirates
               </span>
-            </div>
+            </a>
 
-            <div style={{ display: "flex", gap: "14px" }}>
-              <FaEnvelope style={{ marginTop: "5px" }} />
+            <a
+              href="mailto:info@aurora-textiles.com"
+              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+            >
+              <FaEnvelope style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>info@aurora-textiles.com</span>
-            </div>
+            </a>
 
-            <div style={{ display: "flex", gap: "14px" }}>
-              <FaPhoneAlt style={{ marginTop: "5px" }} />
+            <a
+              href="tel:+97143532696"
+              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+            >
+              <FaPhoneAlt style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>+97143532696</span>
-            </div>
+            </a>
 
-            <div style={{ display: "flex", gap: "14px" }}>
-              <FaPhoneAlt style={{ marginTop: "5px" }} />
+            <a
+              href="tel:+971554172009"
+              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+            >
+              <FaPhoneAlt style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>+971554172009</span>
-            </div>
+            </a>
           </div>
         </div>
 
