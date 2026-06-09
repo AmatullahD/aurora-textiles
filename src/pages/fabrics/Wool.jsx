@@ -110,6 +110,8 @@ export default function WoolPage() {
       <Helmet>
         <title>Buy Wool Fabric in Dubai | Premium Wool Fabric for Dressmaking Online</title>
         <meta name="description" content="Buy Premium quality wool fabric for Dressmaking from Aurora Textiles in Dubai. You can purchase various wool fabric materials in retail and bulk quantities. Contact Us Now." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Wool Fabric", "description": "Buy premium wool fabric wholesale in Dubai from Aurora Textiles. High-quality pure wool and wool blends for dressmaking and suiting in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/wool-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

@@ -61,7 +61,9 @@ export default function ReliancePage() {
             <Helmet>
                 <title>Buy Reliance Fabrics For Men's Suiting | Reliance Textiles - Aurora Textiles</title>
                 <meta name="description" content="Buy Reliance poly-wool &amp; Polyester fabrics for men's suiting from Aurora Textiles – trusted fabric supplier in Dubai. Bulk supply, consistent quality, and fast delivery across UAE &amp; MENA." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Reliance Fabrics", "description": "Buy Reliance fabrics for men's suiting wholesale in Dubai from Aurora Textiles. Premium Reliance textiles collection in UAE.", "brand": {"@type": "Brand", "name": "Reliance"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/reliance-fabrics"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -505,7 +507,7 @@ export default function ReliancePage() {
                     flex: "0 0 calc(50% - 20px)",
                     width: "calc(50% - 20px)",
                     height: `${faqImgHeight}px`,
-                    minHeight: "420px",
+                    minHeight: "300px",
                     transition: "height 0.4s ease",
                     overflow: "hidden",
                     borderRadius: "8px",

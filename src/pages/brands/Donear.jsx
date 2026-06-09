@@ -57,7 +57,9 @@ export default function DonearPage() {
             <Helmet>
                 <title>Buy Donear Men's Suiting &amp; Shirting Fabrics - Aurora Textiles</title>
                 <meta name="description" content="Buy Donear Men's cottons, linens, polyester blends, worsteds and more Unstitched Shirting &amp; Suiting Fabrics at Aurora Textile in Dubai, UAE. Contact or visit our shop to buy now." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Donear Fabrics", "description": "Buy Donear men's suiting and shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Donear fabric collection in UAE.", "brand": {"@type": "Brand", "name": "Donear"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/donear"})}</script>
+      </Helmet>
 
 
             {/* NAVBAR */}
@@ -580,7 +582,7 @@ export default function DonearPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "480px",
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

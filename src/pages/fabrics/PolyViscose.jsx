@@ -117,6 +117,8 @@ export default function PolyViscosePage() {
       <Helmet>
         <title>Buy Poly Viscose Fabrics in Dubai | Poly Viscose Suiting Fabrics</title>
         <meta name="description" content="Buy premium Poly Viscose suiting fabrics in Dubai from Aurora Textiles. Discover soft, durable, and wrinkle-resistant fabrics perfect for uniforms, suits, and formal wear." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Poly Viscose Fabric", "description": "Buy poly viscose suiting fabrics wholesale in Dubai from Aurora Textiles. Premium poly viscose blends for men's suiting in UAE and GCC.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/poly-viscose-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

@@ -127,7 +127,7 @@ export default function Navbar() {
                                     { label: "Suiting", href: "/products/suiting" },
                                     { label: "Shirting", href: "/products/shirting" },
                                     { label: "Uniform", href: "/products/uniform" },
-                                    { label: "Ethnic Fabrics", href: "/products/ethnic-fabrics" },
+                                    { label: "Ethnic", href: "/products/ethnic-fabrics" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -138,6 +138,7 @@ export default function Navbar() {
                                                 textDecoration: "none",
                                                 color: "#111",
                                                 fontSize: "17px",
+                                                fontWeight: 500,
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -205,11 +206,11 @@ export default function Navbar() {
                             >
                                 {/* Simple brand items */}
                                 {[
-                                    { label: "Donear", href: "/products/donear/" },
-                                    { label: "Klopman", href: "/products/klopman/" },
-                                    { label: "Oxford", href: "/products/oxford/" },
-                                    { label: "Reid & Taylor", href: "/products/reid-and-taylor/" },
-                                    { label: "John Cavendish", href: "/products/john-cavendish-fabrics/" },
+                                    { label: "Donear", href: "/products/donear" },
+                                    { label: "Klopman", href: "/products/klopman" },
+                                    { label: "Oxford", href: "/products/oxford" },
+                                    { label: "Reid & Taylor", href: "/products/reid-and-taylor" },
+                                    { label: "John Cavendish", href: "/products/john-cavendish-fabrics" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -220,6 +221,7 @@ export default function Navbar() {
                                                 textDecoration: "none",
                                                 color: "#111",
                                                 fontSize: "17px",
+                                                 fontWeight: 500,
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -246,7 +248,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setSammaanOpen(false)}
                                 >
                                     <a
-                                        href="/products/sammaan-fabrics/"
+                                        href="/products/sammaan-fabrics"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -255,6 +257,7 @@ export default function Navbar() {
                                             textDecoration: "none",
                                             color: sammaanOpen ? "#fff" : "#111",
                                             fontSize: "17px",
+                                            fontWeight: 500,
                                             background: sammaanOpen ? "#122a4b" : "transparent",
                                             transition: "0.3s",
                                         }}
@@ -269,7 +272,7 @@ export default function Navbar() {
                                                 position: "absolute",
                                                 top: "0",
                                                 left: "190px",
-                                                width: "210px",
+                                                width: "220px",
                                                 background: "#fff",
                                                 listStyle: "none",
                                                 padding: "0",
@@ -279,13 +282,14 @@ export default function Navbar() {
                                         >
                                             <li>
                                                 <a
-                                                    href="/products/rasm-ethnics-by-sammaan/"
+                                                    href="/products/rasm-ethnics-by-sammaan"
                                                     style={{
                                                         display: "block",
                                                         padding: "11px 20px",
                                                         textDecoration: "none",
                                                         color: "#111",
-                                                        fontSize: "15px",
+                                                        fontSize: "16px",
+                                                        fontWeight: 500,
                                                         transition: "0.3s",
                                                     }}
                                                     onMouseEnter={(e) => {
@@ -307,13 +311,14 @@ export default function Navbar() {
                                 {/* GEORGIA GULLINI */}
                                 <li>
                                     <a
-                                        href="/products/georgia-gullini-fabrics/"
+                                        href="/products/georgia-gullini-fabrics"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: "#111",
                                             fontSize: "17px",
+                                             fontWeight: 500,
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -332,13 +337,14 @@ export default function Navbar() {
                                 {/* RELIANCE */}
                                 <li>
                                     <a
-                                        href="/products/reliance-fabrics/"
+                                        href="/products/reliance-fabrics"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
                                             textDecoration: "none",
                                             color: "#111",
                                             fontSize: "17px",
+                                            fontWeight: 500,
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -364,7 +370,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setNemssisOpen(false)}
                                 >
                                     <a
-                                        href="/products/nemssis-fabrics/"
+                                        href="/products/nemssis"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -373,6 +379,7 @@ export default function Navbar() {
                                             textDecoration: "none",
                                             color: nemssisOpen ? "#fff" : "#111",
                                             fontSize: "17px",
+                                            fontWeight: 500,
                                             background: nemssisOpen ? "#122a4b" : "transparent",
                                             transition: "0.3s",
                                         }}
@@ -396,11 +403,11 @@ export default function Navbar() {
                                             }}
                                         >
                                             {[
-                                                { label: "Shiddat by Nemssis", href: "/products/shiddat-by-nemssis/" },
-                                                { label: "Sanskriti by Nemssis", href: "/products/sanskriti-by-nemssis/" },
-                                                { label: "Raag Resham by Nemssis", href: "/products/raag-resham-by-nemssis/" },
-                                                { label: "Zarista by Nemssis", href: "/products/zarista-by-nemssis/" },
-                                                { label: "Nawabi by Nemssis", href: "/products/nawabi-by-nemssis/" },
+                                                { label: "Shiddat by Nemssis", href: "/products/shiddat-by-nemssis" },
+                                                { label: "Sanskriti by Nemssis", href: "/products/sanskriti-by-nemssis" },
+                                                { label: "Raag Resham by Nemssis", href: "/products/raag-resham-by-nemssis" },
+                                                { label: "Zarista by Nemssis", href: "/products/zarista-by-nemssis" },
+                                                { label: "Nawabi by Nemssis", href: "/products/nawabi-by-nemssis" },
                                             ].map((sub) => (
                                                 <li key={sub.label}>
                                                     <a
@@ -411,6 +418,7 @@ export default function Navbar() {
                                                             textDecoration: "none",
                                                             color: "#111",
                                                             fontSize: "15px",
+                                                            fontWeight: 500,
                                                             transition: "0.3s",
                                                         }}
                                                         onMouseEnter={(e) => {
@@ -433,7 +441,7 @@ export default function Navbar() {
                                 {/* SPAADAA */}
                                 <li>
                                     <a
-                                        href="/products/spaadaa-fabrics/"
+                                        href="/products/spaadaa-fabrics"
                                         style={{
                                             display: "block",
                                             padding: "11px 20px",
@@ -441,6 +449,7 @@ export default function Navbar() {
                                             color: "#111",
                                             fontSize: "17px",
                                             transition: "0.3s",
+                                            fontWeight: 500,
                                         }}
                                         onMouseEnter={(e) => {
                                             e.target.style.background = "#122a4b";
@@ -476,7 +485,7 @@ export default function Navbar() {
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
-                                fontWeight: 400,
+                              
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
@@ -502,16 +511,16 @@ export default function Navbar() {
                                 }}
                             >
                                 {[
-                                    { label: "Cotton Fabric", href: "/cotton-fabric/" },
-                                    { label: "Wool Fabrics", href: "/wool-fabric/" },
-                                    { label: "Polywool Fabric", href: "/poly-wool-fabric/" },
-                                    { label: "Linen", href: "/linen-fabric/" },
-                                    { label: "Polycotton", href: "/poly-cotton-fabric/" },
-                                    { label: "Denim", href: "/denim/" },
-                                    { label: "Poly Viscose", href: "/poly-viscose/" },
-                                    { label: "Tencel Blend", href: "/tencel-fabric/" },
-                                    { label: "PV Lycra", href: "/pv-lycra/" },
-                                    { label: "Poly Wool Lycra", href: "/poly-wool-lycra/" },
+                                    { label: "Cotton Fabric", href: "/cotton-fabric" },
+                                    { label: "Wool Fabrics", href: "/wool-fabric" },
+                                    { label: "Polywool Fabric", href: "/poly-wool-fabric" },
+                                    { label: "Linen", href: "/linen-fabric" },
+                                    { label: "Polycotton", href: "/poly-cotton-fabric" },
+                                    { label: "Denim", href: "/denim" },
+                                    { label: "Poly Viscose", href: "/poly-viscose" },
+                                    { label: "Tencel Blend", href: "/tencel-fabric" },
+                                    { label: "PV Lycra", href: "/pv-lycra" },
+                                    { label: "Poly Wool Lycra", href: "/poly-wool-lycra" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -522,6 +531,7 @@ export default function Navbar() {
                                                 textDecoration: "none",
                                                 color: "#111",
                                                 fontSize: "17px",
+                                                 fontWeight: 500,
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {

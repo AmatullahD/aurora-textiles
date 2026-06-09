@@ -106,6 +106,8 @@ export default function TencelBlendPage() {
       <Helmet>
         <title>Buy Tencel Blend Fabrics in Dubai | Tencel Blend Shirting Fabrics</title>
         <meta name="description" content="Shop premium Tencel blend fabrics for men in Dubai at Aurora Textiles. Discover soft, breathable, and durable fabrics perfect for shirts, trousers, and suits. Order online today!" />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Tencel Blend Fabric", "description": "Buy tencel blend shirting fabrics wholesale in Dubai from Aurora Textiles. Soft, breathable tencel blend fabrics for premium men's shirts in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/tencel-blend-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

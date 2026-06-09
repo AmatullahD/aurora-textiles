@@ -9,19 +9,19 @@ export default function ShirtingPage() {
     const navigate = useNavigate();
 
     const brands = [
-        { src: "/john-cavendish.webp", route: "/products/john-fabrics" },
-        { src: "/gullini.webp", route: "/products/gullini" },
+        { src: "/john-cavendish.webp", route: "/products/john-cavendish-fabrics" },
+        { src: "/gullini.webp", route: "/products/georgia-gullini-fabrics" },
         { src: "/regency.webp", route: "" },
         { src: "/donear-logo.png", route: "/products/donear" },
         { src: "/opulent.webp", route: "" },
-        { src: "/brand-3.jpg", route: "" },
+        { src: "/brand-3.jpg", route: "/products/reid-and-taylor" },
         { src: "/dignity.webp", route: "" },
         { src: "/cotton-wool.webp", route: "" },
         { src: "/fc-collection.webp", route: "" },
         { src: "/elegant-3.webp", route: "" },
         { src: "/platinum-collection.webp", route: "" },
-        { src: "/john-cavendish.webp", route: "/products/john-fabrics" },
-        { src: "/gullini.webp", route: "/products/gullini" },
+        { src: "/john-cavendish.webp", route: "/products/john-cavendish-fabrics" },
+        { src: "/gullini.webp", route: "/products/georgia-gullini-fabrics" },
         { src: "/regency.webp", route: "" },
     ];
 
@@ -70,8 +70,16 @@ export default function ShirtingPage() {
     );
 
     // FAQ STATE
-    const [openFaq, setOpenFaq] = useState(0);
+    const [openFaq, setOpenFaq] = useState(null);
     const [hoveredFaq, setHoveredFaq] = useState(null);
+    const faqColRef = useRef(null);
+    const [faqImgHeight, setFaqImgHeight] = useState(520);
+
+    useEffect(() => {
+        if (faqColRef.current) {
+            setFaqImgHeight(faqColRef.current.offsetHeight);
+        }
+    }, [openFaq]);
 
     const faqs = [
         {
@@ -118,7 +126,24 @@ export default function ShirtingPage() {
             <Helmet>
                 <title>Men's Shirting Fabrics by Aurora Textile | Luxury Shirting Fabrics</title>
                 <meta name="description" content="Buy High-quality and premium unstitched Men's Shirting Fabrics by Aurora Textiles in Dubai, UAE. Check out our website and contact us to order now." />
-            </Helmet>
+            
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Men's Shirting Fabric",
+            "description": "High-quality men's shirting fabrics wholesale from Aurora Textiles Dubai. Premium unstitched shirting fabrics for retailers and tailors.",
+            "brand": { "@type": "Brand", "name": "Aurora Textiles" },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "AED",
+              "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" }
+            },
+            "url": "https://aurora-textiles.vercel.app/products/shirting"
+          })}
+        `}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -358,29 +383,56 @@ export default function ShirtingPage() {
                         }}
                     >
                         {visibleBrands.map((brand, index) => (
-                            <div
-                                key={index}
-                                onClick={() => brand.route && navigate(brand.route)}
-                                style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    cursor: brand.route ? "pointer" : "default",
-                                }}
-                            >
-                                <img
-                                    src={brand.src}
-                                    alt="brand"
+                            brand.route ? (
+                                <a
+                                    key={index}
+                                    href={brand.route}
+                                    onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                     style={{
-                                        width: "180px",
-                                        height: "180px",
-                                        objectFit: "contain",
-                                        borderRadius: "12px",
-                                        display: "block",
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        textDecoration: "none",
+                                        cursor: "pointer",
                                     }}
-                                />
-                            </div>
+                                >
+                                    <img
+                                        src={brand.src}
+                                        alt="brand"
+                                        style={{
+                                            width: "180px",
+                                            height: "180px",
+                                            objectFit: "contain",
+                                            borderRadius: "12px",
+                                            display: "block",
+                                        }}
+                                    />
+                                </a>
+                            ) : (
+                                <div
+                                    key={index}
+                                    style={{
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        cursor: "default",
+                                    }}
+                                >
+                                    <img
+                                        src={brand.src}
+                                        alt="brand"
+                                        style={{
+                                            width: "180px",
+                                            height: "180px",
+                                            objectFit: "contain",
+                                            borderRadius: "12px",
+                                            display: "block",
+                                        }}
+                                    />
+                                </div>
+                            )
                         ))}
                     </div>
 
@@ -545,7 +597,7 @@ export default function ShirtingPage() {
                 <div
                     style={{
                         maxWidth: "1250px",
-                        margin: "0 auto",
+                        margin: "50px 0",
                         display: "flex",
                         gap: "30px",
                         alignItems: "center",
@@ -691,116 +743,129 @@ export default function ShirtingPage() {
             </section>
 
 
-           
             {/* FAQ SECTION */}
-            <section
+            <div
                 style={{
-                    width: "100%",
-                    padding: window.innerWidth < 768 ? "20px 16px 60px" : "20px 40px 80px",
-                    boxSizing: "border-box",
-                    background: "#ffffff",
+                    maxWidth: "1200px",
+                    margin: "0 auto 80px",
+                    padding: "0 40px",
+                    display: "flex",
+                    gap: "60px",
+                    alignItems: "flex-start",
                 }}
             >
-                {/* FAQ TITLE */}
-                <h3
-                    style={{
-                        fontSize: "42px",
-                        fontWeight: "700",
-                        fontFamily: "'Cinzel Decorative', serif",
-                        color: "#344886",
-                        marginBottom: "32px",
-                        textAlign: "center",
-                    
-                    }}
-                >
-                    FAQ
-                    <span
+                {/* LEFT IMAGE */}
+                <div style={{ flex: "0 0 47%" }}>
+                    <img
+                        src="/suitings-2.webp"
+                        alt="Men's Shirting Fabrics"
                         style={{
-                            position: "absolute",
-                            bottom: "-6px",
-                            right: "-18px",
-                            width: "60px",
-                            height: "3px",
-                            background: "#344886",
-                            borderRadius: "2px",
+                            width: "100%",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "300px",
+                            objectFit: "cover",
+                            borderRadius: "12px",
+                            transition: "height 0.4s ease",
                         }}
                     />
-                </h3>
+                </div>
 
-                {/* FAQ ITEMS */}
-                {faqs.map((faq, index) => (
+                {/* RIGHT FAQ ACCORDION */}
+                <div ref={faqColRef} style={{ flex: "1" }}>
                     <div
-                        key={index}
                         style={{
-                            border: "1px solid #dde0e8",
-                            borderRadius: "0px",
-                            marginBottom: "8px",
-                            overflow: "hidden",
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: "32px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            marginBottom: "24px",
+                            display: "flex",
+                            alignItems: "baseline",
+                            gap: "4px",
                         }}
                     >
-                        {/* QUESTION ROW */}
+                        <span>FAQ</span>
+                    </div>
+
+                    {faqs.map((faq, index) => (
                         <div
-                            onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                            onMouseEnter={() => setHoveredFaq(index)}
-                            onMouseLeave={() => setHoveredFaq(null)}
+                            key={index}
                             style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                padding: "20px 24px",
-                                cursor: "pointer",
-                                background: "#fff",
+                                border: "1px solid #dde0e8",
+                                borderRadius: "8px",
+                                marginBottom: "12px",
+                                overflow: "hidden",
                             }}
                         >
-                            <h4
-                                style={{
-                                    fontSize: window.innerWidth < 768 ? "11px" : "19px",
-                                    fontWeight: "700",
-                                    fontFamily: "'Cinzel Decorative', serif",
-                                    color: openFaq === index ? "#b9972f" : "#122a4b",
-                                    letterSpacing: "0.8px",
-                                    lineHeight: "1.5",
-                                    margin: 0,
-                                    flex: 1,
-                                    paddingRight: "16px",
-                                  
-                                    transition: "color 0.2s ease",
-                                }}
-                            >
-                                {faq.question}
-                            </h4>
-                            <span
-                                style={{
-                                    fontSize: "22px",
-                                    fontWeight: "400",
-                                    color: openFaq === index ? "#b9972f" : "#122a4b",
-                                    transition: "color 0.2s ease",
-                                    lineHeight: 1,
-                                    flexShrink: 0,
-                                }}
-                            >
-                                {openFaq === index ? "−" : "+"}
-                            </span>
-                        </div>
-
-                        {/* ANSWER */}
-                        {openFaq === index && (
                             <div
+                                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                                onMouseEnter={() => setHoveredFaq(index)}
+                                onMouseLeave={() => setHoveredFaq(null)}
                                 style={{
-                                    padding: "16px 24px 24px",
-                                    borderTop: "1px solid #eee",
-                                    fontSize: "17px",
-                                    color: "#333",
-                                    lineHeight: "1.7",
-                                    background: "#fff",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    padding: "18px 22px",
+                                    cursor: "pointer",
+                                    userSelect: "none",
                                 }}
                             >
-                                {faq.answer}
+                                <span
+                                    style={{
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "19px",
+                                        fontWeight: "700",
+                                        color: openFaq === index
+                                            ? "#b9972f"
+                                            : hoveredFaq === index
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.5",
+                                        flex: 1,
+                                        paddingRight: "16px",
+                                        transition: "color 0.2s ease",
+                                    }}
+                                >
+                                    {faq.question}
+                                </span>
+                                <span
+                                    style={{
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: "18px",
+                                        fontWeight: "700",
+                                        color: openFaq === index
+                                            ? "#b9972f"
+                                            : hoveredFaq === index
+                                                ? "#0a1e3d"
+                                                : "#122a4b",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.4",
+                                        transition: "color 0.2s ease",
+                                        flexShrink: 0,
+                                    }}
+                                >
+                                    {openFaq === index ? "−" : "+"}
+                                </span>
                             </div>
-                        )}
-                    </div>
-                ))}
-            </section>
+                            {openFaq === index && (
+                                <div
+                                    style={{
+                                        padding: "0 22px 20px",
+                                        borderTop: "1px solid #eee",
+                                        paddingTop: "16px",
+                                        fontSize: "16px",
+                                        lineHeight: "1.8",
+                                        color: "#474747",
+                                    }}
+                                >
+                                    {faq.answer}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
 
 
             {/* FOOTER */}

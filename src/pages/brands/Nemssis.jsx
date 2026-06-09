@@ -47,7 +47,9 @@ export default function NemssisPage() {
             <Helmet>
                 <title>Buy Nemssis Shirting Fabric | Shop Nemssis Cotton Shirting Fabric</title>
                 <meta name="description" content="The Nemssis fabric is of premium quality and it ensures a skin friendly feel. Woven by using latest knitting technology and quality tested threads. Contact Aurora Textiles to buy Nemssis premium cotton Shirting Fabrics in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Nemssis Fabrics", "description": "Buy Nemssis cotton shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Nemssis shirting fabric collection in UAE.", "brand": {"@type": "Brand", "name": "Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/nemssis"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -609,7 +611,7 @@ export default function NemssisPage() {
                     flex: "0 0 calc(50% - 30px)",
                     width: "calc(50% - 30px)",
                     height: `${faqImgHeight}px`,
-                    minHeight: "500px",
+                    minHeight: "300px",
                     transition: "height 0.4s ease",
                     overflow: "hidden",
                     borderRadius: "8px",

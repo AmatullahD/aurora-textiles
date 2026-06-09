@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import FloatingButtons from "./components/FloatingButtons";
 
 import Home from "./pages/Home";
@@ -37,8 +38,15 @@ import Wool from "./pages/fabrics/Wool";
 import SouthAfrica from "./pages/locations/SouthAfrica";
 import Egypt from "./pages/locations/Egypt";
 import SaudiArabia from "./pages/locations/SaudiArabia";
+import FabricSuppliers from "./pages/products/FabricSuppliers";
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
+
   return (
     <>
       <FloatingButtons />
@@ -54,6 +62,7 @@ function App() {
         <Route path="/products/shirting" element={<Shirting />} />
         <Route path="/products/uniform" element={<Uniform />} />
         <Route path="/products/ethnic-fabrics" element={<Ethnic />} />
+        <Route path="/fabric-suppliers" element={<FabricSuppliers />} />
 
         {/* Brands */}
         <Route path="/products/donear" element={<Donear />} />

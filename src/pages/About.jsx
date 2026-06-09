@@ -53,6 +53,33 @@ export default function AboutPage() {
       <Helmet>
         <title>About Us | Aurora Textiles Dubai</title>
         <meta name="description" content="Learn about Aurora Textiles — a family-run wholesale fabric business in Dubai with 45+ years of experience supplying premium men's fabrics across UAE and GCC." />
+      
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Aurora Textiles",
+            "description": "Aurora Textiles is a family-run wholesale fabric business in Dubai with 45+ years of experience supplying premium men's fabrics across UAE and GCC.",
+            "url": "https://aurora-textiles.vercel.app/about-us",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Aurora Textiles",
+              "url": "https://aurora-textiles.vercel.app",
+              "logo": "https://aurora-textiles.com/wp-content/uploads/2024/12/Aurora-Textiles-Logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Dubai Textile City, Warehouse 47, Al Awir Road",
+                "addressLocality": "Dubai",
+                "addressCountry": "AE"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+971554172009",
+                "contactType": "sales"
+              }
+            }
+          })}
+        `}</script>
       </Helmet>
 
       {/* NAVBAR */}

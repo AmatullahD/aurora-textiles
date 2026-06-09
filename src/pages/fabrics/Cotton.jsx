@@ -44,6 +44,8 @@ export default function CottonPage() {
       <Helmet>
         <title>Buy Cotton Fabric in UAE | Shop Pure Cotton Fabrics at Aurora Textiles</title>
         <meta name="description" content="At Aurora Textiles, we offer pure cotton, as well as cotton weaves and Cotton Blends, in Dubai, UAE, at affordable prices. Our Collection includes: Plain, Twill, Oxford Cotton, Gaberdine, etc." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Cotton Fabric", "description": "Buy pure cotton fabrics wholesale in Dubai, UAE from Aurora Textiles. Includes plain, twill, oxford cotton, gaberdine and cotton blends at affordable prices.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/cotton-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -721,8 +723,3 @@ export default function CottonPage() {
     </div>
   );
 }
-
-
-
-
- 

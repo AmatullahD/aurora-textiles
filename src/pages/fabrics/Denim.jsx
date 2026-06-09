@@ -107,6 +107,8 @@ export default function DenimPage() {
       <Helmet>
         <title>Buy Denim Fabric in Dubai | Denim Fabric Suppliers</title>
         <meta name="description" content="Buy Denim fabrics from Aurora Textiles in Dubai. We are a high-quality Denim Fabric Supplier in the UAE & MENA Regions. Contact us now." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Denim Fabric", "description": "Buy high-quality denim fabric wholesale in Dubai, UAE from Aurora Textiles. Premium denim fabric supplier in UAE and MENA regions.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/denim-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

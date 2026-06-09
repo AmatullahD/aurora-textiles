@@ -104,6 +104,8 @@ export default function PolyWoolLycraPage() {
       <Helmet>
         <title>Buy Poly Wool Lycra | Poly Wool Lycra Suiting Fabrics Dubai</title>
         <meta name="description" content="At Aurora Textiles, we offer a premium collection of Poly Wool Lycra Suiting Fabrics, crafted for men who value comfort, flexibility, and a refined appearance. Check out Poly Wool Fabric for Men in Dubai" />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Poly Wool Lycra Fabric", "description": "Buy poly wool lycra suiting fabrics wholesale in Dubai from Aurora Textiles. Stretch suiting fabric for comfort and style in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/poly-wool-lycra-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

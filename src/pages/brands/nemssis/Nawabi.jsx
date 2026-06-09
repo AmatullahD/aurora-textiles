@@ -44,7 +44,9 @@ export default function NawabiPage() {
             <Helmet>
                 <title>Nawabi by Nemssis - Ethnic Fabrics For Men's at Aurora Textiles</title>
                 <meta name="description" content="Check out Nawabi by Nemssis at Aurora Textiles – your trusted source for luxury ethnic fabrics for men. Shop premium quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Nawabi by Nemssis", "description": "Buy Nawabi by Nemssis ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Traditional embroidery fabrics from Uttar Pradesh.", "brand": {"@type": "Brand", "name": "Nawabi by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/nawabi-by-nemssis"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -480,7 +482,7 @@ export default function NawabiPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         height: `${faqImgHeight}px`,
-                        minHeight: "500px",
+                        minHeight: "300px",
                         transition: "height 0.4s ease",
                         overflow: "hidden",
                         borderRadius: "8px",

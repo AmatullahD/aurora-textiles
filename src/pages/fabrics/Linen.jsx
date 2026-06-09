@@ -105,6 +105,8 @@ export default function LinenPage() {
       <Helmet>
         <title>Buy Linen Fabrics in Dubai | Linen Fabric Online by Aurora Textiles</title>
         <meta name="description" content="We offer a wide collection of linen fabrics online, ideal for Formal Shirts, Ethnic, and casual trousers and jackets styles. Your trusted source for wholesale textile solutions in Dubai." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Linen Fabric", "description": "Wide collection of linen fabrics wholesale in Dubai from Aurora Textiles. Ideal for formal shirts, ethnic wear, casual trousers and jackets.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/linen-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -209,7 +211,7 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "19px",
+              fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
               margin: "0 0 22px 0",
@@ -225,7 +227,7 @@ export default function LinenPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "19px",
+              fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
               margin: "0 0 36px 0",

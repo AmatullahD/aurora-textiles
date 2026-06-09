@@ -58,7 +58,9 @@ export default function EgyptPage() {
                     name="description"
                     content="Aurora Textiles are one of the leading fabric suppliers and wholesalers in Egypt, offering Cotton, poly viscose, poly wool, and other types of fabrics."
                 />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Aurora Textiles Egypt", "description": "Aurora Textiles supplies premium wholesale fabrics to retailers, tailors and distributors in Egypt.", "url": "https://aurora-textiles.vercel.app/egypt", "areaServed": {"@type": "Country", "name": "Egypt"}, "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "address": {"@type": "PostalAddress", "streetAddress": "Dubai Textile City, Warehouse 47, Al Awir Road", "addressLocality": "Dubai", "addressCountry": "AE"}, "telephone": "+971554172009", "email": "info@aurora-textiles.com"})}</script>
+      </Helmet>
 
             <Navbar />
 

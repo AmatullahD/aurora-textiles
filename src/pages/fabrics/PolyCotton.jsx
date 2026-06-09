@@ -110,6 +110,8 @@ export default function PolyCottonPage() {
       <Helmet>
         <title>Buy Polycotton Fabrics in Dubai | Polycotton Work Uniform by Aurora Textiles</title>
         <meta name="description" content="Buy Poly Cotton fabrics from Aurora Textiles in Dubai that combine polyester and Cotton. Check out our website and shop polycotton fabric now." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Poly Cotton Fabric", "description": "Buy polycotton fabrics wholesale in Dubai from Aurora Textiles. Ideal for work uniforms and corporate wear. Durable poly cotton blends in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/poly-cotton-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

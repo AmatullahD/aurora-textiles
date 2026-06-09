@@ -46,7 +46,9 @@ export default function KlopmanPage() {
             <Helmet>
                 <title>Buy Klopman Fabrics in Dubai | Klopman Workwear Fabrics</title>
                 <meta name="description" content="The Klopman fabrics are engineered for performance, sustainability, and economical for the long run. At Aurora Textiles, we offer Corporate, Industrial workwear, Protective wear, and medical apparel fabrics in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Klopman Fabrics", "description": "Buy Klopman workwear fabrics wholesale in Dubai from Aurora Textiles. High-performance Klopman uniform and workwear fabric supplier in UAE.", "brand": {"@type": "Brand", "name": "Klopman"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/klopman"})}</script>
+      </Helmet>
 
 
             {/* NAVBAR */}
@@ -683,7 +685,7 @@ export default function KlopmanPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "520px",
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

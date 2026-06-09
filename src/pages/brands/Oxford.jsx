@@ -46,7 +46,9 @@ export default function OxfordPage() {
             <Helmet>
                 <title>Oxford Fabric in Dubai | Shop Oxford Men&#39;s Shirt Fabric Material</title>
                 <meta name="description" content="Oxford fabric is elegant, durable, &amp; breathable. Shop Oxford Fabric in Dubai, UAE at Aurora Textiles to sew lightweight and stylish men&#39;s casual, formal, and daily wear shirts." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Oxford Fabrics", "description": "Shop Oxford men's shirt fabric material wholesale in Dubai from Aurora Textiles. Premium Oxford fabric for men's shirts in UAE.", "brand": {"@type": "Brand", "name": "Oxford"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/oxford"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -145,7 +147,17 @@ export default function OxfordPage() {
                         }}
                     >
                         At{" "}
-                        <strong style={{ color: "#b8860b" }}>Aurora Textiles</strong>, we
+                        <a
+                            href="/"
+                            style={{
+                                color: "#1a4fd6",
+                                fontWeight: "700",
+                                textDecoration: "none",
+                            }}
+                        >
+                            Aurora Textiles
+                        </a>
+                        , we
                         supply premium <strong>Oxford shirting fabrics</strong> exclusively
                         for men's fashion needs in Dubai, UAE and across the MENA Region.
                         Designed for structure, style, and daily wear, Oxford fabrics are a
@@ -631,7 +643,7 @@ export default function OxfordPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "480px",
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

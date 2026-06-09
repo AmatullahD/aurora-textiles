@@ -47,7 +47,9 @@ export default function SanskritiPage() {
             <Helmet>
                 <title>Sanskriti by Nemssis - Luxury Ethnic Print &amp; Embroidery Fabrics</title>
                 <meta name="description" content="Check out Sanskriti Ethnic by Nemssis at Aurora Textiles – your trusted source for premium luxury ethnic Print and embroidery fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Sanskriti by Nemssis", "description": "Buy Sanskriti by Nemssis luxury ethnic print and embroidery fabrics wholesale in Dubai from Aurora Textiles. The art of embroidery from across India.", "brand": {"@type": "Brand", "name": "Sanskriti by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/sanskriti-by-nemssis"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -461,7 +463,7 @@ export default function SanskritiPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         height: `${faqImgHeight}px`,
-                        minHeight: "500px",
+                        minHeight: "300px",
                         transition: "height 0.4s ease",
                         borderRadius: "16px",
                         overflow: "hidden",

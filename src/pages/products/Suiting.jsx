@@ -9,8 +9,8 @@ export default function SuitingPage() {
     const navigate = useNavigate();
 
     const brands = [
-        { src: "/john-cavendish.webp",      route: "/products/john-fabrics" },
-        { src: "/gullini.webp",              route: "/products/gullini" },
+        { src: "/john-cavendish.webp",      route: "/products/john-cavendish-fabrics" },
+        { src: "/gullini.webp",              route: "/products/georgia-gullini-fabrics" },
         { src: "/regency.webp",              route: "" },
         { src: "/donear-logo.png",           route: "/products/donear" },
         { src: "/opulent.webp",              route: "" },
@@ -20,8 +20,8 @@ export default function SuitingPage() {
         { src: "/fc-collection.webp",        route: "" },
         { src: "/elegant-3.webp",            route: "" },
         { src: "/platinum-collection.webp",  route: "" },
-        { src: "/john-cavendish.webp",       route: "/products/john-fabrics" },
-        { src: "/gullini.webp",              route: "/products/gullini" },
+        { src: "/john-cavendish.webp",       route: "/products/john-cavendish-fabrics" },
+        { src: "/gullini.webp",              route: "/products/georgia-gullini-fabrics" },
         { src: "/regency.webp",              route: "" },
     ];
 
@@ -124,7 +124,24 @@ export default function SuitingPage() {
             <Helmet>
                 <title>Luxury Mens Suiting Fabrics | High-Quality Suit Fabrics Supplier</title>
                 <meta name="description" content="Explore Aurora Textiles' luxurious collection of high-quality men's suiting fabrics. Find the perfect fabric to craft elegant suits that reflect your style and sophistication." />
-            </Helmet>
+            
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Men's Suiting Fabric",
+            "description": "Luxury men's suiting fabrics supplied wholesale by Aurora Textiles in Dubai, UAE. Premium quality suit fabrics from top global brands.",
+            "brand": { "@type": "Brand", "name": "Aurora Textiles" },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "AED",
+              "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" }
+            },
+            "url": "https://aurora-textiles.vercel.app/products/suiting"
+          })}
+        `}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -203,7 +220,7 @@ export default function SuitingPage() {
                         margin: "0 auto",
                         display: "flex",
                         gap: "30px",
-                        alignItems: "center",
+                     
                         justifyContent: "space-between",
                         flexWrap: "wrap",
                     }}
@@ -373,29 +390,56 @@ export default function SuitingPage() {
                         }}
                     >
                         {visibleBrands.map((brand, index) => (
-                            <div
-                                key={index}
-                                onClick={() => brand.route && navigate(brand.route)}
-                                style={{
-                                    width: "100%",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    cursor: brand.route ? "pointer" : "default",
-                                }}
-                            >
-                                <img
-                                    src={brand.src}
-                                    alt="brand"
+                            brand.route ? (
+                                <a
+                                    key={index}
+                                    href={brand.route}
+                                    onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                     style={{
-                                        width: "180px",   // ← change width here
-                                        height: "180px",  // ← change height here
-                                        objectFit: "contain",   // no cropping, shows full image
-                                        borderRadius: "12px",
-                                        display: "block",
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        textDecoration: "none",
+                                        cursor: "pointer",
                                     }}
-                                />
-                            </div>
+                                >
+                                    <img
+                                        src={brand.src}
+                                        alt="brand"
+                                        style={{
+                                            width: "180px",
+                                            height: "180px",
+                                            objectFit: "contain",
+                                            borderRadius: "12px",
+                                            display: "block",
+                                        }}
+                                    />
+                                </a>
+                            ) : (
+                                <div
+                                    key={index}
+                                    style={{
+                                        width: "100%",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        cursor: "default",
+                                    }}
+                                >
+                                    <img
+                                        src={brand.src}
+                                        alt="brand"
+                                        style={{
+                                            width: "180px",
+                                            height: "180px",
+                                            objectFit: "contain",
+                                            borderRadius: "12px",
+                                            display: "block",
+                                        }}
+                                    />
+                                </div>
+                            )
                         ))}
                     </div>
 
@@ -566,6 +610,7 @@ export default function SuitingPage() {
                     padding: window.innerWidth < 768 ? "10px 15% 50px" : "10px 5% 70px",
                     boxSizing: "border-box",
                     background: "#ffffff",
+                    margin: "80px 0",
                 }}
             >
                 <div
@@ -574,7 +619,7 @@ export default function SuitingPage() {
                         margin: "0 auto",
                         display: "flex",
                         gap: "30px",
-                        alignItems: "center",
+                       
                         justifyContent: "space-between",
                         flexWrap: "wrap",
                     }}

@@ -40,7 +40,9 @@ export default function SouthAfricaPage() {
                     name="description"
                     content="Aurora Textiles are one of the leading fabric suppliers and wholesalers in South Africa, offering Cotton, poly viscose, poly wool, and other types of fabrics."
                 />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Aurora Textiles South Africa", "description": "Aurora Textiles supplies premium wholesale fabrics to retailers, tailors and distributors in South Africa.", "url": "https://aurora-textiles.vercel.app/south-africa", "areaServed": {"@type": "Country", "name": "South Africa"}, "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "address": {"@type": "PostalAddress", "streetAddress": "Dubai Textile City, Warehouse 47, Al Awir Road", "addressLocality": "Dubai", "addressCountry": "AE"}, "telephone": "+971554172009", "email": "info@aurora-textiles.com"})}</script>
+      </Helmet>
 
             <Navbar />
 

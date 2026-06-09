@@ -20,7 +20,7 @@ export default function PartnerBrands() {
         { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp", route: "/products/john-cavendish-fabrics", alt: "John Cavendish" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
-             route: "/products/reliance",
+             route: "/products/reliance-fabrics",
              alt: "Reliance" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Oxford-Logo_page-0001-e1736148501624.jpg.webp",
@@ -32,7 +32,7 @@ export default function PartnerBrands() {
              alt: "Klopman" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/lino.jpg.webp",
-             route: "/products/lino", 
+             route: "/linen-fabric", 
             alt: "lino" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/nemssis.jpg.webp",
@@ -40,11 +40,11 @@ export default function PartnerBrands() {
              alt: "Nemssis" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/spada.jpg.webp",
-             route: "/products/spaadaa", 
+             route: "/products/spaadaa-fabrics", 
             alt: "Spaadaa" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-4.png.webp",
-              route: "/products/gullini", 
+              route: "/products/georgia-gullini-fabrics", 
             alt: "Georgia Gullini" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
@@ -60,11 +60,11 @@ export default function PartnerBrands() {
             alt: "Reid & Taylor" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp", 
-            route: "/products/john-fabrics",
+            route: "/products/john-cavendish-fabrics",
              alt: "John Cavendish" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/Reliance-Logo.png.webp",
-             route: "/products/reliance",
+             route: "/products/reliance-fabrics",
              alt: "Reliance" },
     ];
 

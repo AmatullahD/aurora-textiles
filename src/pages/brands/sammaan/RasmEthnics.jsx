@@ -45,7 +45,9 @@ export default function RasmEthnicsPage() {
             <Helmet>
                 <title>Rasm Ethnics by Sammaan - Luxury Ethnic Fabrics by Aurora Textiles</title>
                 <meta name="description" content="Check out Rasm Ethnics Fabrics by Sammaan at Aurora Textiles – your trusted source for premium luxury ethnic fabrics for men in Dubai. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Rasm Ethnics by Sammaan", "description": "Buy Rasm Ethnics by Sammaan luxury ethnic fabrics wholesale in Dubai from Aurora Textiles. Premium ethnic fabric collection for men in UAE.", "brand": {"@type": "Brand", "name": "Rasm Ethnics by Sammaan"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/rasm-ethnics-by-sammaan"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -436,7 +438,7 @@ export default function RasmEthnicsPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "520px",
+                            minHeight: "300px",
                             objectFit: "contain",
                             display: "block",
                             borderRadius: "8px",

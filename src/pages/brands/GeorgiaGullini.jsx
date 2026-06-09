@@ -43,7 +43,9 @@ export default function GulliniPage() {
             <Helmet>
                 <title>Shop Georgia Gullini Shirting, Suitings, and Blazer Fabrics in Dubai</title>
                 <meta name="description" content="Shop premium Georgia Gullini shirting, suiting, and blazer fabrics in Dubai with Aurora Textiles – trusted wholesale fabric suppliers for men's clothing across the UAE and MENA." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Georgia Gullini Fabrics", "description": "Shop Georgia Gullini shirting, suiting and blazer fabrics wholesale in Dubai. Premium Italian-quality fabrics by Aurora Textiles UAE.", "brand": {"@type": "Brand", "name": "Georgia Gullini"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/georgia-gullini-fabrics"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -583,7 +585,7 @@ export default function GulliniPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "430px",
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

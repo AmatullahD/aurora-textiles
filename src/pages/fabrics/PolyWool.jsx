@@ -115,6 +115,8 @@ export default function PolyWoolPage() {
       <Helmet>
         <title>Polywool Fabric in Dubai | Buy Polywool Suiting Fabric</title>
         <meta name="description" content="Buy Polywool Fabric in Dubai from the finest textile fabric supplier in UAE. We offer all types of men's fabric at affordable prices." />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Poly Wool Fabric", "description": "Buy polywool suiting fabric wholesale in Dubai from Aurora Textiles. High-quality poly wool fabric blends for premium men's suits in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/poly-wool-fabric"})}</script>
       </Helmet>
 
       {/* NAVBAR */}

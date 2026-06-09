@@ -145,6 +145,23 @@ export default function Uniform() {
       <Helmet>
         <title>Uniform Fabric Suppliers in Dubai, UAE - Aurora Textiles</title>
         <meta name="description" content="Aurora Textiles is one of the most reliable uniform fabric suppliers in Dubai, UAE. We have all kinds of uniform fabric available within our reach, spread over Dubai and the UAE. Contact us now." />
+      
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Uniform Fabric",
+            "description": "Wholesale uniform fabrics supplier in Dubai, UAE. Aurora Textiles supplies high-quality uniform fabrics for corporate, hospitality, and workwear.",
+            "brand": { "@type": "Brand", "name": "Aurora Textiles" },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "AED",
+              "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" }
+            },
+            "url": "https://aurora-textiles.vercel.app/products/uniform"
+          })}
+        `}</script>
       </Helmet>
 
       <Navbar />
@@ -213,7 +230,7 @@ export default function Uniform() {
               color: "#344886",
              
               lineHeight: "1.2",
-              marginBottom: "24px",
+              marginBottom: "20px",
             }}
           >
             Premium Uniform<br />
@@ -221,7 +238,14 @@ export default function Uniform() {
             Dubai, UAE
           </h2>
 
-          <p style={{ fontSize: "18px", fontWeight: "400", lineHeight: "1.5", color: "#444", marginBottom: "24px" }}>
+          <p style={{ 
+            fontSize: "18px", 
+            fontWeight: "400", 
+            lineHeight: "1.5", 
+            color: "#292626", 
+            marginBottom: "24px" }}
+            > 
+
             Aurora Textiles stands out among the leading uniform fabric suppliers in Dubai. We provide premium-quality fabrics tailored specifically for uniforms across various industries. Our fabrics are designed to deliver durability, comfort, and a professional appearance, enhancing your team’s image and performance.
           </p>
           <h6
@@ -231,15 +255,20 @@ export default function Uniform() {
               fontWeight: "700",
               color: "#1a2b6d",
               letterSpacing: "0.5px",
-              marginBottom: "14px",
+              marginBottom: "10px",
             }}
           >
             Our Fabric Selections Cater to Diverse Needs Across Various Industries, Including:
           </h6>
 
-          <ul style={{ listStyle: "disc", paddingLeft: "25px", lineHeight: "2", fontSize: "16px" }}>
+          <ul style={{ 
+            listStyle: "disc",
+             paddingLeft: "25px", 
+            lineHeight: "1.5", 
+            fontSize: "16px" }}
+          >
             {["Corporate Offices", "Hotels & Hospitality", "Healthcare & Medical", "Education & Schools", "Industrial & Workwear", "Restaurants & Catering"].map((item) => (
-              <li key={item} style={{ fontWeight: "600", color: "#222" }}>{item}</li>
+              <li key={item} style={{ fontWeight: "700", color: "#222" }}>{item}</li>
             ))}
           </ul>
         </div>
@@ -251,7 +280,7 @@ export default function Uniform() {
             alt="Chef in uniform"
             style={{
               width: "100%",
-              height: "640px",
+              height: "650px",
               objectFit: "cover",
               borderRadius: "12px",
               display: "block",
@@ -462,14 +491,19 @@ export default function Uniform() {
           padding: "0 40px",
           display: "flex",
           gap: "60px",
-          alignItems: "center",
+         
         }}
       >
         <div style={{ flex: "0 0 47%" }}>
           <img
             src="/uniform-3.webp"
             alt="Fabric swatches book"
-            style={{ width: "100%", height: "420px", objectFit: "cover", borderRadius: "12px" }}
+            style={{ 
+              width: "100%",
+               height: "420px",
+             
+              objectFit: "cover",
+               borderRadius: "12px" }}
           />
         </div>
         <div style={{ flex: "1" }}>
@@ -569,7 +603,11 @@ export default function Uniform() {
           <img
             src="/uniform-4.webp"
             alt="Fabric rolls on rack"
-            style={{ width: "100%", height: "400px", objectFit: "cover", borderRadius: "12px" }}
+            style={{ 
+              width: "100%",
+               height: "520px",
+               objectFit: "cover",
+               borderRadius: "12px" }}
           />
         </div>
       </div>

@@ -86,7 +86,24 @@ export default function EthnicPage() {
             <Helmet>
                 <title>Buy Ethnic Fabrics in Dubai, UAE | Ethnic Fabric Suppliers</title>
                 <meta name="description" content="Check out our Ethnic Fabrics collection and buy high-quality fabrics in Dubai, UAE. Premium and affordable fabrics in Dubai at Aurora Textiles. Visit our website or shop now." />
-            </Helmet>
+            
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Ethnic Fabric",
+            "description": "Buy premium ethnic fabrics in Dubai, UAE from Aurora Textiles. Exclusive collection of men's ethnic fabrics including embroidery and traditional styles.",
+            "brand": { "@type": "Brand", "name": "Aurora Textiles" },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "AED",
+              "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" }
+            },
+            "url": "https://aurora-textiles.vercel.app/products/ethnic"
+          })}
+        `}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -324,58 +341,114 @@ export default function EthnicPage() {
                         }}
                     >
                         {visibleLogos.map((brand, i) => (
-                            <div
-                                key={i}
-                                onClick={() => brand.route && navigate(brand.route)}
-                                style={{
-                                    flex: 1,
-                                    display: "flex",
-                                    flexDirection: "column",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    minHeight: "100px",
-                                    cursor: brand.route ? "pointer" : "default",
-                                }}
-                            >
-                                {brand.src ? (
-                                    <img
-                                        src={brand.src}
-                                        alt={brand.name}
-                                        style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
-                                    />
-                                ) : (
-                                    <>
-                                        <span
-                                            style={{
-                                                fontFamily: "'Cinzel Decorative', serif",
-                                                fontSize: "26px",
-                                                fontWeight: "600",
-                                                color: "#222",
-                                                letterSpacing: "1px",
-                                                textAlign: "center",
-                                            }}
-                                        >
-                                            {brand.name}
-                                        </span>
-                                        {brand.subtitle && (
+                            brand.route ? (
+                                <a
+                                    key={i}
+                                    href={brand.route}
+                                    onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
+                                    style={{
+                                        flex: 1,
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        minHeight: "100px",
+                                        textDecoration: "none",
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    {brand.src ? (
+                                        <img
+                                            src={brand.src}
+                                            alt={brand.name}
+                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
+                                        />
+                                    ) : (
+                                        <>
                                             <span
                                                 style={{
-                                                    fontSize: "9px",
-                                                    color: "#666",
-                                                    textTransform: "uppercase",
+                                                    fontFamily: "'Cinzel Decorative', serif",
+                                                    fontSize: "26px",
+                                                    fontWeight: "600",
+                                                    color: "#222",
                                                     letterSpacing: "1px",
                                                     textAlign: "center",
-                                                    marginTop: "4px",
-                                                    maxWidth: "160px",
-                                                    lineHeight: "1.4",
                                                 }}
                                             >
-                                                {brand.subtitle}
+                                                {brand.name}
                                             </span>
-                                        )}
-                                    </>
-                                )}
-                            </div>
+                                            {brand.subtitle && (
+                                                <span
+                                                    style={{
+                                                        fontSize: "9px",
+                                                        color: "#666",
+                                                        textTransform: "uppercase",
+                                                        letterSpacing: "1px",
+                                                        textAlign: "center",
+                                                        marginTop: "4px",
+                                                        maxWidth: "160px",
+                                                        lineHeight: "1.4",
+                                                    }}
+                                                >
+                                                    {brand.subtitle}
+                                                </span>
+                                            )}
+                                        </>
+                                    )}
+                                </a>
+                            ) : (
+                                <div
+                                    key={i}
+                                    style={{
+                                        flex: 1,
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        minHeight: "100px",
+                                        cursor: "default",
+                                    }}
+                                >
+                                    {brand.src ? (
+                                        <img
+                                            src={brand.src}
+                                            alt={brand.name}
+                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
+                                        />
+                                    ) : (
+                                        <>
+                                            <span
+                                                style={{
+                                                    fontFamily: "'Cinzel Decorative', serif",
+                                                    fontSize: "26px",
+                                                    fontWeight: "600",
+                                                    color: "#222",
+                                                    letterSpacing: "1px",
+                                                    textAlign: "center",
+                                                }}
+                                            >
+                                                {brand.name}
+                                            </span>
+                                            {brand.subtitle && (
+                                                <span
+                                                    style={{
+                                                        fontSize: "9px",
+                                                        color: "#666",
+                                                        textTransform: "uppercase",
+                                                        letterSpacing: "1px",
+                                                        textAlign: "center",
+                                                        marginTop: "4px",
+                                                        maxWidth: "160px",
+                                                        lineHeight: "1.4",
+                                                    }}
+                                                >
+                                                    {brand.subtitle}
+                                                </span>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
+                            )
                         ))}
                     </div>
 

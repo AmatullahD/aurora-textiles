@@ -16,7 +16,29 @@ export default function ContactPage() {
             <Helmet>
                 <title>Contact Us | Aurora Textiles Dubai</title>
                 <meta name="description" content="Get in touch with Aurora Textiles. Visit us at Dubai Textile City or call +97143532696. We supply wholesale fabrics across UAE, GCC and Africa." />
-            </Helmet>
+            
+        <script type="application/ld+json">{`
+          ${JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Aurora Textiles",
+            "description": "Get in touch with Aurora Textiles. Visit us at Dubai Textile City or call +97143532696. Wholesale fabric supplier in UAE, GCC and Africa.",
+            "url": "https://aurora-textiles.vercel.app/contact-us",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Aurora Textiles",
+              "telephone": ["+97143532696", "+971554172009"],
+              "email": "info@aurora-textiles.com",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Dubai Textile City, Warehouse 47, Al Awir Road",
+                "addressLocality": "Dubai",
+                "addressCountry": "AE"
+              }
+            }
+          })}
+        `}</script>
+      </Helmet>
             
             {/* NAVBAR */}
             <Navbar />

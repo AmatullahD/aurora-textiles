@@ -44,7 +44,9 @@ export default function ZaristaPage() {
             <Helmet>
                 <title>Zarista by Nemssis - Ethnic Fabrics For Men</title>
                 <meta name="description" content="Check out Zarista Ethnic by Nemssis at Aurora Textiles – your trusted source for premium ethnic fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Zarista by Nemssis", "description": "Buy Zarista by Nemssis modern ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Contemporary ethnic fabrics for modern style.", "brand": {"@type": "Brand", "name": "Zarista by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/zarista-by-nemssis"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -452,7 +454,7 @@ export default function ZaristaPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         height: `${faqImgHeight}px`,
-                        minHeight: "500px",
+                        minHeight: "300px",
                         transition: "height 0.4s ease",
                         borderRadius: "16px",
                         overflow: "hidden",

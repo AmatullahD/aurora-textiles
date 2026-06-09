@@ -17,6 +17,7 @@ const quickLinks = [
   { label: "Contact Us", href: "/contact-us" },
   { label: "Blog", href: "/blog" },
   { label: "Leading Fabric Suppliers", href: "/fabric-suppliers" },
+   { label: "High Quality Uniform Fabric Suppliers", href: "/high-quality-uniform-fabric-suppliers" },
 ];
 
 export default function Footer() {

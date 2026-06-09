@@ -47,7 +47,9 @@ export default function RaagReshamPage() {
             <Helmet>
                 <title>Raag Resham by Nemssis - Festival Collection Ethnic Fabrics for Mens</title>
                 <meta name="description" content="Check out Raag Resham by Nemssis – a premium festive collection of ethnic fabrics for men. Perfect for kurtas, sherwanis, and jackets. Available now at Aurora Textiles, Dubai." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Raag Resham by Nemssis", "description": "Buy Raag Resham by Nemssis festival collection ethnic fabrics wholesale in Dubai. Precious silk embroidery fabrics from Varanasi at Aurora Textiles.", "brand": {"@type": "Brand", "name": "Raag Resham by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/raag-resham-by-nemssis"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -457,7 +459,7 @@ export default function RaagReshamPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         height: `${faqImgHeight}px`,
-                        minHeight: "500px",
+                        minHeight: "300px",
                         transition: "height 0.4s ease",
                         overflow: "hidden",
                         borderRadius: "8px",

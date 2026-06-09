@@ -47,7 +47,9 @@ export default function SpaadaaPage() {
             <Helmet>
                 <title>Buy Spaadaa Men's Shirting Fabrics in Dubai | Unstitched Shirting Fabrics</title>
                 <meta name="description" content="Buy Spaadaa men's shirting fabrics from Aurora Textiles in Dubai. Explore premium unstitched shirting fabrics in poly-cotton and blended finishes—available for bulk orders across UAE &amp; MENA." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Spaadaa Fabrics", "description": "Buy Spaadaa men's unstitched shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Spaadaa shirting fabric collection in UAE.", "brand": {"@type": "Brand", "name": "Spaadaa"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/spaadaa-fabrics"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -458,7 +460,7 @@ export default function SpaadaaPage() {
                     flex: "0 0 calc(50% - 30px)",
                     width: "calc(50% - 30px)",
                     height: `${faqImgHeight}px`,
-                    minHeight: "420px",
+                    minHeight: "300px",
                     transition: "height 0.4s ease",
                     overflow: "hidden",
                     borderRadius: "8px",

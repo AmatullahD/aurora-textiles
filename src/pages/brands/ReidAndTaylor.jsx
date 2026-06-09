@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -20,6 +21,8 @@ export default function ReidAndTaylorPage() {
         ro.observe(el);
         return () => ro.disconnect();
     }, [openFaq]);
+
+    const navigate = useNavigate();
 
     const faqs = [
         {
@@ -46,7 +49,9 @@ export default function ReidAndTaylorPage() {
             <Helmet>
                 <title>Reid &amp; Taylor Men&#39;s Suiting &amp; Shirting Fabrics| Buy Reid and Taylor Fabrics in UAE</title>
                 <meta name="description" content="Aurora Textiles offers Reid &amp; Taylor premium collection of suitings and shirtings Men&#39;s Fabrics in Dubai, UAE. Buy Reid and Taylor Fabrics and fill your wardrobe with our collection of men &amp; formal wear." />
-            </Helmet>
+            
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Reid & Taylor Fabrics", "description": "Buy Reid and Taylor men's suiting and shirting fabrics wholesale in Dubai, UAE from Aurora Textiles. Luxury British heritage fabrics.", "brand": {"@type": "Brand", "name": "Reid & Taylor"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/reid-and-taylor"})}</script>
+      </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -125,7 +130,7 @@ export default function ReidAndTaylorPage() {
                 <div
                     style={{
                         flex: "0 0 auto",
-                        width: window.innerWidth < 768 ? "100%" : "400px",
+                        width: window.innerWidth < 768 ? "100%" : "500px",
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
@@ -136,7 +141,7 @@ export default function ReidAndTaylorPage() {
                         alt="Reid and Taylor Logo"
                         style={{
                             width: "100%",
-                            maxWidth: "400px",
+                            maxWidth: "500px",
                             height: "auto",
                             objectFit: "contain",
                             display: "block",
@@ -189,7 +194,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -198,7 +203,7 @@ export default function ReidAndTaylorPage() {
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "26px" : "40px",
+                            fontSize: window.innerWidth < 768 ? "26px" : "38px",
                             fontWeight: "700",
                             color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
@@ -210,7 +215,7 @@ export default function ReidAndTaylorPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: "0 0 20px 0",
@@ -227,7 +232,7 @@ export default function ReidAndTaylorPage() {
                     </p>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,
@@ -248,7 +253,7 @@ export default function ReidAndTaylorPage() {
                         alt="Reid and Taylor Suiting"
                         style={{
                             width: "100%",
-                            height: "680px",
+                            height: "560px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",
@@ -280,7 +285,7 @@ export default function ReidAndTaylorPage() {
                         style={{
                             width: "100%",
                             height: "560px",
-                            objectFit: "cover",
+                            objectFit: "contain",
                             display: "block",
                             borderRadius: "6px",
                         }}
@@ -291,7 +296,7 @@ export default function ReidAndTaylorPage() {
                 <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "26px" : "40px",
+                            fontSize: window.innerWidth < 768 ? "26px" : "45px",
                             fontWeight: "700",
                             color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
@@ -332,7 +337,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -401,10 +406,11 @@ export default function ReidAndTaylorPage() {
                     </ul>
 
                     {/* Button */}
-                    <div
-                        onClick={() => (window.location.href = "/contact-us")}
-                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-
+                    <a
+                        href="/contact-us"
+                        onClick={(e) => { e.preventDefault(); navigate("/contact-us"); window.scrollTo(0, 0); }}
+                        style={{ display: "flex", alignItems: "center", gap: "16px", textDecoration: "none" }}
+                    >
                         <button
                             onMouseEnter={e => {
                                 e.currentTarget.style.background = "#0a089bd3";
@@ -431,7 +437,7 @@ export default function ReidAndTaylorPage() {
                         >
                             Contact Us
                         </button>
-                    </div>
+                    </a>
                 </div>
 
                 {/* Right — image */}
@@ -474,7 +480,7 @@ export default function ReidAndTaylorPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "420px",
+                            minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "15px",

@@ -105,6 +105,8 @@ export default function PvLycraPage() {
       <Helmet>
         <title>Buy PV Lycra Suiting Fabrics | PV Lycra Fabric For Men in Dubai</title>
         <meta name="description" content="At Aurora Textiles, we offer a premium collection of PV Lycra Suiting Fabrics, crafted for men who value comfort, flexibility, and a refined appearance. Check out PV Lycra Fabric for Men in Dubai" />
+      
+        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "PV Lycra Fabric", "description": "Buy PV lycra suiting fabrics for men wholesale in Dubai from Aurora Textiles. Poly viscose lycra blend fabrics for flexible suiting in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/pv-lycra"})}</script>
       </Helmet>
 
       {/* NAVBAR */}
