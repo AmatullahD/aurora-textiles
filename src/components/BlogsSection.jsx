@@ -5,16 +5,19 @@ import React from "react";
 export default function BlogsSection() {
   const blogs = [
     {
-      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform_01-1024x683.png.webp",
+      image: "/blog-card-1.webp",
       title: "WHY WHITE DOMINATES 30% OF THE GLOBAL UNIFORM MARKET",
+      slug: "/why-white-dominates-30-of-the-global-uniform-market",
     },
     {
-      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Uniform2-01-1024x492.png.webp",
+      image: "/blog-card-2.webp",
       title: "WHAT ARE THE DIFFERENT TYPES OF PROTECTIVE WEAR? ALL YOU NEED TO KNOW",
+      slug: "/what-are-the-different-types-of-protective-wear-all-you-need-to-know",
     },
     {
-      image: "https://aurora-textiles.com/wp-content/uploads/2026/04/Mass-uniform.png.webp",
+      image: "/blog-card-3.webp",
       title: "MASS-PRODUCED VS QUALITY-FOCUSED UNIFORMS: HOW MANUFACTURERS CAN BUILD A STRONG REPUTATION",
+      slug: "/mass-produced-vs-quality-focused-uniforms-how-manufacturers-can-build-a-strong-reputation",
     },
   ];
 
@@ -65,16 +68,21 @@ export default function BlogsSection() {
                 overflow: "hidden",
               }}
             >
-              {/* PLAIN IMAGE — not clickable */}
-              <img
-                src={item.image}
-                alt="blog"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-
-              {/* BLACK BLOGS TAG — anchor, same tab, URL shows on hover */}
+              {/* IMAGE — <a href> so URL shows in status bar */}
               <a
-                href="https://aurora-textiles.com/category/blogs/"
+                href={item.slug}
+                style={{ display: "block", width: "100%", height: "100%" }}
+              >
+                <img
+                  src={item.image}
+                  alt="blog"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </a>
+
+              {/* BLACK BLOGS TAG — <a href> so URL shows */}
+              <a
+                href="/category/blogs"
                 style={{
                   position: "absolute",
                   top: "16px",
@@ -110,9 +118,9 @@ export default function BlogsSection() {
               {item.title}
             </h3>
 
-            {/* CARD READ MORE — each card, same tab */}
+            {/* CARD READ MORE — <a href> so URL shows */}
             <a
-              href="/blog"
+              href={item.slug}
               style={{
                 background: "transparent",
                 border: "none",
@@ -133,7 +141,7 @@ export default function BlogsSection() {
         ))}
       </div>
 
-      {/* BOTTOM GOLDEN READ MORE BUTTON */}
+      {/* BOTTOM GOLDEN READ MORE BUTTON — <a href> so URL shows */}
       <div
         style={{
           display: "flex",

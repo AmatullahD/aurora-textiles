@@ -40,6 +40,12 @@ import Egypt from "./pages/locations/Egypt";
 import SaudiArabia from "./pages/locations/SaudiArabia";
 import FabricSuppliers from "./pages/products/FabricSuppliers";
 
+import BlogsPage from "./category/blogs/BlogsPage";
+import Blog from "./category/blogs/Blog";
+import BlogPost1 from "./category/blogs/BlogPost1";
+import BlogPost2 from "./category/blogs/BlogPost2";
+import BlogPost3 from "./category/blogs/BlogPost3";
+
 function App() {
   const location = useLocation();
 
@@ -98,6 +104,13 @@ function App() {
         <Route path="/south-africa" element={<SouthAfrica />} />
         <Route path="/egypt" element={<Egypt />} />
         <Route path="/saudi-arabia" element={<SaudiArabia />} />
+
+        {/* Blogs */}
+        <Route path="/category/blogs" element={<BlogsPage />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/why-white-dominates-30-of-the-global-uniform-market" element={<BlogPost1 />} />
+        <Route path="/what-are-the-different-types-of-protective-wear-all-you-need-to-know" element={<BlogPost2 />} />
+        <Route path="/mass-produced-vs-quality-focused-uniforms-how-manufacturers-can-build-a-strong-reputation" element={<BlogPost3 />} />
       </Routes>
     </>
   );
