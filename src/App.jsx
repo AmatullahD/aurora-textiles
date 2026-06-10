@@ -39,6 +39,7 @@ import SouthAfrica from "./pages/locations/SouthAfrica";
 import Egypt from "./pages/locations/Egypt";
 import SaudiArabia from "./pages/locations/SaudiArabia";
 import FabricSuppliers from "./pages/products/FabricSuppliers";
+import HighQualityUniformFabricSuppliers from "./pages/products/HighQualityUniformFabricSuppliers";
 
 import BlogsPage from "./category/blogs/BlogsPage";
 import Blog from "./category/blogs/Blog";
@@ -69,6 +70,7 @@ function App() {
         <Route path="/products/uniform" element={<Uniform />} />
         <Route path="/products/ethnic-fabrics" element={<Ethnic />} />
         <Route path="/fabric-suppliers" element={<FabricSuppliers />} />
+        <Route path="/high-quality-uniform-fabric-suppliers" element={<HighQualityUniformFabricSuppliers />} />
 
         {/* Brands */}
         <Route path="/products/donear" element={<Donear />} />
