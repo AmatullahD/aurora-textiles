@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function PartnerBrands() {
@@ -6,7 +6,7 @@ export default function PartnerBrands() {
 
     const brands = [
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
-             route: "/products/donear", 
+             route: "/products/donear",
             alt: "Donear" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
@@ -32,7 +32,7 @@ export default function PartnerBrands() {
              alt: "Klopman" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/lino.jpg.webp",
-             route: "/linen-fabric", 
+             route: "/linen-fabric",
             alt: "lino" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/nemssis.jpg.webp",
@@ -40,15 +40,15 @@ export default function PartnerBrands() {
              alt: "Nemssis" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/spada.jpg.webp",
-             route: "/products/spaadaa-fabrics", 
+             route: "/products/spaadaa-fabrics",
             alt: "Spaadaa" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-4.png.webp",
-              route: "/products/georgia-gullini-fabrics", 
+              route: "/products/georgia-gullini-fabrics",
             alt: "Georgia Gullini" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-3.png.webp",
-             route: "/products/donear", 
+             route: "/products/donear",
             alt: "Donear" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/Sammaan-Logo-1-1024x425.png.webp",
@@ -56,10 +56,10 @@ export default function PartnerBrands() {
              alt: "Sammaan" },
 
         { src: "https://aurora-textiles.com/wp-content/uploads/2024/12/su-1.png.webp",
-             route: "/products/reid-and-taylor", 
+             route: "/products/reid-and-taylor",
             alt: "Reid & Taylor" },
 
-        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp", 
+        { src: "https://aurora-textiles.com/wp-content/uploads/2025/01/JC_LOGO_Vector-01-1024x644.png.webp",
             route: "/products/john-cavendish-fabrics",
              alt: "John Cavendish" },
 
@@ -68,41 +68,73 @@ export default function PartnerBrands() {
              alt: "Reliance" },
     ];
 
-    const visibleItems = 6;
+    const isMobile = window.innerWidth < 768;
+    const visibleItems = isMobile ? 2 : 6;
     const totalSlides = brands.length - visibleItems + 1;
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    // Drag-to-scroll state
+    // Auto-slide
+    const autoSlideRef = useRef(null);
+
+    const startAutoSlide = () => {
+        stopAutoSlide();
+        autoSlideRef.current = setInterval(() => {
+            setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        }, 3000);
+    };
+
+    const stopAutoSlide = () => {
+        if (autoSlideRef.current) {
+            clearInterval(autoSlideRef.current);
+            autoSlideRef.current = null;
+        }
+    };
+
+    useEffect(() => {
+        startAutoSlide();
+        return () => stopAutoSlide();
+    }, [totalSlides]);
+
+    const handlePrev = () => {
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev > 0 ? prev - 1 : totalSlides - 1));
+        startAutoSlide();
+    };
+
+    const handleNext = () => {
+        stopAutoSlide();
+        setCurrentSlide(prev => (prev < totalSlides - 1 ? prev + 1 : 0));
+        startAutoSlide();
+    };
+
+    // Drag-to-scroll
     const dragRef = useRef(null);
     const dragStartX = useRef(0);
     const dragStartSlide = useRef(0);
     const isDragging = useRef(false);
 
-    const getVisibleBrands = () => brands.slice(currentSlide, currentSlide + visibleItems);
-
-    const handlePrev = () => setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-    const handleNext = () => setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-
     const onMouseDown = (e) => {
         isDragging.current = true;
         dragStartX.current = e.clientX;
         dragStartSlide.current = currentSlide;
-        dragRef.current.style.cursor = "grabbing";
+        if (dragRef.current) dragRef.current.style.cursor = "grabbing";
     };
     const onMouseMove = (e) => {
         if (!isDragging.current) return;
         const diff = dragStartX.current - e.clientX;
         const threshold = 60;
         if (diff > threshold) {
-            const newSlide = Math.min(dragStartSlide.current + 1, totalSlides - 1);
-            setCurrentSlide(newSlide);
+            stopAutoSlide();
+            setCurrentSlide(Math.min(dragStartSlide.current + 1, totalSlides - 1));
             isDragging.current = false;
+            startAutoSlide();
         } else if (diff < -threshold) {
-            const newSlide = Math.max(dragStartSlide.current - 1, 0);
-            setCurrentSlide(newSlide);
+            stopAutoSlide();
+            setCurrentSlide(Math.max(dragStartSlide.current - 1, 0));
             isDragging.current = false;
+            startAutoSlide();
         }
     };
     const onMouseUp = () => {
@@ -119,19 +151,22 @@ export default function PartnerBrands() {
         else if (diff < -50) handlePrev();
     };
 
+    // Each item width as percentage of the track
+    const itemWidthPct = 100 / visibleItems;
+
     return (
         <section
             style={{
                 width: "100%",
                 background: "#ffffff",
-                padding: window.innerWidth < 768 ? "10px 20px 40px" : "10px 6% 50px",
+                padding: isMobile ? "10px 20px 40px" : "10px 6% 50px",
                 boxSizing: "border-box",
                 textAlign: "center",
             }}
         >
             <h4
                 style={{
-                    fontSize: window.innerWidth < 768 ? "28px" : "38px",
+                    fontSize: isMobile ? "28px" : "38px",
                     color: "#0B2C66",
                     marginBottom: "60px",
                     fontFamily: "'Cinzel Decorative', sans-serif",
@@ -159,62 +194,74 @@ export default function PartnerBrands() {
                     &#8249;
                 </div>
 
-                {/* Brands Grid — draggable */}
+                {/* Sliding track viewport */}
                 <div
-                    ref={dragRef}
-                    onMouseDown={onMouseDown}
-                    onMouseMove={onMouseMove}
-                    onMouseUp={onMouseUp}
-                    onMouseLeave={onMouseUp}
-                    onTouchStart={onTouchStart}
-                    onTouchEnd={onTouchEnd}
                     style={{
-                        display: "grid",
-                        gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(6, 1fr)",
-                        gap: window.innerWidth < 768 ? "30px" : "40px",
-                        alignItems: "center",
-                        justifyItems: "center",
                         flex: 1,
-                        cursor: "grab",
-                        userSelect: "none",
-                        transition: "0.4s ease",
+                        overflow: "hidden",
                     }}
                 >
-                    {getVisibleBrands().map((brand, index) => {
-                        const globalIndex = currentSlide + index;
-                        return (
-                            <a
+                    <div
+                        ref={dragRef}
+                        onMouseDown={onMouseDown}
+                        onMouseMove={onMouseMove}
+                        onMouseUp={onMouseUp}
+                        onMouseLeave={onMouseUp}
+                        onTouchStart={onTouchStart}
+                        onTouchEnd={onTouchEnd}
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            transform: `translateX(-${currentSlide * itemWidthPct}%)`,
+                            transition: "transform 0.45s ease",
+                            cursor: "grab",
+                            userSelect: "none",
+                            willChange: "transform",
+                        }}
+                    >
+                        {brands.map((brand, index) => (
+                            <div
                                 key={index}
-                                href={brand.route}
-                                onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
-                                onMouseEnter={() => setHoveredIndex(globalIndex)}
-                                onMouseLeave={() => setHoveredIndex(null)}
                                 style={{
-                                    width: "100%",
+                                    minWidth: `${itemWidthPct}%`,
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center",
-                                    textDecoration: "none",
-                                    transform: hoveredIndex === globalIndex ? "scale(1.07)" : "scale(1)",
-                                    transition: "transform 0.25s ease",
+                                    padding: isMobile ? "0 10px" : "0 20px",
+                                    boxSizing: "border-box",
                                 }}
                             >
-                                <img
-                                    src={brand.src}
-                                    alt={brand.alt}
-                                    draggable="false"
+                                <a
+                                    href={brand.route}
+                                    onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
                                     style={{
-                                        width: "100%",
-                                        maxWidth: window.innerWidth < 768 ? "120px" : "180px",
-                                        objectFit: "contain",
-                                        transition: "0.3s ease",
-                                        opacity: hoveredIndex === globalIndex ? 0.85 : 1,
-                                        pointerEvents: "none",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                        textDecoration: "none",
+                                        transform: hoveredIndex === index ? "scale(1.07)" : "scale(1)",
+                                        transition: "transform 0.25s ease",
                                     }}
-                                />
-                            </a>
-                        );
-                    })}
+                                >
+                                    <img
+                                        src={brand.src}
+                                        alt={brand.alt}
+                                        draggable="false"
+                                        style={{
+                                            width: "100%",
+                                            maxWidth: isMobile ? "120px" : "180px",
+                                            objectFit: "contain",
+                                            transition: "opacity 0.3s ease",
+                                            opacity: hoveredIndex === index ? 0.85 : 1,
+                                            pointerEvents: "none",
+                                        }}
+                                    />
+                                </a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Right Arrow */}
@@ -231,7 +278,7 @@ export default function PartnerBrands() {
                 {Array.from({ length: totalSlides }).map((_, index) => (
                     <div
                         key={index}
-                        onClick={() => setCurrentSlide(index)}
+                        onClick={() => { stopAutoSlide(); setCurrentSlide(index); startAutoSlide(); }}
                         style={{
                             width: currentSlide === index ? "12px" : "9px",
                             height: currentSlide === index ? "12px" : "9px",

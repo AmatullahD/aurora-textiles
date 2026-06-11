@@ -113,12 +113,12 @@ export default function ShiddatPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1280px",
+                    maxWidth: "1300px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -138,7 +138,7 @@ export default function ShiddatPage() {
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
-                            height: "auto",
+                            height: "420px",
                             objectFit: "contain",
                         }}
                     />
@@ -189,7 +189,7 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -263,7 +263,7 @@ export default function ShiddatPage() {
                     style={{
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
-                        height: "460px",
+                        height: "420px",
                         overflow: "hidden",
                     }}
                 >
@@ -289,7 +289,7 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -299,7 +299,7 @@ export default function ShiddatPage() {
                     style={{
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
-                        height: "560px",
+                        height: "540px",
                         borderRadius: "16px",
                         overflow: "hidden",
                     }}
@@ -321,7 +321,7 @@ export default function ShiddatPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.25",

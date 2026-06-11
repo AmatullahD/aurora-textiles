@@ -89,7 +89,7 @@ export default function NawabiPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                        NAWABI BY NEMSSIS
+                        Nawabi By Nemssis
                     </h1>
                 </div>
             </section>
@@ -102,7 +102,7 @@ export default function NawabiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -309,7 +309,7 @@ export default function NawabiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -319,7 +319,7 @@ export default function NawabiPage() {
                     style={{
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
-                        height: "520px",
+                        height: "680px",
                         overflow: "hidden",
                         borderRadius: "4px",
                     }}
@@ -336,11 +336,11 @@ export default function NawabiPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
                             color: "#344886",
                             margin: "0 0 24px 0",
-                            lineHeight: "1.2",
+                            lineHeight: "1.4",
                         }}
                     >
                         Why Source Nawabi Fabrics From Aurora Textiles?
@@ -351,14 +351,14 @@ export default function NawabiPage() {
                             fontSize: "19px",
                             color: "#333",
                             lineHeight: "1.4",
-                            marginBottom: "20px",
+                            marginBottom: "24px",
                         }}
                     >
                         As one of Dubai's established men's ethnic fabric suppliers,{" "}
                         <strong>Aurora Textiles</strong> brings you original{" "}
                         <strong>fabrics by Nemssis</strong> with:
                     </p>
-                    <ul style={{ paddingLeft: "20px", margin: "0 0 24px 0" }}>
+                    <ul style={{ paddingLeft: "35px", margin: "0 0 24px 0" }}>
                         {[
                             { bold: "Exclusive Access to Sub-Brands", text: " like Nawabi by Nemssis" },
                             { bold: null, text: "Unstitched Ethnic Fabrics for Men's Tailoring" },
@@ -372,8 +372,8 @@ export default function NawabiPage() {
                                     fontFamily: "'Poppins', sans-serif",
                                     fontSize: "19px",
                                     color: "#333",
-                                    lineHeight: "1.4",
-                                    marginBottom: "12px",
+                                    lineHeight: "2",
+                                    marginBottom: "20px",
                                 }}
                             >
                                 {item.bold ? (
@@ -405,7 +405,7 @@ export default function NawabiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -415,7 +415,7 @@ export default function NawabiPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
                             color: "#344886",
                             margin: "0 0 24px 0",
@@ -429,7 +429,7 @@ export default function NawabiPage() {
                             fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.4",
+                            lineHeight: "1.5",
                         }}
                     >
                         Every fabric under the <strong>Nawabi by Nemssis</strong> label is created with

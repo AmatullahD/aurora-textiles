@@ -68,7 +68,7 @@ function App() {
         <Route path="/products/suiting" element={<Suiting />} />
         <Route path="/products/shirting" element={<Shirting />} />
         <Route path="/products/uniform" element={<Uniform />} />
-        <Route path="/products/ethnic-fabrics" element={<Ethnic />} />
+        <Route path="/products/ethnic-fabric" element={<Ethnic />} />
         <Route path="/fabric-suppliers" element={<FabricSuppliers />} />
         <Route path="/high-quality-uniform-fabric-suppliers" element={<HighQualityUniformFabricSuppliers />} />
 
@@ -82,7 +82,7 @@ function App() {
         <Route path="/products/rasm-ethnics-by-sammaan" element={<RasmEthnics />} />
         <Route path="/products/georgia-gullini-fabrics" element={<GeorgiaGullini />} />
         <Route path="/products/reliance-fabrics" element={<Reliance />} />
-        <Route path="/products/nemssis" element={<Nemssis />} />
+        <Route path="/products/nemssis-fabrics" element={<Nemssis />} />
         <Route path="/products/shiddat-by-nemssis" element={<Shiddat />} />
         <Route path="/products/sanskriti-by-nemssis" element={<Sanskriti />} />
         <Route path="/products/raag-resham-by-nemssis" element={<RaagResham />} />
@@ -93,7 +93,7 @@ function App() {
         {/* Fabrics */}
         <Route path="/cotton-fabric" element={<Cotton />} />
         <Route path="/denim" element={<Denim />} />
-        <Route path="/linen-fabric" element={<Linen />} />
+        <Route path="/linen-fabrics" element={<Linen />} />
         <Route path="/poly-cotton-fabric" element={<PolyCotton />} />
         <Route path="/poly-viscose" element={<PolyViscose />} />
         <Route path="/poly-wool-fabric" element={<PolyWool />} />

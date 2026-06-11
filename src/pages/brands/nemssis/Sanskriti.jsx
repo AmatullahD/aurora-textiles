@@ -117,7 +117,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -189,7 +189,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -199,7 +199,7 @@ export default function SanskritiPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "40px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.25",
@@ -290,7 +290,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -383,7 +383,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}

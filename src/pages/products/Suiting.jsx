@@ -14,7 +14,7 @@ export default function SuitingPage() {
         { src: "/regency.webp",              route: "" },
         { src: "/donear-logo.png",           route: "/products/donear" },
         { src: "/opulent.webp",              route: "" },
-        { src: "/brand-3.jpg",               route: "" },
+        { src: "/brand-3.jpg",               route: "/products/reid-and-taylor" },
         { src: "/dignity.webp",              route: "" },
         { src: "/cotton-wool.webp",          route: "" },
         { src: "/fc-collection.webp",        route: "" },

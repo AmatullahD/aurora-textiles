@@ -8,6 +8,55 @@ import ScrollToTop from "../../components/ScrollToTop";
 export default function UniformFabricSupplier() {
     const navigate = useNavigate();
     const [hoveredCard, setHoveredCard] = useState(null);
+    const [openFaq, setOpenFaq] = useState(0);
+    const [hoveredFaq, setHoveredFaq] = useState(null);
+
+    const faqs = [
+        {
+            question: "What makes a uniform fabric high quality?",
+            answer: "High quality uniform fabric offers durability, breathability, comfort, color retention, and resistance to repeated washing and daily wear. It maintains a professional appearance over time and performs well in demanding environments.",
+        },
+        {
+            question: "Does fabric quality affect uniform lifespan?",
+            answer: "Yes. High-quality fabrics maintain structure, texture, and color consistency for a longer period, reducing replacement frequency and long-term costs.",
+        },
+        {
+            question: "How does uniform fabric impact customer perception?",
+            answer: "Customers associate clean, structured, and well-maintained uniforms with professionalism, trust, and quality service. Poor fabric quality can negatively affect brand image.",
+        },
+        {
+            question: "Which fabric is best for uniforms in UAE?",
+            answer: "Polycotton blends and advanced performance fabrics are among the best options because they provide durability, breathability, and comfort in hot climates.",
+        },
+        {
+            question: "What is the most durable uniform fabric?",
+            answer: "Industrial performance fabrics and high-quality polycotton blends are considered highly durable due to their resistance to repeated washing and heavy daily use.",
+        },
+        {
+            question: "Is cotton good for uniforms?",
+            answer: "Yes, cotton is breathable and comfortable, making it suitable for healthcare and office uniforms. However, it wrinkles more easily and may shrink after repeated washing.",
+        },
+        {
+            question: "Which fabric is best for hotel uniforms?",
+            answer: "Hospitality performance blends are ideal because they maintain elegance, wrinkle resistance, and colour consistency over time.",
+        },
+        {
+            question: "Which fabric is best for healthcare uniforms?",
+            answer: "Breathable cotton blends and lightweight polycotton fabrics are commonly preferred for healthcare uniforms because they offer comfort during long working hours.",
+        },
+        {
+            question: "Which fabric is best for corporate uniforms?",
+            answer: "Premium poly-viscose blends and lightweight suiting fabrics are commonly used for corporate uniforms due to their professional appearance and comfort.",
+        },
+        {
+            question: "Why is fabric quality important in UAE climate?",
+            answer: "High temperatures, humidity, sweat exposure, and frequent washing can quickly damage low-quality fabrics. High-quality fabrics maintain comfort and appearance in demanding UAE conditions.",
+        },
+        {
+            question: "How to choose the right uniform fabric supplier in UAE?",
+            answer: "Look for suppliers with consistent quality, reliable delivery, industry expertise, climate-suitable fabrics, and strong product knowledge.",
+        },
+    ];
 
     // ── SECTION 1: Intro inline links ──
     const industryLinks = [
@@ -170,7 +219,7 @@ export default function UniformFabricSupplier() {
                     {/* Left Image */}
                     <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
                         <img
-                            src="/uniform-fabric-supplier-1.webp"
+                            src="/egypt-1.webp"
                             alt="Premium uniform fabric rolls at Aurora Textiles UAE"
                             style={{
                                 width: "100%",
@@ -194,7 +243,7 @@ export default function UniformFabricSupplier() {
                                 marginBottom: "28px",
                             }}
                         >
-                            Your Trusted Uniform Fabric<br />Partner in the UAE
+                            Your Trusted Uniform Fabric<br />Partner in UAE
                         </h2>
 
                         <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
@@ -205,15 +254,15 @@ export default function UniformFabricSupplier() {
                             <LinkText label="corporate uniforms" route="/products/uniform" />.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "20px" }}>
                             With deep expertise as <strong>uniform fabric distributors and textile suppliers</strong>, Aurora Textiles serves hotels, hospitals, factories, airlines, and corporate businesses that demand consistent quality and reliable supply across every order.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "32px" }}>
+                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "32px" }}>
                             As one of the most established <strong>fabric suppliers in the UAE</strong>, we source materials specifically suited to the UAE climate — breathable, fade-resistant, wash-durable, and designed to maintain a professional appearance long after day one.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "36px" }}>
+                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "36px" }}>
                             Whether it's a crisp hotel uniform, a functional healthcare scrub, or a polished corporate outfit —{" "}
                             <a
                                 href="/"
@@ -367,11 +416,11 @@ export default function UniformFabricSupplier() {
                     {/* Right Image */}
                     <div style={{ flex: "0 0 44%", minWidth: "280px" }}>
                         <img
-                            src="/uniform-fabric-range.webp"
+                            src="/fabric-supplier-2.webp"
                             alt="Diverse range of uniform fabrics at Aurora Textiles UAE"
                             style={{
                                 width: "100%",
-                                height: "780px",
+                                height: "650px",
                                 objectFit: "cover",
                                 borderRadius: "16px",
                                 display: "block",
@@ -385,7 +434,7 @@ export default function UniformFabricSupplier() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 40px" : "60px 6% 40px",
+                    padding: window.innerWidth < 768 ? "50px 5% 40px" : "40px 6% 40px",
                     boxSizing: "border-box",
                     background: "#fafafa",
                 }}
@@ -432,10 +481,10 @@ export default function UniformFabricSupplier() {
                                 onMouseLeave={() => setHoveredCard(null)}
                                 style={{
                                     border: "5px solid #071d42",
-                                    borderRadius: "24px",
+                                    borderRadius: "26px",
                                     overflow: "hidden",
                                     cursor: "pointer",
-                                    height: "250px",
+                                    height: "280px",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -475,7 +524,7 @@ export default function UniformFabricSupplier() {
                                         <span
                                             style={{
                                                 fontFamily: "'Cinzel Decorative', serif",
-                                                fontSize: "18px",
+                                                fontSize: "30px",
                                                 fontWeight: "700",
                                                 color: "#0B2C66",
                                                 textAlign: "center",
@@ -504,7 +553,7 @@ export default function UniformFabricSupplier() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "14px",
+                                            fontSize: "15px",
                                             lineHeight: "1.5",
                                             color: "#333",
                                             textAlign: "center",
@@ -513,7 +562,7 @@ export default function UniformFabricSupplier() {
                                             fontWeight: "500",
                                         }}
                                     >
-                                        <strong style={{ color: "#0B2C66", fontFamily: "'Cinzel Decorative', serif", fontSize: "12px", display: "block", marginBottom: "6px" }}>
+                                        <strong style={{ color: "#082352", fontFamily: "'Cinzel Decorative', serif", fontSize: "20px", display: "block", marginBottom: "6px" }}>
                                             {card.alt}
                                         </strong>
                                         {card.desc}
@@ -547,11 +596,11 @@ export default function UniformFabricSupplier() {
                     {/* Left Image */}
                     <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
                         <img
-                            src="/uniform-fabric-supplier-2.webp"
+                            src="/oxford-2.webp"
                             alt="Uniform fabric wholesale solutions UAE"
                             style={{
                                 width: "100%",
-                                height: "680px",
+                                height: "700px",
                                 objectFit: "cover",
                                 borderRadius: "16px",
                                 display: "block",
@@ -574,11 +623,11 @@ export default function UniformFabricSupplier() {
                             Uniform Fabric Supply<br />Solutions in UAE
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.8", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
                             As experienced <strong>wholesale uniform fabric suppliers</strong>, Aurora Textiles supports both bulk and bespoke orders. Whether you're a hotel chain, hospital group, factory, or corporate business, our streamlined supply ensures consistent quality and timely delivery across Dubai, Abu Dhabi, and the wider GCC.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.8", color: "#333", marginBottom: "32px" }}>
+                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "32px" }}>
                             Our wide textile network and climate-focused fabric sourcing make us the preferred partner for <strong>uniform fabric UAE</strong> buyers who value performance, consistency, and long-term value.
                         </p>
 
@@ -587,14 +636,14 @@ export default function UniformFabricSupplier() {
                                 fontFamily: "'Cinzel Decorative', serif",
                                 fontSize: "22px",
                                 fontWeight: "700",
-                                color: "#222",
+                                color: "#344886",
                                 marginBottom: "20px",
                             }}
                         >
                             Why Businesses Choose Aurora Textiles?
                         </h3>
 
-                        <ul style={{ paddingLeft: "20px", margin: 0 }}>
+                        <ul style={{ paddingLeft: "25px", margin: 0 }}>
                             {[
                                 "Consistent fabric quality across every batch and order",
                                 "Wide selection of uniform fabrics for all industries and climates",
@@ -603,7 +652,7 @@ export default function UniformFabricSupplier() {
                                 "Reliable supply capability across UAE and GCC",
                                 "Experienced team with deep understanding of UAE climate requirements",
                             ].map((point, i) => (
-                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.9", color: "#333", marginBottom: "4px" }}>
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "4px" }}>
                                     {point}
                                 </li>
                             ))}
@@ -616,7 +665,7 @@ export default function UniformFabricSupplier() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 60px" : "70px 6% 80px",
+                    padding: window.innerWidth < 768 ? "20px 5% 20px" : "20px 6% 20px",
                     boxSizing: "border-box",
                     background: "#fff",
                 }}
@@ -645,52 +694,96 @@ export default function UniformFabricSupplier() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "40px 5% 60px" : "40px 6% 80px",
+                    maxWidth: "1300px",
+                    margin: "0 auto 80px auto",
+                    padding: "0 40px",
                     boxSizing: "border-box",
-                    background: "#fafafa",
                 }}
             >
-                <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+                {/* FAQ Title */}
+                <div style={{ textAlign: "center", marginBottom: "40px" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: window.innerWidth < 768 ? "20px" : "30px",
-                            fontWeight: "700",
                             color: "#344886",
-                            marginBottom: "40px",
-                            textAlign: "center",
+                            fontSize: "38px",
+                            fontWeight: "700",
+                            margin: 0,
+                            letterSpacing: "2px",
+                            textDecoration: "none",
                         }}
                     >
-                        FAQs
+                        FAQ
                     </h2>
-                    {[
-                        { q: "What makes a uniform fabric high quality?", a: "High quality uniform fabric offers durability, breathability, comfort, color retention, and resistance to repeated washing and daily wear. It maintains a professional appearance over time and performs well in demanding environments." },
-                        { q: "Does fabric quality affect uniform lifespan?", a: "Yes. High-quality fabrics maintain structure, texture, and color consistency for a longer period, reducing replacement frequency and long-term costs." },
-                        { q: "How does uniform fabric impact customer perception?", a: "Customers associate clean, structured, and well-maintained uniforms with professionalism, trust, and quality service. Poor fabric quality can negatively affect brand image." },
-                        { q: "Which fabric is best for uniforms in UAE?", a: "Polycotton blends and advanced performance fabrics are among the best options because they provide durability, breathability, and comfort in hot climates." },
-                        { q: "What is the most durable uniform fabric?", a: "Industrial performance fabrics and high-quality polycotton blends are considered highly durable due to their resistance to repeated washing and heavy daily use." },
-                        { q: "Is cotton good for uniforms?", a: "Yes, cotton is breathable and comfortable, making it suitable for healthcare and office uniforms. However, it wrinkles more easily and may shrink after repeated washing." },
-                        { q: "Which fabric is best for hotel uniforms?", a: "Hospitality performance blends are ideal because they maintain elegance, wrinkle resistance, and colour consistency over time." },
-                        { q: "Which fabric is best for healthcare uniforms?", a: "Breathable cotton blends and lightweight polycotton fabrics are commonly preferred for healthcare uniforms because they offer comfort during long working hours." },
-                        { q: "Which fabric is best for corporate uniforms?", a: "Premium poly-viscose blends and lightweight suiting fabrics are commonly used for corporate uniforms due to their professional appearance and comfort." },
-                        { q: "Why is fabric quality important in UAE climate?", a: "High temperatures, humidity, sweat exposure, and frequent washing can quickly damage low-quality fabrics. High-quality fabrics maintain comfort and appearance in demanding UAE conditions." },
-                        { q: "How to choose the right uniform fabric supplier in UAE?", a: "Look for suppliers with consistent quality, reliable delivery, industry expertise, climate-suitable fabrics, and strong product knowledge." },
-                    ].map((faq, i) => (
-                        <div key={i} style={{ marginBottom: "28px", borderBottom: "1px solid #e0e0e0", paddingBottom: "24px" }}>
-                            <h3
+                </div>
+
+                {/* FAQ Items */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+                    {faqs.map((faq, index) => (
+                        <div
+                            key={index}
+                            style={{
+                                border: "1px solid #ddd",
+                                borderBottom: index === faqs.length - 1 ? "1px solid #ddd" : "none",
+                                background: "#fff",
+                            }}
+                        >
+                            {/* Question Row */}
+                            <div
+                                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                                onMouseEnter={() => setHoveredFaq(index)}
+                                onMouseLeave={() => setHoveredFaq(null)}
                                 style={{
-                                    fontFamily: "'Poppins', sans-serif",
-                                    fontSize: "16px",
-                                    fontWeight: "600",
-                                    color: "#0B2C66",
-                                    marginBottom: "10px",
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    padding: "22px 28px",
+                                    cursor: "pointer",
                                 }}
                             >
-                                {faq.q}
-                            </h3>
-                            <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#444", margin: 0 }}>
-                                {faq.a}
-                            </p>
+                                <span
+                                    style={{
+                                        fontFamily: "'Cinzel Decorative', serif",
+                                        fontSize: "19px",
+                                        fontWeight: "700",
+                                        color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
+                                        letterSpacing: "0.5px",
+                                        lineHeight: "1.4",
+                                        transition: "color 0.2s ease",
+                                    }}
+                                >
+                                    {faq.question}
+                                </span>
+                                <span
+                                    style={{
+                                        fontSize: "18px",
+                                        color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
+                                        fontWeight: "600",
+                                        marginLeft: "20px",
+                                        flexShrink: 0,
+                                        transition: "color 0.2s ease",
+                                    }}
+                                >
+                                    {openFaq === index ? "−" : "+"}
+                                </span>
+                            </div>
+
+                            {/* Answer */}
+                            {openFaq === index && (
+                                <div
+                                    style={{
+                                        padding: "0 28px 24px 28px",
+                                        fontFamily: "sans-serif",
+                                        fontSize: "17px",
+                                        color: "#292626",
+                                        lineHeight: "1.5",
+                                        borderTop: "1px solid #eee",
+                                        paddingTop: "20px",
+                                    }}
+                                >
+                                    {faq.answer}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>

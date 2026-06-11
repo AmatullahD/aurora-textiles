@@ -103,7 +103,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -121,7 +121,7 @@ export default function ZaristaPage() {
                     <img
                         src="/nemssis-1.webp"
                         alt="Nemssis Logo"
-                        style={{ width: "100%", maxWidth: "320px", objectFit: "contain" }}
+                        style={{ width: "100%", maxWidth: "480px", objectFit: "contain" }}
                     />
                 </div>
 
@@ -143,9 +143,9 @@ export default function ZaristaPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.4",
+                            lineHeight: "1.2",
                             marginBottom: "20px",
                         }}
                     >
@@ -304,7 +304,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+               
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -331,10 +331,10 @@ export default function ZaristaPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "46px",
                             fontWeight: "700",
                             color: "#344886",
-                            lineHeight: "1.25",
+                            lineHeight: "1.5",
                             marginBottom: "20px",
                             marginTop: 0,
                         }}
@@ -346,7 +346,7 @@ export default function ZaristaPage() {
                             fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.4",
+                            lineHeight: "1.6",
                             marginBottom: "16px",
                         }}
                     >
@@ -357,8 +357,8 @@ export default function ZaristaPage() {
                             fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#333",
-                            lineHeight: "1.4",
-                            paddingLeft: "24px",
+                            lineHeight: "1.7",
+                            paddingLeft: "30px",
                             margin: 0,
                         }}
                     >
@@ -380,7 +380,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+               
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -390,7 +390,7 @@ export default function ZaristaPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.25",

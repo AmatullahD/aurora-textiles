@@ -29,8 +29,8 @@ export default function Footer() {
         width: "100%",
         backgroundColor: "#122a4b",
         color: "#fff",
-        marginTop: "60px",
-        paddingTop: "40px",
+        marginTop: "20px",
+        paddingTop: "10px",
         boxSizing: "border-box",
       }}
     >
@@ -178,30 +178,31 @@ export default function Footer() {
               display: "flex",
               flexDirection: "column",
               gap: "25px",
-              fontSize: "14px",
+              fontSize: "12px",
               lineHeight: "1.7",
               fontFamily: "'Poppins', sans-serif",
             }}
           >
             <a
-              href="https://maps.google.com/?q=Dubai+Textile+City,+Warehouse+47,+Al+Awir+Road,+Dubai"
+              href="https://maps.app.goo.gl/TwD6YtE3YaVoeTmq5"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+              style={{ fontSize: "15px", display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
             >
               <FaMapMarkerAlt style={{ marginTop: "6px", minWidth: "18px", flexShrink: 0 }} />
               <span>
-                Dubai Textile City - Warehouse # 47
+                Dubai Textile City-Warehouse #47 
                 <br />
-                Al Awir Road - Dubai International
-                <br />
-                City - Dubai - United Arab Emirates
+                Al Awir Road - Dubai International 
+                <br /> 
+                City-Dubai-United Arab Emirates
+              
               </span>
             </a>
 
             <a
               href="mailto:info@aurora-textiles.com"
-              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+              style={{ fontSize: "15px", display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
             >
               <FaEnvelope style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>info@aurora-textiles.com</span>
@@ -209,7 +210,7 @@ export default function Footer() {
 
             <a
               href="tel:+97143532696"
-              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+              style={{ fontSize: "15px", display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
             >
               <FaPhoneAlt style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>+97143532696</span>
@@ -217,7 +218,7 @@ export default function Footer() {
 
             <a
               href="tel:+971554172009"
-              style={{ display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
+              style={{ fontSize: "15px", display: "flex", gap: "14px", color: "#fff", textDecoration: "none" }}
             >
               <FaPhoneAlt style={{ marginTop: "5px", flexShrink: 0 }} />
               <span>+971554172009</span>

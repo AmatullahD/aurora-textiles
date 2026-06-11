@@ -182,23 +182,23 @@ export default function PolyViscosePage() {
       <section
         style={{
           width: "100%",
-          maxWidth: "1000px",
+          maxWidth: "1300px",
           margin: "0 auto 40px auto",
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
+       
           gap: "40px",
         }}
       >
         {/* Left Image */}
-        <div style={{ flex: "0 0 48%", maxWidth: "48%" }}>
+        <div style={{ flex: "0 0 48%"}}>
           <img
             src="/polyviscose-1.webp"
             alt="Poly Viscose Fabric"
             style={{
               width: "100%",
-              height: "650px",
+              height: "580px",
               objectFit: "contain",
               display: "block",
               borderRadius: "20px",
@@ -212,7 +212,7 @@ export default function PolyViscosePage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#344886",
-              fontSize: "30px",
+              fontSize: "42px",
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",

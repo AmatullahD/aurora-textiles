@@ -127,7 +127,7 @@ export default function Navbar() {
                                     { label: "Suiting", href: "/products/suiting" },
                                     { label: "Shirting", href: "/products/shirting" },
                                     { label: "Uniform", href: "/products/uniform" },
-                                    { label: "Ethnic", href: "/products/ethnic-fabrics" },
+                                    { label: "Ethnic", href: "/products/ethnic-fabric" },
                                 ].map((item) => (
                                     <li key={item.label}>
                                         <a
@@ -370,7 +370,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setNemssisOpen(false)}
                                 >
                                     <a
-                                        href="/products/nemssis"
+                                        href="/products/nemssis-fabrics"
                                         style={{
                                             display: "flex",
                                             alignItems: "center",
@@ -514,7 +514,7 @@ export default function Navbar() {
                                     { label: "Cotton Fabric", href: "/cotton-fabric" },
                                     { label: "Wool Fabrics", href: "/wool-fabric" },
                                     { label: "Polywool Fabric", href: "/poly-wool-fabric" },
-                                    { label: "Linen", href: "/linen-fabric" },
+                                    { label: "Linen", href: "/linen-fabrics" },
                                     { label: "Polycotton", href: "/poly-cotton-fabric" },
                                     { label: "Denim", href: "/denim" },
                                     { label: "Poly Viscose", href: "/poly-viscose" },

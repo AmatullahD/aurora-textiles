@@ -47,9 +47,9 @@ export default function NemssisPage() {
             <Helmet>
                 <title>Buy Nemssis Shirting Fabric | Shop Nemssis Cotton Shirting Fabric</title>
                 <meta name="description" content="The Nemssis fabric is of premium quality and it ensures a skin friendly feel. Woven by using latest knitting technology and quality tested threads. Contact Aurora Textiles to buy Nemssis premium cotton Shirting Fabrics in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Nemssis Fabrics", "description": "Buy Nemssis cotton shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Nemssis shirting fabric collection in UAE.", "brand": {"@type": "Brand", "name": "Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Nemssis Fabrics", "description": "Buy Nemssis cotton shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Nemssis shirting fabric collection in UAE.", "brand": { "@type": "Brand", "name": "Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -103,7 +103,7 @@ export default function NemssisPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                        NEMSSIS FABRICS
+                        Nemssis Fabrics
                     </h1>
                 </div>
             </section>
@@ -112,12 +112,12 @@ export default function NemssisPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+
                     gap: "60px",
                 }}
             >
@@ -136,26 +136,26 @@ export default function NemssisPage() {
                         alt="Nemssis Logo"
                         style={{
                             width: "100%",
-                            height: "auto",
+                            height: "420px",
                             objectFit: "contain",
-                            display: "block",
+
                         }}
                     />
                 </div>
 
                 {/* Right: heading + paragraph — 50% */}
-                <div style={{ flex: "0 0 50%", width: "50%" }}>
+                <div style={{ flex: "0 0 50%" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "42px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
                         }}
                     >
-                        NEMSSIS FABRICS – MEN'S SHIRTING SOLUTIONS BY AURORA TEXTILES
+                        Nemssis Fabrics – Men’s Shirting Solutions by Aurora Textiles
                     </h2>
                     <p
                         style={{
@@ -192,19 +192,19 @@ export default function NemssisPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "34px",
+                            fontSize: "48px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.2",
-                            margin: "0 0 24px 0",
+                            margin: "0 0 20px 0",
                         }}
                     >
-                        NEMSSIS SHIRTING FABRIC
+                        Nemssis Shirting Fabric
                     </h2>
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "17px",
                             lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "20px",
@@ -230,10 +230,10 @@ export default function NemssisPage() {
                     <ul
                         style={{
                             listStyle: "disc",
-                            paddingLeft: "24px",
+                            paddingLeft: "50px",
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
-                            lineHeight: "1.4",
+                            fontSize: "17px",
+                            lineHeight: "1.2",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -254,7 +254,7 @@ export default function NemssisPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "17px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -270,7 +270,7 @@ export default function NemssisPage() {
                     style={{
                         flex: "0 0 auto",
                         width: "480px",
-                        height: "580px",
+                        height: "540px",
                         flexShrink: 0,
                         overflow: "hidden",
                     }}
@@ -307,7 +307,7 @@ export default function NemssisPage() {
                     style={{
                         flex: "0 0 auto",
                         width: "480px",
-                        height: "580px",
+                        height: "650px",
                         flexShrink: 0,
                         overflow: "hidden",
                     }}
@@ -337,15 +337,16 @@ export default function NemssisPage() {
                             margin: "0 0 24px 0",
                         }}
                     >
-                        RANGE OF NEMSSIS SHIRTING FABRIC
+
+                        Range of Nemssis Shirting Fabric
                     </h2>
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "20px",
                             lineHeight: "1.4",
                             color: "#333",
-                            marginBottom: "20px",
+                            marginBottom: "24px",
                         }}
                     >
                         We exclusively stock <strong>Nemssis shirting fabrics</strong> in a range of blends and finishes
@@ -354,7 +355,7 @@ export default function NemssisPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             fontWeight: "700",
@@ -366,10 +367,10 @@ export default function NemssisPage() {
                     <ul
                         style={{
                             listStyle: "disc",
-                            paddingLeft: "24px",
+                            paddingLeft: "30px",
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
-                            lineHeight: "1.4",
+                            fontSize: "17px",
+                            lineHeight: "1.2",
                             color: "#333",
                             marginBottom: "20px",
                         }}
@@ -382,7 +383,7 @@ export default function NemssisPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             fontWeight: "700",
@@ -394,10 +395,10 @@ export default function NemssisPage() {
                     <ul
                         style={{
                             listStyle: "disc",
-                            paddingLeft: "24px",
+                            paddingLeft: "30px",
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
-                            lineHeight: "1.4",
+                            fontSize: "17px",
+                            lineHeight: "1.2",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -409,7 +410,7 @@ export default function NemssisPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "20px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -426,9 +427,8 @@ export default function NemssisPage() {
             <section
                 style={{
                     width: "100%",
-                    padding: "60px 40px",
+                    padding: "20px 40px",
                     boxSizing: "border-box",
-                    textAlign: "center",
                     marginBottom: "80px",
                 }}
             >
@@ -440,10 +440,12 @@ export default function NemssisPage() {
                         color: "#344886",
                         lineHeight: "1.2",
                         margin: "0 auto 28px auto",
-                        maxWidth: "900px",
+                        maxWidth: "1200px",
+                        textAlign:"center",
                     }}
                 >
-                    SMART SHIRTING SOLUTIONS FOR MODERN MEN
+                    Smart Shirting Solutions for Modern Men
+
                 </h2>
                 <p
                     style={{
@@ -451,8 +453,9 @@ export default function NemssisPage() {
                         fontSize: "19px",
                         lineHeight: "1.4",
                         color: "#333",
-                        maxWidth: "1000px",
+                        maxWidth: "1200px",
                         margin: "0 auto",
+                         textAlign:"center",
                     }}
                 >
                     Nemssis shirting fabrics are designed to meet modern men's style needs, providing a great balance of
@@ -471,7 +474,7 @@ export default function NemssisPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                 }}
             >
@@ -487,15 +490,15 @@ export default function NemssisPage() {
                             margin: "0 0 36px 0",
                         }}
                     >
-                        WHY SOURCE NEMSSIS FABRICS FROM AURORA TEXTILES?
+                      Why Source Nemssis Fabrics from Aurora Textiles?
                     </h2>
 
                     {[
-                        "VERIFIED NEMSSIS FABRIC SUPPLIER IN DUBAI",
-                        "WE SPECIALIZE IN HIGH-QUALITY SHIRTING FABRICS TAILORED FOR MEN'S FASHION AND APPAREL.",
-                        "REGULAR STOCK AVAILABILITY FOR BULK AND RECURRING ORDERS",
-                        "TRUSTED BY TAILORS, EXPORTERS, AND MENSWEAR BRANDS",
-                        "EXPORT SUPPORT ACROSS UAE AND MENA COUNTRIES",
+                        "Verified Nemssis fabric supplier in Dubai",
+                        "We specialize in high-quality shirting fabrics tailored for men’s fashion and apparel.",
+                        "Regular stock availability for bulk and recurring orders",
+                        "Trusted by tailors, exporters, and menswear brands",
+                        "Export support across UAE and MENA countries",
                     ].map((item, idx) => (
                         <div
                             key={idx}
@@ -508,10 +511,10 @@ export default function NemssisPage() {
                         >
                             <span
                                 style={{
-                                    fontSize: "22px",
+                                    fontSize: "32px",
                                     color: "#b8860b",
                                     flexShrink: 0,
-                                    lineHeight: "1.3",
+                                    lineHeight: "1.2",
                                 }}
                             >
                                 ✦
@@ -519,10 +522,10 @@ export default function NemssisPage() {
                             <p
                                 style={{
                                     fontFamily: "'Cinzel Decorative', serif",
-                                    fontSize: "13px",
+                                    fontSize: "20px",
                                     fontWeight: "700",
                                     color: "#344886",
-                                    lineHeight: "1.5",
+                                    lineHeight: "1.2",
                                     margin: 0,
                                     letterSpacing: "0.5px",
                                 }}
@@ -532,41 +535,41 @@ export default function NemssisPage() {
                         </div>
                     ))}
 
-                        {/* Button */}
-                        <div
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        </div>
+                    {/* Button */}
+                    <div
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <a
+                            href="/contact-us"
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 36px",
+                                fontSize: "15px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 {/* Right: Nemssis fabric folded image */}
@@ -574,7 +577,7 @@ export default function NemssisPage() {
                     style={{
                         flex: "0 0 auto",
                         width: "560px",
-                        height: "580px",
+                        height: "540px",
                         flexShrink: 0,
                         overflow: "hidden",
                     }}

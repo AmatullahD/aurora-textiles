@@ -42,7 +42,7 @@ export default function FabricSuppliers() {
         {
             src: "/klopman.webp",
             route: "/products/klopman",
-            desc: "Klopman International is Europe's leading workwear fabric manufacturer, offering high-performance fabrics designed for durability, safety, and comfort in demanding environments.",
+            desc: "The global benchmark for uniform and workwear fabrics. Our Klopman collection offers performance-driven textiles that are durable, easy-care, and suitable for heavy-duty use in hospitality, corporate, and industrial sectors.",
         },
         {
             src: "/oxford.webp",
@@ -87,7 +87,7 @@ export default function FabricSuppliers() {
         {
             src: "/spaadaa-1.webp",
             route: "/products/spaadaa-fabrics",
-            desc: "Spaadaa Fabrics delivers a distinctive range of menswear fabrics combining modern designs with superior quality, ideal for retail and bespoke tailoring applications.",
+            desc: "Spaadaa fabrics bring creativity and color to men's fashion, offering stylish shirting options for contemporary tailoring and occasion wear.",
         },
     ];
 
@@ -563,7 +563,7 @@ export default function FabricSuppliers() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 60px" : "40px 6%",
+                    padding: window.innerWidth < 768 ? "30px 5% 30px" : "30px 6%",
                     boxSizing: "border-box",
                     background: "#fff",
                 }}
@@ -651,7 +651,7 @@ export default function FabricSuppliers() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 60px" : "70px 6% 80px",
+                    padding: window.innerWidth < 768 ? "50px 5% 60px" : "10px 6% 20px",
                     boxSizing: "border-box",
                     background: "#fff",
                 }}
@@ -667,7 +667,6 @@ export default function FabricSuppliers() {
                             fontWeight: "700",
                             color: "#344886",
                             marginBottom: "24px",
-
                             lineHeight: "1.3",
                         }}
                     >
