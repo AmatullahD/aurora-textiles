@@ -3,18 +3,19 @@ import { useState, useEffect } from "react";
 const slides = [
   {
     image: "/banner1.png",
-    heading1: " 30 YEARS OF EXCELLENCE IN MEN'S FINE FABRICS",
+    heading1: " 30 Years of Excellence in",
+    heading2: " Men's Fine fabrics",
     text: "Supplying Premium Men's Suiting & Shirting Fabrics from top brands.",
   },
   {
     image: "/banner2.jpg",
-    heading1: "MEN'S SHIRTING AND SUITING",
-    heading2: "FABRIC STORE IN DUBAI",
+    heading1: "Men's Shirting and Suiting",
+    heading2: "Fabric Store in Dubai",
     text: "We are the leading fabric store in Dubai with a wider range of fabrics offered from multiple brands.",
   },
   {
     image: "/banner3.jpg",
-    heading1: "WHOLESALE TEXTILE SHOP AND SUPPLIERS IN DUBAI",
+    heading1: "Wholesale Textile Shop and Suppliers in Dubai",
     text: "Aurora Textiles are suppliers of the highest quality textiles in the UAE, Middle East and North African countries.",
   },
 ];
@@ -82,11 +83,10 @@ export default function BannerSlider() {
       >
         <h1
           style={{
-            fontSize: isMobile ? "34px" : "42px",
-            lineHeight: "1.7",
+            fontSize: isMobile ? "34px" : "38px",
+            lineHeight: "1.4",
             fontWeight: "600",
-            marginBottom: "25px",
-            textTransform: "lowercase",
+            marginBottom: "22px",
             fontFamily: "'Cinzel Decorative', sans-serif",
           }}
         >
