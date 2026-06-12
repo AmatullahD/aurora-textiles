@@ -114,13 +114,13 @@ export default function KlopmanPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
-                    margin: "0 auto 80px auto",
+                    maxWidth: "1100px",
+                    margin: "0 auto 60px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
-                    gap: "80px",
+                  
+                    gap: "40px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
@@ -151,9 +151,9 @@ export default function KlopmanPage() {
                 <div style={{ flex: "1 1 0" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "28px" : "30px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 24px 0",
@@ -195,7 +195,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                 
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -206,7 +206,7 @@ export default function KlopmanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
@@ -281,7 +281,7 @@ export default function KlopmanPage() {
                         alt="Klopman Workwear Fabric"
                         style={{
                             width: "100%",
-                            height: "560px",
+                            height: "500px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "15px",
@@ -301,7 +301,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+               
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -313,7 +313,7 @@ export default function KlopmanPage() {
                         alt="Klopman Textile UAE"
                         style={{
                             width: "100%",
-                            height: "680px",
+                            height: "580px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "15px",
@@ -327,7 +327,7 @@ export default function KlopmanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
@@ -436,7 +436,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                 
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -455,7 +455,7 @@ export default function KlopmanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "40px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
@@ -624,7 +624,7 @@ export default function KlopmanPage() {
                     style={{
                         fontSize: window.innerWidth < 768 ? "26px" : "44px",
                         fontWeight: "700",
-                        color: "#1e2a5e",
+                        color: "#344886",
                         fontFamily: "'Cinzel Decorative', serif",
                         lineHeight: "1.2",
                         margin: "0 0 28px 0",
@@ -700,7 +700,7 @@ export default function KlopmanPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "32px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
                             letterSpacing: "1px",

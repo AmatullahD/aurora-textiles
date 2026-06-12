@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 
 function TencelCard({ icon, title, desc }) {
@@ -364,17 +367,17 @@ export default function TencelBlendPage() {
           }}
         >
           <TencelCard
-            icon="★"
+            icon={<FaStar />}
             title="Trusted Tencel fabric supplier in UAE with sustainable sourcing"
             desc="Trusted Tencel fabric supplier in UAE with sustainable sourcing"
           />
           <TencelCard
-            icon="⌃⌃"
+            icon={<FaAngleDoubleUp />}
             title="Range of blends suitable for shirting, suiting, and uniforms"
             desc="Range of blends suitable for shirting, suiting, and uniforms"
           />
           <TencelCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Soft hand feel with excellent drape and long-lasting performance"
             desc="Soft hand feel with excellent drape and long-lasting performance"
           />
@@ -392,12 +395,12 @@ export default function TencelBlendPage() {
           }}
         >
           <TencelCard
-            icon="📊"
+            icon={<FaChartBar />}
             title="Ideal for bulk orders and B2B clients across Dubai and MENA region"
             desc="Ideal for bulk orders and B2B clients across Dubai and MENA region"
           />
           <TencelCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Eco-conscious materials that align with modern fashion trends"
             desc="Eco-conscious materials that align with modern fashion trends"
           />

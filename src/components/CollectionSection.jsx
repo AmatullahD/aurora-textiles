@@ -51,6 +51,8 @@ function CollectionSection() {
           letterSpacing: "1px",
           marginBottom: "45px",
           marginTop: "0",
+
+
         }}
       >
         Our Collection
@@ -88,55 +90,57 @@ function CollectionSection() {
               }}
               style={{ textDecoration: "none", display: "block" }}
             >
-            
 
-            {/* Rounded Sides Image */}
-            <div
-              style={{
-                width: window.innerWidth < 768 ? "200px" : "280px",
-                height: window.innerWidth < 768 ? "200px" : "240px",
-                borderRadius: "50% / 60%",
-                overflow: "hidden",
-                flexShrink: 0,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.querySelector("img").style.transform = "scale(1.08)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.querySelector("img").style.transform = "scale(1)";
-              }}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
+
+              {/* Rounded Sides Image */}
+              <div
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  transition: "transform 0.5s ease",
+                  width: window.innerWidth < 768 ? "200px" : "280px",
+                  height: window.innerWidth < 768 ? "200px" : "240px",
+                  borderRadius: "50% / 60%",
+                  overflow: "hidden",
+                  flexShrink: 0,
                 }}
-              />
-            </div>
+                onMouseEnter={(e) => {
+                  e.currentTarget.querySelector("img").style.transform = "scale(1.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.querySelector("img").style.transform = "scale(1)";
+                }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    transition: "transform 0.5s ease",
+                  }}
+                />
+              </div>
 
-            {/* Title */}
-            <h3
-              style={{
-                fontSize: window.innerWidth < 768 ? "20px" : "30px",
-                fontWeight: "600",
-                color: "#1f2937",
-                marginTop: "18px",
-                marginBottom: 0,
-                fontFamily: "sans-serif",
-              }}
-            >
-              {item.title}
-            </h3>
-          </a>
+              {/* Title */}
+              <h3
+                style={{
+                  fontSize: window.innerWidth < 768 ? "20px" : "24px",
+                  fontWeight: "600",
+                  lineHeight: "30px",
+                  letterSpacing: ".3px",
+                  color: "#424040",
+                  marginTop: "18px",
+                  marginBottom: 0,
+                  fontFamily: "'Poppins', sans-serif",
+                }}
+              >
+                {item.title}
+              </h3>
+            </a>
           </motion.div>
         ))}
       </div>
-    </section>
+    </section >
   );
 }
 

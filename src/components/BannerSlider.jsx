@@ -97,10 +97,12 @@ export default function BannerSlider() {
 
         <p
           style={{
-            fontSize: isMobile ? "16px" : "22px",
+            fontSize: isMobile ? "16px" : "16px",
             lineHeight: isMobile ? "1.6" : "1.8",
             marginBottom: "35px",
             maxWidth: "650px",
+            fontFamily: "'poppins', sans-serif",
+            fontWeight: "400",
           }}
         >
           {slides[current].text}

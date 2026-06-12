@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 
 function PolyViscoseCard({ icon, title, desc }) {
@@ -375,17 +378,17 @@ export default function PolyViscosePage() {
           }}
         >
           <PolyViscoseCard
-            icon="★"
+            icon={<FaStar />}
             title="High-quality blends sourced from trusted textile mills"
             desc="High-quality blends sourced from trusted textile mills"
           />
           <PolyViscoseCard
-            icon="⌃⌃"
+            icon={<FaAngleDoubleUp />}
             title="Available in classic and modern textures for professional use"
             desc="Available in classic and modern textures for professional use"
           />
           <PolyViscoseCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Perfect for UAE's climate—breathable yet polished"
             desc="Perfect for UAE's climate—breathable yet polished"
           />
@@ -403,12 +406,12 @@ export default function PolyViscosePage() {
           }}
         >
           <PolyViscoseCard
-            icon="📊"
+            icon={<FaChartBar />}
             title="Suitable for both retail and bulk Poly Viscose fabric supply"
             desc="Suitable for both retail and bulk Poly Viscose fabric supply"
           />
           <PolyViscoseCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Quick delivery and expert guidance for fabric selection"
             desc="Quick delivery and expert guidance for fabric selection"
           />

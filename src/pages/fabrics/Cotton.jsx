@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar } from "react-icons/fa6";
+import { FaAngleDoubleUp } from "react-icons/fa";
+import { FaRegHandshake } from "react-icons/fa6";
 
 
 export default function CottonPage() {
@@ -328,7 +331,7 @@ export default function CottonPage() {
               overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}>★</div>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}><FaStar /></div>
             {hoveredCard === 1 ? (
               <p
                 style={{
@@ -383,7 +386,7 @@ export default function CottonPage() {
               overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "10px" }}>⌃⌃</div>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "10px" }}><FaAngleDoubleUp /></div>
             {hoveredCard === 2 ? (
               <p
                 style={{
@@ -439,7 +442,7 @@ export default function CottonPage() {
               overflow: "hidden",
             }}
           >
-            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}>🤝</div>
+            <div style={{ fontSize: "60px", color: "#b8960c", marginBottom: "18px" }}><FaRegHandshake /></div>
             {hoveredCard === 3 ? (
               <p
                 style={{

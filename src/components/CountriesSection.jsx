@@ -9,7 +9,9 @@ export default function CountriesSection() {
         <img
           src="https://aurora-textiles.com/wp-content/uploads/2026/01/safari.png.webp"
           alt="South Africa"
-          style={{ width: "75px", height: "75px", objectFit: "contain", }}
+          style={{ width: "75px", height: "75px", objectFit: "contain",
+            
+           }}
         />
       ),
     },
@@ -132,10 +134,9 @@ export default function CountriesSection() {
             <h3
               style={{
                 margin: 0,
-                fontSize: "18px",
-                fontFamily: "serif",
-                fontWeight: "500",
-                textTransform: "uppercase",
+                fontSize: "20px",
+                fontFamily: "'Cinzel Decorative', sans-serif",
+                fontWeight: "600",              
                 textAlign: "center",
                 lineHeight: "1.3",
               }}

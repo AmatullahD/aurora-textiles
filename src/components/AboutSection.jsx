@@ -8,17 +8,20 @@ export default function AboutSection() {
     <section
       style={{
         width: "100%",
-        background: "#ffffff",
-        padding: "60px 30px",
-       fontSize: "36px",
-        boxSizing: "border-box",
-        overflow: "hidden",
+                    maxWidth: "1200px",
+                    margin: "70px auto 20px auto",
+                    padding: "0 40px",
+                    boxSizing: "border-box",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "60px",
+                    flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
       }}
     >
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          // justifyContent: "space-between",
           alignItems: "center",
           gap: "20px",
           flexWrap: "wrap",
@@ -65,10 +68,12 @@ export default function AboutSection() {
           {/* Paragraphs */}
           <div
             style={{
-              fontSize: "20px",
-              lineHeight: "1.5",
-              color: "#111",
+              fontFamily: "'Poppins', Sans-serif",
+              fontSize: "17px",
               fontWeight: "400",
+              lineHeight: "30px",
+              letterSpacing: ".3px",
+              color: "#000",
             }}
           >
             <p>
@@ -142,7 +147,7 @@ export default function AboutSection() {
             />
           </div>
         </motion.div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }

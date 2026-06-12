@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
 
 
 function PolyCottonCard({ icon, title, desc }) {
@@ -180,8 +182,8 @@ export default function PolyCottonPage() {
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
-          gap: "20px",
+       
+          gap: "50px",
         }}
       >
         {/* Left Image */}
@@ -191,7 +193,7 @@ export default function PolyCottonPage() {
             alt="PolyCotton Fabric"
             style={{
               width: "100%",
-              height: "720px",
+              height: "680px",
               objectFit: "cover",
               display: "block",
               borderRadius: "20px",
@@ -204,7 +206,7 @@ export default function PolyCottonPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              color: "#150886",
+              color: "#344886",
               fontSize: "42px",
               fontWeight: "600",
               lineHeight: "1.2",
@@ -217,7 +219,7 @@ export default function PolyCottonPage() {
           <p
             style={{
               fontFamily: "sans-serif",
-              fontSize: "18px",
+              fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
               margin: "0 0 22px 0",
@@ -367,22 +369,22 @@ export default function PolyCottonPage() {
           }}
         >
           <PolyCottonCard
-            icon="★"
+            icon={<FaStar />}
             title="Certified Mills"
             desc="Sourced from certified textile mills for consistent performance"
           />
           <PolyCottonCard
-            icon="⌃⌃"
+            icon={<FaAngleDoubleUp />}
             title="UAE Tailored Options"
             desc="Tailored options for UAE-based workwear & menswear industries"
           />
           <PolyCottonCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Flexible Bulk Orders"
             desc="Flexible bulk ordering for designers, retailers, and uniform suppliers"
           />
           <PolyCottonCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Fast MENA Delivery"
             desc="Fast delivery across Dubai and the MENA region"
           />

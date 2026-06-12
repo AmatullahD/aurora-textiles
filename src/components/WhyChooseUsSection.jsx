@@ -98,11 +98,12 @@ export default function WhyChooseUsSection() {
           {/* Paragraph */}
           <p
             style={{
-              fontSize: "22px",
+              fontFamily: "'poppins', sans-serif",
+              fontSize: "19px",
               lineHeight: "1.5",
               color: "#F2F2F2",
               marginBottom: "45px",
-              maxWidth: "650px",
+              maxWidth: "720px",
             }}
           >
             Our fabrics are sourced from the finest mills,

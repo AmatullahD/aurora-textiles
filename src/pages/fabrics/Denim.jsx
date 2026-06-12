@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
 
 
 function DenimCard({ icon, title, desc }) {
@@ -363,22 +365,22 @@ export default function DenimPage() {
           }}
         >
           <DenimCard
-            icon="★"
+            icon={<FaStar />}
             title="Premium Quality"
             desc="Premium-quality denim sourced from reputed textile mills"
           />
           <DenimCard
-            icon="⌃⌃"
+            icon={<FaAngleDoubleUp />}
             title="Weights & Finishes"
             desc="Available in various weights, textures, and finishes"
           />
           <DenimCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Tailoring & Bulk"
             desc="Ideal for both small-scale tailoring and bulk manufacturing"
           />
           <DenimCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Fast UAE Delivery"
             desc="Quick delivery across Dubai and the UAE"
           />

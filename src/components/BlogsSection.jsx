@@ -68,10 +68,16 @@ export default function BlogsSection() {
                 overflow: "hidden",
               }}
             >
-              {/* IMAGE — <a href> so URL shows in status bar */}
+              {/* IMAGE — absolutely positioned so it doesn't wrap the Blogs tag anchor (no nested <a>) */}
               <a
                 href={item.slug}
-                style={{ display: "block", width: "100%", height: "100%" }}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  display: "block",
+                  width: "100%",
+                  height: "100%",
+                }}
               >
                 <img
                   src={item.image}
@@ -80,13 +86,14 @@ export default function BlogsSection() {
                 />
               </a>
 
-              {/* BLACK BLOGS TAG — <a href> so URL shows */}
+              {/* BLACK BLOGS TAG — sibling anchor, not nested inside image anchor */}
               <a
                 href="/category/blogs"
                 style={{
                   position: "absolute",
                   top: "16px",
                   left: "16px",
+                  zIndex: 1,
                   background: "#000",
                   color: "#fff",
                   padding: "10px 18px",

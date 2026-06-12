@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 function LinenCard({ icon, title, desc }) {
   const [hovered, setHovered] = React.useState(false);
@@ -170,13 +173,13 @@ export default function LinenPage() {
       <section
         style={{
           width: "100%",
-          maxWidth: "1100px",
+          maxWidth: "1200px",
           margin: "0 auto 40px auto",
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
-          gap: "10px",
+          
+          gap: "50px",
         }}
       >
         {/* Left Image */}
@@ -186,7 +189,7 @@ export default function LinenPage() {
             alt="Linen Fabric"
             style={{
               width: "100%",
-              height: "580px",
+              height: "620px",
               objectFit: "cover",
               display: "block",
               borderRadius: "20px",
@@ -200,7 +203,7 @@ export default function LinenPage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#344886",
-              fontSize: "36px",
+              fontSize: "42px",
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 28px 0",
@@ -210,7 +213,7 @@ export default function LinenPage() {
           </h2>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'poppins', sans-serif",
               fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
@@ -334,7 +337,7 @@ export default function LinenPage() {
           background: "#fff",
           padding: "60px 40px",
           boxSizing: "border-box",
-          marginBottom: "70px",
+          marginBottom: "50px",
         }}
       >
         <h2
@@ -362,17 +365,17 @@ export default function LinenPage() {
           }}
         >
           <LinenCard
-            icon="★"
+            icon={<FaStar />}
             title="Sourced from globally trusted textile partners"
             desc="Sourced from globally trusted textile partners"
           />
           <LinenCard
-            icon="⌃⌃"
+            icon={<FaAngleDoubleUp />}
             title="Variety of GSMs and finishes for different tailoring needs"
             desc="Variety of GSMs and finishes for different tailoring needs"
           />
           <LinenCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Options available in pure linen and linen blends (cotton/viscose)"
             desc="Options available in pure linen and linen blends (cotton/viscose)"
           />
@@ -390,12 +393,12 @@ export default function LinenPage() {
           }}
         >
           <LinenCard
-            icon="📊"
+            icon={<FaChartBar />}
             title="Perfect for warm-weather dressing in the UAE"
             desc="Perfect for warm-weather dressing in the UAE"
           />
           <LinenCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Suitable for bulk orders, B2B clients, and fashion houses"
             desc="Suitable for bulk orders, B2B clients, and fashion houses"
           />

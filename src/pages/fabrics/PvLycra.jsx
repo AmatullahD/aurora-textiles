@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 
 function PvLycraCard({ icon, title, desc, isBottom }) {
@@ -345,19 +348,19 @@ export default function PvLycraPage() {
           }}
         >
           <PvLycraCard
-            icon="★"
+            icon={<FaStar />}
             title="High-quality PV Lycra sourced from reputable mills"
             desc="High-quality PV Lycra sourced from reputable mills"
             isBottom={false}
           />
           <PvLycraCard
-            icon="❯❯"
+            icon={<FaAngleDoubleUp />}
             title="Available in multiple textures, finishes, and stretch levels"
             desc="Available in multiple textures, finishes, and stretch levels"
             isBottom={false}
           />
           <PvLycraCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Tailored solutions for fashion houses, tailors, and uniform suppliers"
             desc="Tailored solutions for fashion houses, tailors, and uniform suppliers"
             isBottom={false}
@@ -376,13 +379,13 @@ export default function PvLycraPage() {
           }}
         >
           <PvLycraCard
-            icon="📊"
+            icon={<FaChartBar />}
             title="Reliable bulk supply and fast delivery across Dubai and MENA"
             desc="Reliable bulk supply and fast delivery across Dubai and MENA"
             isBottom={true}
           />
           <PvLycraCard
-            icon="✔"
+            icon={<FaRegCheckCircle />}
             title="Expert guidance to help you choose the right suiting fabric for your needs"
             desc="Expert guidance to help you choose the right suiting fabric for your needs"
             isBottom={true}

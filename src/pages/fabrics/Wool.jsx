@@ -3,6 +3,10 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar } from "react-icons/fa6";
+import { FaAngleDoubleUp } from "react-icons/fa";
+import { FaRegHandshake } from "react-icons/fa6";
+import { GiCheckMark } from "react-icons/gi";
 
 function WoolFeatureCard({ card }) {
   const [hovered, setHovered] = React.useState(false);
@@ -166,7 +170,7 @@ export default function WoolPage() {
               fontFamily: "'Cinzel Decorative', serif",
             }}
           >
-            WOOL FABRIC
+          Wool Fabric
           </h1>
         </div>
       </section>
@@ -175,7 +179,7 @@ export default function WoolPage() {
       <section
         style={{
           width: "100%",
-          maxWidth: "1000px",
+          maxWidth: "1200px",
           margin: "0 auto 40px auto",
           padding: "0 10px",
           boxSizing: "border-box",
@@ -191,7 +195,7 @@ export default function WoolPage() {
             alt="Wool Suiting Fabric"
             style={{
               width: "100%",
-              height: "680px",
+              height: "620px",
               objectFit: "contain",
               display: "block",
               borderRadius: "20px",
@@ -205,7 +209,7 @@ export default function WoolPage() {
             style={{
               fontFamily: "'Cinzel Decorative', serif",
               color: "#344886",
-              fontSize: "36px",
+              fontSize: "46px",
               fontWeight: "700",
               lineHeight: "1.2",
               margin: "0 0 28px 0",
@@ -373,22 +377,22 @@ export default function WoolPage() {
         >
           {[
             {
-              icon: "★",
+              icon: <FaStar />,
               title: "Natural Insulation & Breathability",
               desc: "Wool offers excellent temperature regulation—keeping you warm during winter and cool indoors. Ideal for suits, jackets, and eveningwear.",
             },
             {
-              icon: "⌃⌃",
+              icon: <FaAngleDoubleUp />,
               title: "Luxurious Feel with Excellent Draping",
               desc: "Our wool and cashmere wool fabrics are soft to touch and drape well, enhancing the fit and fall of suits or sherwanis.",
             },
             {
-              icon: "🤝",
+              icon: <FaRegHandshake />,
               title: "Tailoring Friendly & Long-Lasting",
               desc: "Wool fabrics are naturally elastic, resistant to wrinkles, and easy to tailor—ensuring a premium finish with lasting durability.",
             },
             {
-              icon: "✔",
+              icon: <GiCheckMark />,
               title: "Available in Various Weaves & Finishes",
               desc: "Choose from twill, gabardine, herringbone, and other structured weaves suitable for different fashion applications.",
             },

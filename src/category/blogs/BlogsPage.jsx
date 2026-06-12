@@ -239,16 +239,16 @@ export default function BlogsPage() {
                 padding: "24px 24px 28px",
                 display: "flex",
                 flexDirection: "column",
-                gap: "10px",
+                gap: "14px",
               }}
             >
               {/* BLUE BLOGS TAG */}
               <a
                 href="/category/blogs"
                 style={{
-                  color: "#344886",
-                  fontSize: "14px",
-                  fontWeight: "500",
+                  color: "#2f58d1",
+                  fontSize: "16px",
+                  fontWeight: "600",
                   fontFamily: "'Poppins', sans-serif",
                   textDecoration: "none",
                   display: "inline-block",
@@ -277,8 +277,8 @@ export default function BlogsPage() {
               {/* AUTHOR / DATE */}
               <p
                 style={{
-                  fontSize: "13px",
-                  color: "#344886",
+                  fontSize: "15px",
+                  color: "#204dd3",
                   fontFamily: "'Poppins', sans-serif",
                   margin: 0,
                 }}

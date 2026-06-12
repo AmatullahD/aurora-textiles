@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake, } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 
 function PolyWoolCard({ item }) {
@@ -180,11 +183,11 @@ export default function PolyWoolPage() {
       <section
         style={{
           maxWidth: "1200px",
-          margin: "0 auto 80px auto",
+          margin: "0 auto 20px auto",
           padding: "0 40px",
           display: "flex",
-          alignItems: "center",
-          gap: "20px",
+        
+          gap: "50px",
           flexWrap: "wrap",
         }}
       >
@@ -194,7 +197,7 @@ export default function PolyWoolPage() {
             alt="Poly Wool Fabric"
             style={{
               width: "100%",
-              height: "560px",
+              height: "570px",
               objectFit: "contain",
               display: "block",
               borderRadius: "20px",
@@ -205,7 +208,7 @@ export default function PolyWoolPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              fontSize: "36px",
+              fontSize: "38px",
               fontWeight: "700",
               color: "#1a1a5e",
               marginBottom: "24px",
@@ -320,8 +323,8 @@ export default function PolyWoolPage() {
       <section
         style={{
           background: "#fff",
-          padding: "60px 40px",
-          marginBottom: "40px",
+          padding: "30px 20px",
+          marginBottom: "20px",
         }}
       >
         <h2
@@ -351,17 +354,17 @@ export default function PolyWoolPage() {
         >
           {[
             {
-              icon: "⭐",
+              icon: <FaStar />,
               title: "Sourced from top textile mills with consistent blend quality",
               desc: "Sourced from top textile mills with consistent blend quality",
             },
             {
-              icon: "❯❯",
+              icon: <FaAngleDoubleUp />,
               title: "Variety of GSMs, weaves, and textures to match your style",
               desc: "Variety of GSMs, weaves, and textures to match your style",
             },
             {
-              icon: "🤝",
+              icon: <FaRegHandshake />,
               title: "Reliable delivery and support across Dubai & MENA",
               desc: "Reliable delivery and support across Dubai & MENA",
             },
@@ -383,12 +386,12 @@ export default function PolyWoolPage() {
         >
           {[
             {
-              icon: "📊",
+              icon: <FaChartBar />,
               title: "Available in solid shades, subtle patterns, and elegant finishes",
               desc: "Available in solid shades, subtle patterns, and elegant finishes",
             },
             {
-              icon: "✅",
+              icon: <FaRegCheckCircle />,
               title: "Ideal for bulk orders by tailors, wholesalers, and designers",
               desc: "Ideal for bulk orders by tailors, wholesalers, and designers",
             },

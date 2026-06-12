@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ScrollToTop from "../../components/ScrollToTop";
+import { FaStar, FaRegHandshake } from "react-icons/fa6";
+import { FaAngleDoubleUp, FaRegCheckCircle } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
 
 
 function PolyWoolLycraCard({ icon, title, desc, isBottom }) {
@@ -356,19 +359,19 @@ export default function PolyWoolLycraPage() {
           }}
         >
           <PolyWoolLycraCard
-            icon="⭐"
+            icon={<FaStar />}
             title="Trusted Mills"
             desc="Sourced from trusted mills for consistent quality and performance"
             isBottom={false}
           />
           <PolyWoolLycraCard
-            icon="❯❯"
+            icon={<FaAngleDoubleUp />}
             title="Stretch Technology"
             desc="Wide range of suiting blends with modern stretch technology"
             isBottom={false}
           />
           <PolyWoolLycraCard
-            icon="🤝"
+            icon={<FaRegHandshake />}
             title="Dubai Climate Ready"
             desc="Designed for Dubai's climate—breathable yet refined"
             isBottom={false}
@@ -387,13 +390,13 @@ export default function PolyWoolLycraPage() {
           }}
         >
           <PolyWoolLycraCard
-            icon="📊"
+            icon={<FaChartBar />}
             title="Bulk & Custom Orders"
             desc="Suitable for bulk orders and custom tailoring projects"
             isBottom={true}
           />
           <PolyWoolLycraCard
-            icon="✅"
+            icon={<FaRegCheckCircle />}
             title="Quick B2B Delivery"
             desc="Quick delivery and reliable B2B support across the UAE and MENA region"
             isBottom={true}
