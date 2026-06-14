@@ -216,11 +216,10 @@ export default function SuitingPage() {
             >
                 <div
                     style={{
-                        maxWidth: "1250px",
+                        maxWidth: "1100px",
                         margin: "0 auto",
                         display: "flex",
-                        gap: "30px",
-                     
+                        gap: "10px",                    
                         justifyContent: "space-between",
                         flexWrap: "wrap",
                     }}
@@ -235,7 +234,7 @@ export default function SuitingPage() {
                         <h2
                             style={{
                                 fontSize: window.innerWidth < 768 ? "14px" : "40px",
-                                lineHeight: "1.15",
+                                lineHeight: "1.5",
                                 marginBottom: "20px",
                                 color: "#344886",
                                 fontWeight: "700",
@@ -249,12 +248,13 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "18px",
+                                fontSize: "17px",
                                 lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "35px",
                                 fontFamily: "'Poppins', sans-serif",
+                                letterSpacing: ".3px",
                             }}
                         >
                             Our exquisite suiting fabrics are the foundation of sophisticated,
@@ -275,7 +275,7 @@ export default function SuitingPage() {
                         {/* Button */}
                         <div
                             onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                            style={{ display: "flex", alignItems: "center", gap: "14px" }}>
 
                             <a
                                 href="/contact-us"
@@ -342,6 +342,7 @@ export default function SuitingPage() {
                             : "40px 6% 90px",
                     boxSizing: "border-box",
                     background: "#fff",
+                    marginTop:"20px",
                 }}
             >
                 {/* SLIDER */}

@@ -13,7 +13,7 @@ export default function AboutSection() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                    // alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
       }}
@@ -42,7 +42,7 @@ export default function AboutSection() {
           <div style={{ marginBottom: "40px" }}>
             <h3
               style={{
-                fontSize: "42px",
+                fontSize: "40px",
                 color: "#0B2C66",
                 margin: 0,
                 fontFamily: "'Cinzel Decorative', sans-serif",
@@ -69,8 +69,8 @@ export default function AboutSection() {
           <div
             style={{
               fontFamily: "'Poppins', Sans-serif",
-              fontSize: "17px",
-              fontWeight: "400",
+              fontSize: "18px",
+              fontWeight: "500",
               lineHeight: "30px",
               letterSpacing: ".3px",
               color: "#000",
@@ -125,8 +125,8 @@ export default function AboutSection() {
             <div
               style={{
                 position: "absolute",
-                top: "-55px",
-                right: "-35px",
+                top: "-50px",
+                right: "-32px",
                 width: "100%",
                 height: "100%",
                 background: "#33488F",
@@ -140,6 +140,7 @@ export default function AboutSection() {
               alt="About Us"
               style={{
                 width: "100%",
+                height: "480px",
                 position: "relative",
                 zIndex: 2,
                 display: "block",

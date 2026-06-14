@@ -18,6 +18,7 @@ const quickLinks = [
   { label: "Blog", href: "/blog" },
   { label: "Leading Fabric Suppliers", href: "/fabric-suppliers" },
    { label: "High Quality Uniform Fabric Suppliers", href: "/high-quality-uniform-fabric-suppliers" },
+     { label: "Leading GCC Textile Supplier for Premium Fabric Solutions ", href: "/gcc-textile-supplier" },
 ];
 
 export default function Footer() {
@@ -137,6 +138,7 @@ export default function Footer() {
               gap: "20px",
               fontSize: "16px",
               fontFamily: "'Poppins', sans-serif",
+              fontWeight:"500",
             }}
           >
             {quickLinks.map((link, index) => (
