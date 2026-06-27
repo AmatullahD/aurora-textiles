@@ -124,7 +124,7 @@ export default function DonearPage() {
                 style={{
                     width: "100%",
                     maxWidth: "1200px",
-                    margin: "0 auto 70px auto",
+                    margin: "0 auto 50px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
@@ -139,8 +139,7 @@ export default function DonearPage() {
                         width: window.innerWidth < 768 ? "100%" : "50%",
                         display: "flex",
                         flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
+                       
                     }}
                 >
                     <img
@@ -178,7 +177,7 @@ export default function DonearPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.5",
                             margin: 0,
@@ -225,7 +224,7 @@ export default function DonearPage() {
                 </h2>
                 <p
                     style={{
-                        fontSize: "19px",
+                        fontSize: "17px",
                         color: "#333",
                         lineHeight: "1.5",
                         margin: "0 0 20px 0",
@@ -241,7 +240,7 @@ export default function DonearPage() {
                 </p>
                 <p
                     style={{
-                        fontSize: "19px",
+                        fontSize: "17px",
                         color: "#333",
                         lineHeight: "1.5",
                         margin: 0,

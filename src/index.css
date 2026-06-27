@@ -13,3 +13,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.content-paragraph {
+    fontSize: "17px",
+    lineHeight: "1.5",
+    fontFamily: "'Poppins', sans-serif",
+    letterSpacing: ".3px",
+}

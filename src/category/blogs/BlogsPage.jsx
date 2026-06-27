@@ -3,8 +3,10 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
+
+const PER_PAGE = 10;
+
 const allBlogs = [
-  // PAGE 1 — 10 posts
   {
     image: "/blog-card-1.webp",
     title: "Why White Dominates 30% of the Global Uniform Market",
@@ -12,7 +14,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "The Science, Psychology & Industry Data Behind the World's Most Trusted Workwear Color. Across hospitals in Europe, luxury hotels in [...]",
     slug: "/why-white-dominates-30-of-the-global-uniform-market",
-    page: 1,
   },
   {
     image: "/blog-card-2.webp",
@@ -21,7 +22,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "What Is It Made Of? In industries across Dubai and the UAE—construction, oil & gas, manufacturing, logistics, hospitality, and healthcare—protective",
     slug: "/what-are-the-different-types-of-protective-wear-all-you-need-to-know",
-    page: 1,
   },
   {
     image: "/blog-card-3.webp",
@@ -30,7 +30,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "The Real Difference That Impacts Durability, Brand Image & Long-Term Profitability. In today's competitive apparel industry, uniform manufacturers face a",
     slug: "/mass-produced-vs-quality-focused-uniforms-how-manufacturers-can-build-a-strong-reputation",
-    page: 1,
   },
   {
     image: "/blog-card-4.webp",
@@ -39,7 +38,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "White uniforms carry a promise. Clean. Professional. Trustworthy. But give it a few months—sometimes even weeks—and that bright white starts fading",
     slug: "/why-white-uniforms-turn-dull-and-how-klopman-solves-it",
-    page: 1,
   },
   {
     image: "/blog-card-5.webp",
@@ -48,7 +46,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "As a garment maker, your reputation doesn't depend on how cheap your fabric is. It depends on how few complaints you",
     slug: "/high-quality-fabric-vs-cheap-fabric-the-true-cost-and-roi-for-uniform-businesses",
-    page: 1,
   },
   {
     image: "/blog-card-6.webp",
@@ -57,7 +54,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "In a professional setting, your shirt speaks before you do. In the UAE—where business meetings, long office hours, and high temperatures",
     slug: "/how-the-right-shirting-fabric-elevates-your-professional-image",
-    page: 1,
   },
   {
     image: "/blog-card-7.webp",
@@ -66,7 +62,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "In the UAE, fabric isn't just about fashion — it's about comfort, breathability, durability, and appearance in extreme heat. With",
     slug: "/lightweight-fabrics-that-dont-compromise-on-style-in-the-uae",
-    page: 1,
   },
   {
     image: "/blog-card-8.webp",
@@ -75,7 +70,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "The dishdasha — also known as thobe or thawb—is more than a traditional garment. It is a daily essential across",
     slug: "/how-to-select-the-perfect-dishdasha-fabric-for-comfort-climate-daily-wear",
-    page: 1,
   },
   {
     image: "/blog-card-9.webp",
@@ -84,7 +78,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "Dubai's wedding season is more than just a time for celebration — it's a showcase of elegance, craftsmanship, and cultural",
     slug: "/wedding-season-in-dubai-choosing-premium-fabrics-for-celebration-wear",
-    page: 1,
   },
   {
     image: "/blog-card-10.webp",
@@ -93,9 +86,7 @@ const allBlogs = [
     author: "seo",
     excerpt: "In a climate like the UAE's—where daytime heat meets air-conditioned interiors, and winters can surprise with cool breezes—dressing smartly isn't",
     slug: "/smart-fabric-choices-for-changing-temperatures",
-    page: 1,
   },
-  // PAGE 2 — 3 posts
   {
     image: "/blog-card-11.webp",
     title: "How to Pick the Right Fabrics for Every Occasion Wear in the UAE",
@@ -103,7 +94,6 @@ const allBlogs = [
     author: "seo",
     excerpt: "When it comes to occasion wear, choosing the right fabric makes all the difference in comfort, appearance, and cultural relevance—especially [...]",
     slug: "/how-to-pick-the-right-fabrics-for-every-occasion-wear-in-the-uae",
-    page: 2,
   },
   {
     image: "/blog-card-12.webp",
@@ -112,7 +102,6 @@ const allBlogs = [
     author: "dn.burhan72@gmail.com",
     excerpt: "A perfect shirt is more than just a wardrobe staple—it's a statement of style, comfort, and sophistication. At Aurora Textiles,",
     slug: "/elevate-your-style-with-premium-shirting-fabrics-from-aurora-textiles",
-    page: 2,
   },
   {
     image: "/blog-card-13.webp",
@@ -121,16 +110,19 @@ const allBlogs = [
     author: "dn.burhan72@gmail.com",
     excerpt: "Fabrics are the foundation of fashion, interiors, and countless everyday applications. They blend utility with aesthetics, showcasing the perfect harmony",
     slug: "/discover-the-world-of-fabrics-crafting-elegance-comfort-and-style",
-    page: 2,
   },
+  
 ];
 
-const TOTAL_PAGES = 2;
+const TOTAL_PAGES = Math.ceil(allBlogs.length / PER_PAGE);
 
 export default function BlogsPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const visibleBlogs = allBlogs.filter((b) => b.page === currentPage);
+  const visibleBlogs = allBlogs.slice(
+    (currentPage - 1) * PER_PAGE,
+    currentPage * PER_PAGE
+  );
 
   const handlePage = (p) => {
     setCurrentPage(p);
@@ -139,7 +131,6 @@ export default function BlogsPage() {
 
   return (
     <div style={{ width: "100%", background: "#f0f2f5", minHeight: "100vh" }}>
-
       <Helmet>
         <title>Blogs | Aurora Textiles – Fabric & Uniform Insights for the UAE</title>
         <meta
@@ -164,9 +155,7 @@ export default function BlogsPage() {
           }
         })}</script>
       </Helmet>
-
       <Navbar />
-
       {/* PAGE TITLE BANNER */}
       <div style={{ background: "#f0f2f5", padding: "40px 5% 0", boxSizing: "border-box" }}>
         <div
@@ -189,7 +178,6 @@ export default function BlogsPage() {
           </h1>
         </div>
       </div>
-
       {/* CARDS GRID */}
       <div
         style={{
@@ -232,7 +220,6 @@ export default function BlogsPage() {
                 onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
             </a>
-
             {/* CARD BODY */}
             <div
               style={{
@@ -257,7 +244,6 @@ export default function BlogsPage() {
               >
                 Blogs
               </a>
-
               {/* TITLE */}
               <a href={blog.slug} style={{ textDecoration: "none" }}>
                 <h2
@@ -273,7 +259,6 @@ export default function BlogsPage() {
                   {blog.title}
                 </h2>
               </a>
-
               {/* AUTHOR / DATE */}
               <p
                 style={{
@@ -285,7 +270,6 @@ export default function BlogsPage() {
               >
                 {blog.author} / {blog.date}
               </p>
-
               {/* EXCERPT */}
               <p
                 style={{
@@ -302,7 +286,6 @@ export default function BlogsPage() {
           </div>
         ))}
       </div>
-
       {/* PAGINATION */}
       <div
         style={{
@@ -335,7 +318,6 @@ export default function BlogsPage() {
             ← Previous
           </button>
         )}
-
         {/* PAGE NUMBER BUTTONS */}
         {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((p) => (
           <button
@@ -357,7 +339,6 @@ export default function BlogsPage() {
             {p}
           </button>
         ))}
-
         {/* NEXT → — right side, only on page 1 */}
         {currentPage < TOTAL_PAGES && (
           <button
@@ -379,7 +360,6 @@ export default function BlogsPage() {
           </button>
         )}
       </div>
-
       <Footer />
     </div>
   );
