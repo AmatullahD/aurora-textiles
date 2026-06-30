@@ -117,7 +117,6 @@ export default function NemssisPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-
                     gap: "60px",
                 }}
             >
@@ -178,7 +177,7 @@ export default function NemssisPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -293,7 +292,7 @@ export default function NemssisPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -469,7 +468,7 @@ export default function NemssisPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",

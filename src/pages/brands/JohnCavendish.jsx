@@ -112,12 +112,11 @@ export default function JohnCavendishPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "80px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -149,7 +148,7 @@ export default function JohnCavendishPage() {
                 <div style={{ flex: "1 1 0" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "28px" : "44px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "40px",
                             fontWeight: "700",
                             color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
@@ -161,7 +160,7 @@ export default function JohnCavendishPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,
@@ -191,7 +190,6 @@ export default function JohnCavendishPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -212,7 +210,7 @@ export default function JohnCavendishPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,
@@ -256,7 +254,6 @@ export default function JohnCavendishPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -268,7 +265,7 @@ export default function JohnCavendishPage() {
                         alt="John Cavendish Men's Fabrics"
                         style={{
                             width: "100%",
-                            height: "520px",
+                            height: "560px",
                             objectFit: "cover",
                             objectPosition: "top",
                             display: "block",
@@ -293,7 +290,7 @@ export default function JohnCavendishPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: "0 0 20px 0",
@@ -335,10 +332,10 @@ export default function JohnCavendishPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "19px",
+                                    fontSize: "17px",
                                     color: "#333",
-                                    lineHeight: "1.4",
-                                    fontFamily: "\'Poppins\', sans-serif",
+                                    lineHeight: "1.2",
+                                    fontFamily: "'Poppins', sans-serif",
                                 }}
                             >
                                 {item}
@@ -359,7 +356,6 @@ export default function JohnCavendishPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -380,11 +376,11 @@ export default function JohnCavendishPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: "0 0 20px 0",
-                            fontFamily: "\'Poppins\', sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         As a supplier focused exclusively on men's clothing fabrics,{" "}
@@ -395,11 +391,11 @@ export default function JohnCavendishPage() {
                     </p>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "17px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: "0 0 28px 0",
-                            fontFamily: "\'Poppins\', sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                         }}
                     >
                         <strong>Contact Aurora Textiles</strong> today to place your order
@@ -452,7 +448,7 @@ export default function JohnCavendishPage() {
                         alt="John Cavendish Commercial Fabrics"
                         style={{
                             width: "100%",
-                            height: "420px",
+                            height: "460px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "6px",

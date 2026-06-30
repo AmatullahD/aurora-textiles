@@ -516,7 +516,6 @@ export default function PolyViscosePage() {
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
           gap: "60px",
         }}
       >

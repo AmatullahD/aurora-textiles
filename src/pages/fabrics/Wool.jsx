@@ -184,7 +184,6 @@ export default function WoolPage() {
           padding: "0 10px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
           gap: "30px",
         }}
       >

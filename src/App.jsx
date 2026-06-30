@@ -116,7 +116,6 @@ function App() {
         <Route path="/why-white-dominates-30-of-the-global-uniform-market" element={<BlogPost1 />} />
         <Route path="/what-are-the-different-types-of-protective-wear-all-you-need-to-know" element={<BlogPost2 />} />
         <Route path="/mass-produced-vs-quality-focused-uniforms-how-manufacturers-can-build-a-strong-reputation" element={<BlogPost3 />} />
-      
       </Routes>
     </>
   );

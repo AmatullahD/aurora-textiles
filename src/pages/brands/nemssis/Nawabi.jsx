@@ -25,15 +25,15 @@ export default function NawabiPage() {
 
     const faqs = [
         {
-            question: "WHAT STYLES CAN BE DESIGNED USING NAWABI BY NEMSSIS FABRICS?",
+            question: "What styles can be designed using Nawabi by Nemssis fabrics?",
             answer: "These fabrics are perfect for men's sherwanis, kurtas, ethnic jackets, and Indo-western occasion wear.",
         },
         {
-            question: "ARE THESE ETHNIC FABRICS AVAILABLE IN UNSTITCHED FORM?",
+            question: "Are these ethnic fabrics available in unstitched form?",
             answer: "Yes, all Nawabi by Nemssis fabrics are available in unstitched form, giving tailors and designers full creative freedom to craft garments as per their requirements.",
         },
         {
-            question: "CAN NAWABI FABRICS BE ORDERED IN BULK FOR COMMERCIAL USE?",
+            question: "Can Nawabi fabrics be ordered in bulk for commercial use?",
             answer: "Absolutely. Aurora Textiles supports bulk and commercial orders of Nawabi by Nemssis fabrics for tailoring businesses, boutiques, and exporters across Dubai and the MENA region.",
         },
     ];
@@ -97,12 +97,11 @@ export default function NawabiPage() {
             {/* SECTION 1: Logo left + Text right */}
             <section
                 style={{
-                    maxWidth: "1280px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -113,7 +112,7 @@ export default function NawabiPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         display: "flex",
-                        alignItems: "center",
+                       
                         justifyContent: "center",
                         minHeight: "340px",
                     }}
@@ -142,7 +141,7 @@ export default function NawabiPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             marginBottom: "20px",
@@ -174,7 +173,7 @@ export default function NawabiPage() {
             {/* SECTION 2: Text left + Image right */}
             <section
                 style={{
-                    maxWidth: "1280px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -189,7 +188,7 @@ export default function NawabiPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "40px",
                             fontWeight: "700",
                             color: "#344886",
                             margin: "0 0 24px 0",
@@ -201,7 +200,7 @@ export default function NawabiPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             marginBottom: "20px",
@@ -211,7 +210,7 @@ export default function NawabiPage() {
                         sophistication of India's royal era. These fabrics are thoughtfully curated to
                         bring out the richness and detail in:
                     </p>
-                    <ul style={{ paddingLeft: "20px", margin: "0 0 24px 0" }}>
+                    <ul style={{ paddingLeft: "25px", margin: "0 0 24px 0" }}>
                         {[
                             "Wedding and Occasion Sherwanis",
                             "Festive Kurtas and Pathani Sets",
@@ -222,7 +221,7 @@ export default function NawabiPage() {
                                 key={i}
                                 style={{
                                     fontFamily: "'Poppins', sans-serif",
-                                    fontSize: "19px",
+                                    fontSize: "18px",
                                     color: "#333",
                                     lineHeight: "1.4",
                                     marginBottom: "12px",
@@ -235,7 +234,7 @@ export default function NawabiPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             marginBottom: "32px",

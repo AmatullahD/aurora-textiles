@@ -113,12 +113,11 @@ export default function CottonPage() {
       <section
         style={{
           width: "100%",
-          maxWidth: "1300px",
+          maxWidth: "1200px",
           margin: "0 auto 70px auto",
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          alignItems: "center",
           gap: "60px",
         }}
       >

@@ -175,7 +175,6 @@ export default function PolyWoolLycraPage() {
           margin: "0 auto 50px auto",
           padding: "0 40px",
           display: "flex",
-          alignItems: "center",
           gap: "40px",
           flexWrap: "wrap",
         }}
@@ -202,7 +201,7 @@ export default function PolyWoolLycraPage() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "38px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               marginBottom: "28px",
               lineHeight: "1.2",
               margin: "0 0 28px 0",
@@ -338,7 +337,7 @@ export default function PolyWoolLycraPage() {
             fontFamily: "'Cinzel Decorative', serif",
             fontSize: "32px",
             fontWeight: "700",
-            color: "#1a1a5e",
+            color: "#344886",
             textAlign: "center",
             marginBottom: "50px",
             lineHeight: "1.3",
@@ -438,7 +437,7 @@ export default function PolyWoolLycraPage() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "36px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               marginBottom: "24px",
               lineHeight: "1.2",
               margin: "0 0 24px 0",
@@ -541,7 +540,7 @@ export default function PolyWoolLycraPage() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "36px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               marginBottom: "24px",
               lineHeight: "1.2",
               margin: "0 0 24px 0",
@@ -614,7 +613,7 @@ export default function PolyWoolLycraPage() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "42px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               display: "inline-block",
               letterSpacing: "4px",
               margin: 0,
@@ -622,17 +621,6 @@ export default function PolyWoolLycraPage() {
             }}
           >
             FAQ
-            <span
-              style={{
-                position: "absolute",
-                bottom: "-6px",
-                right: "-24px",
-                width: "50px",
-                height: "3px",
-                background: "#c8a84b",
-                borderRadius: "2px",
-              }}
-            />
           </h2>
         </div>
 

@@ -188,7 +188,7 @@ export default function PvLycraPage() {
             alt="PV Lycra Suit"
             style={{
               width: "100%",
-              height: "520px",
+              height: "620px",
               objectFit: "cover",
               display: "block",
               borderRadius: "20px",

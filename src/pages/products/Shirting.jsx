@@ -668,7 +668,7 @@ export default function ShirtingPage() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "10px 5% 50px" : "10px 5% 70px",
+                    padding: window.innerWidth < 768 ? "10px 5% 50px" : "10px 5% 60px",
                     boxSizing: "border-box",
                     background: "#ffffff",
                 }}
@@ -714,6 +714,7 @@ export default function ShirtingPage() {
                             style={{
                                 fontSize: window.innerWidth < 768 ? "26px" : "40px",
                                 lineHeight: "1.15",
+                                marginTop:"1px",
                                 marginBottom: "24px",
                                 color: "#344886",
                                 fontWeight: "700",
@@ -754,23 +755,9 @@ export default function ShirtingPage() {
                     alignItems: "flex-start",
                 }}
             >
-                {/* LEFT IMAGE */}
-                <div style={{ flex: "0 0 47%" }}>
-                    <img
-                        src="/suitings-2.webp"
-                        alt="Men's Shirting Fabrics"
-                        style={{
-                            width: "100%",
-                            height: `${faqImgHeight}px`,
-                            minHeight: "300px",
-                            objectFit: "cover",
-                            borderRadius: "12px",
-                            transition: "height 0.4s ease",
-                        }}
-                    />
-                </div>
+                
 
-                {/* RIGHT FAQ ACCORDION */}
+                {/* left FAQ ACCORDION */}
                 <div ref={faqColRef} style={{ flex: "1" }}>
                     <div
                         style={{
@@ -864,6 +851,22 @@ export default function ShirtingPage() {
                             )}
                         </div>
                     ))}
+                </div>
+
+                {/* right IMAGE */}
+                <div style={{ flex: "0 0 47%" }}>
+                    <img
+                        src="/suitings-2.webp"
+                        alt="Men's Shirting Fabrics"
+                        style={{
+                            width: "100%",
+                            height: `${faqImgHeight}px`,
+                            minHeight: "300px",
+                            objectFit: "cover",
+                            borderRadius: "12px",
+                            transition: "height 0.4s ease",
+                        }}
+                    />
                 </div>
             </div>
 

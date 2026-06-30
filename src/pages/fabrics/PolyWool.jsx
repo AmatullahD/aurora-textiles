@@ -186,7 +186,6 @@ export default function PolyWoolPage() {
           margin: "0 auto 20px auto",
           padding: "0 40px",
           display: "flex",
-        
           gap: "50px",
           flexWrap: "wrap",
         }}
@@ -210,7 +209,7 @@ export default function PolyWoolPage() {
               fontFamily: "'Cinzel Decorative', serif",
               fontSize: "38px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               marginBottom: "24px",
               lineHeight: "1.2",
             }}
@@ -332,7 +331,7 @@ export default function PolyWoolPage() {
             fontFamily: "'Cinzel Decorative', serif",
             fontSize: "32px",
             fontWeight: "700",
-            color: "#1a1a5e",
+            color: "#344886",
             textAlign: "center",
             marginBottom: "50px",
             lineHeight: "1.3",
@@ -408,7 +407,6 @@ export default function PolyWoolPage() {
           margin: "0 auto 20px auto",
           padding: "0 40px",
           display: "flex",
-          alignItems: "center",
           gap: "60px",
           flexWrap: "wrap",
         }}
@@ -430,9 +428,9 @@ export default function PolyWoolPage() {
           <h2
             style={{
               fontFamily: "'Cinzel Decorative', serif",
-              fontSize: "36px",
+              fontSize: "42px",
               fontWeight: "700",
-              color: "#1a1a5e",
+              color: "#344886",
               marginBottom: "24px",
               lineHeight: "1.2",
             }}
@@ -488,7 +486,7 @@ export default function PolyWoolPage() {
             fontFamily: "'Cinzel Decorative', serif",
             fontSize: "46px",
             fontWeight: "700",
-            color: "#1a1a5e",
+            color: "#344886",
             textAlign: "center",
             marginBottom: "16px",
           }}
@@ -610,7 +608,7 @@ export default function PolyWoolPage() {
             fontFamily: "'Cinzel Decorative', serif",
             fontSize: "42px",
             fontWeight: "700",
-            color: "#1a1a5e",
+            color: "#344886",
             textAlign: "center",
             marginBottom: "40px",
             letterSpacing: "4px",

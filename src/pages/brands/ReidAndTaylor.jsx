@@ -121,7 +121,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
+                  
                     gap: "80px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -153,7 +153,7 @@ export default function ReidAndTaylorPage() {
                 <div style={{ flex: "1 1 0" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "28px" : "44px",
+                            fontSize: window.innerWidth < 768 ? "28px" : "40px",
                             fontWeight: "700",
                             color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
@@ -165,7 +165,7 @@ export default function ReidAndTaylorPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,

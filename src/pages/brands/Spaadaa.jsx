@@ -112,7 +112,7 @@ export default function SpaadaaPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -164,7 +164,7 @@ export default function SpaadaaPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "17px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -183,12 +183,11 @@ export default function SpaadaaPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
-                    margin: "0 auto 80px auto",
+                    maxWidth: "1100px",
+                    margin: "0 auto 10px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                 }}
             >
@@ -237,9 +236,8 @@ export default function SpaadaaPage() {
                         alt="Designed for Men's Shirting Needs"
                         style={{
                             width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            objectPosition: "top",
+                            height: "310px",
+                            objectFit: "contain",
                             display: "block",
                         }}
                     />
@@ -250,12 +248,11 @@ export default function SpaadaaPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                 }}
             >
@@ -343,12 +340,11 @@ export default function SpaadaaPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                 }}
             >
@@ -369,7 +365,7 @@ export default function SpaadaaPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             marginBottom: "32px",

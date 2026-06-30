@@ -113,7 +113,7 @@ export default function OxfordPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -124,7 +124,7 @@ export default function OxfordPage() {
                 }}
             >
                 {/* Left — heading + paragraph */}
-                <div style={{ flex: "1 1 50%", minWidth: "280px" }}>
+                <div style={{ flex: "1 1 50%", minWidth: "230px" }}>
                     <h2
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
@@ -200,18 +200,17 @@ export default function OxfordPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
             >
                 {/* Left — image */}
-                <div style={{ flex: "0 0 auto", width: window.innerWidth < 768 ? "100%" : "380px" }}>
+                <div style={{ flex: "0 0 auto", width: window.innerWidth < 768 ? "100%" : "420px" }}>
                     <img
                         src="/oxford-1.webp"
                         alt="Oxford Shirt Men"
@@ -243,7 +242,7 @@ export default function OxfordPage() {
                         style={{
                             fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.4",
+                            lineHeight: "1.5",
                             margin: 0,
                             fontFamily: "'Poppins', sans-serif",
                         }}
@@ -411,7 +410,7 @@ export default function OxfordPage() {
                     <ul
                         style={{
                             margin: "0 0 20px 0",
-                            paddingLeft: "20px",
+                            paddingLeft: "25px",
                             display: "flex",
                             flexDirection: "column",
                             gap: "10px",
@@ -436,7 +435,7 @@ export default function OxfordPage() {
                             <li
                                 key={i}
                                 style={{
-                                    fontSize: "18px",
+                                    fontSize: "17px",
                                     color: "#333",
                                     lineHeight: "1.3",
                                     fontFamily: "'Poppins', sans-serif",
@@ -458,7 +457,7 @@ export default function OxfordPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,
@@ -510,13 +509,14 @@ export default function OxfordPage() {
                             flexDirection: "column",
                             gap: "20px",
                             marginBottom: "28px",
+                            
                         }}
                     >
                         {[
-                            "DEDICATED TO MEN'S SHIRTING FABRICS",
-                            "STRONG INVENTORY AND FABRIC CONTINUITY",
-                            "BULK PRICING FOR WHOLESALE BUYERS",
-                            "DELIVERY ACROSS DUBAI AND THE UAE WITH EXPORT SUPPORT FOR THE GCC",
+                            "Dedicated to men’s shirting fabrics",
+                            "Strong inventory and fabric continuity",
+                            "Bulk pricing for wholesale buyers",
+                            "Delivery across Dubai and the UAE with export support for the GCC",
                         ].map((point, i) => (
                             <div
                                 key={i}
@@ -524,6 +524,7 @@ export default function OxfordPage() {
                                     display: "flex",
                                     alignItems: "flex-start",
                                     gap: "14px",
+                                   
                                 }}
                             >
                                 <span
@@ -544,7 +545,7 @@ export default function OxfordPage() {
                                         letterSpacing: "0.6px",
                                         margin: 0,
                                         lineHeight: "1.3",
-                                        fontFamily: "\'Poppins\', sans-serif",
+                                       fontFamily:"'Cinzel Decorative', sans-serif",
                                     }}
                                 >
                                     {point}
@@ -562,7 +563,7 @@ export default function OxfordPage() {
                             fontFamily: "'Poppins', sans-serif",
                         }}
                     >
-                        <span style={{ color: "#b8860b", fontWeight: "600" }}>
+                        <span style={{ color: "#3b39d6", fontWeight: "600" }}>
                             Get in touch
                         </span>{" "}
                         with Aurora Textiles today to request swatches, inquire about
@@ -610,7 +611,7 @@ export default function OxfordPage() {
                         alt="Aurora Textiles Fabric Store"
                         style={{
                             width: "100%",
-                            height: "420px",
+                            height: "530px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

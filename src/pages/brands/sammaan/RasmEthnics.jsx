@@ -109,11 +109,10 @@ export default function RasmEthnicsPage() {
             {/* ── SECTION 1: Logo Left + Text Right ── */}
             <section
                 style={{
-                    maxWidth: "1200px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: "wrap",
                 }}
@@ -159,7 +158,7 @@ export default function RasmEthnicsPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             marginBottom: "0",
@@ -183,7 +182,6 @@ export default function RasmEthnicsPage() {
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: "wrap",
                 }}
@@ -193,7 +191,7 @@ export default function RasmEthnicsPage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "36px",
+                            fontSize: "40px",
                             fontWeight: "700",
                             color: "#344886",
                             marginBottom: "24px",
@@ -280,7 +278,7 @@ export default function RasmEthnicsPage() {
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                    alignItems: "center",
+                   
                     gap: "60px",
                     flexWrap: "wrap",
                 }}
@@ -365,7 +363,7 @@ export default function RasmEthnicsPage() {
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                    alignItems: "center",
+                 
                     gap: "60px",
                     flexWrap: "wrap",
                 }}

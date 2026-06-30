@@ -24,15 +24,15 @@ export default function GulliniPage() {
 
     const faqs = [
         {
-            question: "WHAT TYPES OF GEORGIA GULLINI FABRICS ARE AVAILABLE AT AURORA TEXTILES?",
+            question: "What types of Georgia Gullini fabrics are available at Aurora Textiles?",
             answer: "We offer a wide range of Georgia Gullini suit and blazer fabrics, including poly-wool blends, textured weaves, and self-checks—ideal for creating formal suits, trousers, and smart jackets.",
         },
         {
-            question: "CAN I BUY GEORGIA GULLINI FABRICS IN BULK FOR TAILORING OR RESALE?",
+            question: "Can I buy Georgia Gullini fabrics in bulk for tailoring or resale?",
             answer: "Yes, we offer bulk purchasing options for tailors, fashion houses, and resellers. Contact us for wholesale pricing and minimum order quantities.",
         },
         {
-            question: "ARE GEORGIA GULLINI SUITING FABRICS SUITABLE FOR HIGH-END FORMALWEAR?",
+            question: "Are Georgia Gullini suiting fabrics suitable for high-end formalwear?",
             answer: "Absolutely. Georgia Gullini fabrics are crafted with European quality standards, making them ideal for premium formalwear, bespoke suits, and luxury occasionwear.",
         },
     ];
@@ -113,7 +113,6 @@ export default function GulliniPage() {
                     padding: "40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     justifyContent: "space-between",
                     gap: "30px",
                 }}
@@ -195,7 +194,7 @@ export default function GulliniPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -222,7 +221,6 @@ export default function GulliniPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                 }}
             >
@@ -376,7 +374,7 @@ export default function GulliniPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -402,11 +400,11 @@ export default function GulliniPage() {
                     </h2>
 
                     {[
-                        "GENUINE GEORGIA GULLINI FABRICS ARE AVAILABLE FOR WHOLESALE",
-                        "EXPERTISE IN MEN'S FORMALWEAR FABRIC SOURCING",
-                        "COMPETITIVE PRICING AND CONSISTENT STOCK AVAILABILITY",
-                        "BULK SUPPLY WITH SUPPORT FOR TAILORS, FASHION HOUSES & EXPORTERS",
-                        "DELIVERY ACROSS DUBAI AND EXPORT OPTIONS THROUGHOUT MENA",
+                        "Genuine Georgia Gullini fabrics are available for wholesale",
+                        "Expertise in men's formalwear fabric sourcing",
+                        "Competitive pricing and consistent stock availability",
+                        "Bulk supply with support for tailors, fashion houses & exporters",
+                        "Delivery across Dubai and export options throughout MENA",
                     ].map((item, idx) => (
                         <div
                             key={idx}
@@ -423,12 +421,12 @@ export default function GulliniPage() {
                             <p
                                 style={{
                                     fontFamily: "'Cinzel Decorative', serif",
-                                    fontSize: "13px",
+                                    fontSize: "17px",
                                     fontWeight: "700",
                                     color: "#344886",
-                                    lineHeight: "1.5",
+                                    lineHeight: "1.2",
                                     margin: 0,
-                                    letterSpacing: "0.5px",
+                                    letterSpacing: "0.3px",
                                 }}
                             >
                                 {item}
@@ -439,7 +437,7 @@ export default function GulliniPage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: "24px 0 32px 0",

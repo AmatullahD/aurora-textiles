@@ -383,7 +383,6 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}

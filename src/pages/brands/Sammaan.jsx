@@ -113,12 +113,11 @@ export default function SammaanPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
+                    maxWidth: "1100px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "80px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -129,8 +128,6 @@ export default function SammaanPage() {
                         flex: "0 0 auto",
                         width: window.innerWidth < 768 ? "100%" : "420px",
                         display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
                     }}
                 >
                     <img
@@ -162,7 +159,7 @@ export default function SammaanPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.4",
                             margin: 0,
@@ -320,7 +317,6 @@ export default function SammaanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -379,12 +375,11 @@ export default function SammaanPage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1200px",
+                    maxWidth: "1300px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -393,7 +388,7 @@ export default function SammaanPage() {
                 <div style={{ flex: "1 1 45%", minWidth: "280px" }}>
                     <h2
                         style={{
-                            fontSize: window.innerWidth < 768 ? "26px" : "40px",
+                            fontSize: window.innerWidth < 768 ? "26px" : "38px",
                             fontWeight: "700",
                             color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
@@ -439,13 +434,13 @@ export default function SammaanPage() {
                                 </span>
                                 <p
                                     style={{
-                                        fontSize: "19px",
+                                        fontSize: "18px",
                                         fontWeight: "700",
                                         color: "#344886",
                                         letterSpacing: "0.6px",
                                         margin: 0,
-                                        lineHeight: "1.6",
-                                        fontFamily: "'Poppins', sans-serif",
+                                        lineHeight: "1.5",
+                                        fontFamily: "'Cinzel Decorative', sans-serif",
                                     }}
                                 >
                                     {point}
@@ -533,7 +528,7 @@ export default function SammaanPage() {
                         style={{
                             width: "100%",
                             height: `${faqImgHeight}px`,
-                            minHeight: "300px",
+                            // minHeight: "300px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",

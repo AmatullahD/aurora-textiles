@@ -131,7 +131,6 @@ export default function ReliancePage() {
                     padding: "0 20px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "50px",
                 }}
             >
@@ -194,7 +193,7 @@ export default function ReliancePage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
@@ -208,10 +207,10 @@ export default function ReliancePage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "34px",
+                            fontSize: "38px",
                             fontWeight: "700",
                             color: "#344886",
-                            lineHeight: "1.2",
+                            lineHeight: "1.5",
                             margin: "0 0 24px 0",
                         }}
                     >
@@ -233,8 +232,8 @@ export default function ReliancePage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
-                            lineHeight: "1.4",
+                            fontSize: "18px",
+                            lineHeight: "1.3",
                             color: "#333",
                             marginBottom: "16px",
                         }}
@@ -246,8 +245,8 @@ export default function ReliancePage() {
                             listStyle: "disc",
                             paddingLeft: "24px",
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
-                            lineHeight: "1.4",
+                            fontSize: "16px",
+                            lineHeight: "1.8",
                             color: "#333",
                             marginBottom: "24px",
                         }}
@@ -268,7 +267,7 @@ export default function ReliancePage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -304,12 +303,11 @@ export default function ReliancePage() {
             <section
                 style={{
                     width: "100%",
-                    maxWidth: "1300px",
+                    maxWidth: "1200px",
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-
                     gap: "40px",
                 }}
             >
@@ -341,7 +339,7 @@ export default function ReliancePage() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: "34px",
+                            fontSize: "40px",
                             fontWeight: "700",
                             color: "#344886",
                             lineHeight: "1.2",
@@ -353,7 +351,7 @@ export default function ReliancePage() {
                     <p
                         style={{
                             fontFamily: "'Poppins', sans-serif",
-                            fontSize: "19px",
+                            fontSize: "18px",
                             lineHeight: "1.4",
                             color: "#333",
                             margin: 0,
@@ -375,7 +373,6 @@ export default function ReliancePage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    alignItems: "center",
                     gap: "40px",
                 }}
             >

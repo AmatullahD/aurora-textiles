@@ -72,7 +72,6 @@ export default function DonearPage() {
                     height: "360px",
                     position: "relative",
                     overflow: "hidden",
-                    marginBottom: "60px",
                 }}
             >
                 <img
@@ -124,7 +123,7 @@ export default function DonearPage() {
                 style={{
                     width: "100%",
                     maxWidth: "1200px",
-                    margin: "0 auto 50px auto",
+                    margin: "0 auto 0 auto",
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
@@ -166,7 +165,7 @@ export default function DonearPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "44px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.15",
                             margin: "0 0 24px 0",
@@ -213,7 +212,7 @@ export default function DonearPage() {
                     style={{
                         fontSize: window.innerWidth < 768 ? "26px" : "42px",
                         fontWeight: "700",
-                        color: "#1e2a5e",
+                        color: "#344886",
                         fontFamily: "'Cinzel Decorative', serif",
                         lineHeight: "1.2",
                         margin: "0 0 30px 0",
@@ -276,7 +275,7 @@ export default function DonearPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "26px" : "38px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'cinzel decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 32px 0",
@@ -376,7 +375,7 @@ export default function DonearPage() {
                         alt="Donear Shirting"
                         style={{
                             width: "100%",
-                            height: "420px",
+                            height: "360px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "8px",
@@ -392,7 +391,7 @@ export default function DonearPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
@@ -402,11 +401,11 @@ export default function DonearPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "17px",
+                            fontSize: "18px",
                             color: "#333",
                             lineHeight: "1.5",
                             margin: 0,
-                            fontFamily: "'poppins', serif",
+                            fontFamily: "'poppins', sans-serif",
                         }}
                     >
                         <strong>Donear shirting fabrics</strong> are engineered for comfort
@@ -442,7 +441,7 @@ export default function DonearPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
@@ -452,11 +451,11 @@ export default function DonearPage() {
                     </h2>
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.5",
+                            lineHeight: "1.3",
                             margin: "0 0 14px 0",
-                            fontFamily: "'poppins', serif",
+                            fontFamily: "'poppins', sans-serif",
                         }}
                     >
                         Sourcing <strong>Donear fabric</strong> through Aurora Textiles means
@@ -467,10 +466,10 @@ export default function DonearPage() {
                     <ul
                         style={{
                             margin: "0 0 18px 0",
-                            paddingLeft: "30px",
+                            paddingLeft: "50px",
                             display: "flex",
                             flexDirection: "column",
-                            gap: "8px",
+                            gap: "5px",
                         }}
                     >
                         {[
@@ -484,8 +483,8 @@ export default function DonearPage() {
                                 style={{
                                     fontSize: "18px",
                                     color: "#333",
-                                    lineHeight: "1.5",
-                                    fontFamily: "'poppins', serif",
+                                    lineHeight: "1.3",
+                                    fontFamily: "'poppins', sans-serif",
                                 }}
                             >
                                 {item}
@@ -495,11 +494,11 @@ export default function DonearPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "18px",
                             color: "#333",
-                            lineHeight: "1.5",
+                            lineHeight: "1.3",
                             margin: "0 0 28px 0",
-                            fontFamily: "'poppins', serif",
+                            fontFamily: "'poppins', sans-serif",
                         }}
                     >
                         As a committed men's fabric supplier, we help businesses maintain
@@ -596,7 +595,7 @@ export default function DonearPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                            color: "#1e2a5e",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
                             letterSpacing: "1px",

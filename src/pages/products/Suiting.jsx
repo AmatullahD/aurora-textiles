@@ -707,7 +707,7 @@ export default function SuitingPage() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "20px 5% 60px" : "20px 5% 80px",
+                    padding: window.innerWidth < 768 ? "20px 5% 30px" : "20px 5% 30px",
                     boxSizing: "border-box",
                     background: "#ffffff",
                 }}
@@ -758,10 +758,10 @@ export default function SuitingPage() {
                                 fontWeight: "700",
                                 fontFamily: "'Cinzel Decorative', serif",
                                 color: "#344886",
-                               
+                               marginTop:"10px",
                                 marginBottom: "24px",
                                 display: "flex",
-                                alignItems: "baseline",
+                                alignItems: "flex-start",
                                 gap: "6px",
                             }}
                         >
