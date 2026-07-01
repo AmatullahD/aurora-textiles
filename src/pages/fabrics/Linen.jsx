@@ -39,9 +39,9 @@ function LinenCard({ icon, title, desc }) {
       {!hovered && (
         <p style={{
           fontFamily: "sans-serif",
-          fontSize: "24px",
+          fontSize: "23px",
           fontWeight: "600",
-          color: "#111",
+          color: "#1a237e",
           lineHeight: "1.4",
           margin: 0,
           textAlign: "center",
@@ -108,8 +108,8 @@ export default function LinenPage() {
       <Helmet>
         <title>Buy Linen Fabrics in Dubai | Linen Fabric Online by Aurora Textiles</title>
         <meta name="description" content="We offer a wide collection of linen fabrics online, ideal for Formal Shirts, Ethnic, and casual trousers and jackets styles. Your trusted source for wholesale textile solutions in Dubai." />
-      
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Linen Fabric", "description": "Wide collection of linen fabrics wholesale in Dubai from Aurora Textiles. Ideal for formal shirts, ethnic wear, casual trousers and jackets.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/linen-fabric"})}</script>
+
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Linen Fabric", "description": "Wide collection of linen fabrics wholesale in Dubai from Aurora Textiles. Ideal for formal shirts, ethnic wear, casual trousers and jackets.", "brand": { "@type": "Brand", "name": "Aurora Textiles" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/linen-fabric" })}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -178,7 +178,7 @@ export default function LinenPage() {
           padding: "0 40px",
           boxSizing: "border-box",
           display: "flex",
-          
+
           gap: "50px",
         }}
       >
@@ -241,48 +241,49 @@ export default function LinenPage() {
             and high wearability.
           </p>
 
-        {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {/* Button */}
+          <div
+            onClick={() => (window.location.href = "/contact-us")}
+            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
+            <a
+              href="/contact-us"
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#8b7d3a";
+                e.currentTarget.style.borderColor = "#050e5f";
+                e.currentTarget.style.color = "#fff";
+              }}
+              style={{
+                background: "#8b7d3a",
+                color: "#fff",
+                border: "2px solid #050e5f",
+                padding: "14px 32px",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "18px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
+                letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Contact Us
+            </a>
 
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
               style={{
-                background: "#050e5f",
+                background: "#344886",
                 color: "#fff",
                 border: "none",
                 borderRadius: "50%",
@@ -330,7 +331,7 @@ export default function LinenPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA FOR LINEN FABRICS */}
-     
+
       <section
         style={{
           width: "100%",
@@ -725,7 +726,7 @@ export default function LinenPage() {
               color: "#344886",
               fontSize: "38px",
               fontWeight: "700",
-              margin: 0, 
+              margin: 0,
               letterSpacing: "2px",
             }}
           >

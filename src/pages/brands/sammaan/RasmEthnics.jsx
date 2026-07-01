@@ -45,9 +45,9 @@ export default function RasmEthnicsPage() {
             <Helmet>
                 <title>Rasm Ethnics by Sammaan - Luxury Ethnic Fabrics by Aurora Textiles</title>
                 <meta name="description" content="Check out Rasm Ethnics Fabrics by Sammaan at Aurora Textiles – your trusted source for premium luxury ethnic fabrics for men in Dubai. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Rasm Ethnics by Sammaan", "description": "Buy Rasm Ethnics by Sammaan luxury ethnic fabrics wholesale in Dubai from Aurora Textiles. Premium ethnic fabric collection for men in UAE.", "brand": {"@type": "Brand", "name": "Rasm Ethnics by Sammaan"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/rasm-ethnics-by-sammaan"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Rasm Ethnics by Sammaan", "description": "Buy Rasm Ethnics by Sammaan luxury ethnic fabrics wholesale in Dubai from Aurora Textiles. Premium ethnic fabric collection for men in UAE.", "brand": { "@type": "Brand", "name": "Rasm Ethnics by Sammaan" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/rasm-ethnics-by-sammaan" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -216,43 +216,44 @@ export default function RasmEthnicsPage() {
                         ceremonies. These fabrics are designed to bring structure, sheen, and
                         sophistication to any traditional garment.
                     </p>
-                        {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        </div>
+                        <a
+                            href="/contact-us"
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 {/* Image Right */}
@@ -278,7 +279,7 @@ export default function RasmEthnicsPage() {
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "wrap",
                 }}
@@ -363,7 +364,7 @@ export default function RasmEthnicsPage() {
                     margin: "0 auto 80px auto",
                     padding: "0 40px",
                     display: "flex",
-                 
+
                     gap: "60px",
                     flexWrap: "wrap",
                 }}
@@ -494,7 +495,7 @@ export default function RasmEthnicsPage() {
                                                     : "#0b18a1",
                                             margin: 0,
                                             lineHeight: "1.4",
-                                            fontFamily: "'Poppins', sans-serif",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                             transition: "color 0.2s ease",
                                             flex: 1,
                                         }}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { IoIosArrowUp } from "react-icons/io";
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -19,12 +20,12 @@ export default function ScrollToTop() {
         bottom: "21px",   /* anchored to bottom */
         right: "20px",
         width: "32px",
-        height: "30px",
-        background: "#0b8be0e7",
+        height: "32px",
+        background: "#0c54c2",
         color: "#fff",
         border: "none",
-        borderRadius: "10px",
-        fontSize: "25px",
+        borderRadius: "2px",
+        fontSize: "22px",
         lineHeight: 1,
         display: "flex",
         alignItems: "center",
@@ -35,14 +36,14 @@ export default function ScrollToTop() {
         transition: "background 0.2s ease",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = "#282bd4";
+        e.currentTarget.style.background = "#0c54c2";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = "#08095e";
+        e.currentTarget.style.background = "#0c54c2";
       }}
       aria-label="Scroll to top"
     >
-     ∧
+      <IoIosArrowUp />
     </button>
   );
 }

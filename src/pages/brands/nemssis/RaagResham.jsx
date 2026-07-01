@@ -47,9 +47,9 @@ export default function RaagReshamPage() {
             <Helmet>
                 <title>Raag Resham by Nemssis - Festival Collection Ethnic Fabrics for Mens</title>
                 <meta name="description" content="Check out Raag Resham by Nemssis – a premium festive collection of ethnic fabrics for men. Perfect for kurtas, sherwanis, and jackets. Available now at Aurora Textiles, Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Raag Resham by Nemssis", "description": "Buy Raag Resham by Nemssis festival collection ethnic fabrics wholesale in Dubai. Precious silk embroidery fabrics from Varanasi at Aurora Textiles.", "brand": {"@type": "Brand", "name": "Raag Resham by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/raag-resham-by-nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Raag Resham by Nemssis", "description": "Buy Raag Resham by Nemssis festival collection ethnic fabrics wholesale in Dubai. Precious silk embroidery fabrics from Varanasi at Aurora Textiles.", "brand": { "@type": "Brand", "name": "Raag Resham by Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/raag-resham-by-nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -103,7 +103,7 @@ export default function RaagReshamPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                      Raag Resham by Nemssis
+                        Raag Resham by Nemssis
                     </h1>
                 </div>
             </section>
@@ -116,7 +116,7 @@ export default function RaagReshamPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                  
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -186,7 +186,7 @@ export default function RaagReshamPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                  
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -240,8 +240,9 @@ export default function RaagReshamPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",
@@ -286,7 +287,7 @@ export default function RaagReshamPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                    
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -381,7 +382,7 @@ export default function RaagReshamPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                 
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}

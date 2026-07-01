@@ -48,9 +48,9 @@ export default function ShiddatPage() {
             <Helmet>
                 <title>Shiddat by Nemssis - Luxury Ethnic Print & Embroidery Fabrics | Aurora Textiles</title>
                 <meta name="description" content="EExplore Shiddat by Nemssis at Aurora Textiles – your trusted source for premium luxury ethnic Print and embroidery fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Shiddat by Nemssis", "description": "Buy Shiddat by Nemssis luxury ethnic print and embroidery fabrics wholesale in Dubai from Aurora Textiles. Embroidery fabrics crafted with passion.", "brand": {"@type": "Brand", "name": "Shiddat by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/shiddat-by-nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Shiddat by Nemssis", "description": "Buy Shiddat by Nemssis luxury ethnic print and embroidery fabrics wholesale in Dubai from Aurora Textiles. Embroidery fabrics crafted with passion.", "brand": { "@type": "Brand", "name": "Shiddat by Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/shiddat-by-nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -118,7 +118,7 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -189,7 +189,7 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -225,37 +225,38 @@ export default function ShiddatPage() {
                         silhouettes. These materials are available in easy-to-stitch
                         formats, perfect for designers and tailoring professionals.
                     </p>
-                        {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                            <button
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                }}
-                            >
-                                Contact Us
-                            </button>
-                        </div>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <button
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                            }}
+                        >
+                            Contact Us
+                        </button>
+                    </div>
                 </div>
 
                 {/* Right: Image — 50% */}
@@ -289,7 +290,7 @@ export default function ShiddatPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}

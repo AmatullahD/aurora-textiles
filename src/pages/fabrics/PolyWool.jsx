@@ -51,7 +51,7 @@ function PolyWoolCard({ item }) {
           style={{
             fontSize: "24px",
             fontWeight: "600",
-            color: "#222",
+            color: "#1a237e",
             lineHeight: "1.4",
             margin: 0,
             textAlign: "center",
@@ -118,8 +118,8 @@ export default function PolyWoolPage() {
       <Helmet>
         <title>Polywool Fabric in Dubai | Buy Polywool Suiting Fabric</title>
         <meta name="description" content="Buy Polywool Fabric in Dubai from the finest textile fabric supplier in UAE. We offer all types of men's fabric at affordable prices." />
-      
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Poly Wool Fabric", "description": "Buy polywool suiting fabric wholesale in Dubai from Aurora Textiles. High-quality poly wool fabric blends for premium men's suits in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/poly-wool-fabric"})}</script>
+
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Poly Wool Fabric", "description": "Buy polywool suiting fabric wholesale in Dubai from Aurora Textiles. High-quality poly wool fabric blends for premium men's suits in UAE.", "brand": { "@type": "Brand", "name": "Aurora Textiles" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/poly-wool-fabric" })}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -229,48 +229,49 @@ export default function PolyWoolPage() {
             <strong>poly wool fabrics</strong> bring comfort, structure, and style together—perfect
             for clients who want performance without compromising on elegance.
           </p>
-         {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {/* Button */}
+          <div
+            onClick={() => (window.location.href = "/contact-us")}
+            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
+            <a
+              href="/contact-us"
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#8b7d3a";
+                e.currentTarget.style.borderColor = "#050e5f";
+                e.currentTarget.style.color = "#fff";
+              }}
+              style={{
+                background: "#8b7d3a",
+                color: "#fff",
+                border: "2px solid #050e5f",
+                padding: "14px 32px",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "18px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
+                letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Contact Us
+            </a>
 
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
               style={{
-                background: "#050e5f",
+                background: "#344886",
                 color: "#fff",
                 border: "none",
                 borderRadius: "50%",
@@ -616,7 +617,7 @@ export default function PolyWoolPage() {
           }}
         >
           FAQ
-          
+
         </h2>
 
         <div>

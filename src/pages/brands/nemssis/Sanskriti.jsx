@@ -47,9 +47,9 @@ export default function SanskritiPage() {
             <Helmet>
                 <title>Sanskriti by Nemssis - Luxury Ethnic Print &amp; Embroidery Fabrics</title>
                 <meta name="description" content="Check out Sanskriti Ethnic by Nemssis at Aurora Textiles – your trusted source for premium luxury ethnic Print and embroidery fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Sanskriti by Nemssis", "description": "Buy Sanskriti by Nemssis luxury ethnic print and embroidery fabrics wholesale in Dubai from Aurora Textiles. The art of embroidery from across India.", "brand": {"@type": "Brand", "name": "Sanskriti by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/sanskriti-by-nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Sanskriti by Nemssis", "description": "Buy Sanskriti by Nemssis luxury ethnic print and embroidery fabrics wholesale in Dubai from Aurora Textiles. The art of embroidery from across India.", "brand": { "@type": "Brand", "name": "Sanskriti by Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/sanskriti-by-nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -117,7 +117,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -189,7 +189,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -245,8 +245,9 @@ export default function SanskritiPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",
@@ -290,7 +291,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -383,7 +384,7 @@ export default function SanskritiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}

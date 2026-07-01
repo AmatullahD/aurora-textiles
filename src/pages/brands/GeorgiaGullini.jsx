@@ -43,9 +43,9 @@ export default function GulliniPage() {
             <Helmet>
                 <title>Shop Georgia Gullini Shirting, Suitings, and Blazer Fabrics in Dubai</title>
                 <meta name="description" content="Shop premium Georgia Gullini shirting, suiting, and blazer fabrics in Dubai with Aurora Textiles – trusted wholesale fabric suppliers for men's clothing across the UAE and MENA." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Georgia Gullini Fabrics", "description": "Shop Georgia Gullini shirting, suiting and blazer fabrics wholesale in Dubai. Premium Italian-quality fabrics by Aurora Textiles UAE.", "brand": {"@type": "Brand", "name": "Georgia Gullini"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/georgia-gullini-fabrics"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Georgia Gullini Fabrics", "description": "Shop Georgia Gullini shirting, suiting and blazer fabrics wholesale in Dubai. Premium Italian-quality fabrics by Aurora Textiles UAE.", "brand": { "@type": "Brand", "name": "Georgia Gullini" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/georgia-gullini-fabrics" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -99,7 +99,7 @@ export default function GulliniPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                       Georgia Gullini Fabrics
+                        Georgia Gullini Fabrics
                     </h1>
                 </div>
             </section>
@@ -189,7 +189,7 @@ export default function GulliniPage() {
                             fontWeight: "700",
                         }}
                     >
-                     Georgia Gullini Fabrics – Premium Suiting Solutions from Aurora Textiles
+                        Georgia Gullini Fabrics – Premium Suiting Solutions from Aurora Textiles
                     </h2>
 
                     <p
@@ -237,7 +237,7 @@ export default function GulliniPage() {
                             margin: "0 0 24px 0",
                         }}
                     >
-                       Georgia Gullini Suit Fabrics
+                        Georgia Gullini Suit Fabrics
                     </h2>
                     <p
                         style={{
@@ -351,7 +351,7 @@ export default function GulliniPage() {
                             margin: "0 0 24px 0",
                         }}
                     >
-                      Georgia Gullini Blazer Fabrics
+                        Georgia Gullini Blazer Fabrics
                     </h2>
                     <p
                         style={{
@@ -380,7 +380,7 @@ export default function GulliniPage() {
                     boxSizing: "border-box",
                     display: "flex",
                     alignItems: "flex-start",
-                    gap: "60px",
+                    gap: "40px",
                 }}
             >
                 {/* Left: heading + bullet points + paragraph + button */}
@@ -421,8 +421,8 @@ export default function GulliniPage() {
                             <p
                                 style={{
                                     fontFamily: "'Cinzel Decorative', serif",
-                                    fontSize: "17px",
-                                    fontWeight: "700",
+                                    fontSize: "19px",
+                                    fontWeight: "bold",
                                     color: "#344886",
                                     lineHeight: "1.2",
                                     margin: 0,
@@ -448,43 +448,44 @@ export default function GulliniPage() {
                         <strong>Georgia Gullini</strong>.
                     </p>
 
-                        {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        </div>
+                        <a
+                            href="/contact-us"
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 {/* Right: two fabric images stacked */}
@@ -520,7 +521,7 @@ export default function GulliniPage() {
                     {/* Bottom image: dark fabric close-up — positioned offset to the left */}
                     <div
                         style={{
-                            width: "260px",
+                            width: "240px",
                             height: "290px",
                             overflow: "hidden",
                             alignSelf: "flex-end",
@@ -599,7 +600,7 @@ export default function GulliniPage() {
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
                             color: "#344886",
-                            fontFamily: "'Cinzel Decorative', serif",
+                            fontFamily: "'Cinzel Decorative', sans-serif",
                             margin: "0 0 28px 0",
                             letterSpacing: "1px",
                         }}
@@ -641,7 +642,7 @@ export default function GulliniPage() {
                                                     : "#0b18a1",
                                             margin: 0,
                                             lineHeight: "1.4",
-                                            fontFamily: "'Poppins', sans-serif",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                             transition: "color 0.2s ease",
                                             flex: 1,
                                         }}
@@ -688,9 +689,9 @@ export default function GulliniPage() {
             </section>
             {/* FOOTER */}
             <Footer />
-             <WhatsAppButton />
+            <WhatsAppButton />
             <ScrollToTop />
-           
+
         </div>
     );
 }

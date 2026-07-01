@@ -484,7 +484,7 @@ export default function UniformFabricSupplier() {
                                     borderRadius: "26px",
                                     overflow: "hidden",
                                     cursor: "pointer",
-                                    height: "280px",
+                                    height: "240px",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",

@@ -44,7 +44,7 @@ function TencelCard({ icon, title, desc }) {
           fontFamily: "sans-serif",
           fontSize: "24px",
           fontWeight: "700",
-          color: "#111",
+          color: "#1a237e",
           lineHeight: "1.4",
           margin: 0,
           textAlign: "center",
@@ -109,8 +109,8 @@ export default function TencelBlendPage() {
       <Helmet>
         <title>Buy Tencel Blend Fabrics in Dubai | Tencel Blend Shirting Fabrics</title>
         <meta name="description" content="Shop premium Tencel blend fabrics for men in Dubai at Aurora Textiles. Discover soft, breathable, and durable fabrics perfect for shirts, trousers, and suits. Order online today!" />
-      
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Tencel Blend Fabric", "description": "Buy tencel blend shirting fabrics wholesale in Dubai from Aurora Textiles. Soft, breathable tencel blend fabrics for premium men's shirts in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/tencel-blend-fabric"})}</script>
+
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Tencel Blend Fabric", "description": "Buy tencel blend shirting fabrics wholesale in Dubai from Aurora Textiles. Soft, breathable tencel blend fabrics for premium men's shirts in UAE.", "brand": { "@type": "Brand", "name": "Aurora Textiles" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/tencel-blend-fabric" })}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -165,7 +165,7 @@ export default function TencelBlendPage() {
               fontFamily: "'Cinzel Decorative', sans-serif",
             }}
           >
-           Tencel Blend Fabric
+            Tencel Blend Fabric
           </h1>
         </div>
       </section>
@@ -244,46 +244,47 @@ export default function TencelBlendPage() {
           </p>
 
           {/* Button */}
-                        <div
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <div
+            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
+            <a
+              href="/contact-us"
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#8b7d3a";
+                e.currentTarget.style.borderColor = "#050e5f";
+                e.currentTarget.style.color = "#fff";
+              }}
+              style={{
+                background: "#8b7d3a",
+                color: "#fff",
+                border: "2px solid #050e5f",
+                padding: "14px 32px",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "18px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
+                letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Contact Us
+            </a>
 
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
               style={{
-                background: "#050e5f",
+                background: "#344886",
                 color: "#fff",
                 border: "none",
                 borderRadius: "50%",
@@ -331,7 +332,7 @@ export default function TencelBlendPage() {
       </section>
 
       {/* SECTION 2 – WHY CHOOSE AURORA TEXTILES FOR TENCEL FABRICS */}
-     
+
       <section
         style={{
           width: "100%",

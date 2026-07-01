@@ -46,9 +46,9 @@ export default function KlopmanPage() {
             <Helmet>
                 <title>Buy Klopman Fabrics in Dubai | Klopman Workwear Fabrics</title>
                 <meta name="description" content="The Klopman fabrics are engineered for performance, sustainability, and economical for the long run. At Aurora Textiles, we offer Corporate, Industrial workwear, Protective wear, and medical apparel fabrics in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Klopman Fabrics", "description": "Buy Klopman workwear fabrics wholesale in Dubai from Aurora Textiles. High-performance Klopman uniform and workwear fabric supplier in UAE.", "brand": {"@type": "Brand", "name": "Klopman"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/klopman"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Klopman Fabrics", "description": "Buy Klopman workwear fabrics wholesale in Dubai from Aurora Textiles. High-performance Klopman uniform and workwear fabric supplier in UAE.", "brand": { "@type": "Brand", "name": "Klopman" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/klopman" })}</script>
+            </Helmet>
 
 
             {/* NAVBAR */}
@@ -119,7 +119,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                  
+
                     gap: "40px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -195,7 +195,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                 
+
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -301,7 +301,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-               
+
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -436,7 +436,7 @@ export default function KlopmanPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                 
+
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -565,8 +565,9 @@ export default function KlopmanPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",

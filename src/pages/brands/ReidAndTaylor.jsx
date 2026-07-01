@@ -49,9 +49,9 @@ export default function ReidAndTaylorPage() {
             <Helmet>
                 <title>Reid &amp; Taylor Men&#39;s Suiting &amp; Shirting Fabrics| Buy Reid and Taylor Fabrics in UAE</title>
                 <meta name="description" content="Aurora Textiles offers Reid &amp; Taylor premium collection of suitings and shirtings Men&#39;s Fabrics in Dubai, UAE. Buy Reid and Taylor Fabrics and fill your wardrobe with our collection of men &amp; formal wear." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Reid & Taylor Fabrics", "description": "Buy Reid and Taylor men's suiting and shirting fabrics wholesale in Dubai, UAE from Aurora Textiles. Luxury British heritage fabrics.", "brand": {"@type": "Brand", "name": "Reid & Taylor"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/reid-and-taylor"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Reid & Taylor Fabrics", "description": "Buy Reid and Taylor men's suiting and shirting fabrics wholesale in Dubai, UAE from Aurora Textiles. Luxury British heritage fabrics.", "brand": { "@type": "Brand", "name": "Reid & Taylor" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/reid-and-taylor" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -121,7 +121,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                  
+
                     gap: "80px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -194,7 +194,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -337,7 +337,7 @@ export default function ReidAndTaylorPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: window.innerWidth < 768 ? "wrap" : "nowrap",
                 }}
@@ -426,8 +426,9 @@ export default function ReidAndTaylorPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",

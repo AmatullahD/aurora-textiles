@@ -46,7 +46,7 @@ function WoolFeatureCard({ card }) {
             fontFamily: "sans-serif",
             fontSize: "24px",
             fontWeight: "600",
-            color: "#111",
+            color: "#1a237e",
             lineHeight: "1.4",
             margin: 0,
             textAlign: "center",
@@ -114,8 +114,8 @@ export default function WoolPage() {
       <Helmet>
         <title>Buy Wool Fabric in Dubai | Premium Wool Fabric for Dressmaking Online</title>
         <meta name="description" content="Buy Premium quality wool fabric for Dressmaking from Aurora Textiles in Dubai. You can purchase various wool fabric materials in retail and bulk quantities. Contact Us Now." />
-      
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Wool Fabric", "description": "Buy premium wool fabric wholesale in Dubai from Aurora Textiles. High-quality pure wool and wool blends for dressmaking and suiting in UAE.", "brand": {"@type": "Brand", "name": "Aurora Textiles"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/wool-fabric"})}</script>
+
+        <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Wool Fabric", "description": "Buy premium wool fabric wholesale in Dubai from Aurora Textiles. High-quality pure wool and wool blends for dressmaking and suiting in UAE.", "brand": { "@type": "Brand", "name": "Aurora Textiles" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/wool-fabric" })}</script>
       </Helmet>
 
       {/* NAVBAR */}
@@ -170,7 +170,7 @@ export default function WoolPage() {
               fontFamily: "'Cinzel Decorative', serif",
             }}
           >
-          Wool Fabric
+            Wool Fabric
           </h1>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function WoolPage() {
               fontWeight: "700",
               lineHeight: "1.2",
               margin: "0 0 28px 0",
-             
+
             }}
           >
             Trusted Supplier of Wool Suiting Fabric in Dubai, UAE
@@ -251,49 +251,50 @@ export default function WoolPage() {
             formalwear, and ceremonial menswear collections.
           </p>
 
-         {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          {/* Button */}
+          <div
+            onClick={() => (window.location.href = "/contact-us")}
+            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
 
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        
+            <a
+              href="/contact-us"
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#0a089bd3";
+                e.currentTarget.style.borderColor = "#e0b219";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "#8b7d3a";
+                e.currentTarget.style.borderColor = "#050e5f";
+                e.currentTarget.style.color = "#fff";
+              }}
+              style={{
+                background: "#8b7d3a",
+                color: "#fff",
+                border: "2px solid #050e5f",
+                padding: "14px 32px",
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "18px",
+                fontWeight: "500",
+                borderRadius: "6px",
+                cursor: "pointer",
+                letterSpacing: "0.5px",
+                transition: "all 0.3s ease",
+                textDecoration: "none",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              Contact Us
+            </a>
+
 
             {/* Call Button */}
             <a
               href="tel:+9197154172009"
               style={{
-                background: "#050e5f",
+                background: "#344886",
                 color: "#fff",
                 border: "none",
                 borderRadius: "50%",
@@ -440,7 +441,7 @@ export default function WoolPage() {
               fontWeight: "700",
               lineHeight: "1.25",
               margin: "0 0 24px 0",
-             
+
             }}
           >
             Shop Wool Fabrics <br /> with Aurora Textiles

@@ -46,9 +46,9 @@ export default function OxfordPage() {
             <Helmet>
                 <title>Oxford Fabric in Dubai | Shop Oxford Men&#39;s Shirt Fabric Material</title>
                 <meta name="description" content="Oxford fabric is elegant, durable, &amp; breathable. Shop Oxford Fabric in Dubai, UAE at Aurora Textiles to sew lightweight and stylish men&#39;s casual, formal, and daily wear shirts." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Oxford Fabrics", "description": "Shop Oxford men's shirt fabric material wholesale in Dubai from Aurora Textiles. Premium Oxford fabric for men's shirts in UAE.", "brand": {"@type": "Brand", "name": "Oxford"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/oxford"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Oxford Fabrics", "description": "Shop Oxford men's shirt fabric material wholesale in Dubai from Aurora Textiles. Premium Oxford fabric for men's shirts in UAE.", "brand": { "@type": "Brand", "name": "Oxford" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/oxford" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -509,7 +509,7 @@ export default function OxfordPage() {
                             flexDirection: "column",
                             gap: "20px",
                             marginBottom: "28px",
-                            
+
                         }}
                     >
                         {[
@@ -524,7 +524,7 @@ export default function OxfordPage() {
                                     display: "flex",
                                     alignItems: "flex-start",
                                     gap: "14px",
-                                   
+
                                 }}
                             >
                                 <span
@@ -545,7 +545,7 @@ export default function OxfordPage() {
                                         letterSpacing: "0.6px",
                                         margin: 0,
                                         lineHeight: "1.3",
-                                       fontFamily:"'Cinzel Decorative', sans-serif",
+                                        fontFamily: "'Cinzel Decorative', sans-serif",
                                     }}
                                 >
                                     {point}
@@ -590,8 +590,9 @@ export default function OxfordPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",
@@ -659,7 +660,7 @@ export default function OxfordPage() {
                         style={{
                             fontSize: window.innerWidth < 768 ? "28px" : "42px",
                             fontWeight: "700",
-                           color: "#344886",
+                            color: "#344886",
                             fontFamily: "'Cinzel Decorative', serif",
                             margin: "0 0 28px 0",
                             letterSpacing: "1px",

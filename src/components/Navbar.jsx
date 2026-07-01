@@ -92,11 +92,11 @@ export default function Navbar() {
                         onMouseLeave={() => setProductsOpen(false)}
                     >
                         <a
-                            href="/products/suiting"
+                            href="/"
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontFamily: "poppins, sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                                 display: "flex",
@@ -137,8 +137,10 @@ export default function Navbar() {
                                                 padding: "14px 26px",
                                                 textDecoration: "none",
                                                 color: "#111",
-                                                fontSize: "17px",
+                                                fontSize: "14px",
                                                 fontWeight: 500,
+                                                letterSpacing: "0.5px",
+                                                fontFamily: "'Poppins', sans-serif",
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -221,7 +223,7 @@ export default function Navbar() {
                                                 textDecoration: "none",
                                                 color: "#111",
                                                 fontSize: "17px",
-                                                 fontWeight: 500,
+                                                fontWeight: 500,
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -318,7 +320,7 @@ export default function Navbar() {
                                             textDecoration: "none",
                                             color: "#111",
                                             fontSize: "17px",
-                                             fontWeight: 500,
+                                            fontWeight: 500,
                                             transition: "0.3s",
                                         }}
                                         onMouseEnter={(e) => {
@@ -485,7 +487,7 @@ export default function Navbar() {
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
                                 fontSize: "18px",
-                              
+
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
@@ -531,7 +533,7 @@ export default function Navbar() {
                                                 textDecoration: "none",
                                                 color: "#111",
                                                 fontSize: "17px",
-                                                 fontWeight: 500,
+                                                fontWeight: 500,
                                                 transition: "0.3s",
                                             }}
                                             onMouseEnter={(e) => {
@@ -574,7 +576,7 @@ export default function Navbar() {
                             style={{
                                 textDecoration: "none",
                                 color: "#000",
-                                fontFamily: "poppins, sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "18px",
                                 fontWeight: 400,
                             }}
@@ -588,13 +590,14 @@ export default function Navbar() {
                 <a
                     href="/contact-us"
                     style={{
-                        background: "#122a4b",
+                        background: "#002147",
                         color: "#fff",
                         textDecoration: "none",
                         padding: "10px 28px",
                         borderRadius: "4px",
-                        fontSize: "18px",
-                        fontWeight: 500,
+                        fontSize: "15px",
+                        fontWeight: 400,
+                        fontFamily: "'Poppins', sans-serif",
                     }}
                 >
                     Enquire Now

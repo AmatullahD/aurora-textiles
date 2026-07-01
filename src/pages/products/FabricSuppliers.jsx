@@ -89,6 +89,11 @@ export default function FabricSuppliers() {
             route: "/products/spaadaa-fabrics",
             desc: "Spaadaa fabrics bring creativity and color to men's fashion, offering stylish shirting options for contemporary tailoring and occasion wear.",
         },
+         {
+            src: "/thai-power.webp",
+            route: "/products/thai-power-fabrics",
+            desc: "Thai Power fabrics are renowned for their vibrant colors and high-quality construction, making them a favorite for bold and expressive fashion choices.",
+        },
     ];
 
     const LinkText = ({ label, route }) => (

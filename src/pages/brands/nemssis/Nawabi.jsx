@@ -44,9 +44,9 @@ export default function NawabiPage() {
             <Helmet>
                 <title>Nawabi by Nemssis - Ethnic Fabrics For Men's at Aurora Textiles</title>
                 <meta name="description" content="Check out Nawabi by Nemssis at Aurora Textiles – your trusted source for luxury ethnic fabrics for men. Shop premium quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Nawabi by Nemssis", "description": "Buy Nawabi by Nemssis ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Traditional embroidery fabrics from Uttar Pradesh.", "brand": {"@type": "Brand", "name": "Nawabi by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/nawabi-by-nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Nawabi by Nemssis", "description": "Buy Nawabi by Nemssis ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Traditional embroidery fabrics from Uttar Pradesh.", "brand": { "@type": "Brand", "name": "Nawabi by Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/nawabi-by-nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -112,7 +112,7 @@ export default function NawabiPage() {
                         flex: "0 0 calc(50% - 30px)",
                         width: "calc(50% - 30px)",
                         display: "flex",
-                       
+
                         justifyContent: "center",
                         minHeight: "340px",
                     }}
@@ -262,8 +262,9 @@ export default function NawabiPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",
@@ -308,7 +309,7 @@ export default function NawabiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -404,7 +405,7 @@ export default function NawabiPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -539,7 +540,7 @@ export default function NawabiPage() {
                                             color: openFaq === i ? "#b9972f" : hoveredFaq === i ? "#070e46" : "#0b18a1",
                                             margin: 0,
                                             lineHeight: "1.4",
-                                            fontFamily: "'Poppins', sans-serif",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                             transition: "color 0.2s ease",
                                             flex: 1,
                                         }}

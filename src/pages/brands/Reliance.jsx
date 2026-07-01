@@ -61,9 +61,9 @@ export default function ReliancePage() {
             <Helmet>
                 <title>Buy Reliance Fabrics For Men's Suiting | Reliance Textiles - Aurora Textiles</title>
                 <meta name="description" content="Buy Reliance poly-wool &amp; Polyester fabrics for men's suiting from Aurora Textiles – trusted fabric supplier in Dubai. Bulk supply, consistent quality, and fast delivery across UAE &amp; MENA." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Reliance Fabrics", "description": "Buy Reliance fabrics for men's suiting wholesale in Dubai from Aurora Textiles. Premium Reliance textiles collection in UAE.", "brand": {"@type": "Brand", "name": "Reliance"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/reliance-fabrics"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Reliance Fabrics", "description": "Buy Reliance fabrics for men's suiting wholesale in Dubai from Aurora Textiles. Premium Reliance textiles collection in UAE.", "brand": { "@type": "Brand", "name": "Reliance" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/reliance-fabrics" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -117,7 +117,7 @@ export default function ReliancePage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                      Reliance Fabrics
+                        Reliance Fabrics
                     </h1>
                 </div>
             </section>
@@ -169,7 +169,7 @@ export default function ReliancePage() {
                             margin: "0 0 30px 0",
                         }}
                     >
-                       Wholesale Reliance Fabrics
+                        Wholesale Reliance Fabrics
                     </h2>
                     <p
                         style={{
@@ -346,7 +346,7 @@ export default function ReliancePage() {
                             margin: "0 0 24px 0",
                         }}
                     >
-                      100% Polyester Fabric for Dishdasha
+                        100% Polyester Fabric for Dishdasha
                     </h2>
                     <p
                         style={{
@@ -388,7 +388,7 @@ export default function ReliancePage() {
                             margin: "0 0 36px 0",
                         }}
                     >
-                       Why Choose Aurora Textiles For Reliance Fabric?
+                        Why Choose Aurora Textiles For Reliance Fabric?
                     </h2>
 
                     {[
@@ -425,41 +425,42 @@ export default function ReliancePage() {
                         </div>
                     ))}
 
-                        {/* Button */}
-                        <div
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        </div>
+                    {/* Button */}
+                    <div
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <a
+                            href="/contact-us"
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 {/* Right: fabric swatches image */}
@@ -533,7 +534,7 @@ export default function ReliancePage() {
                             letterSpacing: "1px",
                         }}
                     >
-                      FAQ
+                        FAQ
                     </h2>
 
                     <div style={{ display: "flex", flexDirection: "column" }}>
@@ -570,8 +571,7 @@ export default function ReliancePage() {
                                                     : "#0b18a1",
                                             margin: 0,
                                             lineHeight: "1.4",
-                                            fontFamily: "'Poppins', sans-serif",
-                                            textTransform: "uppercase",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                             transition: "color 0.2s ease",
                                             flex: 1,
                                         }}

@@ -45,9 +45,9 @@ export default function JohnCavendishPage() {
             <Helmet>
                 <title>John Cavendish Men&#39;s Fabric Supplier in Dubai, UAE | Formal Wear Fabrics by Aurora Textiles</title>
                 <meta name="description" content="Aurora Textiles is the leading John Cavendish men&#39;s fabric supplier in Dubai, UAE. It offers fine wool content, excellent drape, and a premium finish that is ideal for formal suits and business attire. Check out our website and contact us to shop now." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "John Cavendish Fabrics", "description": "Buy John Cavendish men's formal wear fabrics wholesale in Dubai, UAE from Aurora Textiles. Premium suiting and shirting fabric supplier.", "brand": {"@type": "Brand", "name": "John Cavendish"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/john-cavendish-fabrics"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "John Cavendish Fabrics", "description": "Buy John Cavendish men's formal wear fabrics wholesale in Dubai, UAE from Aurora Textiles. Premium suiting and shirting fabric supplier.", "brand": { "@type": "Brand", "name": "John Cavendish" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/john-cavendish-fabrics" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -423,8 +423,9 @@ export default function JohnCavendishPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",

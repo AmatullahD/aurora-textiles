@@ -621,7 +621,6 @@ export default function EthnicPage() {
                             fontSize: "46px",
                             fontWeight: "700",
                             color: "#344886",
-
                             lineHeight: "1.1",
                             margin: "0 0 28px 0",
                         }}
@@ -675,8 +674,9 @@ export default function EthnicPage() {
                                     background: "#8b7d3a",
                                     color: "#fff",
                                     border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
+                                  padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
                                     fontWeight: "500",
                                     borderRadius: "6px",
                                     cursor: "pointer",

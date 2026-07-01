@@ -46,9 +46,9 @@ export default function SammaanPage() {
             <Helmet>
                 <title>Sammaan Men&#39;s Shirting Fabrics in Dubai, UAE - Aurora Textiles</title>
                 <meta name="description" content="Check out Premium Sammaan men&#39;s shirting fabrics from Aurora Textiles in Dubai, UAE. Explore quality blends, stylish prints, jacquards, embroidery, and custom fabric finishes." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Sammaan Fabrics", "description": "Buy Sammaan men's shirting fabrics wholesale in Dubai, UAE from Aurora Textiles. Premium Sammaan fabric collection for men.", "brand": {"@type": "Brand", "name": "Sammaan"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/sammaan-fabrics"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Sammaan Fabrics", "description": "Buy Sammaan men's shirting fabrics wholesale in Dubai, UAE from Aurora Textiles. Premium Sammaan fabric collection for men.", "brand": { "@type": "Brand", "name": "Sammaan" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/sammaan-fabrics" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -470,8 +470,9 @@ export default function SammaanPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",

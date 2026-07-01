@@ -25,17 +25,17 @@ export default function SpaadaaPage() {
 
     const faqs = [
         {
-            question: "WHY CHOOSE SPAADAA SHIRTING FABRICS FROM AURORA TEXTILES?",
+            question: "Why choose Spaadaa shirting fabrics from Aurora Textiles?",
             answer:
                 "Spaadaa shirting fabrics are known for their exceptional comfort, easy maintenance, and professional appeal—making them a top choice for men's shirting needs across industries.",
         },
         {
-            question: "DO SPAADAA SHIRTING FABRICS COME IN A VARIETY OF STYLES?",
+            question: "Do Spaadaa shirting fabrics come in a variety of styles?",
             answer:
                 "Yes, we offer Spaadaa shirting fabrics in a wide variety of styles including poly-cotton blends, tencel blends, printed shirtings, and jacquard and textured finishes to suit every fashion and functional need.",
         },
         {
-            question: "CAN I PLACE A BULK ORDER FOR SPAADAA SHIRTING FABRICS?",
+            question: "Can I place a bulk order for Spaadaa shirting fabrics?",
             answer:
                 "Absolutely. Aurora Textiles supplies Spaadaa fabrics in bulk to retail brands, wholesalers, and corporate tailoring units across Dubai and MENA. Contact us for wholesale pricing and delivery options.",
         },
@@ -47,9 +47,9 @@ export default function SpaadaaPage() {
             <Helmet>
                 <title>Buy Spaadaa Men's Shirting Fabrics in Dubai | Unstitched Shirting Fabrics</title>
                 <meta name="description" content="Buy Spaadaa men's shirting fabrics from Aurora Textiles in Dubai. Explore premium unstitched shirting fabrics in poly-cotton and blended finishes—available for bulk orders across UAE &amp; MENA." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Spaadaa Fabrics", "description": "Buy Spaadaa men's unstitched shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Spaadaa shirting fabric collection in UAE.", "brand": {"@type": "Brand", "name": "Spaadaa"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/spaadaa-fabrics"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Spaadaa Fabrics", "description": "Buy Spaadaa men's unstitched shirting fabrics wholesale in Dubai from Aurora Textiles. Premium Spaadaa shirting fabric collection in UAE.", "brand": { "@type": "Brand", "name": "Spaadaa" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/spaadaa-fabrics" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -103,7 +103,7 @@ export default function SpaadaaPage() {
                             fontFamily: "'Cinzel Decorative', serif",
                         }}
                     >
-                       Spaadaa Fabrics
+                        Spaadaa Fabrics
                     </h1>
                 </div>
             </section>
@@ -159,7 +159,7 @@ export default function SpaadaaPage() {
                             textAlign: "center",
                         }}
                     >
-                       Spaadaa Shirting Fabrics
+                        Spaadaa Shirting Fabrics
                     </h2>
                     <p
                         style={{
@@ -203,7 +203,7 @@ export default function SpaadaaPage() {
                             margin: "0 0 24px 0",
                         }}
                     >
-                    Designed for Men’s Shirting Needs
+                        Designed for Men’s Shirting Needs
                     </h2>
                     <p
                         style={{
@@ -376,42 +376,43 @@ export default function SpaadaaPage() {
                         timely delivery and bulk availability. As a trusted textile partner, we prioritize fabric
                         reliability and responsive service.
                     </p>
-                        {/* Button */}
-                        <div
-                            onClick={() => (window.location.href = "/contact-us")}
-                            style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-                            <a
-                                href="/contact-us"
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.background = "#0a089bd3";
-                                    e.currentTarget.style.borderColor = "#e0b219";
-                                    e.currentTarget.style.color = "#ffffff";
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.background = "#8b7d3a";
-                                    e.currentTarget.style.borderColor = "#050e5f";
-                                    e.currentTarget.style.color = "#fff";
-                                }}
-                                style={{
-                                    background: "#8b7d3a",
-                                    color: "#fff",
-                                    border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
-                                    fontWeight: "500",
-                                    borderRadius: "6px",
-                                    cursor: "pointer",
-                                    letterSpacing: "0.5px",
-                                    transition: "all 0.3s ease",
-                                    textDecoration: "none",
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                }}
-                            >
-                                Contact Us
-                            </a>
-                        </div>
+                    {/* Button */}
+                    <div
+                        onClick={() => (window.location.href = "/contact-us")}
+                        style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+                        <a
+                            href="/contact-us"
+                            onMouseEnter={e => {
+                                e.currentTarget.style.background = "#0a089bd3";
+                                e.currentTarget.style.borderColor = "#e0b219";
+                                e.currentTarget.style.color = "#ffffff";
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.background = "#8b7d3a";
+                                e.currentTarget.style.borderColor = "#050e5f";
+                                e.currentTarget.style.color = "#fff";
+                            }}
+                            style={{
+                                background: "#8b7d3a",
+                                color: "#fff",
+                                border: "2px solid #050e5f",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
+                                fontWeight: "500",
+                                borderRadius: "6px",
+                                cursor: "pointer",
+                                letterSpacing: "0.5px",
+                                transition: "all 0.3s ease",
+                                textDecoration: "none",
+                                display: "inline-flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                            }}
+                        >
+                            Contact Us
+                        </a>
+                    </div>
                 </div>
 
                 {/* Right: dark Spaadaa fabric roll close-up image */}
@@ -522,7 +523,7 @@ export default function SpaadaaPage() {
                                                     : "#0b18a1",
                                             margin: 0,
                                             lineHeight: "1.4",
-                                            fontFamily: "'Poppins', sans-serif",
+                                            fontFamily: "'Cinzel Decorative', sans-serif",
                                             transition: "color 0.2s ease",
                                             flex: 1,
                                         }}

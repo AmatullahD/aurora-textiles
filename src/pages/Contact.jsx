@@ -2,6 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { IoIosCall } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 export default function ContactPage() {
     return (
@@ -147,22 +149,28 @@ export default function ContactPage() {
                 >
                     <div
                         style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "8px",
                             fontSize: window.innerWidth < 768 ? "15px" : "18px",
                             color: "#444",
                             fontFamily: "'Poppins', sans-serif",
                         }}
                     >
-                        📞 +971 4 353 2696
+                        <IoIosCall /> +971 4 353 2696
                     </div>
 
                     <div
                         style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "8px",
                             fontSize: window.innerWidth < 768 ? "15px" : "18px",
                             color: "#444",
                             fontFamily: "'Poppins', sans-serif",
                         }}
                     >
-                        ✉ info@aurora-textiles.com
+                        <MdEmail /> info@aurora-textiles.com
                     </div>
                 </div>
 

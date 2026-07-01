@@ -44,9 +44,9 @@ export default function ZaristaPage() {
             <Helmet>
                 <title>Zarista by Nemssis - Ethnic Fabrics For Men</title>
                 <meta name="description" content="Check out Zarista Ethnic by Nemssis at Aurora Textiles – your trusted source for premium ethnic fabrics for men. Shop high-quality, stylish fabrics perfect for traditional and festive wear in Dubai." />
-            
-        <script type="application/ld+json">{JSON.stringify({"@context": "https://schema.org", "@type": "Product", "name": "Zarista by Nemssis", "description": "Buy Zarista by Nemssis modern ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Contemporary ethnic fabrics for modern style.", "brand": {"@type": "Brand", "name": "Zarista by Nemssis"}, "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": {"@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app"}}, "url": "https://aurora-textiles.vercel.app/products/zarista-by-nemssis"})}</script>
-      </Helmet>
+
+                <script type="application/ld+json">{JSON.stringify({ "@context": "https://schema.org", "@type": "Product", "name": "Zarista by Nemssis", "description": "Buy Zarista by Nemssis modern ethnic fabrics for men wholesale in Dubai from Aurora Textiles. Contemporary ethnic fabrics for modern style.", "brand": { "@type": "Brand", "name": "Zarista by Nemssis" }, "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "AED", "seller": { "@type": "Organization", "name": "Aurora Textiles", "url": "https://aurora-textiles.vercel.app" } }, "url": "https://aurora-textiles.vercel.app/products/zarista-by-nemssis" })}</script>
+            </Helmet>
 
             {/* NAVBAR */}
             <Navbar />
@@ -103,7 +103,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-                   
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -264,8 +264,9 @@ export default function ZaristaPage() {
                                 background: "#8b7d3a",
                                 color: "#fff",
                                 border: "2px solid #050e5f",
-                                padding: "14px 36px",
-                                fontSize: "15px",
+                                padding: "14px 32px",
+                                fontFamily: "'Poppins', sans-serif",
+                                fontSize: "18px",
                                 fontWeight: "500",
                                 borderRadius: "6px",
                                 cursor: "pointer",
@@ -304,7 +305,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-               
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
@@ -380,7 +381,7 @@ export default function ZaristaPage() {
                     padding: "0 40px",
                     boxSizing: "border-box",
                     display: "flex",
-               
+
                     gap: "60px",
                     flexWrap: "nowrap",
                 }}
