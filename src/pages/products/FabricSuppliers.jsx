@@ -423,12 +423,12 @@ export default function FabricSuppliers() {
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 40px" : "60px 6% 40px",
+                    padding: window.innerWidth < 768 ? "30px 5% 30px" : "40px 6% 20px",
                     boxSizing: "border-box",
-                    background: "#fafafa",
+                    background: "#ffffff",
                 }}
             >
-                <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+                <div style={{ maxWidth: "1300px", margin: "0 auto" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
@@ -437,7 +437,6 @@ export default function FabricSuppliers() {
                             color: "#344886",
                             textAlign: "center",
                             marginBottom: "16px",
-
                             lineHeight: "1.3",
                         }}
                     >
@@ -460,7 +459,7 @@ export default function FabricSuppliers() {
                         style={{
                             display: "grid",
                             gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-                            gap: "24px",
+                            gap: "40px",
                         }}
                     >
                         {brandCards.map((brand, index) => (
@@ -474,7 +473,7 @@ export default function FabricSuppliers() {
                                     borderRadius: "24px",
                                     overflow: "hidden",
                                     cursor: "pointer",
-                                    height: "250px",
+                                    height: "210px",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -494,7 +493,7 @@ export default function FabricSuppliers() {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
-                                        padding: "20px",
+                                        padding: "22px",
                                         opacity: hoveredBrand === index ? 0 : 1,
                                         transition: "opacity 0.3s ease",
                                         pointerEvents: "none",
@@ -506,7 +505,7 @@ export default function FabricSuppliers() {
                                             alt={brand.alt}
                                             style={{
                                                 maxWidth: "100%",
-                                                maxHeight: "200px",
+                                                maxHeight: "180px",
                                                 objectFit: "contain",
                                             }}
                                         />
