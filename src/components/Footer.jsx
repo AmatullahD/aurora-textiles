@@ -229,25 +229,79 @@ export default function Footer() {
         </div>
 
         {/* MAP */}
-        <div style={{ minWidth: "260px" }}>
-          <iframe
-            src="https://www.google.com/maps?q=Dubai+Textile+City&output=embed"
-            width="260"
-            height="300"
-            style={{
-              border: 0,
-              borderRadius: "8px",
-            }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+        <div
+          style={{
+            minWidth: "280px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "16px",
+          }}
+        >
+          <div style={{ position: "relative", width: "280px", height: "240px" }}>
+            <iframe
+              src="https://www.google.com/maps?q=25.1661611,55.4227867&output=embed"
+              width="280"
+              height="240"
+              style={{
+                border: 0,
+                borderRadius: "8px",
+                pointerEvents: "none",
+              }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+            <a
+              href="https://maps.app.goo.gl/b4BcyMfuCS92EnA27"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Aurora Textiles FZCO location in Google Maps"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+                cursor: "pointer",
+              }}
+            />
+          </div>
+
+          <div style={{ position: "relative", width: "280px", height: "240px" }}>
+            <iframe
+              src="https://www.google.com/maps?q=25.2630475,55.2963284&output=embed"
+              width="280"
+              height="240"
+              style={{
+                border: 0,
+                borderRadius: "8px",
+                pointerEvents: "none",
+              }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+            <a
+              href="https://maps.app.goo.gl/3gVQC3uRbMzKS5NC6"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Aurora Trading Co. LLC location in Google Maps"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                borderRadius: "8px",
+                cursor: "pointer",
+              }}
+            />
+          </div>
         </div>
       </div>
 
       {/* COPYRIGHT */}
       <div
         style={{
-          borderTop: "1px solid rgb(247, 247, 247)",
           marginTop: "50px",
           padding: "18px 20px 70px",
           textAlign: "center",
@@ -255,6 +309,14 @@ export default function Footer() {
           fontFamily: "'Poppins', sans-serif",
         }}
       >
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "100%",
+            margin: "0 auto 18px",
+            borderTop: "1px solid rgb(247, 247, 247)",
+          }}
+        />
         © Aurora Textiles 2026
       </div>
     </footer>

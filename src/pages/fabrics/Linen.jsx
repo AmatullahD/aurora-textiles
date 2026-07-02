@@ -609,15 +609,16 @@ export default function LinenPage() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  padding: "25px",
+                  padding: "80px",
                 }}
               >
                 <p
                   style={{
+                    fontFamily: "'Poppins', sans-serif",
                     color: "#fff",
-                    fontSize: window.innerWidth < 768 ? "26px" : "28px",
+                    fontSize: window.innerWidth < 768 ? "26px" : "32px",
                     fontWeight: "700",
-                    lineHeight: "1.45",
+                    lineHeight: "1.5",
                     textAlign: "center",
                     margin: 0,
                   }}
@@ -686,13 +687,14 @@ export default function LinenPage() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  padding: "25px",
+                  padding: "80px",
                 }}
               >
                 <p
                   style={{
+                     fontFamily: "'Poppins', sans-serif",
                     color: "#fff",
-                    fontSize: window.innerWidth < 768 ? "26px" : "28px",
+                    fontSize: window.innerWidth < 768 ? "26px" : "30px",
                     fontWeight: "700",
                     lineHeight: "1.45",
                     textAlign: "center",

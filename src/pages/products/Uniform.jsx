@@ -125,7 +125,48 @@ export default function Uniform() {
     startAutoSlide();
   };
 
-  const visibleBrands = brandLogos.slice(currentSlide, currentSlide + visibleItems);
+  const itemWidthPct = 100 / visibleItems;
+
+  // Drag-to-scroll
+  const dragRef = useRef(null);
+  const dragStartX = useRef(0);
+  const dragStartSlide = useRef(0);
+  const isDragging = useRef(false);
+
+  const onMouseDown = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartSlide.current = currentSlide;
+    if (dragRef.current) dragRef.current.style.cursor = "grabbing";
+  };
+  const onMouseMove = (e) => {
+    if (!isDragging.current) return;
+    const diff = dragStartX.current - e.clientX;
+    const threshold = 60;
+    if (diff > threshold) {
+      stopAutoSlide();
+      setCurrentSlide(Math.min(dragStartSlide.current + 1, totalSlides - 1));
+      isDragging.current = false;
+      startAutoSlide();
+    } else if (diff < -threshold) {
+      stopAutoSlide();
+      setCurrentSlide(Math.max(dragStartSlide.current - 1, 0));
+      isDragging.current = false;
+      startAutoSlide();
+    }
+  };
+  const onMouseUp = () => {
+    isDragging.current = false;
+    if (dragRef.current) dragRef.current.style.cursor = "grab";
+  };
+
+  const touchStartX = useRef(0);
+  const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 50) nextSlide();
+    else if (diff < -50) prevSlide();
+  };
 
   // ─── FAQ open state ───
   const [openFaq, setOpenFaq] = useState(null);
@@ -336,40 +377,57 @@ export default function Uniform() {
           <div
             style={{
               flex: 1,
-              display: "grid",
-              gridTemplateColumns:
-                window.innerWidth < 768
-                  ? "repeat(2,1fr)"
-                  : "repeat(4,1fr)",
-              gap: window.innerWidth < 768 ? "16px" : "28px",
-              alignItems: "center",
+              overflow: "hidden",
             }}
           >
-            {visibleBrands.map((brand, index) => (
-              <div
-                key={index}
-                onClick={() => brand.route && navigate(brand.route)}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: brand.route ? "pointer" : "default",
-                }}
-              >
-                <img
-                  src={brand.src}
-                  alt={brand.name}
+            <div
+              ref={dragRef}
+              onMouseDown={onMouseDown}
+              onMouseMove={onMouseMove}
+              onMouseUp={onMouseUp}
+              onMouseLeave={onMouseUp}
+              onTouchStart={onTouchStart}
+              onTouchEnd={onTouchEnd}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                transform: `translateX(-${currentSlide * itemWidthPct}%)`,
+                transition: "transform 0.45s ease",
+                cursor: "grab",
+                userSelect: "none",
+                willChange: "transform",
+              }}
+            >
+              {brandLogos.map((brand, index) => (
+                <div
+                  key={index}
+                  onClick={() => brand.route && navigate(brand.route)}
                   style={{
-                    width: "150px",
-                    height: "150px",
-                    objectFit: "contain",
-                    borderRadius: "12px",
-                    display: "block",
+                    minWidth: `${itemWidthPct}%`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    cursor: brand.route ? "pointer" : "default",
+                    boxSizing: "border-box",
+                    padding: window.innerWidth < 768 ? "0 8px" : "0 14px",
                   }}
-                />
-              </div>
-            ))}
+                >
+                  <img
+                    src={brand.src}
+                    alt={brand.name}
+                    draggable="false"
+                    style={{
+                      width: "150px",
+                      height: "150px",
+                      objectFit: "contain",
+                      borderRadius: "12px",
+                      display: "block",
+                      pointerEvents: "none",
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* RIGHT ARROW */}

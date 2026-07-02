@@ -29,7 +29,10 @@ export default function EthnicPage() {
         { name: "Shiddat", subtitle: "EMBROIDERY FABRICS CRAFTED WITH PASSION", src: "/ethnic-icon6.webp", route: "/products/shiddat-by-nemssis" },
     ];
 
-    const totalSlides = brandLogos.length;
+    const isMobile = window.innerWidth < 768;
+    const visibleItems = isMobile ? 2 : 4;
+    const itemWidthPct = 100 / visibleItems;
+    const totalSlides = brandLogos.length - visibleItems + 1;
 
     const startAutoSlide = () => {
         stopAutoSlide();
@@ -49,6 +52,49 @@ export default function EthnicPage() {
         startAutoSlide();
         return () => stopAutoSlide();
     }, [totalSlides]);
+
+    // Drag-to-scroll
+    const dragRef = useRef(null);
+    const dragStartX = useRef(0);
+    const dragStartSlide = useRef(0);
+    const isDragging = useRef(false);
+
+    const onMouseDown = (e) => {
+        isDragging.current = true;
+        dragStartX.current = e.clientX;
+        dragStartSlide.current = activeSlide;
+        if (dragRef.current) dragRef.current.style.cursor = "grabbing";
+    };
+    const onMouseMove = (e) => {
+        if (!isDragging.current) return;
+        const diff = dragStartX.current - e.clientX;
+        const threshold = 60;
+        if (diff > threshold) {
+            stopAutoSlide();
+            setActiveSlide((dragStartSlide.current + 1) % totalSlides);
+            isDragging.current = false;
+            startAutoSlide();
+        } else if (diff < -threshold) {
+            stopAutoSlide();
+            setActiveSlide((dragStartSlide.current - 1 + totalSlides) % totalSlides);
+            isDragging.current = false;
+            startAutoSlide();
+        }
+    };
+    const onMouseUp = () => {
+        isDragging.current = false;
+        if (dragRef.current) dragRef.current.style.cursor = "grab";
+    };
+
+    const touchStartX = useRef(0);
+    const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+    const onTouchEnd = (e) => {
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        stopAutoSlide();
+        if (diff > 50) setActiveSlide((prev) => (prev + 1) % totalSlides);
+        else if (diff < -50) setActiveSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+        startAutoSlide();
+    };
 
     const faqs = [
         {
@@ -74,10 +120,6 @@ export default function EthnicPage() {
             answer: "Yes! Aurora Textiles specializes in bulk ethnic fabric orders. Whether you need large quantities for retail, manufacturing, or bespoke fashion production, we can accommodate your requirements with consistent quality and timely delivery,"
         },
     ];
-
-    const visibleLogos = [0, 1, 2, 3].map(
-        (offset) => brandLogos[(activeSlide + offset) % brandLogos.length]
-    );
 
     return (
         <div style={{ width: "100%", background: "#fff" }}>
@@ -334,20 +376,35 @@ export default function EthnicPage() {
                     <div
                         style={{
                             flex: 1,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "space-around",
-                            gap: "20px",
+                            overflow: "hidden",
                         }}
                     >
-                        {visibleLogos.map((brand, i) => (
+                        <div
+                            ref={dragRef}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={onMouseUp}
+                            onMouseLeave={onMouseUp}
+                            onTouchStart={onTouchStart}
+                            onTouchEnd={onTouchEnd}
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                transform: `translateX(-${activeSlide * itemWidthPct}%)`,
+                                transition: "transform 0.45s ease",
+                                cursor: "grab",
+                                userSelect: "none",
+                                willChange: "transform",
+                            }}
+                        >
+                        {brandLogos.map((brand, i) => (
                             brand.route ? (
                                 <a
                                     key={i}
                                     href={brand.route}
                                     onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                     style={{
-                                        flex: 1,
+                                        minWidth: `${itemWidthPct}%`,
                                         display: "flex",
                                         flexDirection: "column",
                                         alignItems: "center",
@@ -355,13 +412,16 @@ export default function EthnicPage() {
                                         minHeight: "100px",
                                         textDecoration: "none",
                                         cursor: "pointer",
+                                        boxSizing: "border-box",
+                                        padding: "0 10px",
                                     }}
                                 >
                                     {brand.src ? (
                                         <img
                                             src={brand.src}
                                             alt={brand.name}
-                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
+                                            draggable="false"
+                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain", pointerEvents: "none" }}
                                         />
                                     ) : (
                                         <>
@@ -400,20 +460,23 @@ export default function EthnicPage() {
                                 <div
                                     key={i}
                                     style={{
-                                        flex: 1,
+                                        minWidth: `${itemWidthPct}%`,
                                         display: "flex",
                                         flexDirection: "column",
                                         alignItems: "center",
                                         justifyContent: "center",
                                         minHeight: "100px",
                                         cursor: "default",
+                                        boxSizing: "border-box",
+                                        padding: "0 10px",
                                     }}
                                 >
                                     {brand.src ? (
                                         <img
                                             src={brand.src}
                                             alt={brand.name}
-                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain" }}
+                                            draggable="false"
+                                            style={{ maxWidth: "200px", maxHeight: "160px", objectFit: "contain", pointerEvents: "none" }}
                                         />
                                     ) : (
                                         <>
@@ -450,6 +513,7 @@ export default function EthnicPage() {
                                 </div>
                             )
                         ))}
+                        </div>
                     </div>
 
                     {/* Next Arrow */}

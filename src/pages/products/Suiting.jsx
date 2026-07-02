@@ -64,10 +64,48 @@ export default function SuitingPage() {
         startAutoSlide();
     };
 
-    const visibleBrands = brands.slice(
-        currentSlide,
-        currentSlide + visibleItems
-    );
+    const itemWidthPct = 100 / visibleItems;
+
+    // Drag-to-scroll
+    const dragRef = useRef(null);
+    const dragStartX = useRef(0);
+    const dragStartSlide = useRef(0);
+    const isDragging = useRef(false);
+
+    const onMouseDown = (e) => {
+        isDragging.current = true;
+        dragStartX.current = e.clientX;
+        dragStartSlide.current = currentSlide;
+        if (dragRef.current) dragRef.current.style.cursor = "grabbing";
+    };
+    const onMouseMove = (e) => {
+        if (!isDragging.current) return;
+        const diff = dragStartX.current - e.clientX;
+        const threshold = 60;
+        if (diff > threshold) {
+            stopAutoSlide();
+            setCurrentSlide(Math.min(dragStartSlide.current + 1, totalSlides - 1));
+            isDragging.current = false;
+            startAutoSlide();
+        } else if (diff < -threshold) {
+            stopAutoSlide();
+            setCurrentSlide(Math.max(dragStartSlide.current - 1, 0));
+            isDragging.current = false;
+            startAutoSlide();
+        }
+    };
+    const onMouseUp = () => {
+        isDragging.current = false;
+        if (dragRef.current) dragRef.current.style.cursor = "grab";
+    };
+
+    const touchStartX = useRef(0);
+    const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
+    const onTouchEnd = (e) => {
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        if (diff > 50) nextSlide();
+        else if (diff < -50) prevSlide();
+    };
 
     // FAQ STATE
     const [openFaq, setOpenFaq] = useState(0);
@@ -382,39 +420,55 @@ export default function SuitingPage() {
                     <div
                         style={{
                             flex: 1,
-                            display: "grid",
-                            gridTemplateColumns:
-                                window.innerWidth < 768
-                                    ? "repeat(2,1fr)"
-                                    : "repeat(4,1fr)",
-                            gap: window.innerWidth < 768 ? "16px" : "28px",
-                            alignItems: "center",
+                            overflow: "hidden",
                         }}
                     >
-                        {visibleBrands.map((brand, index) => (
+                        <div
+                            ref={dragRef}
+                            onMouseDown={onMouseDown}
+                            onMouseMove={onMouseMove}
+                            onMouseUp={onMouseUp}
+                            onMouseLeave={onMouseUp}
+                            onTouchStart={onTouchStart}
+                            onTouchEnd={onTouchEnd}
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                transform: `translateX(-${currentSlide * itemWidthPct}%)`,
+                                transition: "transform 0.45s ease",
+                                cursor: "grab",
+                                userSelect: "none",
+                                willChange: "transform",
+                            }}
+                        >
+                        {brands.map((brand, index) => (
                             brand.route ? (
                                 <a
                                     key={index}
                                     href={brand.route}
                                     onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                     style={{
-                                        width: "100%",
+                                        minWidth: `${itemWidthPct}%`,
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
                                         textDecoration: "none",
                                         cursor: "pointer",
+                                        boxSizing: "border-box",
+                                        padding: window.innerWidth < 768 ? "0 8px" : "0 14px",
                                     }}
                                 >
                                     <img
                                         src={brand.src}
                                         alt="brand"
+                                        draggable="false"
                                         style={{
                                             width: "180px",
                                             height: "180px",
                                             objectFit: "contain",
                                             borderRadius: "12px",
                                             display: "block",
+                                            pointerEvents: "none",
                                         }}
                                     />
                                 </a>
@@ -422,27 +476,32 @@ export default function SuitingPage() {
                                 <div
                                     key={index}
                                     style={{
-                                        width: "100%",
+                                        minWidth: `${itemWidthPct}%`,
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "center",
                                         cursor: "default",
+                                        boxSizing: "border-box",
+                                        padding: window.innerWidth < 768 ? "0 8px" : "0 14px",
                                     }}
                                 >
                                     <img
                                         src={brand.src}
                                         alt="brand"
+                                        draggable="false"
                                         style={{
                                             width: "180px",
                                             height: "180px",
                                             objectFit: "contain",
                                             borderRadius: "12px",
                                             display: "block",
+                                            pointerEvents: "none",
                                         }}
                                     />
                                 </div>
                             )
                         ))}
+                        </div>
                     </div>
 
                     {/* RIGHT ARROW */}

@@ -514,26 +514,28 @@ export default function PolyWoolPage() {
             gridTemplateColumns:
               window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)",
             gap: "22px",
-            maxWidth: "1150px",
+            maxWidth: "1100px",
             margin: "0 auto",
+           
+          
           }}
         >
           {[
             {
               label: "Blazers for formal and semi-formal events",
-              image: "/polywool-3.webp",
+              image: "/polywool-app1.jpg",
             },
             {
               label: "Business suits & corporate uniforms",
-              image: "/polywool-4.webp",
+              image: "/polywool-app2.jpg",
             },
             {
               label: "Tailored trousers and waistcoats",
-              image: "/polywool-5.jpg",
+              image: "/polywool-app3.jpg",
             },
             {
               label: "Kandura & Dishdasha",
-              image: "/polywool-6.jpg",
+              image: "/polywool-app4.jpg",
             },
           ].map((item, i) => (
             <div
@@ -573,18 +575,19 @@ export default function PolyWoolPage() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  padding: "20px",
+                  padding: "25px",
                 }}
               >
                 <p
                   style={{
                     color: "#fff",
-                    fontSize: window.innerWidth < 768 ? "26px" : "26px",
+                    fontSize: window.innerWidth < 768 ? "30px" : "30px",
+                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: "700",
-                    lineHeight: "1.3",
+                    lineHeight: "1.5",
                     textAlign: "center",
                     margin: 0,
-                    maxWidth: "80%",
+                  maxWidth: "80%",
                   }}
                 >
                   {item.label}
