@@ -488,23 +488,27 @@ export default function GulliniPage() {
                     </div>
                 </div>
 
-                {/* Right: two fabric images stacked */}
+                {/* Right: fabric image grid */}
                 <div
                     style={{
                         flex: "0 0 auto",
                         width: "520px",
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: "20px",
+                        marginTop: "40px",
                         flexShrink: 0,
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
+                        gridTemplateRows: "240px 240px",
+                        gap: "20px",
                     }}
                 >
-                    {/* Top image: two fabric rolls side by side */}
+                    {/* Top image: two fabric rolls — spans full width */}
                     <div
                         style={{
+                            gridColumn: "1 / span 2",
                             width: "100%",
-                            height: "320px",
+                            height: "250px",
                             overflow: "hidden",
+                            borderRadius: "6px",
                         }}
                     >
                         <img
@@ -518,13 +522,14 @@ export default function GulliniPage() {
                             }}
                         />
                     </div>
-                    {/* Bottom image: dark fabric close-up — positioned offset to the left */}
+
+                    {/* Bottom-left image: dark fabric close-up */}
                     <div
                         style={{
-                            width: "240px",
-                            height: "290px",
+                            width: "100%",
+                            height: "280px",
                             overflow: "hidden",
-                            alignSelf: "flex-end",
+                            borderRadius: "6px",
                         }}
                     >
                         <img
@@ -538,14 +543,14 @@ export default function GulliniPage() {
                             }}
                         />
                     </div>
-                    {/* Third image: dark check fabric with label */}
+
+                    {/* Bottom-right image: dark check fabric with label */}
                     <div
                         style={{
-                            width: "260px",
-                            height: "290px",
+                            width: "100%",
+                            height: "280px",
                             overflow: "hidden",
-                            alignSelf: "flex-start",
-                            marginTop: "-180px",
+                            borderRadius: "6px",
                         }}
                     >
                         <img

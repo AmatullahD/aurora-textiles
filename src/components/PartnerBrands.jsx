@@ -75,6 +75,10 @@ export default function PartnerBrands() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
+    // Live drag offset (in % of track width) applied on top of currentSlide's position
+    const [dragOffsetPct, setDragOffsetPct] = useState(0);
+    const [isDraggingState, setIsDraggingState] = useState(false);
+
     // Auto-slide
     const autoSlideRef = useRef(null);
 
@@ -109,50 +113,67 @@ export default function PartnerBrands() {
         startAutoSlide();
     };
 
-    // Drag-to-scroll
+    // Drag-to-scroll (smooth, follows cursor in real time)
     const dragRef = useRef(null);
     const dragStartX = useRef(0);
-    const dragStartSlide = useRef(0);
     const isDragging = useRef(false);
+    const trackWidthPx = useRef(0);
 
-    const onMouseDown = (e) => {
+    const clampSlide = (slide) => Math.max(0, Math.min(totalSlides - 1, slide));
+
+    const beginDrag = (clientX) => {
+        stopAutoSlide();
         isDragging.current = true;
-        dragStartX.current = e.clientX;
-        dragStartSlide.current = currentSlide;
+        dragStartX.current = clientX;
+        trackWidthPx.current = dragRef.current ? dragRef.current.offsetWidth : 1;
+        setIsDraggingState(true);
         if (dragRef.current) dragRef.current.style.cursor = "grabbing";
     };
-    const onMouseMove = (e) => {
+
+    const moveDrag = (clientX) => {
         if (!isDragging.current) return;
-        const diff = dragStartX.current - e.clientX;
-        const threshold = 60;
-        if (diff > threshold) {
-            stopAutoSlide();
-            setCurrentSlide(Math.min(dragStartSlide.current + 1, totalSlides - 1));
-            isDragging.current = false;
-            startAutoSlide();
-        } else if (diff < -threshold) {
-            stopAutoSlide();
-            setCurrentSlide(Math.max(dragStartSlide.current - 1, 0));
-            isDragging.current = false;
-            startAutoSlide();
-        }
-    };
-    const onMouseUp = () => {
-        isDragging.current = false;
-        if (dragRef.current) dragRef.current.style.cursor = "grab";
+        const deltaPx = dragStartX.current - clientX; // positive = moved left
+        const pct = (deltaPx / trackWidthPx.current) * 100;
+        setDragOffsetPct(pct);
     };
 
-    // Touch support
-    const touchStartX = useRef(0);
-    const onTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
-    const onTouchEnd = (e) => {
-        const diff = touchStartX.current - e.changedTouches[0].clientX;
-        if (diff > 50) handleNext();
-        else if (diff < -50) handlePrev();
+    const endDrag = () => {
+        if (!isDragging.current) return;
+        isDragging.current = false;
+        setIsDraggingState(false);
+        if (dragRef.current) dragRef.current.style.cursor = "grab";
+
+        // Decide how many slides to move based on how far we dragged
+        setDragOffsetPct((pct) => {
+            const slideMove = Math.round(pct / itemWidthPct);
+            if (slideMove !== 0) {
+                setCurrentSlide((prev) => clampSlide(prev + slideMove));
+            }
+            return 0;
+        });
+
+        startAutoSlide();
     };
+
+    // Mouse events
+    const onMouseDown = (e) => {
+        e.preventDefault(); // stops native browser link/image drag ghost + URL tooltip
+        beginDrag(e.clientX);
+    };
+    const onMouseMove = (e) => moveDrag(e.clientX);
+    const onMouseUp = () => endDrag();
+    const onMouseLeave = () => endDrag();
+    const onDragStart = (e) => e.preventDefault();
+
+    // Touch events (smooth, same logic as mouse)
+    const onTouchStart = (e) => beginDrag(e.touches[0].clientX);
+    const onTouchMove = (e) => moveDrag(e.touches[0].clientX);
+    const onTouchEnd = () => endDrag();
 
     // Each item width as percentage of the track
     const itemWidthPct = 100 / visibleItems;
+
+    const translatePct = currentSlide * itemWidthPct + dragOffsetPct;
 
     return (
         <section
@@ -206,14 +227,15 @@ export default function PartnerBrands() {
                         onMouseDown={onMouseDown}
                         onMouseMove={onMouseMove}
                         onMouseUp={onMouseUp}
-                        onMouseLeave={onMouseUp}
+                        onMouseLeave={onMouseLeave}
                         onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
                         style={{
                             display: "flex",
                             alignItems: "center",
-                            transform: `translateX(-${currentSlide * itemWidthPct}%)`,
-                            transition: "transform 0.45s ease",
+                            transform: `translateX(-${translatePct}%)`,
+                            transition: isDraggingState ? "none" : "transform 0.45s ease",
                             cursor: "grab",
                             userSelect: "none",
                             willChange: "transform",
@@ -233,6 +255,8 @@ export default function PartnerBrands() {
                             >
                                 <a
                                     href={brand.route}
+                                    draggable={false}
+                                    onDragStart={onDragStart}
                                     onClick={(e) => { e.preventDefault(); navigate(brand.route); window.scrollTo(0, 0); }}
                                     onMouseEnter={() => setHoveredIndex(index)}
                                     onMouseLeave={() => setHoveredIndex(null)}

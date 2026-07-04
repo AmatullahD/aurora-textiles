@@ -65,7 +65,7 @@ export default function FabricSuppliers() {
             desc: "The epitome of luxury. Reid & Taylor suiting fabrics are crafted with superfine wool and premium blends — chosen by those who appreciate Scottish heritage and timeless sophistication.",
         },
         {
-            src: "/georgia-gullini-1.webp",
+            src: "/georgia-gullini.png",
             route: "/products/georgia-gullini-fabrics",
             desc: "A brand celebrated for its refined aesthetics and craftsmanship. Our Georgia Gullini collection features contemporary suiting materials perfect for business attire and eveningwear.",
         },
@@ -75,7 +75,7 @@ export default function FabricSuppliers() {
             desc: "Dedicated to the finest linen fabrics, Linoworld represents natural luxury and comfort — ideal for Dubai's warm climate and resort-style fashion.",
         },
         {
-            src: "/john-cavendish.webp",
+            src: "/john-cavendish.png",
             route: "/products/john-cavendish-fabrics",
             desc: "A classic brand offering a versatile collection of cotton, wool, and blended fabrics, combining style and practicality for both formal and semi-formal looks.",
         },
@@ -428,7 +428,7 @@ export default function FabricSuppliers() {
                     background: "#ffffff",
                 }}
             >
-                <div style={{ maxWidth: "1300px", margin: "0 auto" }}>
+                <div style={{ maxWidth: "1450px", margin: "0 auto" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
@@ -459,7 +459,7 @@ export default function FabricSuppliers() {
                         style={{
                             display: "grid",
                             gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-                            gap: "40px",
+                            gap: "50px",
                         }}
                     >
                         {brandCards.map((brand, index) => (
@@ -473,7 +473,7 @@ export default function FabricSuppliers() {
                                     borderRadius: "24px",
                                     overflow: "hidden",
                                     cursor: "pointer",
-                                    height: "210px",
+                                    height: "180px",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",

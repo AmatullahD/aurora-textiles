@@ -38,10 +38,10 @@ function LinenCard({ icon, title, desc }) {
 
       {!hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "23px",
           fontWeight: "600",
-          color: "#1a237e",
+          color: "#090f4e",
           lineHeight: "1.4",
           margin: 0,
           textAlign: "center",
@@ -52,7 +52,7 @@ function LinenCard({ icon, title, desc }) {
 
       {hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "14px",
           fontWeight: "500",
           color: "#333",
@@ -366,17 +366,17 @@ export default function LinenPage() {
           }}
         >
           <LinenCard
-            icon={<FaStar />}
+            icon={<FaStar size="50" />}
             title="Sourced from globally trusted textile partners"
             desc="Sourced from globally trusted textile partners"
           />
           <LinenCard
-            icon={<FaAngleDoubleUp />}
+            icon={<FaAngleDoubleUp size="50" />}
             title="Variety of GSMs and finishes for different tailoring needs"
             desc="Variety of GSMs and finishes for different tailoring needs"
           />
           <LinenCard
-            icon={<FaRegHandshake />}
+            icon={<FaRegHandshake size="50" />}
             title="Options available in pure linen and linen blends (cotton/viscose)"
             desc="Options available in pure linen and linen blends (cotton/viscose)"
           />
@@ -394,12 +394,12 @@ export default function LinenPage() {
           }}
         >
           <LinenCard
-            icon={<FaChartBar />}
+            icon={<FaChartBar size="50" />}
             title="Perfect for warm-weather dressing in the UAE"
             desc="Perfect for warm-weather dressing in the UAE"
           />
           <LinenCard
-            icon={<FaRegCheckCircle />}
+            icon={<FaRegCheckCircle size="50" />}
             title="Suitable for bulk orders, B2B clients, and fashion houses"
             desc="Suitable for bulk orders, B2B clients, and fashion houses"
           />
@@ -522,10 +522,10 @@ export default function LinenPage() {
           style={{
             fontFamily: "'Cinzel Decorative', serif",
             color: "#344886",
-            fontSize: "32px",
+            fontSize: "36px",
             fontWeight: "700",
             textAlign: "center",
-            margin: "0 0 18px 0",
+            margin: "0 0 14px 0",
           }}
         >
           Applications of Linen Fabric
@@ -692,7 +692,7 @@ export default function LinenPage() {
               >
                 <p
                   style={{
-                     fontFamily: "'Poppins', sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     color: "#fff",
                     fontSize: window.innerWidth < 768 ? "26px" : "30px",
                     fontWeight: "700",

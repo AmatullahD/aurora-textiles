@@ -92,7 +92,7 @@ export default function AboutPage() {
           height: "210px",
           position: "relative",
           overflow: "hidden",
-          marginBottom: "50px",
+          marginBottom: "20px",
         }}
       >
         {/* BACKGROUND IMAGE */}
@@ -152,7 +152,7 @@ export default function AboutPage() {
       <section
         style={{
           width: "100%",
-          padding: "70px 6%",
+          padding: "50px 6%",
           background: "#ffffff",
           boxSizing: "border-box",
         }}
@@ -162,15 +162,15 @@ export default function AboutPage() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            gap: "45px",
+            gap: "40px",
             flexWrap: "wrap",
           }}
         >
           {/* LEFT SIDE */}
           <div
             style={{
-              flex: "1 1 60%",
-              minWidth: "300px",
+              flex: "1 1 50%",
+              minWidth: "400px",
             }}
           >
             {/* HEADING */}
@@ -208,8 +208,8 @@ export default function AboutPage() {
             {/* PARAGRAPHS */}
             <p
               style={{
-                fontSize: window.innerWidth < 768 ? "15px" : "18px",
-                lineHeight: "1.8",
+                fontSize: window.innerWidth < 768 ? "15px" : "17px",
+                lineHeight: "30px",
                 color: "#222",
                 marginTop: 0,
                 marginBottom: "28px",
@@ -217,27 +217,20 @@ export default function AboutPage() {
                 fontWeight: "400",
               }}
             >
-              As a family-run business with over 45 years of experience in
-              textile wholesale and a four-generation, century-long legacy
-              within the textile sector in the MENA region, our core values are
-              integrity, reliability, and an unwavering commitment to quality
-              and customer service.
+             As a family-run business with over 45 years of experience in textile wholesale and a four-generation, century-long legacy within the textile sector in the MENA region, our core values are integrity, reliability, and an unwavering commitment to quality and customer service. These principles have been instrumental in building trust and fostering long-term relationships with partners and customers worldwide. We pride ourselves on treating every client as part of the Aurora family, ensuring their needs are met with personalized attention and care. 
             </p>
 
             <p
               style={{
-                fontSize: window.innerWidth < 768 ? "15px" : "18px",
-                lineHeight: "1.8",
+                fontSize: window.innerWidth < 768 ? "15px" : "17px",
+                lineHeight: "30px",
                 color: "#222",
                 margin: 0,
                 fontFamily: "'Poppins', sans-serif",
                 fontWeight: "400",
               }}
             >
-              At Aurora, quality is our hallmark. We ensure this by sourcing
-              materials from trusted global suppliers, conducting rigorous
-              quality checks, and maintaining transparency throughout the supply
-              chain.
+             At Aurora, quality is our hallmark. We ensure this by sourcing materials from trusted global suppliers, conducting rigorous quality checks, and maintaining transparency throughout the supply chain. Our exclusive partnerships with reputable fabric brands and a dedication to excellence has kept us standing tall in the market for over 30 years.
             </p>
           </div>
 
@@ -246,24 +239,28 @@ export default function AboutPage() {
             style={{
               flex: "1 1 35%",
               minWidth: "280px",
+              position: "relative",
+              paddingTop: window.innerWidth < 768 ? "220px" : "320px",
+              borderRadius: "8px",
+              overflow: "hidden",
             }}
           >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls={false}
+            <iframe
+              src="https://player.vimeo.com/video/1044791642?background=1&autoplay=1&loop=1&muted=1&controls=0"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+              title="Aurora Textiles Video"
               style={{
+                position: "absolute",
+                top: "40px",
+                left: 0,
                 width: "100%",
-                height: window.innerWidth < 768 ? "220px" : "320px",
-                objectFit: "cover",
-                borderRadius: "8px",
+                height: "100%",
+                border: "none",
                 display: "block",
               }}
-            >
-              <source src="/blogs-1.avif" type="video/mp4" />
-            </video>
+            ></iframe>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { TiArrowSortedDown } from "react-icons/ti";
 
 export default function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false);
@@ -72,8 +73,9 @@ export default function Navbar() {
                                 textDecoration: "none",
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 400,
+                                 fontSize: "17px",
+                                fontWeight: 500,
+                                  letterSpacing: "0.5px",
                             }}
                         >
                             Home
@@ -92,20 +94,21 @@ export default function Navbar() {
                         onMouseLeave={() => setProductsOpen(false)}
                     >
                         <a
-                            href="/"
+                            href="/product-new"
                             style={{
                                 textDecoration: "none",
-                                color: "#000",
+                                color: "#2c2b2b",
                                 fontFamily: "'Poppins', sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 400,
+                                fontSize: "17px",
+                                fontWeight: 500,
+                                  letterSpacing: "0.5px",
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
                             }}
                         >
                             Products
-                            <span style={{ fontSize: "13px" }}>▼</span>
+                            <TiArrowSortedDown style={{ fontSize: "16px" }} />
                         </a>
 
                         {productsOpen && (
@@ -181,15 +184,16 @@ export default function Navbar() {
                                 textDecoration: "none",
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 400,
+                                 fontSize: "17px",
+                                fontWeight: 500,
+                                  letterSpacing: "0.5px",
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
                             }}
                         >
                             Brands
-                            <span style={{ fontSize: "13px" }}>▼</span>
+                            <TiArrowSortedDown style={{ fontSize: "16px" }} />
                         </a>
 
                         {brandsOpen && (
@@ -486,15 +490,16 @@ export default function Navbar() {
                                 textDecoration: "none",
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
-                                fontSize: "18px",
-
+                                 fontSize: "17px",
+                                fontWeight: 500,
+                                  letterSpacing: "0.5px",
                                 display: "flex",
                                 alignItems: "center",
                                 gap: "6px",
                             }}
                         >
                             Fabrics
-                            <span style={{ fontSize: "13px" }}>▼</span>
+                            <TiArrowSortedDown style={{ fontSize: "16px" }} />
                         </a>
 
                         {fabricsOpen && (
@@ -561,8 +566,9 @@ export default function Navbar() {
                                 textDecoration: "none",
                                 color: "#000",
                                 fontFamily: "poppins, sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 400,
+                                 fontSize: "17px",
+                                fontWeight: 500,
+                                  letterSpacing: "0.5px",
                             }}
                         >
                             About Us
@@ -577,8 +583,9 @@ export default function Navbar() {
                                 textDecoration: "none",
                                 color: "#000",
                                 fontFamily: "'Poppins', sans-serif",
-                                fontSize: "18px",
-                                fontWeight: 400,
+                                fontSize: "17px",
+                                fontWeight: 500,
+                                letterSpacing: "0.5px",
                             }}
                         >
                             Contact Us
@@ -590,7 +597,7 @@ export default function Navbar() {
                 <a
                     href="/contact-us"
                     style={{
-                        background: "#002147",
+                        background: "#012650",
                         color: "#fff",
                         textDecoration: "none",
                         padding: "10px 28px",

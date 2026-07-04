@@ -49,9 +49,10 @@ function PolyWoolCard({ item }) {
       {!hovered && (
         <p
           style={{
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "24px",
             fontWeight: "600",
-            color: "#1a237e",
+            color: "#070f61",
             lineHeight: "1.4",
             margin: 0,
             textAlign: "center",
@@ -65,7 +66,7 @@ function PolyWoolCard({ item }) {
       {hovered && (
         <p
           style={{
-            fontSize: "16px",
+            fontSize: "18px",
             fontWeight: "500",
             color: "#333",
             lineHeight: "1.6",
@@ -322,6 +323,7 @@ export default function PolyWoolPage() {
 
       <section
         style={{
+          maxWidth: "1300px",
           background: "#fff",
           padding: "30px 20px",
           marginBottom: "20px",
@@ -330,7 +332,7 @@ export default function PolyWoolPage() {
         <h2
           style={{
             fontFamily: "'Cinzel Decorative', serif",
-            fontSize: "32px",
+            fontSize: "42px",
             fontWeight: "700",
             color: "#344886",
             textAlign: "center",
@@ -354,17 +356,17 @@ export default function PolyWoolPage() {
         >
           {[
             {
-              icon: <FaStar />,
+              icon: <FaStar size={50}  />,
               title: "Sourced from top textile mills with consistent blend quality",
               desc: "Sourced from top textile mills with consistent blend quality",
             },
             {
-              icon: <FaAngleDoubleUp />,
+              icon: <FaAngleDoubleUp size={50}  />,
               title: "Variety of GSMs, weaves, and textures to match your style",
               desc: "Variety of GSMs, weaves, and textures to match your style",
             },
             {
-              icon: <FaRegHandshake />,
+              icon: <FaRegHandshake size={50}  />,
               title: "Reliable delivery and support across Dubai & MENA",
               desc: "Reliable delivery and support across Dubai & MENA",
             },
@@ -386,12 +388,12 @@ export default function PolyWoolPage() {
         >
           {[
             {
-              icon: <FaChartBar />,
+              icon: <FaChartBar size={50} />,
               title: "Available in solid shades, subtle patterns, and elegant finishes",
               desc: "Available in solid shades, subtle patterns, and elegant finishes",
             },
             {
-              icon: <FaRegCheckCircle />,
+              icon: <FaRegCheckCircle size={50} />,
               title: "Ideal for bulk orders by tailors, wholesalers, and designers",
               desc: "Ideal for bulk orders by tailors, wholesalers, and designers",
             },
