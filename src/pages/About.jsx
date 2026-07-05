@@ -246,14 +246,14 @@ export default function AboutPage() {
             }}
           >
             <iframe
-              src="https://player.vimeo.com/video/1044791642?background=1&autoplay=1&loop=1&muted=1&controls=0"
+              src="https://player.vimeo.com/video/1044791642?title=1&byline=0&portrait=0&controls=1&autoplay=1&loop=1&muted=1"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"
               allowFullScreen
               title="Aurora Textiles Video"
               style={{
                 position: "absolute",
-                top: "40px",
+                top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",

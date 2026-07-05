@@ -623,7 +623,7 @@ export default function Navbar() {
                 >
                     {[
                         { label: "Home", href: "/" },
-                        { label: "Products", href: "/products/suiting" },
+                        { label: "Products", href: "/product-new" },
                         { label: "Brands", href: "/products/donear" },
                         { label: "Fabrics", href: "/cotton-fabric" },
                         { label: "About Us", href: "/about-us" },

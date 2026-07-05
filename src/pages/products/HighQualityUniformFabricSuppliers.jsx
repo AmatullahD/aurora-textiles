@@ -82,37 +82,37 @@ export default function UniformFabricSupplier() {
     const industryCards = [
         {
             alt: "Healthcare",
-            src: "/healthcare-uniform.webp",
+            src: "/healthcare.jpg",
             route: "/products/uniform",
             desc: "Breathable cotton blends and lightweight polycotton fabrics designed for comfort and hygiene during long working hours in clinics and hospitals.",
         },
         {
             alt: "Hospitality",
-            src: "/hospitality-uniform.webp",
+            src: "/hospitality.jpg",
             route: "/products/uniform",
             desc: "Wrinkle-resistant, colour-retentive hospitality blends that maintain a polished appearance through full service shifts in hotels and restaurants.",
         },
         {
             alt: "Industrial",
-            src: "/industrial-uniform.webp",
+            src: "/industrial.jpg",
             route: "/products/uniform",
             desc: "Heavy-duty performance fabrics with abrasion resistance and high wash durability — engineered for factories, construction, and logistics environments.",
         },
         {
             alt: "Corporate",
-            src: "/corporate-uniform.webp",
+            src: "/corporate.jpg",
             route: "/products/uniform",
             desc: "Premium poly-viscose and suiting blends that deliver a professional, structured finish for office and corporate staff across the GCC.",
         },
         {
             alt: "Aviation & Travel",
-            src: "/aviation-uniform.webp",
+            src: "/aviation.jpg",
             route: "/products/uniform",
             desc: "Lightweight, wrinkle-resistant performance blends that retain a premium appearance through extended flight hours and international travel.",
         },
         {
             alt: "Retail & Service",
-            src: "/retail-uniform.webp",
+            src: "/retail-service.jpg",
             route: "/products/uniform",
             desc: "Comfortable, colour-fast polycotton fabrics that keep retail and service staff looking sharp and professional throughout busy shifts.",
         },
@@ -436,7 +436,7 @@ export default function UniformFabricSupplier() {
                     width: "100%",
                     padding: window.innerWidth < 768 ? "50px 5% 40px" : "40px 6% 40px",
                     boxSizing: "border-box",
-                    background: "#fafafa",
+                    background: "#ffffff",
                 }}
             >
                 <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
@@ -518,6 +518,7 @@ export default function UniformFabricSupplier() {
                                                 maxWidth: "100%",
                                                 maxHeight: "200px",
                                                 objectFit: "contain",
+                                                borderRadius: "12px",
                                             }}
                                         />
                                     ) : (

@@ -5,6 +5,7 @@ import FloatingButtons from "./components/FloatingButtons";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductNew from "./pages/products/ProductNew";
 import Suiting from "./pages/products/Suiting";
 import Shirting from "./pages/products/Shirting";
 import Uniform from "./pages/products/Uniform";
@@ -67,6 +68,7 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
 
         {/* Products */}
+        <Route path="/product-new" element={<ProductNew />} />
         <Route path="/products/suiting" element={<Suiting />} />
         <Route path="/products/shirting" element={<Shirting />} />
         <Route path="/products/uniform" element={<Uniform />} />
