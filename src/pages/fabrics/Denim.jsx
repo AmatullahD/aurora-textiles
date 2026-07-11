@@ -40,7 +40,7 @@ function DenimCard({ icon, title, desc }) {
       {/* Title — before hover, bold 24px */}
       {!hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "24px",
           fontWeight: "700",
           color: "#1a237e",
@@ -55,7 +55,7 @@ function DenimCard({ icon, title, desc }) {
       {/* Description — after hover, small text */}
       {hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "14px",
           fontWeight: "400",
           color: "#333",
@@ -213,7 +213,7 @@ export default function DenimPage() {
           </h2>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -229,7 +229,7 @@ export default function DenimPage() {
           </p>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -434,7 +434,7 @@ export default function DenimPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
@@ -448,7 +448,7 @@ export default function DenimPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "24px",
               fontWeight: "700",
               color: "#111",
@@ -460,7 +460,7 @@ export default function DenimPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.2",
@@ -476,7 +476,7 @@ export default function DenimPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "24px",
               fontWeight: "700",
               color: "#111",
@@ -488,7 +488,7 @@ export default function DenimPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.2",
@@ -499,22 +499,22 @@ export default function DenimPage() {
             apparel categories and design requirements.
           </p>
 
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Shirt for Men</strong> – Lightweight denim suitable for everyday wear and casual outings
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Jacket for Men</strong> – Medium to heavy-weight options for structured outerwear
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 6px 0" }}>
             <strong>Denim Pants</strong> – Sturdy, flexible fabric for trousers and jeans
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
             <strong>Custom Apparel</strong> – Ideal for brands, tailors, and fashion studios looking for trendy, durable fabric
           </p>
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -609,7 +609,7 @@ export default function DenimPage() {
                 <div
                   style={{
                     padding: "20px 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "17px",
                     color: "#333",
                     lineHeight: "1.5",

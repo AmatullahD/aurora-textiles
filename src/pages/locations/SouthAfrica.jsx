@@ -167,8 +167,9 @@ export default function SouthAfricaPage() {
                                     background: "#8b7d3a",
                                     color: "#fff",
                                     border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
+                                     padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
                                     fontWeight: "500",
                                     borderRadius: "6px",
                                     cursor: "pointer",
@@ -188,7 +189,7 @@ export default function SouthAfricaPage() {
                 {/* Right Image */}
                 <div style={{ flex: "0 0 42%", maxWidth: "42%" }}>
                     <img
-                        src="/south-africa-1.webp"
+                        src="/suiting-fabric.jpg"
                         alt="Fabric Suppliers South Africa"
                         style={{
                             width: "100%",
@@ -218,7 +219,7 @@ export default function SouthAfricaPage() {
                 {/* Left Image */}
                 <div style={{ flex: "0 0 42%", maxWidth: "42%" }}>
                     <img
-                        src="/south-africa-2.webp"
+                        src="/suitings.webp"
                         alt="Cotton Fabric Suppliers South Africa"
                         style={{
                             width: "100%",
@@ -387,7 +388,7 @@ export default function SouthAfricaPage() {
                 {/* Right Image */}
                 <div style={{ flex: "0 0 42%", maxWidth: "42%" }}>
                     <img
-                        src="/south-africa-3.webp"
+                        src="/suitings-1.webp"
                         alt="Poly Viscose Fabric Suppliers South Africa"
                         style={{
                             width: "100%",
@@ -417,11 +418,11 @@ export default function SouthAfricaPage() {
                 {/* Left Image */}
                 <div style={{ flex: "0 0 42%", maxWidth: "42%" }}>
                     <img
-                        src="/south-africa-4.webp"
+                        src="/zarista-1.jpg"
                         alt="Bulk Fabric Suppliers South Africa"
                         style={{
                             width: "100%",
-                            height: "620px",
+                            height: "680px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "20px",
@@ -708,11 +709,11 @@ export default function SouthAfricaPage() {
                 {/* Right Image */}
                 <div style={{ flex: "0 0 42%", maxWidth: "42%" }}>
                     <img
-                        src="/south-africa-5.webp"
+                        src="/south-africa-1.webp"
                         alt="Fabric Wholesalers South Africa"
                         style={{
                             width: "100%",
-                            height: "620px",
+                            height: "780px",
                             objectFit: "cover",
                             display: "block",
                             borderRadius: "4px",
@@ -781,29 +782,50 @@ export default function SouthAfricaPage() {
                     </p>
 
                     {/* Contact Us Button */}
-                    <a
-                        href="/contact"
-                        style={{
-                            display: "inline-block",
-                            background: "#b39131",
-                            color: "#fff",
-                            fontFamily: "'poppins',sans-serif",
-                            fontSize: "17px",
-                            fontWeight: "600",
-                            padding: "14px 36px",
-                            borderRadius: "6px",
-                            textDecoration: "none",
-                            letterSpacing: "0.5px",
-                        }}
-                    >
-                        Contact Us
-                    </a>
+                    {/* Button */}
+                        <div
+                            onClick={() => (window.location.href = "/contact-us")}
+                            style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+
+                            <a
+                                href="/contact-us"
+                                onMouseEnter={e => {
+                                    e.currentTarget.style.background = "#0a089bd3";
+                                    e.currentTarget.style.borderColor = "#e0b219";
+                                    e.currentTarget.style.color = "#ffffff";
+                                }}
+                                onMouseLeave={e => {
+                                    e.currentTarget.style.background = "#8b7d3a";
+                                    e.currentTarget.style.borderColor = "#050e5f";
+                                    e.currentTarget.style.color = "#fff";
+                                }}
+                                style={{
+                                    background: "#8b7d3a",
+                                    color: "#fff",
+                                    border: "2px solid #050e5f",
+                                    padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
+                                    fontWeight: "500",
+                                    borderRadius: "6px",
+                                    cursor: "pointer",
+                                    letterSpacing: "0.5px",
+                                    transition: "all 0.3s ease",
+                                    textDecoration: "none",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                }}
+                            >
+                                Contact Us
+                            </a>
+                        </div>
                 </div>
 
                 {/* Right — Single Image */}
                 <div style={{ flex: "0 0 44%", maxWidth: "44%" }}>
                     <img
-                        src="/south-africa-6.webp"
+                        src="/polywool-lycra3.webp"
                         alt="Why Choose Aurora Textiles South Africa"
                         style={{
                             width: "100%",

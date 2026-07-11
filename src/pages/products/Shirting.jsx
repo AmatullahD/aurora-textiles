@@ -124,7 +124,7 @@ export default function ShirtingPage() {
             question: "What types of men's shirt fabrics do you offer?",
             answer: (
                 <>
-                    <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", marginBottom: "12px", fontFamily: "'Poppins', sans-serif" }}>
+                    <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#333", marginBottom: "12px", fontFamily: "Poppins, sans-serif", letterSpacing: "0.3px" }}>
                         We offer a diverse range of men's shirting fabrics, including:
                     </p>
                     <ul style={{ paddingLeft: "22px", margin: 0 }}>
@@ -140,7 +140,7 @@ export default function ShirtingPage() {
         {
             question: "Where is Your Retail Store Located?",
             answer: (
-                <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#333", fontFamily: "Poppins, sans-serif", letterSpacing: "0.3px" }}>
                     Our store is located in Al Fahidi, Wholesale Textile Market, Capital Building, Dubai. You can visit our retail store:{" "}
                     <a href="https://maps.app.goo.gl/4XVdGmxDpRs5Yxa37" target="_blank" rel="noopener noreferrer" style={{ color: "#b9972f" }}>
                         https://maps.app.goo.gl/4XVdGmxDpRs5Yxa37
@@ -151,7 +151,7 @@ export default function ShirtingPage() {
         {
             question: "Do you offer a wholesale price for bulk purchases?",
             answer: (
-                <p style={{ fontSize: "15px", lineHeight: "1.7", color: "#333", fontFamily: "'Poppins', sans-serif" }}>
+                <p style={{ fontSize: "16px", lineHeight: "1.7", color: "#333", fontFamily: "Poppins, sans-serif", letterSpacing: "0.3px" }}>
                     Yes, we offer wholesale prices for bulk purchases. If you are looking to buy bulk fabrics in Dubai at wholesale prices, then you can contact us directly through email, Call, or WhatsApp, and we will discuss your specific needs for the quote.
                 </p>
             ),
@@ -295,7 +295,8 @@ export default function ShirtingPage() {
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "35px",
-                                fontFamily: "'Poppins', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
+                                letterSpacing: "0.3px"
                             }}
                         >
                             A perfectly tailored shirt crafted from quality fabrics forms the foundation of every stylish man's wardrobe. At Aurora Textiles, Dubai, we offer an exceptional collection of men's shirting fabrics designed to meet all your sartorial needs. From formal attire to casual elegance, discover the finest fabric selections that blend sophistication with comfort.
@@ -613,11 +614,12 @@ export default function ShirtingPage() {
 
                         <p
                             style={{
-                                fontSize: "19px",
+                                fontSize: "16px",
                                 lineHeight: "1.5",
                                 color: "#222",
                                 marginBottom: "20px",
-                                fontFamily: "'Poppins', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
+                                letterSpacing: "0.3px"
                             }}
                         >
                             Our shirting fabrics are crafted to deliver the perfect balance of comfort, durability, and style, making every shirt a testament to quality and sophistication.
@@ -695,7 +697,8 @@ export default function ShirtingPage() {
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "20px",
-                                fontFamily: "'Poppins', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
+                                letterSpacing: "0.3px"
                             }}
                         >
                             From formal shirt fabric ideal for business attire to vibrant printed shirt fabric available for casual and party wear, Aurora Textiles has something to suit every personality and occasion. Choose from various shades and textures—rich, bold hues like navy, black, maroon, and teal, or softer, subtle tones such as pastel blues, gentle pinks, and sophisticated beige. Additionally, our fabrics feature unique textures and practical benefits such as easy ironing, fragrance infusion, stain resistance, cooling comfort, washing durability, and eco-friendly qualities to simplify care and enhance sustainability. With Aurora Textiles, you are always spoilt for choice.
@@ -739,7 +742,6 @@ export default function ShirtingPage() {
                         margin: "0 auto",
                         display: "flex",
                         gap: "30px",
-                        alignItems: "center",
                         justifyContent: "space-between",
                         flexWrap: "wrap",
                     }}
@@ -794,7 +796,8 @@ export default function ShirtingPage() {
                                 color: "#333",
                                 maxWidth: "620px",
                                 marginBottom: "20px",
-                                fontFamily: "'Poppins', sans-serif",
+                                fontFamily: "Poppins, sans-serif",
+                                letterSpacing: "0.3px"
                             }}
                         >
                             When purchasing men's shirting fabric, quality and trust matter. At Aurora Textiles, we combine decades of expertise with unparalleled customer care, ensuring every fabric meets your highest expectations. Discover the best shirt fabric and redefine your wardrobe with ease and elegance.

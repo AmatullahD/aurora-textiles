@@ -41,7 +41,7 @@ function TencelCard({ icon, title, desc }) {
       {/* Title — before hover, bold 24px */}
       {!hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "24px",
           fontWeight: "700",
           color: "#1a237e",
@@ -56,7 +56,7 @@ function TencelCard({ icon, title, desc }) {
       {/* Description — after hover, small text */}
       {hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "18px",
           fontWeight: "400",
           color: "#333",
@@ -215,7 +215,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -231,7 +231,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -455,7 +455,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -475,7 +475,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -490,7 +490,7 @@ export default function TencelBlendPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "18px",
               fontWeight: "700",
               color: "#111",
@@ -502,7 +502,7 @@ export default function TencelBlendPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -548,7 +548,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -562,7 +562,7 @@ export default function TencelBlendPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -590,7 +590,7 @@ export default function TencelBlendPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -704,7 +704,7 @@ export default function TencelBlendPage() {
                 <div
                   style={{
                     padding: "20px 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "17px",
                     color: "#333",
                     lineHeight: "1.5",

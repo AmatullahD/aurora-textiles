@@ -153,7 +153,7 @@ export default function CottonPage() {
           </h2>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -171,7 +171,7 @@ export default function CottonPage() {
           </p>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -335,7 +335,7 @@ export default function CottonPage() {
             {hoveredCard === 1 ? (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "15px",
                   fontWeight: "400",
                   color: "#111",
@@ -349,7 +349,7 @@ export default function CottonPage() {
             ) : (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "24px",
                   fontWeight: "700",
                   color: "#111",
@@ -390,7 +390,7 @@ export default function CottonPage() {
             {hoveredCard === 2 ? (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "15px",
                   fontWeight: "400",
                   color: "#111",
@@ -405,7 +405,7 @@ export default function CottonPage() {
             ) : (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "24px",
                   fontWeight: "700",
                   color: "#111",
@@ -446,7 +446,7 @@ export default function CottonPage() {
             {hoveredCard === 3 ? (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "15px",
                   fontWeight: "400",
                   color: "#111",
@@ -460,7 +460,7 @@ export default function CottonPage() {
             ) : (
               <p
                 style={{
-                  fontFamily: "sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "20px",
                   fontWeight: "700",
                   color: "#111",
@@ -523,7 +523,7 @@ export default function CottonPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "28px",
               fontWeight: "700",
               color: "#111",
@@ -535,7 +535,7 @@ export default function CottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -552,7 +552,7 @@ export default function CottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -567,7 +567,7 @@ export default function CottonPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "28px",
               fontWeight: "700",
               color: "#111",
@@ -579,7 +579,7 @@ export default function CottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -593,7 +593,7 @@ export default function CottonPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "15.5px",
               color: "#222",
               lineHeight: "2",
@@ -704,7 +704,7 @@ export default function CottonPage() {
                 <div
                   style={{
                     padding: "0 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "19px",
                     color: "#292626",
                     lineHeight: "1.5",

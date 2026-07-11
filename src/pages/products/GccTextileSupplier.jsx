@@ -7,7 +7,6 @@ import ScrollToTop from "../../components/ScrollToTop";
 
 export default function GccTextileSupplier() {
     const navigate = useNavigate();
-    const [hoveredCard, setHoveredCard] = useState(null);
     const [openFaq, setOpenFaq] = useState(0);
     const [hoveredFaq, setHoveredFaq] = useState(null);
 
@@ -49,84 +48,30 @@ export default function GccTextileSupplier() {
             answer: "Yes. Most established GCC textile suppliers support wholesale orders for garment manufacturers, retailers, hospitality groups, corporate organizations, and uniform suppliers.",
         },
         {
+            question: "What should buyers check before sourcing fabrics?",
+            answer: "Buyers should evaluate fabric composition, GSM, color fastness, shrinkage resistance, durability, climate suitability, stock availability, and supplier reliability before making purchasing decisions.",
+        },
+        {
             question: "Why is climate suitability important when sourcing fabrics in GCC?",
             answer: "The GCC experiences high temperatures, humidity, and frequent garment washing. Fabrics designed for these conditions typically last longer and provide better comfort than standard materials.",
+        },
+        {
+            question: "What fabrics are best for hospitality uniforms in GCC countries?",
+            answer: "Hospitality businesses often prefer wrinkle-resistant fabrics, poly-cotton blends, hospitality performance fabrics, and premium suiting materials that maintain appearance after repeated use.",
+        },
+        {
+            question: "How do textile suppliers help growing businesses?",
+            answer: "Reliable textile suppliers provide consistent fabric quality, inventory availability, logistics support, and scalable sourcing solutions that allow businesses to grow without compromising quality.",
+        },
+        {
+            question: "Which GCC country has the strongest textile sourcing network?",
+            answer: "The UAE, particularly Dubai, is widely recognized as one of the strongest textile sourcing and distribution hubs in the GCC due to its logistics infrastructure and international trade connectivity.",
         },
         {
             question: "Why choose a regional GCC textile supplier instead of overseas sourcing?",
             answer: "Regional suppliers often provide faster delivery, easier communication, better market understanding, reduced lead times, and fabrics better suited to GCC climate and business requirements.",
         },
     ];
-
-    // ── SECTION 1: Intro inline links ──
-    const industryLinks = [
-        { label: "uniform fabrics", route: "/products/uniform" },
-        { label: "hospitality textiles", route: "/products/uniform" },
-        { label: "menswear fabrics", route: "/products/suiting" },
-        { label: "industrial workwear fabrics", route: "/products/uniform" },
-    ];
-
-    // ── SECTION 2: Fabric types list ──
-    const fabricTypes = [
-        { label: "Poly-Cotton Blend", route: "/products/uniform", desc: "The most preferred fabric across GCC industries — balances durability, comfort, and easy maintenance for hospitality, corporate, and industrial sectors." },
-        { label: "PolyViscose", route: "/products/suiting", desc: "Smooth drape and professional finish — ideal for corporate uniforms, menswear collections, and aviation crew attire." },
-        { label: "Tropical Suiting Fabric", route: "/products/suiting", desc: "Lightweight and breathable suiting fabric — engineered for GCC climates where comfort and professional appearance are equally important." },
-        { label: "Hospitality Performance Blend", route: "/products/uniform", desc: "Wrinkle-resistant and colour-retentive — designed for front-of-house hospitality staff who represent your brand every shift." },
-        { label: "Industrial Performance Fabric", route: "/products/uniform", desc: "Built for demanding environments — high wash durability, abrasion resistance, and tear strength for factories, construction, and logistics." },
-        { label: "Lightweight Menswear Fabric", route: "/products/suiting", desc: "Breathable and refined — suited for premium menswear collections, tailoring houses, and retail fashion in GCC markets." },
-        { label: "Cotton Blend", route: "/products/uniform", desc: "Breathable and skin-friendly — commonly used for healthcare uniforms, scrubs, and light workwear requiring all-day comfort." },
-        { label: "Premium Suiting Fabric", route: "/products/suiting", desc: "Sophisticated fabrics for high-end menswear, bespoke tailoring, and executive corporate wardrobes across the GCC." },
-    ];
-
-    // ── SECTION 3: Industry cards with hover description ──
-    const industryCards = [
-        {
-            alt: "Hospitality",
-            src: "/hospitality-uniform.webp",
-            route: "/products/uniform",
-            desc: "Wrinkle-resistant, colour-retentive hospitality blends that maintain a polished appearance through full service shifts in hotels and restaurants across the GCC.",
-        },
-        {
-            alt: "Corporate",
-            src: "/corporate-uniform.webp",
-            route: "/products/uniform",
-            desc: "Premium poly-viscose and suiting blends that deliver a professional, structured finish for corporate offices and government organizations across UAE and GCC.",
-        },
-        {
-            alt: "Industrial",
-            src: "/industrial-uniform.webp",
-            route: "/products/uniform",
-            desc: "Heavy-duty performance fabrics with abrasion resistance and high wash durability — engineered for factories, construction sites, and logistics facilities.",
-        },
-        {
-            alt: "Menswear",
-            src: "/fabric-supplier-9.webp",
-            route: "/products/suiting",
-            desc: "Lightweight, breathable suiting and shirting fabrics tailored for premium menswear retailers, fashion boutiques, and tailoring houses throughout the GCC.",
-        },
-        {
-            alt: "Aviation & Travel",
-            src: "/aviation-uniform.webp",
-            route: "/products/uniform",
-            desc: "Lightweight, wrinkle-resistant performance blends that retain a premium appearance through extended flight hours and demanding international travel schedules.",
-        },
-        {
-            alt: "Healthcare",
-            src: "/healthcare-uniform.webp",
-            route: "/products/uniform",
-            desc: "Breathable cotton blends and lightweight polycotton fabrics designed for comfort, hygiene, and durability during long working hours in clinics and hospitals.",
-        },
-    ];
-
-    const LinkText = ({ label, route }) => (
-        <a
-            href={route}
-            onClick={(e) => { e.preventDefault(); navigate(route); window.scrollTo(0, 0); }}
-            style={{ color: "#344886", fontWeight: "600", textDecoration: "underline", cursor: "pointer" }}
-        >
-            {label}
-        </a>
-    );
 
     return (
         <div style={{ width: "100%", background: "#fff", fontFamily: "'Poppins', sans-serif", color: "#222" }}>
@@ -148,10 +93,14 @@ export default function GccTextileSupplier() {
                         { "@type": "Question", "name": "What fabrics are commonly used for corporate uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Poly-viscose blends, cotton blends, and premium suiting fabrics are commonly used for corporate uniforms because they offer comfort, durability, and a professional appearance." } },
                         { "@type": "Question", "name": "What is the most durable fabric for workwear and industrial uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Performance fabrics and durable poly-cotton blends are widely used for industrial uniforms because they offer strength, durability, and resistance to wear and tear." } },
                         { "@type": "Question", "name": "Can GCC textile suppliers support wholesale orders?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Established GCC textile suppliers typically support wholesale orders for retailers, manufacturers, hospitality groups, and corporate organizations." } },
+                        { "@type": "Question", "name": "What should buyers check before sourcing fabrics?", "acceptedAnswer": { "@type": "Answer", "text": "Buyers should review fabric composition, GSM, color fastness, durability, shrinkage resistance, climate suitability, inventory availability, and supplier reliability." } },
                         { "@type": "Question", "name": "Why is climate suitability important when sourcing fabrics in GCC?", "acceptedAnswer": { "@type": "Answer", "text": "The GCC's hot climate and frequent garment washing require fabrics that offer breathability, durability, moisture management, and long-lasting appearance." } },
+                        { "@type": "Question", "name": "What fabrics are best for hospitality uniforms in GCC countries?", "acceptedAnswer": { "@type": "Answer", "text": "Hospitality businesses often choose wrinkle-resistant fabrics, poly-cotton blends, hospitality performance fabrics, and premium suiting materials." } },
+                        { "@type": "Question", "name": "How do textile suppliers help growing businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Reliable textile suppliers provide consistent quality, inventory availability, logistics support, and scalable sourcing solutions that help businesses grow efficiently." } },
+                        { "@type": "Question", "name": "Which GCC country has the strongest textile sourcing network?", "acceptedAnswer": { "@type": "Answer", "text": "The UAE, particularly Dubai, is widely recognized as one of the strongest textile sourcing hubs in the GCC due to its logistics infrastructure and trade connectivity." } },
                         { "@type": "Question", "name": "Why choose a regional GCC textile supplier instead of overseas sourcing?", "acceptedAnswer": { "@type": "Answer", "text": "Regional GCC suppliers often provide faster delivery, better market understanding, easier communication, and fabrics better suited to local climate conditions." } },
                     ]
-                  })}
+                })}
                 `}</script>
             </Helmet>
 
@@ -216,13 +165,13 @@ export default function GccTextileSupplier() {
                         display: "flex",
                         gap: "60px",
                         alignItems: "flex-start",
-                        flexWrap: "wrap",
+                     flexWrap: "wrap",
                     }}
                 >
                     {/* Left Image */}
                     <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
                         <img
-                            src="/egypt-1.webp"
+                            src="/blog-card-10.webp"
                             alt="Premium fabric rolls at Aurora Textiles GCC supplier UAE"
                             style={{
                                 width: "100%",
@@ -244,37 +193,22 @@ export default function GccTextileSupplier() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
+                                marginTop: "0",
                             }}
                         >
-                            Your Trusted GCC Textile<br />Supplier Based in Dubai
+                            Leading GCC Textile<br />Supplier for Premium Fabric
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
-                            As a leading <strong>GCC textile supplier</strong>, <strong>Aurora Textiles</strong> provides premium fabric solutions to businesses across the UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain. We specialise in sourcing fabrics for{" "}
-                            <LinkText label="uniform fabrics" route="/products/uniform" />,{" "}
-                            <LinkText label="hospitality textiles" route="/products/uniform" />,{" "}
-                            <LinkText label="menswear fabrics" route="/products/suiting" />, and{" "}
-                            <LinkText label="industrial workwear fabrics" route="/products/uniform" />.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
+                            The textile industry in the Gulf Cooperation Council (GCC) region is evolving rapidly. From luxury hospitality projects in Dubai and Doha to large-scale industrial developments in Saudi Arabia and growing retail sectors in Kuwait, businesses today require more than just fabric—they need reliable sourcing partners that can support long-term growth.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "20px" }}>
-                            With Dubai's strategic position as the region's textile and logistics hub, Aurora Textiles serves hotels, hospitals, factories, airlines, and corporate businesses that demand consistent quality and reliable supply across every GCC market.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
+                            As a trusted GCC textile supplier, Aurora Textiles provides premium fabric solutions to businesses across the UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain. Whether you're sourcing uniform fabrics, hospitality textiles, menswear fabrics, suiting materials, or industrial workwear fabrics, choosing the right textile supplier can directly impact product quality, operational efficiency, and customer satisfaction.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "32px" }}>
-                            As one of the most established <strong>fabric suppliers in the GCC</strong>, we source materials specifically suited to regional climate conditions — breathable, fade-resistant, wash-durable, and designed to maintain a professional appearance long after day one.
-                        </p>
-
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "36px" }}>
-                            Whether it's a luxury hotel uniform in Doha, a corporate wardrobe in Riyadh, or industrial workwear in Abu Dhabi —{" "}
-                            <a
-                                href="/"
-                                onClick={(e) => { e.preventDefault(); navigate("/"); window.scrollTo(0, 0); }}
-                                style={{ color: "#344886", fontWeight: "600", textDecoration: "underline" }}
-                            >
-                                Aurora Textiles
-                            </a>{" "}
-                            delivers fabrics that perform as well as they look.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "36px", letterSpacing: "0.3px" }}>
+                            In a competitive market where consistency matters, fabric is no longer simply a raw material—it has become a strategic business asset.
                         </p>
 
                         {/* Contact Us + Call + WhatsApp */}
@@ -294,8 +228,9 @@ export default function GccTextileSupplier() {
                                     background: "#8b7d3a",
                                     color: "#fff",
                                     border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
+                                    padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
                                     fontWeight: "500",
                                     borderRadius: "6px",
                                     cursor: "pointer",
@@ -365,12 +300,355 @@ export default function GccTextileSupplier() {
                 </div>
             </section>
 
-            {/* ── SECTION 2: EXPLORE OUR GCC FABRIC RANGE ── */}
+            {/* ── SECTION 1B: WHAT IS A GCC TEXTILE SUPPLIER? ── */}
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "0 5% 40px" : "0 6% 20px",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
                     boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "36px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            What Is a GCC Textile Supplier?
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            A GCC textile supplier is a company that provides fabrics and textile solutions to businesses throughout the Gulf Cooperation Council region, including the UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            However, modern textile sourcing goes far beyond supplying rolls of fabric.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Today's businesses need suppliers who can offer:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 20px 0" }}>
+                            {["Consistent product quality", "Reliable inventory availability", "Fast regional distribution", "Industry-specific expertise", "Climate-appropriate fabric solutions"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            For many organizations, the textile supplier becomes a long-term business partner rather than simply a vendor.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            This is particularly important in the GCC, where environmental conditions, customer expectations, and industry standards create unique textile requirements that differ significantly from other global markets.
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/donear-3.webp"
+                            alt="GCC textile supplier regions UAE Saudi Arabia Qatar Oman Kuwait Bahrain"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 1C: WHY THE RIGHT TEXTILE SUPPLIER MATTERS MORE THAN EVER ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/image-2.png"
+                            alt="Premium fabric quality inspection GCC textile supplier"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "36px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            Why the Right Textile Supplier Matters More Than Ever
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Many buyers initially focus on price when sourcing fabrics.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            But experienced procurement managers, garment manufacturers, fashion brands, and hospitality operators understand that the true cost of fabric extends far beyond the purchase price.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Poor-quality fabric can result in:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 20px 0" }}>
+                            {["Frequent replacements", "Customer complaints", "Reduced garment lifespan", "Brand image issues", "Increased operational costs"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Conversely, high-quality fabrics improve garment performance, maintain appearance over time, and contribute to stronger customer experiences.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            A hotel uniform that retains its appearance after hundreds of washes, a corporate shirt that remains comfortable throughout the workday, or an industrial uniform that withstands demanding conditions all begin with one decision: choosing the right textile supplier.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 1D: WHY DUBAI HAS BECOME THE TEXTILE GATEWAY TO THE GCC ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "36px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            Why Dubai Has Become the Textile Gateway to the GCC
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            When businesses search for a reliable Dubai textile exporter GCC, they are often looking for more than a convenient location.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Dubai has established itself as one of the region's leading textile sourcing and distribution hubs due to its strategic position between Asia, Europe, and Africa.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            The city's advanced logistics infrastructure, world-class ports, free zones, and international trade networks enable faster movement of goods throughout the region.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            For buyers in Saudi Arabia, Qatar, Oman, Bahrain, and Kuwait, sourcing through Dubai often means:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 20px 0" }}>
+                            {["Reduced lead times", "Better inventory access", "Easier logistics management", "Access to international textile collections", "Improved supply chain flexibility"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            These advantages have helped make Dubai a preferred textile sourcing destination for businesses across the GCC.
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/linen-2.webp"
+                            alt="Dubai textile trade hub logistics and port infrastructure"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 2B: TEXTILE SOLUTIONS DESIGNED FOR EVERY INDUSTRY ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/sanskriti-4.webp"
+                            alt="Textile fabric solutions for hospitality uniform and industrial sectors"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "22px" : "36px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            marginBottom: "20px",
+                            lineHeight: "1.3",
+                              marginTop: "0",
+                        }}
+                    >
+                        Textile Solutions Designed for Every Industry
+                    </h2>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                        No two industries use fabric in the same way.
+                    </p>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                        The requirements of a luxury hotel are vastly different from those of a manufacturing facility or a fashion retailer.
+                    </p>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "28px", letterSpacing: "0.3px" }}>
+                        This is why successful textile sourcing begins with understanding the end application.
+                    </p>
+
+                    {[
+                        {
+                            title: "Uniform Fabrics",
+                            paras: [
+                                "Uniforms are often the first thing customers notice about a business. Whether in healthcare, aviation, education, retail, or corporate environments, uniforms must balance comfort, durability, and professional appearance.",
+                                "High-quality uniform fabrics are designed to withstand repeated washing while maintaining color consistency, shape, and overall presentation.",
+                            ],
+                        },
+                        {
+                            title: "Hospitality Fabrics",
+                            paras: [
+                                "Hotels, restaurants, and resorts require fabrics that create a premium visual impression while remaining practical for daily use.",
+                                "Hospitality fabrics must resist wrinkles, retain their appearance, and provide comfort during long working hours. In luxury hospitality environments, fabric quality directly contributes to guest perception and brand image.",
+                            ],
+                        },
+                        {
+                            title: "Menswear Fabrics",
+                            paras: [
+                                "Menswear continues to be one of the strongest textile segments in the GCC.",
+                                "From premium suiting fabrics and shirting materials to occasionwear collections, retailers and tailoring houses require fabrics that combine elegance, comfort, and durability.",
+                                "Climate suitability is particularly important in the GCC, where lightweight and breathable fabrics often outperform heavier alternatives.",
+                            ],
+                        },
+                        {
+                            title: "Industrial Workwear Fabrics",
+                            paras: [
+                                "Industrial sectors demand a different level of performance.",
+                                "Workwear fabrics must withstand demanding environments while maintaining durability, safety, and comfort. These fabrics are often engineered for high wash resistance, abrasion resistance, and long-term reliability.",
+                            ],
+                        },
+                    ].map((industry, idx, arr) => (
+                        <div key={idx} style={{ marginBottom: idx < arr.length - 1 ? "28px" : "0" }}>
+                            <h3
+                                style={{
+                                    fontFamily: "'Cinzel Decorative', serif",
+                                    fontSize: "22px",
+                                    fontWeight: "700",
+                                    color: "#344886",
+                                    marginBottom: "12px",
+                                }}
+                            >
+                                {industry.title}
+                            </h3>
+                            {industry.paras.map((para, pi) => (
+                                <p key={pi} style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                                    {para}
+                                </p>
+                            ))}
+                        </div>
+                    ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 3B: UNDERSTANDING FABRIC PERFORMANCE IN GCC CONDITIONS ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "50px 5% 50px" : "40px 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
                 }}
             >
                 <div
@@ -388,42 +666,61 @@ export default function GccTextileSupplier() {
                         <h2
                             style={{
                                 fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: window.innerWidth < 768 ? "24px" : "38px",
+                                fontSize: window.innerWidth < 768 ? "22px" : "36px",
                                 fontWeight: "700",
                                 color: "#344886",
-                                lineHeight: "1.2",
-                                marginBottom: "24px",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
                             }}
                         >
-                            Explore Our GCC<br />Textile Range
+                            Understanding Fabric Performance in GCC Conditions
                         </h2>
-
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
-                            We offer a comprehensive collection of fabrics covering every industry, climate requirement, and durability standard across the GCC. Our inventory includes:
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            One of the biggest mistakes businesses make is sourcing fabrics without considering regional environmental conditions.
                         </p>
-
-                        <ul style={{ paddingLeft: "30px", margin: 0 }}>
-                            {fabricTypes.map((item, i) => (
-                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "4px" }}>
-                                    <LinkText label={item.label} route={item.route} />
-                                    : {item.desc}
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            The GCC climate presents several challenges:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 20px 0" }}>
+                            {["High temperatures", "Humidity", "Intense sunlight", "Frequent laundering", "Extended wear periods"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
                                 </li>
                             ))}
                         </ul>
-
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginTop: "24px" }}>
-                            At <strong>Aurora Textiles</strong>, our collection ensures every GCC business finds the right <strong>textile solution</strong> — built for the regional environment it will work in.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            These factors can significantly affect garment performance.
                         </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            A fabric that performs well in a European climate may struggle in Saudi Arabia or the UAE.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            This is why businesses increasingly prioritize fabrics that offer:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: 0 }}>
+                            {[
+                                { label: "Breathability", desc: "Allows air circulation and improves wearer comfort." },
+                                { label: "Moisture Management", desc: "Helps manage perspiration in hot conditions." },
+                                { label: "Color Retention", desc: "Maintains appearance despite UV exposure and frequent washing." },
+                                { label: "Durability", desc: "Extends garment lifespan and reduces replacement costs." },
+                                { label: "Comfort", desc: "Supports employee productivity and customer-facing presentation." },
+                            ].map((item, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "8px" }}>
+                                    <strong>{item.label}:</strong> {item.desc}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
 
                     {/* Right Image */}
-                    <div style={{ flex: "0 0 44%", minWidth: "280px" }}>
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
                         <img
-                            src="/fabric-supplier-2.webp"
-                            alt="Diverse range of premium fabrics at Aurora Textiles GCC supplier"
+                            src="/reliance-5.webp"
+                            alt="Fabric performance breathability and durability in GCC climate"
                             style={{
                                 width: "100%",
-                                height: "670px",
+                                height: "880px",
                                 objectFit: "cover",
                                 borderRadius: "16px",
                                 display: "block",
@@ -433,146 +730,158 @@ export default function GccTextileSupplier() {
                 </div>
             </section>
 
-            {/* ── SECTION 3: GCC TEXTILE SOLUTIONS BY INDUSTRY ── */}
+            {/* ── SECTION 3C: TEXTILE DEMAND ACROSS GCC COUNTRIES ── */}
             <section
                 style={{
                     width: "100%",
-                    padding: window.innerWidth < 768 ? "50px 5% 40px" : "20px 6% 20px",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
                     boxSizing: "border-box",
-                    background: "#fafafa",
+                    background: "#fff",
                 }}
             >
-                <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/faq-image.jpg"
+                            alt="Textile demand across GCC countries Saudi Arabia Qatar Oman Kuwait Bahrain UAE"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: window.innerWidth < 768 ? "22px" : "42px",
+                            fontSize: window.innerWidth < 768 ? "22px" : "36px",
                             fontWeight: "700",
                             color: "#344886",
-                            textAlign: "center",
-                            marginBottom: "16px",
+                            marginBottom: "20px",
                             lineHeight: "1.3",
+                              marginTop: "0",
                         }}
                     >
-                        GCC Textile Solutions by Industry
+                        Textile Demand Across GCC Countries
                     </h2>
-                    <p
-                        style={{
-                            textAlign: "center",
-                            fontSize: "17px",
-                            color: "#333",
-                            marginBottom: "50px",
-                            lineHeight: "1.7",
-                        }}
-                    >
-                        As trusted <strong>textile suppliers across the GCC</strong>, we understand that different industries face different challenges — and we stock fabrics built for each one.
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "28px", letterSpacing: "0.3px" }}>
+                        While the GCC functions as a connected regional market, each country has unique textile requirements.
                     </p>
 
-                    {/* Industry Cards Grid */}
-                    <div
-                        style={{
-                            display: "grid",
-                            gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
-                            gap: "24px",
-                        }}
-                    >
-                        {industryCards.map((card, index) => (
-                            <div
-                                key={index}
-                                onClick={() => { navigate(card.route); window.scrollTo(0, 0); }}
-                                onMouseEnter={() => setHoveredCard(index)}
-                                onMouseLeave={() => setHoveredCard(null)}
+                    {[
+                        { title: "Saudi Arabia", para: "Saudi Arabia's expanding hospitality, tourism, industrial, and corporate sectors continue to drive demand for quality textile solutions. Large-scale developments and Vision 2030 initiatives have increased the need for uniforms, workwear, and hospitality fabrics." },
+                        { title: "Qatar", para: "Qatar's focus on hospitality, aviation, luxury retail, and corporate services creates strong demand for premium fabrics that balance appearance and functionality." },
+                        { title: "Oman", para: "Tourism growth, infrastructure development, and industrial expansion continue to create opportunities for textile suppliers capable of delivering reliable fabric solutions." },
+                        { title: "Kuwait", para: "Retail, hospitality, and government sectors contribute significantly to textile demand, particularly for professional uniforms and premium menswear fabrics." },
+                        { title: "Bahrain", para: "Bahrain's corporate, financial, and hospitality industries rely heavily on professional apparel and textile products that reflect quality and consistency." },
+                        { title: "United Arab Emirates", para: "The UAE remains one of the region's most dynamic textile markets. Businesses across Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, Umm Al Quwain, and Al Ain require textile solutions that meet international standards while performing effectively in local conditions." },
+                    ].map((country, idx, arr) => (
+                        <div key={idx} style={{ marginBottom: idx < arr.length - 1 ? "20px" : "0" }}>
+                            <h3
                                 style={{
-                                    border: "5px solid #071d42",
-                                    borderRadius: "26px",
-                                    overflow: "hidden",
-                                    cursor: "pointer",
-                                    height: "280px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    padding: "24px",
-                                    boxSizing: "border-box",
-                                    position: "relative",
-                                    background: "#fff",
-                                    transition: "box-shadow 0.3s ease",
-                                    boxShadow: hoveredCard === index ? "0 8px 30px rgba(11,44,102,0.15)" : "none",
+                                    fontFamily: "'Cinzel Decorative', serif",
+                                    fontSize: "22px",
+                                    fontWeight: "700",
+                                    color: "#344886",
+                                    marginBottom: "8px",
                                 }}
                             >
-                                {/* Default: Industry name / image */}
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        inset: 0,
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        padding: "20px",
-                                        opacity: hoveredCard === index ? 0 : 1,
-                                        transition: "opacity 0.3s ease",
-                                        pointerEvents: "none",
-                                    }}
-                                >
-                                    {card.src ? (
-                                        <img
-                                            src={card.src}
-                                            alt={card.alt}
-                                            style={{
-                                                maxWidth: "100%",
-                                                maxHeight: "200px",
-                                                objectFit: "contain",
-                                            }}
-                                        />
-                                    ) : (
-                                        <span
-                                            style={{
-                                                fontFamily: "'Cinzel Decorative', serif",
-                                                fontSize: "30px",
-                                                fontWeight: "700",
-                                                color: "#0B2C66",
-                                                textAlign: "center",
-                                            }}
-                                        >
-                                            {card.alt}
-                                        </span>
-                                    )}
-                                </div>
+                                {country.title}
+                            </h3>
+                            <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                                {country.para}
+                            </p>
+                        </div>
+                    ))}
+                    </div>
+                </div>
+            </section>
 
-                                {/* Hover: Description */}
-                                <div
-                                    style={{
-                                        position: "absolute",
-                                        inset: 0,
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "center",
-                                        padding: "20px 22px",
-                                        opacity: hoveredCard === index ? 1 : 0,
-                                        transition: "opacity 0.3s ease",
-                                        pointerEvents: "none",
-                                        background: "#fff",
-                                        borderRadius: "16px",
-                                    }}
-                                >
-                                    <p
-                                        style={{
-                                            fontSize: "15px",
-                                            lineHeight: "1.5",
-                                            color: "#333",
-                                            textAlign: "center",
-                                            margin: 0,
-                                            fontFamily: "'Poppins', sans-serif",
-                                            fontWeight: "500",
-                                        }}
-                                    >
-                                        <strong style={{ color: "#082352", fontFamily: "'Cinzel Decorative', serif", fontSize: "20px", display: "block", marginBottom: "6px" }}>
-                                            {card.alt}
-                                        </strong>
-                                        {card.desc}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+            {/* ── SECTION 3D: HOW TO CHOOSE THE RIGHT GCC TEXTILE SUPPLIER ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "50px 5% 50px" : "40px 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "stretch",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "36px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            How to Choose the Right GCC Textile Supplier
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Selecting a textile supplier should never be based solely on price.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Instead, businesses should evaluate suppliers based on several critical factors.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            A reliable supplier should demonstrate:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 20px 0" }}>
+                            {["Consistent product quality", "Strong inventory management", "Regional market expertise", "Industry-specific knowledge", "Reliable logistics capability", "Wholesale support", "Scalability for future growth"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            The best textile suppliers help businesses grow by providing predictable quality and dependable service over the long term.
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/egypt-1.webp"
+                            alt="Checklist for choosing the right GCC textile supplier"
+                            style={{
+                                width: "100%",
+                                height: "100%",
+                                minHeight: "420px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
                     </div>
                 </div>
             </section>
@@ -621,45 +930,23 @@ export default function GccTextileSupplier() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
+                                  marginTop: "0",
                             }}
                         >
-                            GCC Textile Supply<br />Solutions from Dubai
+                            Why Businesses Across the<br />GCC Choose Aurora Textiles
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
-                            As experienced <strong>wholesale textile suppliers for the GCC</strong>, Aurora Textiles supports both bulk and bespoke orders. Whether you're a hotel chain in Qatar, a hospital group in Saudi Arabia, a factory in Oman, or a corporate business in Kuwait, our streamlined supply ensures consistent quality and timely delivery across the entire region.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
+                            Aurora Textiles supports businesses throughout the GCC by providing textile solutions designed for regional market needs.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "32px" }}>
-                            Our wide textile network and climate-focused fabric sourcing make us the preferred partner for <strong>GCC textile buyers</strong> who value performance, consistency, and long-term supply reliability.
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
+                            With expertise spanning hospitality fabrics, uniform textiles, menswear fabrics, and industrial applications, Aurora Textiles helps organizations source materials that perform in demanding environments while maintaining premium quality standards.
                         </p>
 
-                        <h3
-                            style={{
-                                fontFamily: "'Cinzel Decorative', serif",
-                                fontSize: "22px",
-                                fontWeight: "700",
-                                color: "#344886",
-                                marginBottom: "20px",
-                            }}
-                        >
-                            Why Businesses Across the GCC Choose Aurora Textiles?
-                        </h3>
-
-                        <ul style={{ paddingLeft: "25px", margin: 0 }}>
-                            {[
-                                "Consistent fabric quality across every batch and order",
-                                "Wide selection of textiles for all GCC industries and climate conditions",
-                                "Industry-focused solutions for hospitality, corporate, menswear, and industrial sectors",
-                                "Fade-resistant, wash-durable, and breathable fabric options",
-                                "Reliable supply capability across UAE, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain",
-                                "Experienced team with deep understanding of GCC regional requirements",
-                            ].map((point, i) => (
-                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "4px" }}>
-                                    {point}
-                                </li>
-                            ))}
-                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            Businesses across Dubai, Abu Dhabi, Sharjah, Ajman, Saudi Arabia, Qatar, Oman, Kuwait, and Bahrain choose Aurora Textiles because of its commitment to consistency, product knowledge, and reliable regional supply capabilities.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -677,18 +964,22 @@ export default function GccTextileSupplier() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontSize: window.innerWidth < 768 ? "22px" : "40px",
                             fontWeight: "700",
                             color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.3",
+                            textAlign: "center",
+                              marginTop: "0",
                         }}
                     >
                         Looking for a Reliable GCC Textile Supplier?
                     </h2>
-                    <p style={{ fontSize: "19px", lineHeight: "1.5", color: "#333" }}>
-                        If you're searching for the most reliable{" "}
-                        <strong>GCC textile supplier</strong> for wholesale, retail, hospitality, or corporate needs — Aurora Textiles is your destination. Discover our collection, explore fabric performance options, and source premium textiles engineered for GCC climate conditions and your specific industry.
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", textAlign: "center", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                        Whether you are sourcing fabrics for hospitality uniforms, corporate apparel, menswear collections, industrial workwear, or large-scale textile projects, the right supplier can make a significant difference to your business outcomes.
+                    </p>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", textAlign: "center", letterSpacing: "0.3px" }}>
+                        Aurora Textiles helps organizations across the GCC access premium textile solutions backed by regional expertise, quality assurance, and dependable supply capabilities.
                     </p>
                 </div>
             </section>
@@ -747,7 +1038,7 @@ export default function GccTextileSupplier() {
                                 <span
                                     style={{
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "19px",
+                                        fontSize: "17px",
                                         fontWeight: "700",
                                         color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                                         letterSpacing: "0.5px",
@@ -776,8 +1067,8 @@ export default function GccTextileSupplier() {
                                 <div
                                     style={{
                                         padding: "0 28px 24px 28px",
-                                        fontFamily: "sans-serif",
-                                        fontSize: "17px",
+                                        fontFamily: "'Poppins',sans-serif",
+                                        fontSize: "16px",
                                         color: "#292626",
                                         lineHeight: "1.5",
                                         borderTop: "1px solid #eee",

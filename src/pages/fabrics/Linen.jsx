@@ -229,7 +229,7 @@ export default function LinenPage() {
           </p>
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
@@ -452,7 +452,7 @@ export default function LinenPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -467,7 +467,7 @@ export default function LinenPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               fontWeight: "700",
               color: "#111",
@@ -479,7 +479,7 @@ export default function LinenPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "15.5px",
               color: "#222",
               lineHeight: "2.6",
@@ -495,7 +495,7 @@ export default function LinenPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -533,7 +533,7 @@ export default function LinenPage() {
 
         <p
           style={{
-            fontFamily: "sans-serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "19px",
             color: "#333",
             textAlign: "center",
@@ -790,7 +790,7 @@ export default function LinenPage() {
                 <div
                   style={{
                     padding: "20px 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "17px",
                     color: "#333",
                     lineHeight: "1.5",

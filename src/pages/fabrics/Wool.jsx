@@ -43,7 +43,7 @@ function WoolFeatureCard({ card }) {
       {!hovered && (
         <p
           style={{
-            fontFamily: "sans-serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "24px",
             fontWeight: "600",
             color: "#1a237e",
@@ -60,7 +60,7 @@ function WoolFeatureCard({ card }) {
       {hovered && (
         <p
           style={{
-            fontFamily: "sans-serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "13.5px",
             fontWeight: "400",
             color: "#333",
@@ -220,7 +220,7 @@ export default function WoolPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.2",
@@ -239,7 +239,7 @@ export default function WoolPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.2",
@@ -449,7 +449,7 @@ export default function WoolPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "24px",
               fontWeight: "700",
               color: "#111",
@@ -461,7 +461,7 @@ export default function WoolPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.8",
@@ -477,7 +477,7 @@ export default function WoolPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.8",
@@ -573,7 +573,7 @@ export default function WoolPage() {
                 <div
                   style={{
                     padding: "20px 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "19px",
                     color: "#333",
                     lineHeight: "1.8",

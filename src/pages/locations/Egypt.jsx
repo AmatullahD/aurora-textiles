@@ -153,7 +153,7 @@ export default function EgyptPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -271,7 +271,7 @@ export default function EgyptPage() {
                 </h2>
                 <p
                     style={{
-                        fontFamily: "sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         fontSize: "19px",
                         color: "#222",
                         textAlign: "center",
@@ -336,7 +336,7 @@ export default function EgyptPage() {
                         </h3>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -349,7 +349,7 @@ export default function EgyptPage() {
                         </p>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -360,7 +360,7 @@ export default function EgyptPage() {
                         </p>
                         <ul
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.9",
@@ -374,7 +374,7 @@ export default function EgyptPage() {
                         </ul>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -415,7 +415,7 @@ export default function EgyptPage() {
                         </h3>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -428,7 +428,7 @@ export default function EgyptPage() {
                         </p>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -439,7 +439,7 @@ export default function EgyptPage() {
                         </p>
                         <ul
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.9",
@@ -453,7 +453,7 @@ export default function EgyptPage() {
                         </ul>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -494,7 +494,7 @@ export default function EgyptPage() {
                         </h3>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -507,7 +507,7 @@ export default function EgyptPage() {
                         </p>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -518,7 +518,7 @@ export default function EgyptPage() {
                         </p>
                         <ul
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.9",
@@ -532,7 +532,7 @@ export default function EgyptPage() {
                         </ul>
                         <p
                             style={{
-                                fontFamily: "sans-serif",
+                                fontFamily: "'Poppins', sans-serif",
                                 fontSize: "15px",
                                 color: "#222",
                                 lineHeight: "1.7",
@@ -575,7 +575,7 @@ export default function EgyptPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -588,7 +588,7 @@ export default function EgyptPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             fontWeight: "700",
                             color: "#222",
@@ -599,7 +599,7 @@ export default function EgyptPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "2",
@@ -613,7 +613,7 @@ export default function EgyptPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -639,7 +639,7 @@ export default function EgyptPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -652,7 +652,7 @@ export default function EgyptPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             fontWeight: "700",
                             color: "#222",
@@ -663,7 +663,7 @@ export default function EgyptPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "2",
@@ -677,7 +677,7 @@ export default function EgyptPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -750,7 +750,7 @@ export default function EgyptPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -762,7 +762,7 @@ export default function EgyptPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             fontWeight: "700",
                             color: "#222",
@@ -773,7 +773,7 @@ export default function EgyptPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "2",
@@ -791,7 +791,7 @@ export default function EgyptPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -833,7 +833,7 @@ export default function EgyptPage() {
                     </h2>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -845,7 +845,7 @@ export default function EgyptPage() {
                     </p>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             fontWeight: "700",
                             color: "#222",
@@ -856,7 +856,7 @@ export default function EgyptPage() {
                     </p>
                     <ul
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "1.2",
@@ -870,7 +870,7 @@ export default function EgyptPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",
@@ -895,7 +895,7 @@ export default function EgyptPage() {
                     </h2>
                     <ul
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "17px",
                             color: "#222",
                             lineHeight: "1.2",
@@ -910,7 +910,7 @@ export default function EgyptPage() {
                     </ul>
                     <p
                         style={{
-                            fontFamily: "sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "19px",
                             color: "#222",
                             lineHeight: "1.6",

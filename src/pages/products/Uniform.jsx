@@ -280,7 +280,8 @@ export default function Uniform() {
           </h2>
 
           <p style={{ 
-            fontSize: "18px", 
+            fontFamily: "'Poppins', sans-serif",
+            fontSize: "16px", 
             fontWeight: "400", 
             lineHeight: "1.5", 
             color: "#292626", 
@@ -306,6 +307,7 @@ export default function Uniform() {
             listStyle: "disc",
              paddingLeft: "25px", 
             lineHeight: "1.5", 
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "16px" }}
           >
             {["Corporate Offices", "Hotels & Hospitality", "Healthcare & Medical", "Education & Schools", "Industrial & Workwear", "Restaurants & Catering"].map((item) => (

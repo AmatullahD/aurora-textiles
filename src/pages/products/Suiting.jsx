@@ -257,7 +257,7 @@ export default function SuitingPage() {
                         maxWidth: "1100px",
                         margin: "0 auto",
                         display: "flex",
-                        gap: "10px",                    
+                        gap: "30px",                    
                         justifyContent: "space-between",
                         flexWrap: "wrap",
                     }}
@@ -286,28 +286,16 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "17px",
+                                fontSize: "16px",
                                 lineHeight: "1.5",
-                                color: "#333",
+                                color: "#1f1d1d",
                                 maxWidth: "620px",
                                 marginBottom: "35px",
                                 fontFamily: "'Poppins', sans-serif",
                                 letterSpacing: ".3px",
                             }}
                         >
-                            Our exquisite suiting fabrics are the foundation of sophisticated,
-                            <br />
-                            stylish, and luxurious attire. Whether you're crafting a formal
-                            <br />
-                            business suit, a casual blazer, or professional suiting, the right
-                            <br />
-                            fabric makes all the difference. At Aurora Textiles in Dubai, UAE, we
-                            <br />
-                            offer an exclusive selection of premium suiting fabrics from our
-                            <br />
-                            renowned partner brands, ensuring the perfect choice for every
-                            <br />
-                            taste and occasion.
+                            Our exquisite suiting fabrics are the foundation of sophisticated, stylish, and luxurious attire. Whether you’re crafting a formal business suit, a casual blazer, or professional suiting, the right fabric makes all the difference. At Aurora Textiles in Dubai, UAE, we offer an exclusive selection of premium suiting fabrics from our renowned partner brands, ensuring the perfect choice for every taste and occasion.
                         </p>
 
                         {/* Button */}
@@ -361,7 +349,7 @@ export default function SuitingPage() {
                             alt="Suiting Fabric"
                             style={{
                                 width: "100%",
-                                height: "420px",
+                                height: "460px",
                                 objectFit: "cover",
                                 borderRadius: "24px",
                                 display: "block",
@@ -590,7 +578,7 @@ export default function SuitingPage() {
                             alt="Suiting Fabrics"
                             style={{
                                 width: "100%",
-                                height: window.innerWidth < 768 ? "420px" : "620px",
+                                height: window.innerWidth < 768 ? "420px" : "680px",
                                 objectFit: "cover",
                                 borderRadius: "18px",
                                 display: "block",
@@ -621,18 +609,15 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "17px",
-                                lineHeight: "1.3",
+                                fontSize: "16.5px",
+                                lineHeight: "1.5",
                                 color: "#222",
-                                marginBottom: "12px",
+                                marginBottom: "14px",
                                 fontFamily: "'Poppins', sans-serif",
+                                letterSpacing: ".3px",
                             }}
                         >
-                            Our suiting fabrics blend functionality, durability, and elegance,
-                            each offering its own unique qualities, perfect for crafting a
-                            professional wardrobe attire that enhances both style and confidence.
-                            At Aurora Textiles, we offer a wide range of options to suit every
-                            preference.
+                           Our suiting fabrics blend functionality, durability, and elegance, each offering its own unique qualities, perfect for crafting a professional wardrobe attire that enhances both style and confidence. At Aurora Textiles, we offer a wide range of options to suit every preference. Whether you’re looking for the sophistication of luxurious wool, the softness of premium cotton or the breathability of lightweight linen, we have the finest fabrics all under one roof. Treat yourself to a new outfit every once in a while and step out looking sharp and self-assured.
                         </p>
 
                         {/* LIST */}
@@ -641,7 +626,7 @@ export default function SuitingPage() {
                                 paddingLeft: "30px",
                                 margin: "2px",
                                 lineHeight: "1.5",
-                                fontSize: "19px",
+                                fontSize: "16px",
                                 color: "#111",
                                 fontFamily: "'Poppins', sans-serif",
                             }}
@@ -676,7 +661,7 @@ export default function SuitingPage() {
             >
                 <div
                     style={{
-                        maxWidth: "1250px",
+                        maxWidth: "1100px",
                         margin: "0 auto",
                         display: "flex",
                         gap: "30px",
@@ -709,7 +694,7 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "18px",
+                                fontSize: "16.5px",
                                 lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",
@@ -726,7 +711,7 @@ export default function SuitingPage() {
 
                         <p
                             style={{
-                                fontSize: "18px",
+                                fontSize: "16.5px",
                                 lineHeight: "1.5",
                                 color: "#333",
                                 maxWidth: "620px",

@@ -101,7 +101,7 @@ export default function EthnicPage() {
             question: "What type of Ethnic Fabrics does Aurora Textile offer?",
             answer: (
                 <>
-                    <p style={{ margin: "0 0 10px 0" }}>At Aurora Textile, we offer ethnic fabrics including:</p>
+                    <p style={{ fontFamily: "Poppins, sans-serif", margin: "0 0 10px 0", fontSize: "16px", letterSpacing: "0.3px" }}>At Aurora Textile, we offer ethnic fabrics including:</p>
                     <ul style={{ margin: 0, paddingLeft: "30px", lineHeight: "1.3" }}>
                         <li>Printed Cotton</li>
                         <li>Velvet Tuxedo Fabrics</li>
@@ -256,10 +256,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "16px",
                             color: "#333",
                             lineHeight: "1.3",
                             margin: "0 0 24px 0",
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         Celebrate tradition with a modern twist through{" "}
@@ -324,10 +326,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "16px",
                             color: "#333",
                             lineHeight: "1.6",
                             margin: 0,
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         Whether you're a boutique, fashion brand, or designer, we have the perfect{" "}
@@ -591,10 +595,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "20px",
+                            fontSize: "16px",
                             color: "#333",
                             lineHeight: "1.2",
                             margin: "0 0 20px 0",
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         Our ethnic fabric range blends timeless artistry with contemporary textile innovation. As a
@@ -608,10 +614,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "20px",
+                            fontSize: "16px",
                             color: "#333",
                             lineHeight: "1.2",
                             margin: 0,
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         Each fabric in our collection tells a unique story—whether it's inspired by centuries-old
@@ -694,10 +702,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "16px",
                             color: "#344886",
                             lineHeight: "1.8",
                             margin: "0 0 20px 0",
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         From Men'S Sherwanisto boho fusion wear, our ethnic fabrics are made for expressions that
@@ -707,10 +717,12 @@ export default function EthnicPage() {
 
                     <p
                         style={{
-                            fontSize: "19px",
+                            fontSize: "16px",
                             color: "#344886",
                             lineHeight: "1.8",
                             margin: "0 0 36px 0",
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         Choose Aurora Textiles when you want more than just fabric—choose storytelling, artistry,
@@ -811,7 +823,7 @@ export default function EthnicPage() {
                             <li>Costume designers for cultural events and productions</li>
                         </ul>
 
-                        <p style={{ fontSize: "19px", lineHeight: "1.2", margin: 0 }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", margin: 0, letterSpacing: "0.3px" }}>
                             Whether you're designing one-of-a-kind garments or looking to scale production, Aurora
                             Textiles ensures reliable access to quality fabrics and timely service.
                         </p>
@@ -844,7 +856,7 @@ export default function EthnicPage() {
                             Sustainability & Craftsmanship
                         </h3>
 
-                        <p style={{ fontSize: "19px", lineHeight: "1.5", margin: 0 }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", margin: 0, letterSpacing: "0.3px" }}>
                             We are committed to responsible sourcing and promoting traditional textile arts. Our
                             collaborations with skilled artisans and ethical manufacturers ensure that each fabric
                             tells a story of sustainability, culture, and skill.
@@ -877,7 +889,7 @@ export default function EthnicPage() {
                             Buy Ethnic Fabric Online or In-Store with Aurora Textiles
                         </h3>
 
-                        <p style={{ fontSize: "19px", lineHeight: "1.5", margin: 0 }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", margin: 0, letterSpacing: "0.3px" }}>
                             Are you looking to buy ethnic fabrics that reflect tradition with a modern flair? Contact
                             Aurora Textiles and browse our latest catalogues of ethnic fabrics for sale.
                         </p>
@@ -963,7 +975,7 @@ export default function EthnicPage() {
                                 <span
                                     style={{
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: window.innerWidth < 768 ? "11px" : "19px",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "17px",
                                         fontWeight: "700",
                                         color: openFaq === i
                                             ? "#b9972f"
@@ -982,7 +994,7 @@ export default function EthnicPage() {
                                 <span
                                     style={{
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "18px",
+                                        fontSize: "16px",
                                         fontWeight: "700",
                                         color: openFaq === i
                                             ? "#b9972f"

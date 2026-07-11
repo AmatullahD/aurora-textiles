@@ -19,17 +19,17 @@ export default function FabricSuppliers() {
 
     // ── SECTION 2: Fabric types list with links ──
     const fabricTypes = [
-        { label: "Wool", route: "/products/suiting", desc: "Perfect for formal suits and blazers, offering warmth, structure, and timeless sophistication." },
+        { label: "Wool", route: "/wool-fabric", desc: "Perfect for formal suits and blazers, offering warmth, structure, and timeless sophistication." },
         { label: "Polyester", route: "/products/reliance-fabrics", desc: "Wrinkle-resistant, breathable, and elegant." },
-        { label: "Cotton", route: "/products/shirting", desc: "Lightweight, soft, and ideal for casual shirting or uniforms." },
-        { label: "Linen", route: "/linen-fabric", desc: "The fabric of understated luxury, known for its natural texture and cooling properties." },
-        { label: "PolyCotton", route: "/products/uniform", desc: "A practical choice for uniforms and workwear — durable and easy to maintain." },
+        { label: "Cotton", route: "/cotton-fabric", desc: "Lightweight, soft, and ideal for casual shirting or uniforms." },
+        { label: "Linen", route: "/linen-fabrics", desc: "The fabric of understated luxury, known for its natural texture and cooling properties." },
+        { label: "PolyCotton", route: "/poly-cotton-fabric", desc: "A practical choice for uniforms and workwear — durable and easy to maintain." },
         { label: "Cotton-Linen", route: "/linen-fabric", desc: "A breezy fusion for summer wear, combining the softness of cotton and the breathability of linen." },
-        { label: "PolyViscose", route: "/products/suiting", desc: "Known for smooth drape and vibrant finish, perfect for contemporary suits." },
-        { label: "Denim", route: "/products/suiting", desc: "Strong, stylish, and versatile — suitable for smart casual wear and modern tailoring." },
-        { label: "PV Lycra", route: "/products/suiting", desc: "For comfort and flexibility in tailored suits, maintaining shape through long hours of wear." },
-        { label: "Poly Wool Lycra", route: "/products/suiting", desc: "A premium stretch blend that offers structure and ease — ideal for travel and office attire." },
-        { label: "Tencel Blend", route: "/products/shirting", desc: "Eco-friendly luxury with a silky texture, perfect for modern, breathable shirting and suits." },
+        { label: "PolyViscose", route: "/poly-viscose", desc: "Known for smooth drape and vibrant finish, perfect for contemporary suits." },
+        { label: "Denim", route: "/denim", desc: "Strong, stylish, and versatile — suitable for smart casual wear and modern tailoring." },
+        { label: "PV Lycra", route: "/pv-lycra", desc: "For comfort and flexibility in tailored suits, maintaining shape through long hours of wear." },
+        { label: "Poly Wool Lycra", route: "/poly-wool-lycra", desc: "A premium stretch blend that offers structure and ease — ideal for travel and office attire." },
+        { label: "Tencel Blend", route: "/tencel-fabric", desc: "Eco-friendly luxury with a silky texture, perfect for modern, breathable shirting and suits." },
     ];
 
     // ── SECTION 3: Brand cards with hover description ──
@@ -89,7 +89,7 @@ export default function FabricSuppliers() {
             route: "/products/spaadaa-fabrics",
             desc: "Spaadaa fabrics bring creativity and color to men's fashion, offering stylish shirting options for contemporary tailoring and occasion wear.",
         },
-         {
+        {
             src: "/thai-power.webp",
             route: "/products/thai-power-fabrics",
             desc: "Thai Power fabrics are renowned for their vibrant colors and high-quality construction, making them a favorite for bold and expressive fashion choices.",
@@ -228,7 +228,7 @@ export default function FabricSuppliers() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
-
+                                marginTop: "0",
                             }}
                         >
                             Your Trusted Fabric<br />Partner in the UAE
@@ -236,7 +236,7 @@ export default function FabricSuppliers() {
 
                         <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
                             When it comes to <strong>premium fabric suppliers in Dubai</strong>, <strong>Aurora Textiles</strong> stands as a trusted name across the UAE and the Middle East. We specialise in <strong>men's fabrics</strong> that combine luxury, durability, and craftsmanship — catering to everything from{" "}
-                            <LinkText label="ethnic wear" route="/products/ethnic" /> to{" "}
+                            <LinkText label="ethnic wear" route="/products/ethnic-fabric" /> to{" "}
                             <LinkText label="uniforms" route="/products/uniform" />,{" "}
                             <LinkText label="suiting" route="/products/suiting" />, and{" "}
                             <LinkText label="shirting" route="/products/shirting" />.
@@ -279,8 +279,9 @@ export default function FabricSuppliers() {
                                     background: "#8b7d3a",
                                     color: "#fff",
                                     border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
+                                    padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
                                     fontWeight: "500",
                                     borderRadius: "6px",
                                     cursor: "pointer",
@@ -378,19 +379,19 @@ export default function FabricSuppliers() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "24px",
-
+                                marginTop: "0",
                             }}
                         >
                             Explore Our Diverse<br />Range of Men's<br />Fabrics
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
                             We offer an extensive collection that covers every occasion, purpose, and preference. Our inventory includes:
                         </p>
 
                         <ul style={{ paddingLeft: "30px", margin: 0 }}>
                             {fabricTypes.map((item, i) => (
-                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "4px" }}>
+                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "4px" }}>
                                     <LinkText label={item.label} route={item.route} />
                                     : {item.desc}
                                 </li>
@@ -409,7 +410,7 @@ export default function FabricSuppliers() {
                             alt="Diverse range of men's fabrics at Aurora Textiles"
                             style={{
                                 width: "100%",
-                                height: "780px",
+                                height: "820px",
                                 objectFit: "cover",
                                 borderRadius: "16px",
                                 display: "block",
@@ -438,6 +439,7 @@ export default function FabricSuppliers() {
                             textAlign: "center",
                             marginBottom: "16px",
                             lineHeight: "1.3",
+                            marginTop: "0",
                         }}
                     >
                         Official Distributors of Leading Fabric<br />Brands
@@ -542,7 +544,7 @@ export default function FabricSuppliers() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "14px",
+                                            fontSize: "12px",
                                             lineHeight: "1.5",
                                             color: "#333",
                                             textAlign: "center",
@@ -607,7 +609,7 @@ export default function FabricSuppliers() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
-
+                                marginTop: "0",
                             }}
                         >
                             Wholesale Textile<br />Solutions in Dubai
@@ -642,7 +644,7 @@ export default function FabricSuppliers() {
                                 "Trusted by tailors, designers, and retailers across the UAE",
                                 "Personalised service from experienced fabric consultants",
                             ].map((point, i) => (
-                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.9", color: "#333", marginBottom: "4px" }}>
+                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.3", color: "#333", marginBottom: "4px" }}>
                                     {point}
                                 </li>
                             ))}
@@ -672,12 +674,13 @@ export default function FabricSuppliers() {
                             color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.3",
+                              marginTop: "0",
                         }}
                     >
                         Connect with the Leading Fabric Suppliers in UAE
                     </h2>
                     <p style={{
-                        fontSize: "19px",
+                        fontSize: "18px",
                         lineHeight: "1.5",
                         color: "#333"
                     }}>

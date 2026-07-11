@@ -37,8 +37,12 @@ export default function UniformFabricSupplier() {
             answer: "Yes, cotton is breathable and comfortable, making it suitable for healthcare and office uniforms. However, it wrinkles more easily and may shrink after repeated washing.",
         },
         {
+            question: "Is polycotton good for industrial uniforms?",
+            answer: "Yes. Polycotton blends combine durability, comfort, and easier maintenance, making them ideal for industrial workwear.",
+        },
+        {
             question: "Which fabric is best for hotel uniforms?",
-            answer: "Hospitality performance blends are ideal because they maintain elegance, wrinkle resistance, and colour consistency over time.",
+            answer: "Hospitality performance blends are ideal because they maintain elegance, wrinkle resistance, and color consistency over time.",
         },
         {
             question: "Which fabric is best for healthcare uniforms?",
@@ -49,12 +53,52 @@ export default function UniformFabricSupplier() {
             answer: "Premium poly-viscose blends and lightweight suiting fabrics are commonly used for corporate uniforms due to their professional appearance and comfort.",
         },
         {
-            question: "Why is fabric quality important in UAE climate?",
+            question: "Why is fabric important in UAE climate?",
             answer: "High temperatures, humidity, sweat exposure, and frequent washing can quickly damage low-quality fabrics. High-quality fabrics maintain comfort and appearance in demanding UAE conditions.",
+        },
+        {
+            question: "Which fabric works best in hot climates?",
+            answer: "Breathable polycotton blends and lightweight performance fabrics are among the best choices for hot climates because they offer better airflow and moisture management.",
+        },
+        {
+            question: "What fabrics are best for industrial washing?",
+            answer: "Industrial performance fabrics and durable polycotton blends are designed to withstand repeated industrial washing cycles without losing shape or color.",
+        },
+        {
+            question: "Which fabric resists fading the most?",
+            answer: "Performance fabrics and high-quality blended fabrics typically offer better color fastness and fade resistance compared to low-grade materials.",
+        },
+        {
+            question: "How long should uniform fabric last?",
+            answer: "The lifespan depends on usage and washing frequency, but high-quality uniform fabrics are designed for long-term performance and repeated daily wear.",
         },
         {
             question: "How to choose the right uniform fabric supplier in UAE?",
             answer: "Look for suppliers with consistent quality, reliable delivery, industry expertise, climate-suitable fabrics, and strong product knowledge.",
+        },
+        {
+            question: "What should businesses check before buying uniform fabrics?",
+            answer: "Businesses should check fabric composition, GSM, color fastness, shrinkage resistance, wash durability, breathability, and supplier consistency.",
+        },
+        {
+            question: "What GSM is ideal for workwear fabrics?",
+            answer: "Medium to heavier GSM fabrics are typically preferred for industrial workwear, while lighter GSM fabrics are suitable for hospitality and healthcare sectors.",
+        },
+        {
+            question: "Why is fabric consistency important?",
+            answer: "Inconsistent fabric quality can affect garment appearance, customer trust, employee comfort, and overall brand presentation.",
+        },
+        {
+            question: "What is color fastness in fabrics?",
+            answer: "Color fastness refers to a fabric's ability to maintain its color after washing, sunlight exposure, sweat, and daily wear.",
+        },
+        {
+            question: "Why do uniforms fade after repeated washing?",
+            answer: "Uniforms fade because of low-quality dyes, weak fabric construction, harsh detergents, and repeated industrial washing cycles.",
+        },
+        {
+            question: "What are the advantages of performance fabrics?",
+            answer: "Performance fabrics offer better durability, wrinkle resistance, stain resistance, moisture management, and long-lasting appearance.",
         },
     ];
 
@@ -142,11 +186,24 @@ export default function UniformFabricSupplier() {
                         { "@type": "Question", "name": "What makes a uniform fabric high quality?", "acceptedAnswer": { "@type": "Answer", "text": "High quality uniform fabric offers durability, breathability, comfort, color retention, and resistance to repeated washing and daily wear. It maintains a professional appearance over time and performs well in demanding environments." } },
                         { "@type": "Question", "name": "Does fabric quality affect uniform lifespan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. High-quality fabrics maintain structure, texture, and color consistency for a longer period, reducing replacement frequency and long-term costs." } },
                         { "@type": "Question", "name": "Which fabric is best for uniforms in UAE?", "acceptedAnswer": { "@type": "Answer", "text": "Polycotton blends and advanced performance fabrics are among the best options because they provide durability, breathability, and comfort in hot climates." } },
+                        { "@type": "Question", "name": "What is the most durable uniform fabric?", "acceptedAnswer": { "@type": "Answer", "text": "Industrial performance fabrics and high-quality polycotton blends are considered highly durable due to their resistance to repeated washing and heavy daily use." } },
+                        { "@type": "Question", "name": "Is cotton good for uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, cotton is breathable and comfortable, making it suitable for healthcare and office uniforms. However, it wrinkles more easily and may shrink after repeated washing." } },
+                        { "@type": "Question", "name": "Is polycotton good for industrial uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Polycotton blends combine durability, comfort, and easier maintenance, making them ideal for industrial workwear." } },
                         { "@type": "Question", "name": "Which fabric is best for hotel uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Hospitality performance blends are ideal because they maintain elegance, wrinkle resistance, and color consistency over time." } },
                         { "@type": "Question", "name": "Which fabric is best for healthcare uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Breathable cotton blends and lightweight polycotton fabrics are commonly preferred for healthcare uniforms because they offer comfort during long working hours." } },
                         { "@type": "Question", "name": "Which fabric is best for corporate uniforms?", "acceptedAnswer": { "@type": "Answer", "text": "Premium poly-viscose blends and lightweight suiting fabrics are commonly used for corporate uniforms due to their professional appearance and comfort." } },
                         { "@type": "Question", "name": "Why is fabric important in UAE climate?", "acceptedAnswer": { "@type": "Answer", "text": "High temperatures, humidity, sweat exposure, and frequent washing can quickly damage low-quality fabrics. High-quality fabrics maintain comfort and appearance in demanding UAE conditions." } },
+                        { "@type": "Question", "name": "Which fabric works best in hot climates?", "acceptedAnswer": { "@type": "Answer", "text": "Breathable polycotton blends and lightweight performance fabrics are among the best choices for hot climates because they offer better airflow and moisture management." } },
+                        { "@type": "Question", "name": "What fabrics are best for industrial washing?", "acceptedAnswer": { "@type": "Answer", "text": "Industrial performance fabrics and durable polycotton blends are designed to withstand repeated industrial washing cycles without losing shape or color." } },
+                        { "@type": "Question", "name": "Which fabric resists fading the most?", "acceptedAnswer": { "@type": "Answer", "text": "Performance fabrics and high-quality blended fabrics typically offer better color fastness and fade resistance compared to low-grade materials." } },
+                        { "@type": "Question", "name": "How long should uniform fabric last?", "acceptedAnswer": { "@type": "Answer", "text": "The lifespan depends on usage and washing frequency, but high-quality uniform fabrics are designed for long-term performance and repeated daily wear." } },
                         { "@type": "Question", "name": "How to choose the right uniform fabric supplier in UAE?", "acceptedAnswer": { "@type": "Answer", "text": "Look for suppliers with consistent quality, reliable delivery, industry expertise, climate-suitable fabrics, and strong product knowledge." } },
+                        { "@type": "Question", "name": "What should businesses check before buying uniform fabrics?", "acceptedAnswer": { "@type": "Answer", "text": "Businesses should check fabric composition, GSM, color fastness, shrinkage resistance, wash durability, breathability, and supplier consistency before purchasing uniform fabrics." } },
+                        { "@type": "Question", "name": "What GSM is ideal for workwear fabrics?", "acceptedAnswer": { "@type": "Answer", "text": "Medium to heavier GSM fabrics are typically preferred for industrial workwear, while lighter GSM fabrics are suitable for hospitality and healthcare sectors." } },
+                        { "@type": "Question", "name": "Why is fabric consistency important?", "acceptedAnswer": { "@type": "Answer", "text": "Inconsistent fabric quality can affect garment appearance, customer trust, employee comfort, and overall brand presentation." } },
+                        { "@type": "Question", "name": "What is color fastness in fabrics?", "acceptedAnswer": { "@type": "Answer", "text": "Color fastness refers to a fabric's ability to maintain its color after washing, sunlight exposure, sweat, and daily wear." } },
+                        { "@type": "Question", "name": "Why do uniforms fade after repeated washing?", "acceptedAnswer": { "@type": "Answer", "text": "Uniforms fade because of low-quality dyes, weak fabric construction, harsh detergents, and repeated industrial washing cycles." } },
+                        { "@type": "Question", "name": "What are the advantages of performance fabrics?", "acceptedAnswer": { "@type": "Answer", "text": "Performance fabrics offer better durability, wrinkle resistance, stain resistance, moisture management, and a long-lasting professional appearance." } },
                     ]
                   })}
                 `}</script>
@@ -219,7 +276,7 @@ export default function UniformFabricSupplier() {
                     {/* Left Image */}
                     <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
                         <img
-                            src="/egypt-1.webp"
+                            src="/oxford-5.webp"
                             alt="Premium uniform fabric rolls at Aurora Textiles UAE"
                             style={{
                                 width: "100%",
@@ -241,12 +298,13 @@ export default function UniformFabricSupplier() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
+                                  marginTop: "0",
                             }}
                         >
                             Your Trusted Uniform Fabric<br />Partner in UAE
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
                             When it comes to <strong>high quality uniform fabric suppliers in UAE</strong>, <strong>Aurora Textiles</strong> is a name businesses across the GCC trust. We specialise in uniform fabrics engineered for real-world performance — covering{" "}
                             <LinkText label="hospitality uniforms" route="/products/uniform" />,{" "}
                             <LinkText label="healthcare workwear" route="/products/uniform" />,{" "}
@@ -254,15 +312,15 @@ export default function UniformFabricSupplier() {
                             <LinkText label="corporate uniforms" route="/products/uniform" />.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
                             With deep expertise as <strong>uniform fabric distributors and textile suppliers</strong>, Aurora Textiles serves hotels, hospitals, factories, airlines, and corporate businesses that demand consistent quality and reliable supply across every order.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "32px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "32px", letterSpacing: "0.3px" }}>
                             As one of the most established <strong>fabric suppliers in the UAE</strong>, we source materials specifically suited to the UAE climate — breathable, fade-resistant, wash-durable, and designed to maintain a professional appearance long after day one.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "36px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "36px", letterSpacing: "0.3px" }}>
                             Whether it's a crisp hotel uniform, a functional healthcare scrub, or a polished corporate outfit —{" "}
                             <a
                                 href="/"
@@ -291,8 +349,9 @@ export default function UniformFabricSupplier() {
                                     background: "#8b7d3a",
                                     color: "#fff",
                                     border: "2px solid #050e5f",
-                                    padding: "14px 36px",
-                                    fontSize: "15px",
+                                     padding: "14px 32px",
+                                    fontFamily: "'Poppins', sans-serif",
+                                    fontSize: "18px",
                                     fontWeight: "500",
                                     borderRadius: "6px",
                                     cursor: "pointer",
@@ -362,12 +421,474 @@ export default function UniformFabricSupplier() {
                 </div>
             </section>
 
-            {/* ── SECTION 2: EXPLORE OUR UNIFORM FABRIC RANGE ── */}
+            {/* ── SECTION 2: WHAT MAKES A UNIFORM FABRIC HIGH QUALITY ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            What Makes a Uniform Fabric High Quality?
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            High quality uniform fabric combines durability, breathability, comfort, color retention, and long-term appearance. The best uniform fabrics for UAE and GCC businesses are designed to withstand heat, repeated industrial washing, daily wear, and demanding work environments while maintaining a professional look over time.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            A uniform is not just fabric. It becomes:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["your brand image", "employee comfort", "customer trust", "operational efficiency"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            That's why choosing the right fabric matters more than most businesses realize.
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/image-2.png"
+                            alt="What makes a uniform fabric high quality"
+                            style={{
+                                width: "100%",
+                                height: "540px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 3: WHY FABRIC QUALITY MATTERS MORE THAN MOST BUSINESSES REALIZE ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/sammaan-2.webp"
+                            alt="Why uniform fabric quality matters"
+                            style={{
+                                width: "100%",
+                                height: "680px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            Why Fabric Quality Matters More Than Most Businesses Realize
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Many businesses focus only on:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["color", "stitching", "design", "logo placement"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            But the real long-term difference comes from the fabric itself.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Low-quality fabrics may look acceptable initially, but after repeated use, businesses often face:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["fading colors", "shrinking", "wrinkling", "sweat retention", "rough texture - pilling", "poor durability"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            Over time, this affects both employees and customers.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 4: DOES FABRIC QUALITY AFFECT UNIFORM LIFESPAN ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            Does Fabric Quality Affect Uniform Lifespan?
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Yes.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Low-quality fabrics lose structure faster after repeated washing and heavy daily use. High quality uniform fabrics maintain:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["shape", "texture", "color consistency", "professional appearance"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            This reduces replacement costs and improves long-term value for businesses.
+                        </p>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/uniform-3.webp"
+                            alt="Does fabric quality affect uniform lifespan"
+                            style={{
+                                width: "100%",
+                                height: "500px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 5: HOW UNIFORM FABRIC IMPACTS CUSTOMER PERCEPTION ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/polyviscose-3.webp"
+                            alt="How uniform fabric impacts customer perception"
+                            style={{
+                                width: "100%",
+                                height: "680px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            How Uniform Fabric Impacts Customer Perception
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Customers may not know fabric composition, but they notice:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["dull uniforms", "wrinkles", "fading", "poor fitting garments"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            Clean and structured uniforms create trust.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            This is especially important in:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["healthcare", "hospitality", "aviation", "retail", "luxury service sectors"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            In cities like Dubai, where presentation standards are high, uniform quality directly impacts brand perception.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 6: BEST FABRIC TYPES FOR UNIFORMS ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        background: "#1e2d6b",
+                        borderRadius: "24px",
+                        border: "3px solid #e6e213e7",
+                        maxWidth: "1120px",
+                        margin: "0 auto",
+                        padding: "30px 40px",
+                        color: "#fff",
+                    }}
+                >
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontWeight: "700",
+                            letterSpacing: "2px",
+                            textAlign: "center",
+                            marginBottom: "20px",
+                            lineHeight: "1.3",
+                              marginTop: "0",
+                        }}
+                    >
+                        Best Fabric Types for Uniforms
+                    </h2>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#d0d5ee", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                        Different industries require different fabric performance. Choosing the right fabric depends on:
+                    </p>
+                    <ul style={{ paddingLeft: "30px", margin: "0 0 28px 0" }}>
+                        {["climate", "work environment", "wash frequency", "comfort needs", "durability requirements"].map((point, i) => (
+                            <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#d0d5ee", marginBottom: "6px" }}>
+                                {point}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                        {[
+                            {
+                                num: "1.",
+                                title: "Cotton Uniform Fabric",
+                                intro: "Cotton fabrics are widely used because they are breathable, soft, and comfortable for long wear.",
+                                groups: [
+                                    { label: "Best For:", items: ["healthcare", "clinics", "light office uniforms"] },
+                                    { label: "Advantages:", items: ["Natural feel", "Comfortable in warm environments", "Skin-friendly"] },
+                                    { label: "Limitations:", items: ["Wrinkles easily", "Can shrink after washing", "Lower durability in industrial environments"] },
+                                ],
+                            },
+                            {
+                                num: "2.",
+                                title: "Poly-Cotton Blend Uniform Fabric",
+                                intro: "Polycotton blends combine polyester durability with cotton comfort. These fabrics are among the most preferred options for UAE businesses because they balance durability, comfort, and maintenance efficiency.",
+                                groups: [
+                                    { label: "Best For:", items: ["hospitality", "corporate uniforms", "schools", "retail staff"] },
+                                    { label: "Advantages:", items: ["Better wrinkle resistance", "Longer lifespan", "Easy maintenance", "Better color retention"] },
+                                    { label: "Limitations:", items: ["Slightly less breathable than pure cotton"] },
+                                ],
+                            },
+                            {
+                                num: "3.",
+                                title: "Industrial Performance Fabrics",
+                                intro: "Industrial environments require stronger fabrics designed for heavy usage, repeated industrial washing, heat exposure, and demanding working conditions.",
+                                groups: [
+                                    { label: "Best For:", items: ["factories", "construction", "logistics", "industrial workwear"] },
+                                    { label: "Advantages:", items: ["High durability", "Tear resistance", "Long-term performance", "Better stain resistance"] },
+                                    { label: "Limitations:", items: ["Heavier feel compared to lighter fabrics"] },
+                                ],
+                            },
+                        ].map((fabric, idx) => (
+                            <li key={idx} style={{ marginBottom: idx < 2 ? "24px" : "0", fontSize: "16px", lineHeight: "1.6", color: "#dde", fontFamily: "Poppins, sans-serif", letterSpacing: "0.3px" }}>
+                                <span style={{ marginRight: "4px", fontWeight: "400" }}>{fabric.num}</span>
+                                <strong style={{ color: "#fff" }}>{fabric.title}:</strong> {fabric.intro}
+                                <ul style={{ listStyle: "disc", paddingLeft: "40px", marginTop: "10px" }}>
+                                    {fabric.groups.map((group, gi) => (
+                                        <li key={gi} style={{ marginBottom: "10px", fontSize: "16px", lineHeight: "1.4", color: "#ccc" }}>
+                                            <strong style={{ color: "#dde" }}>{group.label}</strong>{" "}{group.items.join(", ")}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </section>
+
+            {/* ── SECTION 7: UNIFORM FABRIC COMPARISON CHART ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            marginBottom: "24px",
+                            lineHeight: "1.3",
+                              marginTop: "0",
+                        }}
+                    >
+                        Uniform Fabric Comparison Chart
+                    </h2>
+                    <div style={{ overflowX: "auto" }}>
+                        <table
+                            style={{
+                                width: "100%",
+                                borderCollapse: "collapse",
+                                fontFamily: "'Poppins', sans-serif",
+                                minWidth: "600px",
+                            }}
+                        >
+                            <thead>
+                                <tr style={{ background: "#344886" }}>
+                                    {["Fabric Type", "Durability", "Breathability", "Wrinkle Resistance", "Best For"].map((head, i) => (
+                                        <th
+                                            key={i}
+                                            style={{
+                                                color: "#fff",
+                                                padding: "14px 18px",
+                                                textAlign: "left",
+                                                fontSize: "15px",
+                                                fontWeight: "600",
+                                                border: "1px solid #344886",
+                                            }}
+                                        >
+                                            {head}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {[
+                                    { type: "Cotton", durability: "Medium", breathability: "High", wrinkle: "Low", bestFor: "Healthcare" },
+                                    { type: "Poly-Cotton", durability: "High", breathability: "Medium-High", wrinkle: "Medium", bestFor: "Corporate" },
+                                    { type: "Performance Fabric", durability: "Very High", breathability: "Medium", wrinkle: "High", bestFor: "Industrial" },
+                                ].map((row, i) => (
+                                    <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#f8f9fc" }}>
+                                        <td style={{ padding: "14px 18px", fontSize: "15px", color: "#333", border: "1px solid #ddd", fontWeight: "600" }}>{row.type}</td>
+                                        <td style={{ padding: "14px 18px", fontSize: "15px", color: "#333", border: "1px solid #ddd" }}>{row.durability}</td>
+                                        <td style={{ padding: "14px 18px", fontSize: "15px", color: "#333", border: "1px solid #ddd" }}>{row.breathability}</td>
+                                        <td style={{ padding: "14px 18px", fontSize: "15px", color: "#333", border: "1px solid #ddd" }}>{row.wrinkle}</td>
+                                        <td style={{ padding: "14px 18px", fontSize: "15px", color: "#333", border: "1px solid #ddd" }}>{row.bestFor}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 8: EXPLORE OUR UNIFORM FABRIC RANGE ── */}
             <section
                 style={{
                     width: "100%",
                     padding: window.innerWidth < 768 ? "0 5% 40px" : "0 6% 20px",
                     boxSizing: "border-box",
+                    marginBottom:"20px",
                 }}
             >
                 <div
@@ -390,25 +911,26 @@ export default function UniformFabricSupplier() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "24px",
+                                  marginTop: "0",
                             }}
                         >
                             Explore Our Uniform<br />Fabric Range
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
                             We offer a comprehensive collection of uniform fabrics covering every industry, climate requirement, and durability standard. Our inventory includes:
                         </p>
 
                         <ul style={{ paddingLeft: "30px", margin: 0 }}>
                             {fabricTypes.map((item, i) => (
-                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "4px" }}>
+                                <li key={i} style={{ fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "4px" }}>
                                     <LinkText label={item.label} route={item.route} />
                                     : {item.desc}
                                 </li>
                             ))}
                         </ul>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginTop: "24px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginTop: "24px", letterSpacing: "0.3px" }}>
                             At <strong>Aurora Textiles</strong>, our collection ensures every business finds the right <strong>uniform fabric in UAE</strong> — built for the environment it will work in.
                         </p>
                     </div>
@@ -416,11 +938,11 @@ export default function UniformFabricSupplier() {
                     {/* Right Image */}
                     <div style={{ flex: "0 0 44%", minWidth: "280px" }}>
                         <img
-                            src="/fabric-supplier-2.webp"
+                            src="/uniform-5.webp"
                             alt="Diverse range of uniform fabrics at Aurora Textiles UAE"
                             style={{
                                 width: "100%",
-                                height: "650px",
+                                height: "790px",
                                 objectFit: "cover",
                                 borderRadius: "16px",
                                 display: "block",
@@ -430,7 +952,108 @@ export default function UniformFabricSupplier() {
                 </div>
             </section>
 
-            {/* ── SECTION 3: UNIFORM FABRIC SOLUTIONS BY INDUSTRY ── */}
+            {/* ── SECTION 9: UNIFORM FABRIC SOLUTIONS BY INDUSTRY (DETAILED) ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 40px" : "0 6% 50px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        background: "#1e2d6b",
+                        borderRadius: "24px",
+                        border: "3px solid #e6e213e7",
+                        maxWidth: "1120px",
+                        margin: "0 auto",
+                        padding: "30px 40px",
+                        color: "#fff",
+                    }}
+                >
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontWeight: "700",
+                            letterSpacing: "2px",
+                            marginBottom: "20px",
+                            lineHeight: "1.3",
+                            textAlign: "center",
+                              marginTop: "0",
+                        }}
+                    >
+                        Uniform Fabric Solutions by Industry
+                    </h2>
+                    <p style={{ fontFamily: "Poppins, sans-serif", textAlign: "center", fontSize: "16px", lineHeight: "1.6", color: "#d0d5ee", marginBottom: "28px", letterSpacing: "0.3px" }}>
+                        Different industries face different challenges. A one-size-fits-all approach rarely works.
+                    </p>
+
+                    <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                        {[
+                            {
+                                num: "1.",
+                                title: "Healthcare Uniform Fabrics",
+                                intro: "Healthcare professionals work long shifts in demanding conditions.",
+                                groups: [
+                                    { label: "Recommended features:", items: ["breathable fabrics", "easy stain removal", "comfort-focused materials", "antibacterial finishes"] },
+                                    { label: "Best suited fabrics:", items: ["cotton blends", "lightweight polycotton"] },
+                                ],
+                            },
+                            {
+                                num: "2.",
+                                title: "Hospitality Uniform Fabrics",
+                                intro: "Hospitality businesses rely heavily on appearance and customer experience.",
+                                groups: [
+                                    { label: "Recommended features:", items: ["wrinkle resistance", "premium finish", "color retention", "lightweight comfort"] },
+                                    { label: "Best suited fabrics:", items: ["hospitality performance blends", "luxury suiting blends"] },
+                                ],
+                            },
+                            {
+                                num: "3.",
+                                title: "Industrial Workwear Fabrics",
+                                intro: "Industrial uniforms need maximum durability and safety.",
+                                groups: [
+                                    { label: "Recommended features:", items: ["abrasion resistance", "high wash durability", "stronger fabric construction"] },
+                                    { label: "Best suited fabrics:", items: ["industrial performance fabrics", "reinforced polycotton blends"] },
+                                ],
+                            },
+                            {
+                                num: "4.",
+                                title: "Corporate Uniform Fabrics",
+                                intro: "Corporate uniforms should feel professional without sacrificing comfort.",
+                                groups: [
+                                    { label: "Recommended features:", items: ["smooth finish", "structure retention", "breathable construction"] },
+                                    { label: "Best suited fabrics:", items: ["premium poly-viscose blends", "lightweight suiting fabrics"] },
+                                ],
+                            },
+                            {
+                                num: "5.",
+                                title: "Aviation & Travel Uniform Fabrics",
+                                intro: "Aviation staff uniforms require long-lasting structure, wrinkle resistance, and premium appearance during extended use.",
+                                groups: [
+                                    { label: "Best suited fabrics:", items: ["lightweight performance blends", "wrinkle-resistant suiting fabrics"] },
+                                ],
+                            },
+                        ].map((industry, idx, arr) => (
+                            <li key={idx} style={{ marginBottom: idx < arr.length - 1 ? "24px" : "0", fontSize: "16px", lineHeight: "1.6", color: "#dde", fontFamily: "Poppins, sans-serif", letterSpacing: "0.3px" }}>
+                                <span style={{ marginRight: "4px", fontWeight: "400" }}>{industry.num}</span>
+                                <strong style={{ color: "#fff" }}>{industry.title}:</strong> {industry.intro}
+                                <ul style={{ listStyle: "disc", paddingLeft: "40px", marginTop: "10px" }}>
+                                    {industry.groups.map((group, gi) => (
+                                        <li key={gi} style={{ marginBottom: "10px", fontSize: "16px", lineHeight: "1.4", color: "#ccc" }}>
+                                            <strong style={{ color: "#dde" }}>{group.label}</strong>{" "}{group.items.join(", ")}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ol>
+                </div>
+            </section>
+
+            {/* ── SECTION 10: UNIFORM FABRIC SOLUTIONS BY INDUSTRY ── */}
             <section
                 style={{
                     width: "100%",
@@ -449,6 +1072,7 @@ export default function UniformFabricSupplier() {
                             textAlign: "center",
                             marginBottom: "16px",
                             lineHeight: "1.3",
+                              marginTop: "0",
                         }}
                     >
                         Uniform Fabric Solutions<br />by Industry
@@ -456,10 +1080,12 @@ export default function UniformFabricSupplier() {
                     <p
                         style={{
                             textAlign: "center",
-                            fontSize: "17px",
+                            fontSize: "16px",
                             color: "#333",
                             marginBottom: "50px",
                             lineHeight: "1.7",
+                            fontFamily: "Poppins, sans-serif",
+                            letterSpacing: "0.3px"
                         }}
                     >
                         As trusted <strong>uniform fabric suppliers in UAE</strong>, we understand that different industries face different challenges — and we stock fabrics built for each one.
@@ -554,13 +1180,14 @@ export default function UniformFabricSupplier() {
                                 >
                                     <p
                                         style={{
-                                            fontSize: "15px",
+                                            fontSize: "16px",
                                             lineHeight: "1.5",
                                             color: "#333",
                                             textAlign: "center",
                                             margin: 0,
-                                            fontFamily: "'Poppins', sans-serif",
+                                            fontFamily: "Poppins, sans-serif",
                                             fontWeight: "500",
+                                            letterSpacing: "0.3px"
                                         }}
                                     >
                                         <strong style={{ color: "#082352", fontFamily: "'Cinzel Decorative', serif", fontSize: "20px", display: "block", marginBottom: "6px" }}>
@@ -575,7 +1202,281 @@ export default function UniformFabricSupplier() {
                 </div>
             </section>
 
-            {/* ── SECTION 4: WHY UAE BUSINESSES CHOOSE AURORA TEXTILES ── */}
+            {/* ── SECTION 11: WHY UAE CLIMATE REQUIRES BETTER UNIFORM FABRICS ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/egypt-3.webp"
+                            alt="Why UAE climate requires better uniform fabrics"
+                            style={{
+                                width: "100%",
+                                height: "700px",
+                                objectFit: "cover",
+                                borderRadius: "20px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+
+                    {/* Right Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "30px",
+                            }}
+                        >
+                            Why UAE Climate Requires Better Uniform Fabrics
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "16px", letterSpacing: "0.3px" }}>
+                            The UAE climate creates unique challenges for uniforms.
+                        </p>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Businesses in Dubai and GCC regions deal with:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["extreme temperatures", "humidity", "sweat exposure", "frequent washing cycles", "UV exposure"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Low-quality fabrics degrade quickly under these conditions. Common problems include:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["fading", "odor retention", "rough texture", "shrinking", "color inconsistency"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.6", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", letterSpacing: "0.3px" }}>
+                            That's why businesses increasingly prefer fabrics designed specifically for hot-climate performance.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 12: BEST UNIFORM FABRICS FOR UAE CLIMATE ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* Left Content */}
+                    <div style={{ flex: "1", minWidth: "280px" }}>
+                        <h2
+                            style={{
+                                fontFamily: "'Cinzel Decorative', serif",
+                                fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                                fontWeight: "700",
+                                color: "#344886",
+                                marginBottom: "20px",
+                                lineHeight: "1.3",
+                                  marginTop: "0",
+                            }}
+                        >
+                            Best Uniform Fabrics for UAE Climate
+                        </h2>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.6", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            The best fabrics for UAE businesses typically offer:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: "0 0 16px 0" }}>
+                            {["Breathability", "Sweat management", "Color retention", "Lightweight comfort", "Long-term durability"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "20px", lineHeight: "1.4", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                            Polycotton and advanced performance blends are often ideal for:
+                        </p>
+                        <ul style={{ paddingLeft: "30px", margin: 0 }}>
+                            {["hospitality", "retail", "industrial uniforms", "healthcare workwear"].map((point, i) => (
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "6px" }}>
+                                    {point}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/sanskriti-3.webp"
+                            alt="Best uniform fabrics for UAE climate"
+                            style={{
+                                width: "100%",
+                                height: "500px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 13: HOW TO CHOOSE THE RIGHT UNIFORM FABRIC SUPPLIER IN UAE ── */}
+            <section
+                style={{
+                    width: "100%",
+                    padding: window.innerWidth < 768 ? "0 5% 50px" : "0 6% 60px",
+                    boxSizing: "border-box",
+                    background: "#fff",
+                }}
+            >
+                <div
+                    style={{
+                        maxWidth: "1280px",
+                        margin: "0 auto",
+                        display: "flex",
+                        gap: "60px",
+                        alignItems: "flex-start",
+                        flexWrap: "wrap",
+                    }}
+                >
+                {/* Left Image */}
+                <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                    <img
+                        src="/suitings-2.webp"
+                        alt="How to choose the right uniform fabric supplier in UAE"
+                        style={{
+                            width: "100%",
+                            height: "1100px",
+                            objectFit: "cover",
+                            borderRadius: "16px",
+                            display: "block",
+                        }}
+                    />
+                </div>
+
+                {/* Right Content */}
+                <div style={{ flex: "1", minWidth: "280px" }}>
+                    <h2
+                        style={{
+                            fontFamily: "'Cinzel Decorative', serif",
+                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontWeight: "700",
+                            color: "#344886",
+                            marginBottom: "20px",
+                            lineHeight: "1.3",
+                              marginTop: "0",
+                        }}
+                    >
+                        How to Choose the Right Uniform Fabric Supplier in UAE
+                    </h2>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "28px", letterSpacing: "0.3px" }}>
+                        Choosing the right supplier matters just as much as choosing the right fabric. Businesses should evaluate suppliers based on:
+                    </p>
+
+                    {[
+                        {
+                            title: "1. Fabric Consistency",
+                            body: "Every batch should maintain:",
+                            list: ["same color", "same texture", "same performance"],
+                            closing: "Inconsistent supply affects brand image.",
+                        },
+                        {
+                            title: "2. Wash Durability",
+                            body: "Uniforms must survive repeated washing without:",
+                            list: ["fading", "shrinking", "losing structure"],
+                            closing: null,
+                        },
+                        {
+                            title: "3. Color Fastness",
+                            body: null,
+                            list: null,
+                            closing: "High-quality fabrics retain appearance even after multiple washes and daily exposure.",
+                        },
+                        {
+                            title: "4. Climate Suitability",
+                            body: "Fabrics should perform well in:",
+                            list: ["UAE heat", "humidity", "long working hours"],
+                            closing: null,
+                        },
+                        {
+                            title: "5. Industry Expertise",
+                            body: "Different sectors require different fabric solutions. A good supplier understands:",
+                            list: ["hospitality needs", "industrial requirements", "healthcare functionality", "corporate presentation standards"],
+                            closing: null,
+                        },
+                    ].map((criteria, idx, arr) => (
+                        <div key={idx} style={{ marginBottom: idx < arr.length - 1 ? "28px" : "0" }}>
+                            <h3
+                                style={{
+                                    fontFamily: "'Cinzel Decorative', serif",
+                                    fontSize: "22px",
+                                    fontWeight: "700",
+                                    color: "#344886",
+                                    marginBottom: "12px",
+                                }}
+                            >
+                                {criteria.title}
+                            </h3>
+                            {criteria.body && (
+                                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", color: "#333", marginBottom: "8px", letterSpacing: "0.3px" }}>
+                                    {criteria.body}
+                                </p>
+                            )}
+                            {criteria.list && (
+                                <ul style={{ paddingLeft: "30px", margin: "0 0 8px 0" }}>
+                                    {criteria.list.map((point, i) => (
+                                        <li key={i} style={{ fontSize: "17px", lineHeight: "1.2", color: "#333", marginBottom: "4px" }}>
+                                            {point}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                            {criteria.closing && (
+                                <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.2", color: "#333", margin: 0, letterSpacing: "0.3px" }}>
+                                    {criteria.closing}
+                                </p>
+                            )}
+                        </div>
+                    ))}
+                </div>
+                </div>
+            </section>
+
+            {/* ── SECTION 14: WHY UAE BUSINESSES CHOOSE AURORA TEXTILES ── */}
             <section
                 style={{
                     width: "100%",
@@ -594,22 +1495,8 @@ export default function UniformFabricSupplier() {
                         flexWrap: "wrap",
                     }}
                 >
-                    {/* Left Image */}
-                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
-                        <img
-                            src="/oxford-2.webp"
-                            alt="Uniform fabric wholesale solutions UAE"
-                            style={{
-                                width: "100%",
-                                height: "700px",
-                                objectFit: "cover",
-                                borderRadius: "16px",
-                                display: "block",
-                            }}
-                        />
-                    </div>
 
-                    {/* Right Content */}
+                    {/* left Content */}
                     <div style={{ flex: "1", minWidth: "280px" }}>
                         <h2
                             style={{
@@ -619,16 +1506,17 @@ export default function UniformFabricSupplier() {
                                 color: "#344886",
                                 lineHeight: "1.2",
                                 marginBottom: "28px",
+                                  marginTop: "0",
                             }}
                         >
                             Uniform Fabric Supply<br />Solutions in UAE
                         </h2>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "20px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "20px", letterSpacing: "0.3px" }}>
                             As experienced <strong>wholesale uniform fabric suppliers</strong>, Aurora Textiles supports both bulk and bespoke orders. Whether you're a hotel chain, hospital group, factory, or corporate business, our streamlined supply ensures consistent quality and timely delivery across Dubai, Abu Dhabi, and the wider GCC.
                         </p>
 
-                        <p style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "32px" }}>
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginBottom: "32px", letterSpacing: "0.3px" }}>
                             Our wide textile network and climate-focused fabric sourcing make us the preferred partner for <strong>uniform fabric UAE</strong> buyers who value performance, consistency, and long-term value.
                         </p>
 
@@ -644,25 +1532,45 @@ export default function UniformFabricSupplier() {
                             Why Businesses Choose Aurora Textiles?
                         </h3>
 
-                        <ul style={{ paddingLeft: "25px", margin: 0 }}>
+                        <ul style={{ paddingLeft: "30px", margin: 0 }}>
                             {[
-                                "Consistent fabric quality across every batch and order",
-                                "Wide selection of uniform fabrics for all industries and climates",
-                                "Industry-focused solutions for hospitality, healthcare, industrial, and corporate sectors",
-                                "Fade-resistant, wash-durable, and breathable fabric options",
-                                "Reliable supply capability across UAE and GCC",
-                                "Experienced team with deep understanding of UAE climate requirements",
+                                "Consistent fabric quality",
+                                "Wide textile sourcing expertise",
+                                "Industry-focused fabric solutions",
+                                "Hospitality and industrial textile experience",
+                                "Reliable supply capability",
+                                "Understanding of UAE climate requirements",
                             ].map((point, i) => (
-                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.5", color: "#333", marginBottom: "4px" }}>
+                                <li key={i} style={{ fontSize: "17px", lineHeight: "1.1", color: "#333", marginBottom: "4px" }}>
                                     {point}
                                 </li>
                             ))}
                         </ul>
+
+                        <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", marginTop: "20px", letterSpacing: "0.3px" }}>
+                            From hospitality uniforms to industrial workwear fabrics, Aurora Textiles supports businesses looking for long-term textile performance — not just short-term appearance.
+                        </p>
                     </div>
+
+                      {/* Right Image */}
+                    <div style={{ flex: "0 0 47%", minWidth: "280px" }}>
+                        <img
+                            src="/oxford-2.webp"
+                            alt="Uniform fabric wholesale solutions UAE"
+                            style={{
+                                width: "100%",
+                                height: "700px",
+                                objectFit: "cover",
+                                borderRadius: "16px",
+                                display: "block",
+                            }}
+                        />
+                    </div>
+                    
                 </div>
             </section>
 
-            {/* ── SECTION 5: CONNECT WITH AURORA TEXTILES ── */}
+            {/* ── SECTION 15: CONNECT WITH AURORA TEXTILES ── */}
             <section
                 style={{
                     width: "100%",
@@ -675,16 +1583,17 @@ export default function UniformFabricSupplier() {
                     <h2
                         style={{
                             fontFamily: "'Cinzel Decorative', serif",
-                            fontSize: window.innerWidth < 768 ? "22px" : "34px",
+                            fontSize: window.innerWidth < 768 ? "22px" : "38px",
                             fontWeight: "700",
                             color: "#344886",
                             marginBottom: "24px",
                             lineHeight: "1.3",
+                              marginTop: "0",
                         }}
                     >
                         Looking for High Quality Uniform Fabric in UAE?
                     </h2>
-                    <p style={{ fontSize: "19px", lineHeight: "1.5", color: "#333" }}>
+                    <p style={{ fontFamily: "Poppins, sans-serif", fontSize: "16px", lineHeight: "1.5", color: "#333", letterSpacing: "0.3px" }}>
                         If you're searching for the most reliable{" "}
                         <strong>uniform fabric suppliers in UAE</strong> for wholesale, retail, or corporate needs — Aurora Textiles is your destination. Discover our collection, explore fabric performance options, and source premium uniform fabrics engineered for the UAE climate and your industry.
                     </p>
@@ -745,7 +1654,7 @@ export default function UniformFabricSupplier() {
                                 <span
                                     style={{
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: "19px",
+                                        fontSize: "17px",
                                         fontWeight: "700",
                                         color: openFaq === index ? "#b39131" : hoveredFaq === index ? "#070e46" : "#0b18a1",
                                         letterSpacing: "0.5px",
@@ -774,8 +1683,8 @@ export default function UniformFabricSupplier() {
                                 <div
                                     style={{
                                         padding: "0 28px 24px 28px",
-                                        fontFamily: "sans-serif",
-                                        fontSize: "17px",
+                                        fontFamily: "'Poppins', sans-serif",
+                                        fontSize: "16px",
                                         color: "#292626",
                                         lineHeight: "1.5",
                                         borderTop: "1px solid #eee",

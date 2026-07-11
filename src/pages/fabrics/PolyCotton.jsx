@@ -40,7 +40,7 @@ function PolyCottonCard({ icon, title, desc }) {
       {/* Title — before hover, bold 24px */}
       {!hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "24px",
           fontWeight: "700",
           color: "#1a237e",
@@ -55,7 +55,7 @@ function PolyCottonCard({ icon, title, desc }) {
       {/* Description — after hover, small text */}
       {hovered && (
         <p style={{
-          fontFamily: "sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           fontSize: "14px",
           fontWeight: "400",
           color: "#333",
@@ -218,7 +218,7 @@ export default function PolyCottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -234,7 +234,7 @@ export default function PolyCottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "18px",
               color: "#222",
               lineHeight: "1.5",
@@ -439,7 +439,7 @@ export default function PolyCottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -453,7 +453,7 @@ export default function PolyCottonPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "25px",
               fontWeight: "700",
               color: "#111",
@@ -465,7 +465,7 @@ export default function PolyCottonPage() {
 
           <ul
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "16px",
               color: "#222",
               lineHeight: "1.2",
@@ -481,7 +481,7 @@ export default function PolyCottonPage() {
 
           <h3
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "24px",
               fontWeight: "700",
               color: "#111",
@@ -493,7 +493,7 @@ export default function PolyCottonPage() {
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "17px",
               color: "#222",
               lineHeight: "1.5",
@@ -513,22 +513,22 @@ export default function PolyCottonPage() {
             including hospitality, corporate apparel, and retail fashion.
           </p>
 
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             <strong>Polycotton work uniforms</strong> – Ideal for factory, hospital, and hospitality uniforms
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             Daily wear shirts &amp; Pants – Lightweight and easy to maintain
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "17px", color: "#222", lineHeight: "1.2", margin: "0 0 4px 0" }}>
             Customised kurtas and semi-formal menswear
           </p>
-          <p style={{ fontFamily: "sans-serif", fontSize: "19px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
+          <p style={{ fontFamily: "'Poppins', sans-serif", fontSize: "19px", color: "#222", lineHeight: "1.2", margin: "0 0 22px 0" }}>
             Corporate giveaways and branded merchandise
           </p>
 
           <p
             style={{
-              fontFamily: "sans-serif",
+              fontFamily: "'Poppins', sans-serif",
               fontSize: "19px",
               color: "#222",
               lineHeight: "1.5",
@@ -621,7 +621,7 @@ export default function PolyCottonPage() {
                 <div
                   style={{
                     padding: "20px 28px 24px 28px",
-                    fontFamily: "sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontSize: "17px",
                     color: "#333",
                     lineHeight: "1.5",
