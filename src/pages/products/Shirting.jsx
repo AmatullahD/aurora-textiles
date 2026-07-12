@@ -863,7 +863,7 @@ export default function ShirtingPage() {
                                 <span
                                     style={{
                                         fontFamily: "'Cinzel Decorative', serif",
-                                        fontSize: window.innerWidth < 768 ? "11px" : "19px",
+                                        fontSize: window.innerWidth < 768 ? "11px" : "17px",
                                         fontWeight: "700",
                                         color: openFaq === index
                                             ? "#b9972f"

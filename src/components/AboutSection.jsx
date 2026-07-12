@@ -69,8 +69,8 @@ export default function AboutSection() {
           <div
             style={{
               fontFamily: "'Poppins', Sans-serif",
-              fontSize: "18px",
-              fontWeight: "500",
+              fontSize: "17px",
+              fontWeight: "400",
               lineHeight: "30px",
               letterSpacing: ".3px",
               color: "#000",

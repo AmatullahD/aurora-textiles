@@ -99,7 +99,7 @@ export default function WhyChooseUsSection() {
           <p
             style={{
               fontFamily: "'poppins', sans-serif",
-              fontSize: "19px",
+              fontSize: "17px",
               lineHeight: "1.5",
               color: "#F2F2F2",
               marginBottom: "45px",
